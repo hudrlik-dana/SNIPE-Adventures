@@ -16,11 +16,11 @@ import java.util.Objects;
 public class Country implements Serializable{
     
     //class instance variables
-    private List country;
+    private List <Country> country;
     private String entryPointCode;
     private String entryPointDesc;
 
-    public List getCountry() {
+    public List <Country> getCountry() {
         return country;
     }
 

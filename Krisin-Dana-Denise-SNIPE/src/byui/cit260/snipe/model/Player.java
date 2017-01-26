@@ -20,7 +20,7 @@ public class Player implements Serializable {
     private int playerHealth;
     private String charName;
     private String dossier;
-    private List<Place> passport;
+    private List <Place> passport;
     private Place currentPlace;
 
     public String getName() {

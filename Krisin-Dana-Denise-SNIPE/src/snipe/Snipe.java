@@ -18,11 +18,13 @@ public class Snipe {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+      
       Player player = new Player();
       player.setName ("Fred");
       
       System.out.println("Player: " + player.toString());
-        
+      
+      
       Challenge challengeOne = new Challenge();
       
       challengeOne.setInjuryPoints(5);
@@ -30,6 +32,8 @@ public class Snipe {
       
       String challengeInfo = challengeOne.toString();
       System.out.println(challengeInfo);
+      
+      
       
      
       
