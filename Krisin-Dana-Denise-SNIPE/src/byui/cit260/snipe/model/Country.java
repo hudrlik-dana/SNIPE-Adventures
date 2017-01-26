@@ -16,15 +16,15 @@ import java.util.Objects;
 public class Country implements Serializable{
     
     //class instance variables
-    private List country;
+    private List <String> country;
     private String entryPointCode;
     private String entryPointDesc;
 
-    public List getCountry() {
+    public List<String> getCountry() {
         return country;
     }
 
-    public void setCountry(List country) {
+    public void setCountry(List<String> country) {
         this.country = country;
     }
 
@@ -44,6 +44,8 @@ public class Country implements Serializable{
         this.entryPointDesc = entryPointDesc;
     }
 
+    
+   //constructor for country
     public Country() {
     }
 
