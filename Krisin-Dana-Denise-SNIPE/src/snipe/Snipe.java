@@ -6,7 +6,18 @@
 package snipe;
 
 import byui.cit260.snipe.model.Challenge;
+import byui.cit260.snipe.model.Country;
+import byui.cit260.snipe.model.CypherComplete;
+import byui.cit260.snipe.model.Dossier;
+import byui.cit260.snipe.model.Game;
+import byui.cit260.snipe.model.Item;
+import byui.cit260.snipe.model.Map;
+import byui.cit260.snipe.model.MathPuzzle;
+import byui.cit260.snipe.model.MentalChallenge;
+import byui.cit260.snipe.model.PhysicalChallenge;
+import byui.cit260.snipe.model.Place;
 import byui.cit260.snipe.model.Player;
+import byui.cit260.snipe.model.World;
 
 /**
  *
@@ -19,21 +30,26 @@ public class Snipe {
      */
     public static void main(String[] args) {
       
-      Player player = new Player();
-      player.setName ("Fred");
-      
-      System.out.println("Player: " + player.toString());
-      
-      
-      Challenge challengeOne = new Challenge();
-      
-      challengeOne.setInjuryPoints(5);
-      challengeOne.setMasterCodePiece("masterCodePiece");
-      
-      String challengeInfo = challengeOne.toString();
-      System.out.println(challengeInfo);
-      
-      
+        //player class
+        Player player1 = new Player();
+        player1.setName ("Fred");
+        
+        System.out.println("Player: " + player1.toString());
+        
+        //challenge class
+        Challenge challengeOne = new Challenge();
+        
+        challengeOne.setInjuryPoints(5);
+        challengeOne.setMasterCodePiece("masterCodePiece");
+        
+        String challengeInfo = challengeOne.toString();
+        System.out.println(challengeInfo);
+        
+        //item class
+        Item d1 = new Item();
+        d1.setType ("USA Dossier");
+        
+        System.out.println("You have the " + d1.toString());
       
      
       
