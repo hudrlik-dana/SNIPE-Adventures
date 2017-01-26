@@ -6,6 +6,7 @@
 package snipe;
 
 import byui.cit260.snipe.model.Challenge;
+import byui.cit260.snipe.model.Player;
 
 /**
  *
@@ -24,6 +25,12 @@ public class Snipe {
       
       String challengeInfo = challengeOne.toString();
       System.out.println(challengeInfo);
+      
+      Player player = new Player();
+      player.setName ("Fred");
+      
+      System.out.println("Player: " + player.toString());
+      
     }
     
 }
