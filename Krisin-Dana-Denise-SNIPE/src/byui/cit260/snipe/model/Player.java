@@ -17,6 +17,9 @@ public class Player implements Serializable {
     //Class instance variables
     private String name;
     private int playerHealth;
+    private String charName;
+    private String Dossier;
+    
 
     public String getName() {
         return name;
