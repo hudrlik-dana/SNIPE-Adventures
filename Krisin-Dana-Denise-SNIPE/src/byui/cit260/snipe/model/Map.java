@@ -18,7 +18,7 @@ public class Map implements Serializable{
     //class instance variables
     private int numRows;
     private int numCols;
-    private List places;
+    private List <String> places;
     private boolean visited;
 
     public int getNumRows() {
@@ -37,11 +37,11 @@ public class Map implements Serializable{
         this.numCols = numCols;
     }
 
-    public List getPlaces() {
+    public List<String> getPlaces() {
         return places;
     }
 
-    public void setPlaces(List places) {
+    public void setPlaces(List<String> places) {
         this.places = places;
     }
 
@@ -53,6 +53,8 @@ public class Map implements Serializable{
         this.visited = visited;
     }
 
+  
+    //constructor for map
     public Map() {
     }
 
