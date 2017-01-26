@@ -5,9 +5,11 @@
  */
 package snipe;
 
+import byui.cit260.snipe.model.Challenge;
+
 /**
  *
- * @author Daniel
+ * @author danahudrlik
  */
 public class Snipe {
 
@@ -15,7 +17,13 @@ public class Snipe {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+      Challenge challengeOne = new Challenge();
+      
+      challengeOne.setInjuryPoints(5);
+      challengeOne.setMasterCodePiece("masterCodePiece");
+      
+      String challengeInfo = challengeOne.toString();
+      System.out.println(challengeInfo);
     }
     
 }
