@@ -6,6 +6,7 @@
 package byui.cit260.snipe.model;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -17,6 +18,10 @@ public class Player implements Serializable {
     //Class instance variables
     private String name;
     private int playerHealth;
+    private String charName;
+    private String dossier;
+    private List <Place> passport;
+    private Place currentPlace;
 
     public String getName() {
         return name;
@@ -34,14 +39,50 @@ public class Player implements Serializable {
         this.playerHealth = playerHealth;
     }
 
+    public String getCharName() {
+        return charName;
+    }
+
+    public void setCharName(String charName) {
+        this.charName = charName;
+    }
+
+    public String getDossier() {
+        return dossier;
+    }
+
+    public void setDossier(String dossier) {
+        this.dossier = dossier;
+    }
+
+    public List<Place> getPassport() {
+        return passport;
+    }
+
+    public void setPassport(List<Place> passport) {
+        this.passport = passport;
+    }
+
+    public Place getCurrentPlace() {
+        return currentPlace;
+    }
+
+    public void setCurrentPlace(Place currentPlace) {
+        this.currentPlace = currentPlace;
+    }
+
     public Player() {
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 67 * hash + Objects.hashCode(this.name);
-        hash = 67 * hash + this.playerHealth;
+        int hash = 7;
+        hash = 89 * hash + Objects.hashCode(this.name);
+        hash = 89 * hash + this.playerHealth;
+        hash = 89 * hash + Objects.hashCode(this.charName);
+        hash = 89 * hash + Objects.hashCode(this.dossier);
+        hash = 89 * hash + Objects.hashCode(this.passport);
+        hash = 89 * hash + Objects.hashCode(this.currentPlace);
         return hash;
     }
 
@@ -63,12 +104,27 @@ public class Player implements Serializable {
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
+        if (!Objects.equals(this.charName, other.charName)) {
+            return false;
+        }
+        if (!Objects.equals(this.dossier, other.dossier)) {
+            return false;
+        }
+        if (!Objects.equals(this.passport, other.passport)) {
+            return false;
+        }
+        if (!Objects.equals(this.currentPlace, other.currentPlace)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", playerHealth=" + playerHealth + '}';
+        return "Player{" + "name=" + name + ", playerHealth=" + playerHealth + ", charName=" + charName + ", dossier=" + dossier + ", passport=" + passport + ", currentPlace=" + currentPlace + '}';
     }
+    
+    
+    
 
 }
