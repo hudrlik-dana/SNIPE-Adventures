@@ -13,12 +13,12 @@ import java.util.Objects;
  *
  * @author denisegoetz
  */
-public class Map implements Serializable{
-    
+public class Map implements Serializable {
+
     //class instance variables
     private int numRows;
     private int numCols;
-    private List <String> places;
+    private List<String> places;
     private boolean visited;
 
     public int getNumRows() {
@@ -53,7 +53,6 @@ public class Map implements Serializable{
         this.visited = visited;
     }
 
-  
     //constructor for map
     public Map() {
     }
@@ -99,7 +98,5 @@ public class Map implements Serializable{
     public String toString() {
         return "Map{" + "numRows=" + numRows + ", numCols=" + numCols + ", places=" + places + ", visited=" + visited + '}';
     }
-     
-    
-    
+
 }
