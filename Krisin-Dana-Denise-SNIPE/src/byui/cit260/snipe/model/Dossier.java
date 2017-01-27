@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.snipe.model;
 
 import java.io.Serializable;
@@ -14,11 +13,11 @@ import java.util.Objects;
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
 public class Dossier implements Serializable {
-    
+
     //class instance variables
     private String countryCode;
     private String challengeChoices;
-    private String hints; 
+    private String hints;
     private String countryVis;
 
     public String getCountryCode() {
@@ -97,9 +96,5 @@ public class Dossier implements Serializable {
     public String toString() {
         return "Dossier{" + "countryCode=" + countryCode + ", challengeChoices=" + challengeChoices + ", hints=" + hints + ", countryVis=" + countryVis + '}';
     }
-    
-    
-    
-    
 
 }

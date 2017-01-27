@@ -11,13 +11,14 @@ import java.util.Objects;
 /**
  *
  * @author danahudrlik
- */ 
+ */
 public class Challenge implements Serializable {
+
     //class instance variables
     private String desc;
-    private int injuryPoints; 
-    private String hint; 
-    private String masterCodePiece; 
+    private int injuryPoints;
+    private String hint;
+    private String masterCodePiece;
 
     public String getDesc() {
         return desc;
@@ -95,5 +96,5 @@ public class Challenge implements Serializable {
     public String toString() {
         return "Challenge{" + "desc=" + desc + ", injuryPoints=" + injuryPoints + ", hint=" + hint + ", masterCodePiece=" + masterCodePiece + '}';
     }
-    
+
 }

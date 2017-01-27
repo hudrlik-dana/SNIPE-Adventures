@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.snipe.model;
 
 import java.io.Serializable;
@@ -14,7 +13,7 @@ import java.util.Objects;
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
 public class CypherComplete implements Serializable {
-    
+
     //Class instance variables
     private String codePhrase;
     private String codeDecoder;
@@ -71,8 +70,5 @@ public class CypherComplete implements Serializable {
     public String toString() {
         return "CypherComplete{" + "codePhrase=" + codePhrase + ", codeDecoder=" + codeDecoder + '}';
     }
-    
-    
-    
 
 }
