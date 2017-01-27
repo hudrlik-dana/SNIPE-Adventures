@@ -11,9 +11,10 @@ import java.io.Serializable;
  *
  * @author danahudrlik
  */
-public class MentalChallenge implements Serializable{
+public class MentalChallenge implements Serializable {
+
     //class instance variables
-    private char mentalAnswer; 
+    private char mentalAnswer;
 
     public char getMentalAnswer() {
         return mentalAnswer;
@@ -56,7 +57,4 @@ public class MentalChallenge implements Serializable{
         return "MentalChallenge{" + "mentalAnswer=" + mentalAnswer + '}';
     }
 
-    
-    
-    
 }
