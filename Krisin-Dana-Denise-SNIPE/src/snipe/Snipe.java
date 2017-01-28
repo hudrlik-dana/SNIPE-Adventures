@@ -7,6 +7,9 @@ package snipe;
 
 import byui.cit260.snipe.model.Challenge;
 import byui.cit260.snipe.model.Player;
+import byui.cit260.snipe.model.MathPuzzle;
+import byui.cit260.snipe.model.MentalChallenge;
+import byui.cit260.snipe.model.PhysicalChallenge;
 
 /**
  *
@@ -18,27 +21,36 @@ public class Snipe {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      
-      Player player = new Player();
-      player.setName ("Fred");
-      
-      System.out.println("Player: " + player.toString());
-      
-      
-      Challenge challengeOne = new Challenge();
-      
-      challengeOne.setInjuryPoints(5);
-      challengeOne.setMasterCodePiece("masterCodePiece");
-      
-      String challengeInfo = challengeOne.toString();
-      System.out.println(challengeInfo);
-      
-      
-      
-     
-      
+
+        Player player = new Player();
+        player.setName("Fred");
+
+        System.out.println("Player: " + player.toString());
+
+        // these are the tests Dana coded for the classes 
+        Challenge challengeOne = new Challenge();
+
+        challengeOne.setInjuryPoints(5);
+        challengeOne.setMasterCodePiece("masterCodePiece");
+
+        String challengeInfo = challengeOne.toString();
+        System.out.println(challengeInfo);
+
+        MathPuzzle var1 = new MathPuzzle();
+
+        var1.setMathAnswer("7");
+        System.out.println();
+
+        PhysicalChallenge success = new PhysicalChallenge();
+
+        success.setPhysicalSuccess(true);
+        System.out.println();
+
+        MentalChallenge choice = new MentalChallenge();
+
+        choice.setMentalAnswer('a');
+        System.out.println();
+
     }
-    
+
 }
-
-
