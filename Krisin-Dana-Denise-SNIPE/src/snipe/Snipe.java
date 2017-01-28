@@ -6,6 +6,7 @@
 package snipe;
 
 import byui.cit260.snipe.model.Challenge;
+import byui.cit260.snipe.model.Item;
 import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.model.MathPuzzle;
 import byui.cit260.snipe.model.MentalChallenge;
@@ -22,6 +23,8 @@ public class Snipe {
      */
     public static void main(String[] args) {
 
+        // this is the test for our team class of player
+        
         Player player = new Player();
         player.setName("Fred");
 
@@ -50,6 +53,13 @@ public class Snipe {
 
         choice.setMentalAnswer('a');
         System.out.println();
+
+        //item class
+        Item d1 = new Item();
+        d1.setType("USA Dossier");
+
+        System.out.println("You have the " + d1.toString());
+
 
     }
 

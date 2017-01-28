@@ -16,16 +16,17 @@ import java.util.Objects;
 public class World implements Serializable {
 
     //class instance variables
-    private List countries;
+    private List <String> countries;
 
-    public List getCountries() {
+    public List<String> getCountries() {
         return countries;
     }
 
-    public void setCountries(List countries) {
+    public void setCountries(List<String> countries) {
         this.countries = countries;
     }
-
+      
+    //constructor for world
     public World() {
     }
 

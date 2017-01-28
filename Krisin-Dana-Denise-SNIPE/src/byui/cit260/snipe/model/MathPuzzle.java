@@ -12,13 +12,14 @@ import java.util.Objects;
  *
  * @author danahudrlik
  */
-public class MathPuzzle implements Serializable{
+public class MathPuzzle implements Serializable {
+
     //class instance variables
-    private int healthPoints; 
-    private String mathAnswer; 
-    private int var1; 
+    private int healthPoints;
+    private String mathAnswer;
+    private int var1;
     private int var2;
-    private int var3; 
+    private int var3;
 
     public int getHealthPoints() {
         return healthPoints;
@@ -109,5 +110,4 @@ public class MathPuzzle implements Serializable{
         return "MathPuzzle{" + "healthPoints=" + healthPoints + ", mathAnswer=" + mathAnswer + ", var1=" + var1 + ", var2=" + var2 + ", var3=" + var3 + '}';
     }
 
-    
 }

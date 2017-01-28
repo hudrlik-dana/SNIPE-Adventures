@@ -11,11 +11,12 @@ import java.io.Serializable;
  *
  * @author danahudrlik
  */
-public class PhysicalChallenge implements Serializable{
+public class PhysicalChallenge implements Serializable {
+
     //class instance variables
-    private boolean physicalSuccess; 
-    private int challengeNumber; 
-    private int playerRandomNum; 
+    private boolean physicalSuccess;
+    private int challengeNumber;
+    private int playerRandomNum;
 
     public boolean isPhysicalSuccess() {
         return physicalSuccess;
@@ -82,6 +83,4 @@ public class PhysicalChallenge implements Serializable{
         return "PhysicalChallenge{" + "physicalSuccess=" + physicalSuccess + ", challengeNumber=" + challengeNumber + ", playerRandomNum=" + playerRandomNum + '}';
     }
 
-    
-    
 }
