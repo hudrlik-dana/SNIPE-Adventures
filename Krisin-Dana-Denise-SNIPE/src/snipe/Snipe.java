@@ -11,6 +11,7 @@ import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.model.MathPuzzle;
 import byui.cit260.snipe.model.MentalChallenge;
 import byui.cit260.snipe.model.PhysicalChallenge;
+import byui.cit260.snipe.control.ChallengeControl;
 
 /**
  *
@@ -60,7 +61,9 @@ public class Snipe {
 
         System.out.println("You have the " + d1.toString());
 
-
+        //ChallengeControl call calcMathPuzzle with chickens and cows
+        String animals = ChallengeControl.calcMathPuzzle2(74,30);
+    //    System.out.println(animals);
     }
 
 }
