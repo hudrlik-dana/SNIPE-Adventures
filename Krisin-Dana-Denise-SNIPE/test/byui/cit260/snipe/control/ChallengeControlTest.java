@@ -23,9 +23,9 @@ public class ChallengeControlTest {
     @Test
     public void testCalcMathPuzzle2() {
         System.out.println("calcMathPuzzle2");
-        int totalLegs = 0;
-        int totalAnimals = 0;
-        String expResult = "";
+        int totalLegs = 74;
+        int totalAnimals = 30;
+        String expResult = "You have  23 chickens and  7 cows.";
         String result = ChallengeControl.calcMathPuzzle2(totalLegs, totalAnimals);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
