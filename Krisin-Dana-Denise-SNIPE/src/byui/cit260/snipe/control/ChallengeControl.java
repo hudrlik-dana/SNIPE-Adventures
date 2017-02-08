@@ -21,12 +21,10 @@ public class ChallengeControl {
         int numChickens = ((4 * totalAnimals) - totalLegs) / 2;
         int numCows = totalAnimals - numChickens;
         
- 
-        String words  = String.valueOf(numCows);
-        String words2 = String.valueOf(numChickens);
-        words2 = "The Number of chickens is " + words2 + " The number cows is " + words;
+
+    String response = "You have  " + numChickens + " chickens and  " + numCows + " cows.";
         
-        return words2;
+    return response;
     
    }
 

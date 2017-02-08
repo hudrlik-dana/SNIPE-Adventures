@@ -91,8 +91,10 @@ public class Snipe {
         World gameWorld = new World();
         //Couldn't get the list to work and that is all world contains.
 
-        // Call the calcMathPuzzle2 function in ChallengeControl
+        // Call the calcMathPuzzle2 function in ChallengeControl 
         String animals = ChallengeControl.calcMathPuzzle2(74, 30);
+        
+        //prints outs the number chickens and cows 
        
         System.out.println(animals);
         
