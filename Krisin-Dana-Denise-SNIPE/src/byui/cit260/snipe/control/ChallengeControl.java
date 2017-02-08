@@ -14,6 +14,7 @@ import static javafx.beans.binding.Bindings.and;
  */
 public class ChallengeControl {
 
+    
     int totallegs    = 74;
     int totalAnimals = 30;
     
