@@ -16,13 +16,13 @@ import java.util.Objects;
 public class World implements Serializable {
 
     //class instance variables
-    private List <String> countries;
+    private List<Country> countries;
 
-    public List<String> getCountries() {
+    public List<Country> getCountries() {
         return countries;
     }
 
-    public void setCountries(List<String> countries) {
+    public void setCountries(List<Country> countries) {
         this.countries = countries;
     }
       

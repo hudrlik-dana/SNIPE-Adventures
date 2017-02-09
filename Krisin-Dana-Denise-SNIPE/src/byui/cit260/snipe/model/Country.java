@@ -16,16 +16,16 @@ import java.util.Objects;
 public class Country implements Serializable{
     
     //class instance variables
-    private List <String> country;
+    private List <Place> places;
     private String entryPointCode;
     private String entryPointDesc;
 
-    public List<String> getCountry() {
-        return country;
+    public List<Place> getPlaces() {
+        return places;
     }
 
-    public void setCountry(List<String> country) {
-        this.country = country;
+    public void setPlaces(List<Place> places) {
+        this.places = places;
     }
 
     public String getEntryPointCode() {
@@ -52,7 +52,7 @@ public class Country implements Serializable{
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 53 * hash + Objects.hashCode(this.country);
+        hash = 53 * hash + Objects.hashCode(this.places);
         hash = 53 * hash + Objects.hashCode(this.entryPointCode);
         hash = 53 * hash + Objects.hashCode(this.entryPointDesc);
         return hash;
@@ -76,7 +76,7 @@ public class Country implements Serializable{
         if (!Objects.equals(this.entryPointDesc, other.entryPointDesc)) {
             return false;
         }
-        if (!Objects.equals(this.country, other.country)) {
+        if (!Objects.equals(this.places, other.places)) {
             return false;
         }
         return true;
@@ -84,7 +84,7 @@ public class Country implements Serializable{
 
     @Override
     public String toString() {
-        return "Countries{" + "country=" + country + ", entryPointCode=" + entryPointCode + ", entryPointDesc=" + entryPointDesc + '}';
+        return "Countries{" + "places=" + places + ", entryPointCode=" + entryPointCode + ", entryPointDesc=" + entryPointDesc + '}';
     }
     
     
