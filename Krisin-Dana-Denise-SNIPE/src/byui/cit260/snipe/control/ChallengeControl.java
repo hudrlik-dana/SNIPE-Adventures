@@ -14,8 +14,10 @@ import static javafx.beans.binding.Bindings.and;
  *
  * @author denisegoetz
  */
-public class ChallengeControl {
 
+public class ChallengeControl {
+    
+//Team Assignment
     int totallegs = 74;
     int totalAnimals = 30;
 
@@ -28,13 +30,14 @@ public class ChallengeControl {
         return response;
 
     }
-    
+
+//Kristin's Individual Assignment
     Boolean physicalSuccess = null;
-                   
+
     public Boolean physicalChallenge() {
         int randomNumber = 75;
         int challengeNumber = 50;
-                
+
         if (randomNumber > challengeNumber) {
             return physicalSuccess = TRUE;
         } else {
@@ -43,4 +46,30 @@ public class ChallengeControl {
 
     }
 
+//Denise's Individual Assignment
+    int wallHeight = 32;
+    int shadowLength = 60;
+    double distance = 0;
+
+    public double calcMathPuzzle1(int wallHeight, int shadowLength) {
+        distance = Math.sqrt((wallHeight * wallHeight) + (shadowLength * shadowLength));
+
+        return distance;
+    }
+
+//Dana's Individual Assignment
+    //length & width in feet
+    int lengthA = 200; 
+    int widthA = 75;
+    //length & width in inches
+    int lengthB = 6;
+    int widthB = 3;
+    
+    public double calcMathPuzzle3(int lengthA, int widthA, int lengthB, int widthB){
+
+        double totalBricks = ((lengthA*widthA)*12)/(lengthB*widthB);
+        
+        return totalBricks;    
+    }
+    
 }
