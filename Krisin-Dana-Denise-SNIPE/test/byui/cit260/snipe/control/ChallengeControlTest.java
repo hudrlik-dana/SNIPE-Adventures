@@ -5,6 +5,8 @@
  */
 package byui.cit260.snipe.control;
 
+import static java.lang.Boolean.FALSE;
+import static java.lang.Boolean.TRUE;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -30,6 +32,20 @@ public class ChallengeControlTest {
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of physicalChallenge method, of class ChallengeControl.
+     */
+    @Test
+    public void testPhysicalChallenge() {
+        System.out.println("physicalChallenge");
+        ChallengeControl instance = new ChallengeControl();
+        Boolean expResult = TRUE;
+        Boolean result = instance.physicalChallenge();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
     
 }
