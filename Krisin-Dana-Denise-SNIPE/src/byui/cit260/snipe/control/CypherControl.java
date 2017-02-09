@@ -7,7 +7,7 @@ package byui.cit260.snipe.control;
 
 /**
  *
- * @author danahudrlik
+ * @author denisegoetz
  */
 public class CypherControl {
     

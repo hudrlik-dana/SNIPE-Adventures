@@ -5,31 +5,28 @@
  */
 package byui.cit260.snipe.control;
 
+import java.util.Objects;
+import static javafx.beans.binding.Bindings.and;
+
 /**
  *
- * @author danahudrlik
+ * @author denisegoetz
  */
 public class ChallengeControl {
 
-       int totalLegs; 
-       int totalAnimals; 
-     
-    public static String calcMathPuzzle2(int totalAnimals, int totalLegs) {
-        int numChickens = ((totalAnimals * 4) - totalLegs)/2; 
+    
+    int totallegs    = 74;
+    int totalAnimals = 30;
+    
+    public static String calcMathPuzzle2(int totalLegs, int totalAnimals) {
+        int numChickens = ((4 * totalAnimals) - totalLegs) / 2;
         int numCows = totalAnimals - numChickens;
         
-        String response = "You have " + numChickens + " chickens and " + numCows + " cows.";   
+
+    String response = "You have  " + numChickens + " chickens and  " + numCows + " cows.";
         
-        System.out.println(response);
-       
-       return response;
-    }
-}
-   
-
-
-
-      
-
-
+    return response;
     
+   }
+
+}

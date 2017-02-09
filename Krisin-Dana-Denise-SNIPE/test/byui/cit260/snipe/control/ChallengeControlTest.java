@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author danahudrlik
+ * @author Randstad
  */
 public class ChallengeControlTest {
     
@@ -23,12 +23,13 @@ public class ChallengeControlTest {
     @Test
     public void testCalcMathPuzzle2() {
         System.out.println("calcMathPuzzle2");
-        int totalAnimals = 30;
         int totalLegs = 74;
-        String expResult = "You have 23 chickens and 7 cows.";
-        String result = ChallengeControl.calcMathPuzzle2(totalAnimals, totalLegs);
+        int totalAnimals = 30;
+        String expResult = "You have  23 chickens and  7 cows.";
+        String result = ChallengeControl.calcMathPuzzle2(totalLegs, totalAnimals);
         assertEquals(expResult, result);
-
+        // TODO review the generated test code and remove the default call to fail.
+       //fail("The test case is a prototype.");
     }
     
 }

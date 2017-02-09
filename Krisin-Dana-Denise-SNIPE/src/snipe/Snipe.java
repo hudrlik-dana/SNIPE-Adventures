@@ -9,13 +9,15 @@ import byui.cit260.snipe.model.Challenge;
 import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Item;
 import byui.cit260.snipe.model.Map;
-import byui.cit260.snipe.model.Place;
-import byui.cit260.snipe.model.World;
 import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.model.MathPuzzle;
 import byui.cit260.snipe.model.MentalChallenge;
 import byui.cit260.snipe.model.PhysicalChallenge;
+import byui.cit260.snipe.model.Place;
+import byui.cit260.snipe.model.World;
 import byui.cit260.snipe.control.ChallengeControl;
+import java.util.List;
+
 /**
  *
  * @author danahudrlik
@@ -63,9 +65,6 @@ public class Snipe {
 
         System.out.println("You have the " + d1.toString());
 
-        //ChallengeControl call calcMathPuzzle with chickens and cows
-        String animals = ChallengeControl.calcMathPuzzle2(74,30);
-        // System.out.println(animals);
         // These lines are testing classes that Denise added
         Map playerMap = new Map();
         playerMap.setNumCols(7);
@@ -93,12 +92,19 @@ public class Snipe {
         //Couldn't get the list to work and that is all world contains.
 
         // Call the calcMathPuzzle2 function in ChallengeControl 
+
  //       String animals = ChallengeControl.calcMathPuzzle2();
         
         //prints outs the number chickens and cows 
        
  //       System.out.println(animals);
+        String animals = ChallengeControl.calcMathPuzzle2(74, 30);
         
+        //prints outs the number chickens and cows 
+       
+        System.out.println(animals);
+
+
     }
 
 }
