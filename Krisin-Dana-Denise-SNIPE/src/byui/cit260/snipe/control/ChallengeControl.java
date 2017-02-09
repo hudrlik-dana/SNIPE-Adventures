@@ -72,4 +72,51 @@ public class ChallengeControl {
         return totalBricks;    
     }
     
+//Other functions
+
+    
+//Apply Damage
+    int injuryPoints = 10;
+    int playerHealth = 100;
+    int currentHealth = 100;
+    
+    public int adjustPlayerHealth(int currentHealth, int injuryPoints){
+        
+        if (injuryPoints < currentHealth){
+        playerHealth = currentHealth - injuryPoints;
+            return playerHealth;}
+        else{     
+            return playerHealth = 0;
+        }
+                
+    }
+    
+//Results of Player Answer
+    
+    char playerAnswer = 'A';
+    char correctAnswer = 'A';
+    char otherAnswer1 = 'B';
+    char otherAnswer2 = 'C';
+    char otherAnswer3 = 'D';
+    String result = null;
+        
+    public String playerAnswer(char playerAnswer, char correctAnswer, char otherAnswer1, char otherAnswer2, char otherAnswer3){
+        
+        if(playerAnswer == correctAnswer){
+            return result = "Correct";
+        }
+        else if (playerAnswer == otherAnswer1 || playerAnswer == otherAnswer2 || playerAnswer == otherAnswer3){
+           return result = "Incorrect";
+        }
+        else{
+           return result = "Invalid Entry, Try Again";
+        }
+
+    }
+
+
+
+
+    
+    
 }
