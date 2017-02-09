@@ -28,8 +28,7 @@ public class ChallengeControlTest {
         String expResult = "You have  23 chickens and  7 cows.";
         String result = ChallengeControl.calcMathPuzzle2(totalLegs, totalAnimals);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-       //fail("The test case is a prototype.");
+        
     }
     
 }
