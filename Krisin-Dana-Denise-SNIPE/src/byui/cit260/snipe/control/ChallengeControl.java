@@ -22,15 +22,18 @@ public class ChallengeControl {
         return playerAnswer == correctAnswer;
     }
     
+    
+    
+    
+    
+    
 //Team Assignment
-    int totallegs = 74;
-    int totalAnimals = 30;
+    
+    public static String calcMathPuzzle2(double totalLegs, double totalAnimals) {
+        double numChickens = Math.round(((4 * totalAnimals) - totalLegs) / 2);
+        double numCows = Math.round(totalAnimals - numChickens);
 
-    public static String calcMathPuzzle2(int totalLegs, int totalAnimals) {
-        int numChickens = ((4 * totalAnimals) - totalLegs) / 2;
-        int numCows = totalAnimals - numChickens;
-
-        String response = "You have  " + numChickens + " chickens and  " + numCows + " cows.";
+        String response = "You have " + numChickens + " chickens and " + numCows + " cows.";
 
         return response;
 
@@ -63,18 +66,14 @@ public class ChallengeControl {
     //Denise's Individual Assignment
     public double calcMathPuzzle1(int wallHeight, int shadowLength) {
         double distance = 0;
-        distance = Math.sqrt((wallHeight * wallHeight) + (shadowLength * shadowLength));
+        distance = Math.round(Math.sqrt((wallHeight * wallHeight) + (shadowLength * shadowLength)));
 
         return distance;
     }
 
 //Dana's Individual Assignment
-    //length & width in feet
-    int lengthA = 200;
-    int widthA = 75;
-    //length & width in inches
-    int lengthB = 6;
-    int widthB = 3;
+    //A - length & width in feet 
+    //B - length & width in inches
 
     public double calcMathPuzzle3(int lengthA, int widthA, int lengthB, int widthB) {
 
@@ -85,12 +84,11 @@ public class ChallengeControl {
 
 //Other functions
 //Apply Damage
-    int injuryPoints = 10;
-    int playerHealth = 100;
-    int currentHealth = 100;
 
+    int playerHealth;
+            
     public int adjustPlayerHealth(int currentHealth, int injuryPoints) {
-
+        
         if (injuryPoints < currentHealth) {
             playerHealth = currentHealth - injuryPoints;
             return playerHealth;
