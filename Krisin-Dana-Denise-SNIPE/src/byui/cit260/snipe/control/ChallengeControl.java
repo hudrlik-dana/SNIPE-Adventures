@@ -8,14 +8,19 @@ package byui.cit260.snipe.control;
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 import java.util.Objects;
+import java.util.Random;
 import static javafx.beans.binding.Bindings.and;
 
 /**
  *
  * @author denisegoetz
  */
-
 public class ChallengeControl {
+
+    
+    public boolean checkAnswer(double playerAnswer, double correctAnswer) {
+        return playerAnswer == correctAnswer;
+    }
     
 //Team Assignment
     int totallegs = 74;
@@ -31,27 +36,33 @@ public class ChallengeControl {
 
     }
 
-//Kristin's Individual Assignment
-    Boolean physicalSuccess = null;
-
-    public Boolean physicalChallenge() {
-        int randomNumber = 75;
-        int challengeNumber = 50;
-
-        if (randomNumber > challengeNumber) {
-            return physicalSuccess = TRUE;
-        } else {
-            return physicalSuccess = FALSE;
-        }
-
+    public boolean performPhysicalChallenge() {
+        Random rand = new Random();
+        int randomValue = rand.nextInt(100);
+        return physicalChallengeCheck(randomValue, 50); //TODO grab location challenge number
+        //TODO add more logic like removing health, etc.
     }
 
-//Denise's Individual Assignment
-    int wallHeight = 32;
-    int shadowLength = 60;
-    double distance = 0;
+    //Kristin's Individual Assignment
+    public boolean physicalChallengeCheck(int randomNumber, int challengeNumber) {
+        if (randomNumber > challengeNumber) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public void performMathPuzle1() {
+        int wallHeight = 10;
+        int shadowLength = 10;
+        
+        double distance = calcMathPuzzle1(wallHeight, shadowLength);
+        
+    }
 
+    //Denise's Individual Assignment
     public double calcMathPuzzle1(int wallHeight, int shadowLength) {
+        double distance = 0;
         distance = Math.sqrt((wallHeight * wallHeight) + (shadowLength * shadowLength));
 
         return distance;
@@ -59,68 +70,64 @@ public class ChallengeControl {
 
 //Dana's Individual Assignment
     //length & width in feet
-    int lengthA = 200; 
+    int lengthA = 200;
     int widthA = 75;
     //length & width in inches
     int lengthB = 6;
     int widthB = 3;
-    
-    public double calcMathPuzzle3(int lengthA, int widthA, int lengthB, int widthB){
 
-        double totalBricks = ((lengthA*widthA)*12)/(lengthB*widthB);
-        
-        return totalBricks;    
+    public double calcMathPuzzle3(int lengthA, int widthA, int lengthB, int widthB) {
+
+        double totalBricks = ((lengthA * widthA) * 12) / (lengthB * widthB);
+
+        return totalBricks;
     }
-    
-//Other functions
 
-    
+//Other functions
 //Apply Damage
     int injuryPoints = 10;
     int playerHealth = 100;
     int currentHealth = 100;
-    
-    public int adjustPlayerHealth(int currentHealth, int injuryPoints){
-        
-        if (injuryPoints < currentHealth){
-        playerHealth = currentHealth - injuryPoints;
-            return playerHealth;}
-        else{     
+
+    public int adjustPlayerHealth(int currentHealth, int injuryPoints) {
+
+        if (injuryPoints < currentHealth) {
+            playerHealth = currentHealth - injuryPoints;
+            return playerHealth;
+        } else {
             return playerHealth = 0;
         }
-                
+
     }
-    
+
 //Results of Player Answer
-    
     char playerAnswer = 'A';
     char correctAnswer = 'A';
     char otherAnswer1 = 'B';
     char otherAnswer2 = 'C';
     char otherAnswer3 = 'D';
     String result = null;
-        
-    public String playerAnswer(char playerAnswer, char correctAnswer, char otherAnswer1, char otherAnswer2, char otherAnswer3){
-        
-        if(playerAnswer == correctAnswer){
+
+    public String playerAnswer(char playerAnswer, char correctAnswer, char otherAnswer1, char otherAnswer2, char otherAnswer3) {
+
+        if (playerAnswer == correctAnswer) {
             return result = "Correct";
-        }
-        else if (playerAnswer == otherAnswer1 || playerAnswer == otherAnswer2 || playerAnswer == otherAnswer3){
-           return result = "Incorrect";
-        }
-        else{
-           return result = "Invalid Entry, Try Again";
+        } else if (playerAnswer == otherAnswer1 || playerAnswer == otherAnswer2 || playerAnswer == otherAnswer3) {
+            return result = "Incorrect";
+        } else {
+            return result = "Invalid Entry, Try Again";
         }
     }
-  // Get an integer between 1 and 100.
-       
-   int min = 1;
-   int max = 100;
-   int number;
-   public int randomWithRange(int min, int max){
-   int range = (max - min) + 1;   
-   return number = (int)(Math.random() * range) + min;
-   
-   }    
-           
-} 
+    // Get an integer between 1 and 100.
+
+    int min = 1;
+    int max = 100;
+    int number;
+
+    public int randomWithRange(int min, int max) {
+        int range = (max - min) + 1;
+        return number = (int) (Math.random() * range) + min;
+
+    }
+
+}
