@@ -111,12 +111,16 @@ public class ChallengeControl {
         else{
            return result = "Invalid Entry, Try Again";
         }
-
     }
-
-
-
-
-    
-    
-}
+  // Get an integer between 1 and 100.
+       
+   int min = 1;
+   int max = 100;
+   int number;
+   public int randomWithRange(int min, int max){
+   int range = (max - min) + 1;   
+   return number = (int)(Math.random() * range) + min;
+   
+   }    
+           
+} 
