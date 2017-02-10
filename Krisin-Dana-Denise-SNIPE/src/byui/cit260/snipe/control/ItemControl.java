@@ -5,10 +5,12 @@
  */
 package byui.cit260.snipe.control;
 
+import java.util.Random;
+
 /**
  *
  * @author denisegoetz
  */
 public class ItemControl {
-    
+
 }

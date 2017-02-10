@@ -5,6 +5,7 @@
  */
 package byui.cit260.snipe.control;
 
+import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,20 +15,36 @@ import java.util.Random;
  *
  * @author danahudrlik
  */
-
-/**
 public class SandboxTest {
 
-    import java.util.Random ;
-    import java.util.ArrayList ;
-    import java.util.Collections ;
-    import java.util.LinkedList ;
-    import java.util.List ;
+    @Test
+    
+// This is a random name generator for the player code name
+//    public SandboxTest() {
+//    }
 
-    /**
-     *
-     * @author danahudrlik
-     */
+    public static String getCodeName(String[] args) {
+
+//public void Danas() {       
+        //list of first and last names
+        String[] names1 = {"Speedy", "Bright", "Stealthy", "Silent", "Brave", "Dizzy", "Neon", "Red", "Diamond", "Silver"};
+        String[] names2 = {"Unicorn", "Snake", "Ninja", "Lizard", "King", "Tabasco", "Cockroach", "Ladybug", "Dancer", "Tuna"};
+
+        //random generation of one name from names1, and one name from names2
+        Random random = new Random();
+        String firstName = names1[random.nextInt(names1.length)];
+        String lastName = names2[random.nextInt(names2.length)];
+
+        //I couldn't figure out how to make this test without placing it in the GameControl and calling it from Snipe.java
+        //String test = names1[2];
+        //System.out.println(names1 + " " + names2)
+        
+        //returns the code name 
+        return "Your SNIPE code name is " + firstName + " " + lastName + ".";
+
+    }
+}
+
 /*    public class RandomGenerator {
 
 // a list to hold all the names
@@ -142,5 +159,5 @@ public static List<String> getRandomString(List<String> list, int n) {
     }
 }
         
-*/  
+ */  
 // }
