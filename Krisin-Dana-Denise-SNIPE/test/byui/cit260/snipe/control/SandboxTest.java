@@ -14,70 +14,73 @@ import java.util.Random;
  *
  * @author danahudrlik
  */
-public class SandboxTest {
-  
-    import java.util.Random;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
- *
- * @author danahudrlik
- */
-public class RandomGenerator {
+public class SandboxTest {
+
+    import java.util.Random ;
+    import java.util.ArrayList ;
+    import java.util.Collections ;
+    import java.util.LinkedList ;
+    import java.util.List ;
+
+    /**
+     *
+     * @author danahudrlik
+     */
+/*    public class RandomGenerator {
 
 // a list to hold all the names
-    List<String> namesList = new ArrayList<>();
+        List<String> namesList = new ArrayList<>();
 
 // create the full list of names
-    String[] names = {"Awesome", "Dragon", "LadyBug", "Fiercesome", "Iguana", "Sleepy"};
+        String[] names = {"Awesome", "Dragon", "LadyBug", "Fiercesome", "Iguana", "Sleepy"};
 
 // store them into the List
-    
-namesList = new ArrayList(Arrays.asList(names));
- //   randomly get the first part of the name
+        namesList  = new ArrayList(Arrays.asList(names));
+        //   randomly get the first part of the name
 
-    int randomIndex = new Random().nextInt(names.length - 1);
-    String firstName = namesList.get(randomIndex);
-    String lastName = null;
+        int randomIndex = new Random().nextInt(names.length - 1);
+        String firstName = namesList.get(randomIndex);
+        String lastName = null;
 
 // figure out the size remaining
-    int remainSize = 12 - firstName.length();
+        int remainSize = 12 - firstName.length();
 
 // remove the element from the List so I don't get "DragonDragon"
-    namesList.remove (randomIndex);
+        namesList.remove (randomIndex);
 
 // randomly shuffle the list
-    long seed = System.nanoTime();
+        long seed = System.nanoTime();
 
-    Collections.shuffle (namesList,
-            
-    new Random(seed));
+        Collections.shuffle (namesList,
+                
+        new Random(seed));
 
 // for each name, grab the first one that will complete the size 12
 for (String name : namesList
 
-    
-        ) {
+        
+            ) {
     int nameSize = name.length();
 
-        if (nameSize <= remainSize) {
-            lastName = name;
-            break;
+            if (nameSize <= remainSize) {
+                lastName = name;
+                break;
+            }
         }
-    }
 
-    String newName = firstName + lastName;
+        String newName = firstName + lastName;
 
-    System.out.println (
-            
+        System.out.println (
+                
+    
 
 "Generated name: " + newName + ", with size " + newName.length());    
     
    
-}    
+}  
+
 /*    public static String[] random() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -139,8 +142,5 @@ public static List<String> getRandomString(List<String> list, int n) {
     }
 }
         
-*/
-    
-    
-    
-}
+*/  
+// }
