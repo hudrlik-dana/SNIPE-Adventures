@@ -77,8 +77,8 @@ public class ChallengeControl {
 
     public double calcMathPuzzle3(int lengthA, int widthA, int lengthB, int widthB) {
 
-        double totalBricks = ((lengthA * widthA) * 12) / (lengthB * widthB);
-
+        double totalBricks = Math.round(((lengthA * widthA) * 12) / (lengthB * widthB));
+                
         return totalBricks;
     }
 
