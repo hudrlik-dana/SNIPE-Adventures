@@ -16,8 +16,6 @@ import byui.cit260.snipe.model.PhysicalChallenge;
 import byui.cit260.snipe.model.Place;
 import byui.cit260.snipe.model.World;
 import byui.cit260.snipe.control.ChallengeControl;
-import byui.cit260.snipe.control.RandomGenerator;
-import static byui.cit260.snipe.control.RandomGenerator.random;
 import java.util.List;
 import java.util.Random;
 import java.util.ArrayList;
@@ -107,11 +105,6 @@ public class Snipe {
        
         System.out.println(animals);
 
-        
-        
-     //   String names1[];
-        String names1 [] = RandomGenerator.random();
-        System.out.println(names1[new Random().nextInt(names1.length)]);
     }
 }
 

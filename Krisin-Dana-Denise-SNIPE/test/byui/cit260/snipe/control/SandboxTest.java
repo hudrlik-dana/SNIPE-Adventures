@@ -5,7 +5,18 @@
  */
 package byui.cit260.snipe.control;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
+
+/**
+ *
+ * @author danahudrlik
+ */
+public class SandboxTest {
+  
+    import java.util.Random;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -129,3 +140,7 @@ public static List<String> getRandomString(List<String> list, int n) {
 }
         
 */
+    
+    
+    
+}
