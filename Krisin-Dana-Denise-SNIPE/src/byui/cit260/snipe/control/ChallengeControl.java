@@ -82,7 +82,7 @@ public class ChallengeControl {
         return totalBricks;
     }
 
-//Other functions
+//Other functions 
 //Apply Damage
 
     int playerHealth;
