@@ -11,4 +11,12 @@ package byui.cit260.snipe.control;
  */
 public class GameControl {
     
+
 }
+
+    
+    
+    
+    
+    
+
