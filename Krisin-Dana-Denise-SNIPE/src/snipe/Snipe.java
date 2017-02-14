@@ -16,8 +16,10 @@ import byui.cit260.snipe.model.PhysicalChallenge;
 import byui.cit260.snipe.model.Place;
 import byui.cit260.snipe.model.World;
 import byui.cit260.snipe.control.ChallengeControl;
+import byui.cit260.snipe.control.GameControl;
 import java.util.List;
-
+import java.util.Random;
+import java.util.ArrayList;
 /**
  *
  * @author danahudrlik
@@ -92,14 +94,16 @@ public class Snipe {
         //Couldn't get the list to work and that is all world contains.
 
         // Call the calcMathPuzzle2 function in ChallengeControl 
-        String animals = ChallengeControl.calcMathPuzzle2(74, 30);
-        
+        //       String animals = ChallengeControl.calcMathPuzzle2();
         //prints outs the number chickens and cows 
-       
+        //       System.out.println(animals);
+        String animals = ChallengeControl.calcMathPuzzle2(74, 30);
+
+        //prints outs the number chickens and cows 
         System.out.println(animals);
         
-
-        //End of Denise Code
-    }
-
+        //prints out the player's codeName
+        String codeName = GameControl.getCodeName(args);
+        System.out.println(codeName);
+    }  
 }

@@ -13,7 +13,7 @@ import static javafx.beans.binding.Bindings.and;
 
 /**
  *
- * @author denisegoetz
+ * @author dana.hudrlik
  */
 public class ChallengeControl {
 
@@ -74,7 +74,7 @@ public class ChallengeControl {
         return totalBricks;
     }
 
-//Other functions
+//Other functions 
 //Apply Damage
     int playerHealth;
 
@@ -118,5 +118,8 @@ public class ChallengeControl {
         return number = (int) (Math.random() * range) + min;
 
     }
-
 }
+        
+ 
+
+
