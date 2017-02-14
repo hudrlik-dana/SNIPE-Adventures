@@ -17,18 +17,11 @@ import static javafx.beans.binding.Bindings.and;
  */
 public class ChallengeControl {
 
-    
     public boolean checkAnswer(double playerAnswer, double correctAnswer) {
         return playerAnswer == correctAnswer;
     }
-    
-    
-    
-    
-    
-    
+
 //Team Assignment
-    
     public static String calcMathPuzzle2(double totalLegs, double totalAnimals) {
         double numChickens = Math.round(((4 * totalAnimals) - totalLegs) / 2);
         double numCows = Math.round(totalAnimals - numChickens);
@@ -54,13 +47,13 @@ public class ChallengeControl {
             return false;
         }
     }
-    
+
     public void performMathPuzle1() {
         int wallHeight = 10;
         int shadowLength = 10;
-        
+
         double distance = calcMathPuzzle1(wallHeight, shadowLength);
-        
+
     }
 
     //Denise's Individual Assignment
@@ -74,21 +67,19 @@ public class ChallengeControl {
 //Dana's Individual Assignment
     //A - length & width in feet 
     //B - length & width in inches
-
     public double calcMathPuzzle3(int lengthA, int widthA, int lengthB, int widthB) {
 
         double totalBricks = Math.round(((lengthA * widthA) * 12) / (lengthB * widthB));
-                
+
         return totalBricks;
     }
 
 //Other functions
 //Apply Damage
-
     int playerHealth;
-            
+
     public int adjustPlayerHealth(int currentHealth, int injuryPoints) {
-        
+
         if (injuryPoints < currentHealth) {
             playerHealth = currentHealth - injuryPoints;
             return playerHealth;
