@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.snipe.view;
 
 import java.util.Scanner;
@@ -12,12 +11,8 @@ import java.util.Scanner;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public class GameMenuView {
-    
-    void displayMenu() {
-            System.out.println("\n*** displayMenu stub function called ***");
-        }
-    /*
+public class TravelMenuView {
+
     private final String menu;
 
     public TravelMenuView() {
@@ -131,6 +126,4 @@ public class GameMenuView {
     }
 
 //System.out.println("\n*** functionName stub function called ***");
-*/
 }
-
