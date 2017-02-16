@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.GameControl;
@@ -14,6 +15,7 @@ import snipe.Snipe;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
+
 public class MainMenuView {
 
     private String menu;
@@ -98,6 +100,7 @@ doAction(choice): void
         RETURN false
     END
 */
+    
     private boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
@@ -125,9 +128,7 @@ doAction(choice): void
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;   
         }
-
         return false;
-
     }
 
     private void startSavedGame() {
@@ -162,6 +163,5 @@ doAction(choice): void
         System.out.println("\n*** exitGame() function called ***");
     }
 
-    
 //System.out.println("\n*** functionName() function called ***");
 }

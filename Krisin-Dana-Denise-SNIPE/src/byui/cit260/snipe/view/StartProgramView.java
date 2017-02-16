@@ -57,12 +57,8 @@ public class StartProgramView {
         );
 
     }
-
     
-         //displays the start program view 
-    
-    public void displayStartProgramView() {
-/*  
+  /*  
     Basic template for displaying a view: 
     BEGIN
         do
@@ -74,10 +70,11 @@ public class StartProgramView {
         
         while the veiw is not done
     END
-*/
+*/      
+    
+    public void displayStartProgramView() { 
+        //displays the start program view 
         
-        
-
         boolean done = false; //set flag to not done
         do {
             //prompt for and get player's name
@@ -90,7 +87,6 @@ public class StartProgramView {
             done = this.doAction(playerName);
 
         } while (!done);
-
     }
 
     /*
@@ -132,10 +128,8 @@ public class StartProgramView {
             }
             break; //end the loop
         }
-
         return value; //return entered value
     }
-
     
     /*
     doAction(playersName): boolean
@@ -176,6 +170,7 @@ public class StartProgramView {
 
         return true; //Success! 
     }
+    
 /*
     displayNextView(player): Player
     BEGIN
@@ -185,6 +180,7 @@ public class StartProgramView {
         Display the MainMenuView
     END
 */
+    
     private void displayNextView(Player player) {
         
         //display a custom welcome message

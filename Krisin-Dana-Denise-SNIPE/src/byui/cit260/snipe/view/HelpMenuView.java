@@ -12,6 +12,7 @@ import java.util.Scanner;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
+
 public class HelpMenuView {
 
     private final String menu;
@@ -54,7 +55,6 @@ public class HelpMenuView {
                 + "\n M - Main Menu"
                 + "\n-----------------------------------------------------------";
     }
-
     
     /*  
     Basic template for displaying a view: 
@@ -102,7 +102,6 @@ public class HelpMenuView {
             }
             break; //end the loop
         }
-
         return value; //return entered value
     }
 
@@ -136,9 +135,7 @@ doAction(choice): void
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
-
         return false;
-
     }
     
     private void displayMainMenu() {
@@ -151,5 +148,5 @@ doAction(choice): void
         System.out.println("\n*** displayPlayerCurrentScene stub function called ***");
     }
     
-     //System.out.println("\n*** functionName() function called ***");
+    //System.out.println("\n*** functionName() function called ***");
 }
