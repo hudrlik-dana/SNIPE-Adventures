@@ -20,8 +20,11 @@ public class StartProgramView {
     private String promptMessage;
 
     public StartProgramView() {
+        //promptMessage = "Please enter your name"
+        
         this.promptMessage = "\nPlease enter your name:";
-        //display banner
+        //display banner when view is created
+        
         this.displayBanner();
     }
 
@@ -55,14 +58,32 @@ public class StartProgramView {
 
     }
 
+    
+         //displays the start program view 
+    
     public void displayStartProgramView() {
+/*  
+    Basic template for displaying a view: 
+    BEGIN
+        do
+            prompt for and get playersName
+            if playersName =='X'  *typically 'Q', our game menu is 'X'
+                return
+        
+        do  requested action and display next view
+        
+        while the veiw is not done
+    END
+*/
+        
+        
 
         boolean done = false; //set flag to not done
         do {
             //prompt for and get player's name
             String playerName = this.getPlayerName();
-            if (playerName.toUpperCase().equals("X")) //user wants to quit
-            {
+            if (playerName.toUpperCase().equals("X")) {//user wants to quit
+            
                 return; //exit the game
             }
             //do the requested action and display the next view
@@ -72,6 +93,28 @@ public class StartProgramView {
 
     }
 
+    /*
+    Template for getting user input - prompt for and get user input
+        getInput(): value
+        BEGIN
+            WHILE a valid value has not been entered
+                DISPLAY a message prompting the user to enter a value
+                GET the value entered from the keyboard
+                Trim front and trailing blanks off of the value
+    
+                IF the length of the value is blank or <1  THEN
+                    DISPLAY "Invalid value: The value cannot be blank"
+                    CONTINUE
+                ENDIF
+    
+                BREAK
+    
+            ENDWHILE
+    
+            RETURN value
+        END
+    */
+    
     private String getPlayerName() {
         Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         String value = ""; //value to be returned
@@ -85,6 +128,7 @@ public class StartProgramView {
 
             if (value.length() < 1) { // value is blank
                 System.out.println("\nInvalid: name cannot be blank");
+                continue;
             }
             break; //end the loop
         }
@@ -92,10 +136,30 @@ public class StartProgramView {
         return value; //return entered value
     }
 
+    
+    /*
+    doAction(playersName): boolean
+    BEGIN
+        IF the length of the playersName < 2 THEN
+            display "Invalid name: The name must be > 1 character"
+            RETURN false
+    
+        create Player with specified name
+        IF unsuccessful THEN
+            display "Invalid name: The name is too short"
+            RETURN false
+    
+        display customized welcome message
+        display mainMenuView
+    
+        RETURN true
+    END
+    */
+    
     private boolean doAction(String playerName) {
 
         if (playerName.length() < 2) {
-            System.out.println("\nInvalid: Your name must be more than one character in length.");
+            System.out.println("\nInvalid players name: Your name must be more than one character in length.");
             return false;
         }
 
@@ -106,12 +170,24 @@ public class StartProgramView {
             System.out.println("\nError creating the player");
             return false;
         }
+        
+        //display next view
         this.displayNextView(player);
 
         return true; //Success! 
     }
-
+/*
+    displayNextView(player): Player
+    BEGIN
+        Print a customized welcome message
+    
+        Create a MainMenuView
+        Display the MainMenuView
+    END
+*/
     private void displayNextView(Player player) {
+        
+        //display a custom welcome message
         System.out.println("\n****************************************************************"
                           +"\n Welcome, " + player.getName() + " to your final training"
                           +"\n at the S.N.I.P.E. Academy. Successful completion is required"
@@ -129,10 +205,5 @@ public class StartProgramView {
         mainMenuView.displayMenuView();
     }
 
-    
-    
-    
-    
-    
 //System.out.println("\n*** functionName() function called ***");
 }

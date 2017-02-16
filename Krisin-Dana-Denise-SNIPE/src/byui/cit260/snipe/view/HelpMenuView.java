@@ -55,6 +55,21 @@ public class HelpMenuView {
                 + "\n-----------------------------------------------------------";
     }
 
+    
+    /*  
+    Basic template for displaying a view: 
+    BEGIN
+        do
+            prompt for and get input value/s
+            if (value == "X") THEN
+                exit
+        
+        do  the action and display the next view
+        
+        while the view is not done
+    END
+*/
+    
     public void displayMenu() {
 
         boolean done = false; //set flag to not done
@@ -83,6 +98,7 @@ public class HelpMenuView {
 
             if (value.length() < 1) { // value is blank
                 System.out.println("\nInvalid: entry required.");
+                continue;
             }
             break; //end the loop
         }
@@ -90,6 +106,21 @@ public class HelpMenuView {
         return value; //return entered value
     }
 
+    /*
+doAction(choice): void
+    BEGIN
+        convert choice to uppercase
+        SWITCH choice
+            "A":  description();
+                break; 
+            "B":  description();
+                break;
+        DEFAULT:DISPLAY "Invalid selection"
+        ENDSWITCH
+        RETURN false
+    END
+*/
+    
     private boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
