@@ -11,7 +11,7 @@ import snipe.Snipe;
 
 /**
  *
- * @author denisegoetz
+ * @author danahudrlik
  */
 
 /*
@@ -54,11 +54,9 @@ public class GameControl {
         String lastName = names2[random.nextInt(names2.length)];
 
         return "Your SNIPE code name is " + firstName + " " + lastName + ".";
-
     }
 
     public static void createNewGame(Player player) {
         System.out.println("\n*** createNewGame stub function called ***");
     }
-
 }
