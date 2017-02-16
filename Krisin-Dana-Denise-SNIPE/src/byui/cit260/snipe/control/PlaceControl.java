@@ -7,8 +7,9 @@ package byui.cit260.snipe.control;
 
 /**
  *
- * @author denisegoetz
- */
+<<<<<<< HEAD
+ * @author danahudrlik
+*/
 public class PlaceControl {
     
 }

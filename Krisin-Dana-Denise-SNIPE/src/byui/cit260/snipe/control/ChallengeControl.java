@@ -13,24 +13,20 @@ import static javafx.beans.binding.Bindings.and;
 
 /**
  *
- * @author denisegoetz
+ * @author dana.hudrlik
  */
 public class ChallengeControl {
 
-    
     public boolean checkAnswer(double playerAnswer, double correctAnswer) {
         return playerAnswer == correctAnswer;
     }
-    
+
 //Team Assignment
-    int totallegs = 74;
-    int totalAnimals = 30;
+    public static String calcMathPuzzle2(double totalLegs, double totalAnimals) {
+        double numChickens = Math.round(((4 * totalAnimals) - totalLegs) / 2);
+        double numCows = Math.round(totalAnimals - numChickens);
 
-    public static String calcMathPuzzle2(int totalLegs, int totalAnimals) {
-        int numChickens = ((4 * totalAnimals) - totalLegs) / 2;
-        int numCows = totalAnimals - numChickens;
-
-        String response = "You have  " + numChickens + " chickens and  " + numCows + " cows.";
+        String response = "You have " + numChickens + " chickens and " + numCows + " cows.";
 
         return response;
 
@@ -51,43 +47,36 @@ public class ChallengeControl {
             return false;
         }
     }
-    
+
     public void performMathPuzle1() {
         int wallHeight = 10;
         int shadowLength = 10;
-        
+
         double distance = calcMathPuzzle1(wallHeight, shadowLength);
-        
+
     }
 
     //Denise's Individual Assignment
     public double calcMathPuzzle1(int wallHeight, int shadowLength) {
         double distance = 0;
-        distance = Math.sqrt((wallHeight * wallHeight) + (shadowLength * shadowLength));
+        distance = Math.round(Math.sqrt((wallHeight * wallHeight) + (shadowLength * shadowLength)));
 
         return distance;
     }
 
 //Dana's Individual Assignment
-    //length & width in feet
-    int lengthA = 200;
-    int widthA = 75;
-    //length & width in inches
-    int lengthB = 6;
-    int widthB = 3;
-
+    //A - length & width in feet 
+    //B - length & width in inches
     public double calcMathPuzzle3(int lengthA, int widthA, int lengthB, int widthB) {
 
-        double totalBricks = ((lengthA * widthA) * 12) / (lengthB * widthB);
+        double totalBricks = Math.round(((lengthA * widthA) * 12) / (lengthB * widthB));
 
         return totalBricks;
     }
 
-//Other functions
+//Other functions 
 //Apply Damage
-    int injuryPoints = 10;
-    int playerHealth = 100;
-    int currentHealth = 100;
+    int playerHealth;
 
     public int adjustPlayerHealth(int currentHealth, int injuryPoints) {
 
@@ -129,5 +118,8 @@ public class ChallengeControl {
         return number = (int) (Math.random() * range) + min;
 
     }
-
 }
+        
+ 
+
+
