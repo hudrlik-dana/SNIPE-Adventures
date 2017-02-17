@@ -23,7 +23,7 @@ public class SandboxTest {
 //    public SandboxTest() {
 //    }
 
-    public static String getCodeName(String[] args) {
+/*    public static String getCodeName(String[] args) {
 
 //public void Danas() {       
         //list of first and last names
@@ -44,7 +44,7 @@ public class SandboxTest {
 
     }
 }
-
+*/
 /*    public class RandomGenerator {
 
 // a list to hold all the names

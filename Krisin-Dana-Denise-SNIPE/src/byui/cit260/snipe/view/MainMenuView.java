@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.GameControl;
+//import byui.cit260.snipe.view.GameMenuView;
 import java.util.Scanner;
 import snipe.Snipe;
 
@@ -13,6 +15,7 @@ import snipe.Snipe;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
+
 public class MainMenuView {
 
     private String menu;
@@ -31,13 +34,29 @@ public class MainMenuView {
                 + "\n--------------------------------";
     }
 
+/*  
+    Basic template for displaying a view: 
+    BEGIN
+        do
+            prompt for and get input value/s
+            if (value == "X") THEN
+                exit
+        
+        do  the action and display the next view
+        
+        while the view is not done
+    END
+*/
+    
+    // displays the start program view
     public void displayMenuView() {
 
         boolean done = false; //set flag to not done
         do {
+            // prompt for and get players name
             String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("X")) {
-                return;
+            if (menuOption.toUpperCase().equals("X")) {  //user wants to quit
+                return;    //exit the game
             }
 
             //do the requested action and display the next view
@@ -59,6 +78,7 @@ public class MainMenuView {
 
             if (value.length() < 1) { // value is blank
                 System.out.println("\nInvalid: entry required.");
+                continue;
             }
             break; //end the loop
         }
@@ -66,11 +86,26 @@ public class MainMenuView {
         return value; //return entered value
     }
 
+/*
+doAction(choice): void
+    BEGIN
+        convert choice to uppercase
+        SWITCH choice
+            "A":  description();
+                break; 
+            "B":  description();
+                break;
+        DEFAULT:DISPLAY "Invalid selection"
+        ENDSWITCH
+        RETURN false
+    END
+*/
+    
     private boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
-        switch (choice) {
+        switch (choice) {   
             case "L": //Load Saved Game
                 this.startSavedGame();
                 break;
@@ -89,13 +124,11 @@ public class MainMenuView {
             case "X": //Exit Game
                 this.exitGame();
                 break;
-            default:
+            default:      
                 System.out.println("\n*** Invalid Selection *** Try Again");
-                break;
+                break;   
         }
-
         return false;
-
     }
 
     private void startSavedGame() {
@@ -106,8 +139,9 @@ public class MainMenuView {
         //create new game
         GameControl.createNewGame(Snipe.getPlayer());
         
-        //display the game menu
+        //display the game menu view
         GameMenuView gameMenu = new GameMenuView();
+        //display the game menu
         gameMenu.displayMenu();
     }
 
@@ -129,6 +163,5 @@ public class MainMenuView {
         System.out.println("\n*** exitGame() function called ***");
     }
 
-    
 //System.out.println("\n*** functionName() function called ***");
 }

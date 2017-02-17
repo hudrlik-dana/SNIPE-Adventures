@@ -11,8 +11,23 @@ import snipe.Snipe;
 
 /**
  *
- * @author denisegoetz
+ * @author danahudrlik
  */
+
+/*
+createPlayer(name): Player
+BEGIN
+    IF (name == null ) THEN
+        RETURN null
+
+    Create Player object
+    Set the name in the player object
+    Save the Player as a global variable
+END
+
+null value is used for String; -1 is used for int
+*/
+
 public class GameControl {
 
     public static Player createPlayer(String name) {
@@ -39,11 +54,9 @@ public class GameControl {
         String lastName = names2[random.nextInt(names2.length)];
 
         return "Your SNIPE code name is " + firstName + " " + lastName + ".";
-
     }
 
     public static void createNewGame(Player player) {
         System.out.println("\n*** createNewGame stub function called ***");
     }
-
 }

@@ -12,6 +12,7 @@ import java.util.Scanner;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
+
 public class HelpMenuView {
 
     private final String menu;
@@ -54,7 +55,21 @@ public class HelpMenuView {
                 + "\n M - Main Menu"
                 + "\n-----------------------------------------------------------";
     }
-
+    
+    /*  
+    Basic template for displaying a view: 
+    BEGIN
+        do
+            prompt for and get input value/s
+            if (value == "X") THEN
+                exit
+        
+        do  the action and display the next view
+        
+        while the view is not done
+    END
+*/
+    
     public void displayMenu() {
 
         boolean done = false; //set flag to not done
@@ -83,13 +98,28 @@ public class HelpMenuView {
 
             if (value.length() < 1) { // value is blank
                 System.out.println("\nInvalid: entry required.");
+                continue;
             }
             break; //end the loop
         }
-
         return value; //return entered value
     }
 
+    /*
+doAction(choice): void
+    BEGIN
+        convert choice to uppercase
+        SWITCH choice
+            "A":  description();
+                break; 
+            "B":  description();
+                break;
+        DEFAULT:DISPLAY "Invalid selection"
+        ENDSWITCH
+        RETURN false
+    END
+*/
+    
     private boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
@@ -105,9 +135,7 @@ public class HelpMenuView {
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
-
         return false;
-
     }
     
     private void displayMainMenu() {
@@ -120,5 +148,5 @@ public class HelpMenuView {
         System.out.println("\n*** displayPlayerCurrentScene stub function called ***");
     }
     
-     //System.out.println("\n*** functionName() function called ***");
+    //System.out.println("\n*** functionName() function called ***");
 }
