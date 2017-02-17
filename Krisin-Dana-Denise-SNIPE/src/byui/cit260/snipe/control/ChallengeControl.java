@@ -76,8 +76,8 @@ public class ChallengeControl {
 
 //Other functions 
 //Apply Damage
-    int playerHealth;
-
+    int playerHealth = 100;
+    
     public int adjustPlayerHealth(int currentHealth, int injuryPoints) {
 
         if (injuryPoints < currentHealth) {
@@ -90,13 +90,9 @@ public class ChallengeControl {
     }
 
 //Results of Player Answer
-    char playerAnswer = 'A';
-    char correctAnswer = 'A';
-    char otherAnswer1 = 'B';
-    char otherAnswer2 = 'C';
-    char otherAnswer3 = 'D';
+    
     String result = null;
-
+    
     public String playerAnswer(char playerAnswer, char correctAnswer, char otherAnswer1, char otherAnswer2, char otherAnswer3) {
 
         if (playerAnswer == correctAnswer) {
@@ -109,11 +105,8 @@ public class ChallengeControl {
     }
     // Get an integer between 1 and 100.
 
-    int min = 1;
-    int max = 100;
-    int number;
 
-    public int randomWithRange(int min, int max) {
+    public int randomWithRange(int min, int max, int number) {
         int range = (max - min) + 1;
         return number = (int) (Math.random() * range) + min;
 
