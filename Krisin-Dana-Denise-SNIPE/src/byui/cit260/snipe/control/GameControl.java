@@ -11,7 +11,7 @@ import snipe.Snipe;
 
 /**
  *
- * @author danahudrlik
+ * @author dana.hudrlik
  */
 
 /*

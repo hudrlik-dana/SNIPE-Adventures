@@ -9,7 +9,7 @@ import java.util.Random;
 
 /**
  *
- * @author denisegoetz
+ * @author dana.hudrlik
  */
 public class ItemControl {
 
