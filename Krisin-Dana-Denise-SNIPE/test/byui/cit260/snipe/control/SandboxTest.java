@@ -17,7 +17,7 @@ import java.util.Random;
  */
 public class SandboxTest {
 
-    @Test
+//    @Test
     
 // This is a random name generator for the player code name
 //    public SandboxTest() {
@@ -160,4 +160,4 @@ public static List<String> getRandomString(List<String> list, int n) {
 }
         
  */  
-// }
+ }
