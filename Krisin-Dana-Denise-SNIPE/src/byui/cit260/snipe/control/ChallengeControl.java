@@ -103,8 +103,8 @@ public class ChallengeControl {
             return result = "Invalid Entry, Try Again";
         }
     }
+    
     // Get an integer between 1 and 100.
-
 
     public int randomWithRange(int min, int max, int number) {
         int range = (max - min) + 1;
