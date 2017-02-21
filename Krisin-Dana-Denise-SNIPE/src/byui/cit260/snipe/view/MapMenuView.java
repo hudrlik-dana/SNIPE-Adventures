@@ -12,21 +12,43 @@ import java.util.Scanner;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public class GameMenuView {
-    
+public class MapMenuView {
+
     private final String menu;
 
-    public GameMenuView() {
+    public MapMenuView() {
         this.menu = "\n"
                 + "\n-----------------------------------------------------------"
-                + "\n Game Menu                                                "
+                + "\n Map Menu                                                "
                 + "\n-----------------------------------------------------------"
                 + "\n"
-                + "\n D - View Dossier List"
-                + "\n C - View Collected Codes"
-                + "\n P - View Player Health"
+                + "Countries to Choose\n" +
+                    "________________ _______________ _______________ _______________ _______________ _______________ _______________ _______________ ________________\n" +
+                    "|*USA		|Germany	|England	|Spain	 	|France		|Canada		|Brazil		|Australia	|Russia		|\n" +
+                    "|		|		|		|		|		|		|		|		|		|\n" +
+                    "|		|		|		|		|		|		|		|		|		|\n" +
+                    "________________ _______________ _______________ _______________ _______________ _______________ _______________ _______________ ________________\n" +
+                    "\n" +
+                    "Locations within Countries\n" +
+                    "________________ _______________ _______________ _______________ _______________ _______________ _______________ _______________ ________________\n" +
+                    "|*USA - Snipe	|Germany -	|England - 	|Spain	- 	|France - 	|Canada -	|Brazil - 	|Australia - 	|Russia - 	|\n" +
+                    "|Academy	|Berlin Wall	|Big Ben	|Tarragona	|Eiffel Tower	|Montreal	|Beach (Rio de	|Sydney Opera	|St Peter's	|\n" +
+                    "|		|		|		|		|		|Olympic Stadium|Janeiro)	|House		|Square		|\n" +
+                    "---------------- --------------- --------------- --------------- --------------- --------------- --------------- --------------- ---------------- \n" +
+                    "|*USA - 	|Germany -	|England -	|Spain -  	|France - 	|Canada -	|Brazil - 	|Australia - 	|Russia - 	|\n" +
+                    "|Library of	|Cologne 	|Westminster	|Cathedral of	|The Louvre	|Library of	|Amazon Forest	|Old Melbourne	|Lenin's	|\n" +
+                    "|Congress	|Cathedral	|Abbey		|Seville	|		|Parliament	|		|Jail		|Mausoleum	|\n" +
+                    "---------------- --------------- --------------- --------------- --------------- --------------- --------------- --------------- ----------------\n" +
+                    "|*USA - 	|Germany - 	|England -	|Spain -  	|France - 	|Canada -	|Brazil - 	|Australia - 	|Russia - 	|\n" +
+                    "|Gateway Arch	|Rhine River	|Buckingham	|Valencia	|A Sidewalk	|CN Tower	|Sao Paulo	|Bridge		|St Basil's	|\n" +
+                    "|		|		|Palace		|		|Cafe		|		|(Capital)	|		|Cathedral	|\n" +
+                    "________________ _______________ _______________ _______________ _______________ _______________ _______________ _______________ ________________\n" +
+                    "\n" +
+                    "\n"
+                + "\n "
+                + "\n **************"
                 + "\n T - Travel"
-                + "\n V - View Map"
+                + "\n P - View Passport"
                 + "\n M - Main Menu"
                 + "\n H - Help Menu"
                 + "\n-----------------------------------------------------------";
@@ -72,20 +94,11 @@ public class GameMenuView {
         choice = choice.toUpperCase(); //convert choice to upper case
 
         switch (choice) {
-            case "D": //Travel to first location
-                this.displayDossierListView();
-                break;
-            case "C": //Travel to second location
-                this.displayCollectedCodesView();
-                break;
-            case "P": //Travel to third location
-                this.displayPlayerHealthView();
-                break;
-            case "T": //display the TravelMenu
+            case "T": //display the Travel Menu
                 this.displayTravelMenuView();
                 break;
-            case "V": //display the map
-                this.displayMap();
+            case "P": //display the passport list
+                this.displayPassportList();
                 break;
             case "M": //Return to Main Menu
                 this.displayMainMenu();
@@ -113,34 +126,16 @@ public class GameMenuView {
         helpMenu.displayMenuView();
     }
 
-    private void displayMap() {
-        //display the travel menu
-        MapMenuView mapMenu = new MapMenuView();
-        mapMenu.displayMenuView();
-    }
-
     private void displayTravelMenuView() {
         //display the travel menu
         TravelMenuView travelMenu = new TravelMenuView();
         travelMenu.displayMenuView();
     }
 
-    private void displayPlayerHealthView() {
-        System.out.println("\n*** displayPlayerHealthView stub function called ***");
+    private void displayPassportList() {
+        System.out.println("\n*** displayPassportList stub function called ***");
     }
-
-    private void displayCollectedCodesView() {
-        System.out.println("\n*** displayCollectedCodesView stub function called ***");
-    }
-
-    private void displayDossierListView() {
-        System.out.println("\n*** displayDossierListView stub function called ***");
-    }
-    
+       
     
 //System.out.println("\n*** functionName stub function called ***");
 }
-
-
-
-

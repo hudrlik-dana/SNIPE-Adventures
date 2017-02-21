@@ -108,6 +108,12 @@ public class TravelMenuView {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.displayMenuView();
     }
+    
+        private void displayMap() {
+        //display the travel menu
+        MapMenuView mapMenu = new MapMenuView();
+        mapMenu.displayMenuView();
+    }
 
     private void displayPlaceOne() {
         System.out.println("\n*** displayPlaceOne stub function called ***");
@@ -121,9 +127,7 @@ public class TravelMenuView {
         System.out.println("\n*** displayPlaceThree stub function called ***");
     }
 
-    private void displayMap() {
-        System.out.println("\n*** displayMap stub function called ***");
-    }
+
 
 //System.out.println("\n*** functionName stub function called ***");
 }
