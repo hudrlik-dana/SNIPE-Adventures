@@ -14,8 +14,8 @@ import java.util.Scanner;
  */
 public class GameMenuView {
     
-    void displayMenu() {
-            System.out.println("\n*** displayMenu stub function called ***");
+    void displayMenuView() {
+            System.out.println("\n*** displayMenuView stub function called ***");
         }
     /*
     private final String menu;
@@ -36,7 +36,7 @@ public class GameMenuView {
                 + "\n-----------------------------------------------------------";
     }
 
-    public void displayMenu() {
+    public void displayMenuView() {
 
         boolean done = false; //set flag to not done
         do {
@@ -111,7 +111,7 @@ public class GameMenuView {
     private void displayHelpMenu() {
         //display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenu();
+        helpMenu.displayMenuView();
     }
 
     private void displayPlaceOne() {

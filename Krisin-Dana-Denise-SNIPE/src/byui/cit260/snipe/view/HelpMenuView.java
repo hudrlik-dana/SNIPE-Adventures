@@ -70,7 +70,7 @@ public class HelpMenuView {
     END
 */
     
-    public void displayMenu() {
+    public void displayMenuView() {
 
         boolean done = false; //set flag to not done
         do {

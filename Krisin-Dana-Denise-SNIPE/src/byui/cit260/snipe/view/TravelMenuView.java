@@ -31,7 +31,7 @@ public class TravelMenuView {
                 + "\n-----------------------------------------------------------";
     }
 
-    public void displayMenu() {
+    public void displayMenuView() {
 
         boolean done = false; //set flag to not done
         do {
@@ -106,7 +106,7 @@ public class TravelMenuView {
     private void displayHelpMenu() {
         //display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenu();
+        helpMenu.displayMenuView();
     }
 
     private void displayPlaceOne() {

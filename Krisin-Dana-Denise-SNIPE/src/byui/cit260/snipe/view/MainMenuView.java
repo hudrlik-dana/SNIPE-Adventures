@@ -156,7 +156,7 @@ doAction(choice): void
     private void displayHelpMenu() {
         //display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenu();
+        helpMenu.displayMenuView();
     }
 
     private void exitGame() {
