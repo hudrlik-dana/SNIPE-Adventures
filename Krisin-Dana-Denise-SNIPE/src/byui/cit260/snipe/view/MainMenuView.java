@@ -142,7 +142,7 @@ doAction(choice): void
         //display the game menu view
         GameMenuView gameMenu = new GameMenuView();
         //display the game menu
-        gameMenu.displayMenu();
+        gameMenu.displayMenuView();
     }
 
     private void saveGame() {
