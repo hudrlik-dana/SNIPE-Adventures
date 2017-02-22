@@ -16,4 +16,11 @@ public class PlayerHealthView {
             System.out.println("\n*** displayMenuView stub function called ***");
         }
 
+    /* your health is: 
+    display 
+    menu options
+    congratulations you are still alive! 
+    */
+    
+    
 }
