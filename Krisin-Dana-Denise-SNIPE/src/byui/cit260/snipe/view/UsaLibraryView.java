@@ -22,9 +22,6 @@ public class UsaLibraryView {
                 + "\n USA - Library of Congress"
                 + "\n-----------------------------------------------------------"
                 + "\n "
-                + "\n complete the final mission."
-                + "\n "
-                + "\n-----------------------------------------------------------"
                 + "\n This library holds the president’s book of secrets and is"
                 + "\n heavily guarded. You will need to be very alert to collect"
                 + "\n your next clue. You have a special key to enter the back"
@@ -56,11 +53,6 @@ public class UsaLibraryView {
                 + "\n 2 - Only in San Freancisco"
                 + "\n 3 - No"
                 + "\n **************"
-                + "\n D - View Dossier List"
-                + "\n C - View Collected Codes"
-                + "\n P - View Player Health"
-                + "\n T - Travel"
-                + "\n V - View Map"
                 + "\n M - Main Menu"
                 + "\n H - Help Menu"
                 + "\n-----------------------------------------------------------";
@@ -115,21 +107,6 @@ public class UsaLibraryView {
             case "3": //Travel to first location
                 this.displaySceneChoice3();
                 break;
-            case "D": //Travel to first location
-                this.displayDossierListView();
-                break;
-            case "C": //Travel to second location
-                this.displayCollectedCodesView();
-                break;
-            case "P": //Travel to third location
-                this.displayPlayerHealthView();
-                break;
-            case "T": //display the map
-                this.displayTravelMenuView();
-                break;
-            case "V": //display the map
-                this.displayMap();
-                break;
             case "M": //Return to Main Menu
                 this.displayMainMenu();
                 break;
@@ -156,34 +133,12 @@ public class UsaLibraryView {
         helpMenu.displayMenuView();
     }
 
-    private void displayMap() {
-        System.out.println("\n*** displayMap stub function called ***");
-    }
-
-    private void displayTravelMenuView() {
-        //display the travel menu
-        TravelMenuView travelMenu = new TravelMenuView();
-        travelMenu.displayMenuView();
-    }
-
-    private void displayPlayerHealthView() {
-        System.out.println("\n*** displayPlayerHealthView stub function called ***");
-    }
-
-    private void displayCollectedCodesView() {
-        System.out.println("\n*** displayCollectedCodesView stub function called ***");
-    }
-
-    private void displayDossierListView() {
-        System.out.println("\n*** displayDossierListView stub function called ***");
-    }
-
     private void displaySceneChoice1() {
-        System.out.println("\n*** Incorrect Answer - <remove player health> stub function called ***");
+        System.out.println("\n*** Incorrect Answer - <remove player health> & <Offer Retry> stub function called ***");
     }
 
     private void displaySceneChoice2() {
-        System.out.println("\n*** Incorrect Answer - <remove player health> stub function called ***");
+        System.out.println("\n*** Incorrect Answer - <remove player health> & <Offer Retry> stub function called ***");
     }
 
     private void displaySceneChoice3() {
