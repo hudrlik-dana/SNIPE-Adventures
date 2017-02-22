@@ -22,6 +22,7 @@ public class Player implements Serializable {
     private String dossier;
     private List<Place> passport;
     private Place currentPlace;
+    private Country currentCountry;
 
     public String getName() {
         return name;
@@ -69,6 +70,14 @@ public class Player implements Serializable {
 
     public void setCurrentPlace(Place currentPlace) {
         this.currentPlace = currentPlace;
+    }
+
+    public Country getCurrentCountry() {
+        return currentCountry;
+    }
+
+    public void setCurrentCountry(Country currentCountry) {
+        this.currentCountry = currentCountry;
     }
 
     public Player() {

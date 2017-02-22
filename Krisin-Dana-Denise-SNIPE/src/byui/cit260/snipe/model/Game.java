@@ -16,7 +16,7 @@ public class Game implements Serializable {
 
     //class instance variables
     private Player player;
-    private Map map;
+    private World world;
     private boolean gameComplete;
     private boolean totalPlayerHealth;
 
@@ -28,12 +28,12 @@ public class Game implements Serializable {
         this.player = player;
     }
 
-    public Map getMap() {
-        return map;
+    public World getWorld() {
+        return world;
     }
 
-    public void setMap(Map map) {
-        this.map = map;
+    public void setWorld(World world) {
+        this.world = world;
     }
 
     public boolean isGameComplete() {
@@ -59,7 +59,7 @@ public class Game implements Serializable {
     public int hashCode() {
         int hash = 5;
         hash = 53 * hash + Objects.hashCode(this.player);
-        hash = 53 * hash + Objects.hashCode(this.map);
+        hash = 53 * hash + Objects.hashCode(this.world);
         hash = 53 * hash + (this.gameComplete ? 1 : 0);
         hash = 53 * hash + (this.totalPlayerHealth ? 1 : 0);
         return hash;
@@ -86,7 +86,7 @@ public class Game implements Serializable {
         if (!Objects.equals(this.player, other.player)) {
             return false;
         }
-        if (!Objects.equals(this.map, other.map)) {
+        if (!Objects.equals(this.world, other.world)) {
             return false;
         }
         return true;
@@ -94,7 +94,7 @@ public class Game implements Serializable {
 
     @Override
     public String toString() {
-        return "Game{" + "player=" + player + ", map=" + map + ", gameComplete=" + gameComplete + ", totalPlayerHealth=" + totalPlayerHealth + '}';
+        return "Game{" + "player=" + player + ", world=" + world + ", gameComplete=" + gameComplete + ", totalPlayerHealth=" + totalPlayerHealth + '}';
     }
 
 }

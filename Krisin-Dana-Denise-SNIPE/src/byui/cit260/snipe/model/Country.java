@@ -6,6 +6,7 @@
 package byui.cit260.snipe.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,6 +20,7 @@ public class Country implements Serializable{
     private List <Place> places;
     private String entryPointCode;
     private String entryPointDesc;
+    private String name;
 
     public List<Place> getPlaces() {
         return places;
@@ -44,9 +46,21 @@ public class Country implements Serializable{
         this.entryPointDesc = entryPointDesc;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
     
+    public void addPlace(Place place) {
+        places.add(place);
+    }
+
    //constructor for country
     public Country() {
+        places = new ArrayList<>();
     }
 
     @Override

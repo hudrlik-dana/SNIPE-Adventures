@@ -6,6 +6,7 @@
 package byui.cit260.snipe.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,9 +26,14 @@ public class World implements Serializable {
     public void setCountries(List<Country> countries) {
         this.countries = countries;
     }
-      
+    
+    public void addCountry(Country country) {
+        countries.add(country);
+    }
+    
     //constructor for world
     public World() {
+        countries = new ArrayList<>();
     }
 
     @Override
