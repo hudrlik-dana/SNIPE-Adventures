@@ -24,32 +24,7 @@ public class ChallengeMentalView {
        Country currentCountry = Snipe.getPlayer().getCurrentCountry();
         
        switch ("currentCountry") {
-            case "USA": //display the question
-                System.out.println("\n This library holds the president’s book of secrets"
-                                 + "\n and is heavily guarded. You will need to be  very"
-                                 + "\n alert to collect your next clue. You have a special"
-                                 + "\n key to enter the back rooms where you clue is located."
-                                 + "\n Your clue will be inside a leather bound, 1788 first"
-                                 + "\n edition, of the Federalists Papers. This book is to "
-                                 + "\n the right, and 2 shelves down from the president’s book "
-                                 + "\n of secrets. Remember, you are not to look inside the"
-                                 + "\n president’s book. To get past the first guard you will "
-                                 + "\n need a distraction that will draw him away from his post"
-                                 + "\n at the stairwell. You find an enterprising 12-year old "
-                                 + "\n and pay him $20 to pull the fire alarm. Once the alarm "
-                                 + "\n sounds, the chaos and confusion has the guards running "
-                                 + "\n around trying to get the tourists out of the building."
-                                 + "\n Using your stealthy SNIPE powers, you slip past the guards"
-                                 + "\n unnoticed, quickly climb the stairs, and use your key to"
-                                 + "\n unlock the first of 3 doors. A few minutes later you are"
-                                 + "\n searching the shelves for the leather-bound book holding your"
-                                 + "\n next clue. You find the book and a tattered old paper falls "
-                                 + "\n to the floor. You pick it up and read, “Is it legal for a man"
-                                 + "\n in California to marry his widow’s sister?” You smile,"
-                                 + "\n and bury the book back on the shelf."
-                                 + "\n ==========================================================="
-                                 + "\n Type Y for yes and N for no.  ");
-                break;
+           
             case "Germany": //display the question
                 System.out.println("\n Beginning at the east end you walk along the wall"
                                  + "\n looking for your next clue that will lead you to "
@@ -196,7 +171,6 @@ public class ChallengeMentalView {
                 //need to display the return value
                 break;
             case "1,2,3 && currentCountry == 'Russia'": //They chose an answer for Russia challenge
-                ChallengeControl.calcMathPuzzle3(0, 0, 0, 0);
                  if (answerOption == "1"){
                     var1=500;
                     var2=95;

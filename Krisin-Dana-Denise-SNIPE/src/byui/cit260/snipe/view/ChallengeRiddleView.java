@@ -146,19 +146,14 @@ public class ChallengeRiddleView {
                                  + "\n ========================================================");
                 break; 
             case "Australia": //display the question
-                System.out.println("\n The capital city is filled with tourists haggling with the"
-                                 + "\n street vendors over prices. You weave in and out of the crowd"
-                                 + "\n looking for your contact at the fireworks stand. You spot him"
-                                 + "\n near the bright pink adobe building. This is the safe house in"
-                                 + "\n Brazil. As your contact shakes your hand, and begins speaking"
-                                 + "\n Portuguese, he slips something into your pocket. Fortunately,"
-                                 + "\n the clue inside the tattered envelope you receive is in English."
-                                 + "\n You are anxious to get out of the heat and humidity, take a"
-                                 + "\n shower, You are anxious to get out of the heat and humidity,"
-                                 + "\n take a shower, and get some rest."
-                                 + "\n Puzzle: I am the beginning of end, and the end of time and space."
-                                 + "\n I am essential to creation, and I surround every place. Who am I?"
-                                 + "\n  Puzzle: What does December have that other months don’t have?"
+                System.out.println("\n Today has been exhausting and painful. You really need a break"
+                                 + "\n to rest and recover. The most unlikely place for a safe-house"
+                                 + "\n happens to be in the basement of the Old Melbourne Jail. This"
+                                 + "\n is the safe-house for Australia. A nice comfy bed, hot shower"
+                                 + "\n and air conditioning is sounding so good right about now.  The"
+                                 + "\n only thing standing between you and the secret entrance door is"
+                                 + "\n the answer to this clue."
+                                 + "\n Puzzle: What kind of coat is always wet when you put it on?"
                                  + "\n ========================================================");
                 break; 
             default:
