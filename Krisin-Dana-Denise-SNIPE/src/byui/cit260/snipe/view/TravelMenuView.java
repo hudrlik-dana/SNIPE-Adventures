@@ -85,6 +85,9 @@ public class TravelMenuView {
             int numChoice = Integer.parseInt(choice);
             Snipe.getPlayer().setCurrentPlace(Snipe.getPlayer().getCurrentCountry().getPlaces().get(numChoice - 1));
             
+            //Output non-challenge description
+            System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+            
             //IF PLAYER MOVEMENT TO A PLACE TRIGGERS CHALLENGE - OPEN THE CHALLENGE VIEW HERE
 //            if(Snipe.getPlayer().getCurrentPlace().isChallenge()) {
 //            }
