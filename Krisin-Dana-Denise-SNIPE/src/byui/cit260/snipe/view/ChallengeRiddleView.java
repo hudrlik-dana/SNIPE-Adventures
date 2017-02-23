@@ -5,10 +5,279 @@
  */
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.control.ChallengeControl;
+import byui.cit260.snipe.model.Country;
+import java.util.Scanner;
+import snipe.Snipe;
+
 /**
  *
  * @author denisegoetz
  */
 public class ChallengeRiddleView {
+    
+    private String answerOption;
+
+    public ChallengeRiddleView() {
+        Country currentCountry = Snipe.getPlayer().getCurrentCountry();
+        
+       switch ("currentCountry") {
+            case "USA": //display the question
+                System.out.println("\n This library holds the president’s book of secrets"
+                                 + "\n and is heavily guarded. You will need to be  very"
+                                 + "\n alert to collect your next clue. You have a special"
+                                 + "\n key to enter the back rooms where you clue is located."
+                                 + "\n Your clue will be inside a leather bound, 1788 first"
+                                 + "\n edition, of the Federalists Papers. This book is to "
+                                 + "\n the right, and 2 shelves down from the president’s book "
+                                 + "\n of secrets. Remember, you are not to look inside the"
+                                 + "\n president’s book. To get past the first guard you will "
+                                 + "\n need a distraction that will draw him away from his post"
+                                 + "\n at the stairwell. You find an enterprising 12-year old "
+                                 + "\n and pay him $20 to pull the fire alarm. Once the alarm "
+                                 + "\n sounds, the chaos and confusion has the guards running "
+                                 + "\n around trying to get the tourists out of the building."
+                                 + "\n Using your stealthy SNIPE powers, you slip past the guards"
+                                 + "\n unnoticed, quickly climb the stairs, and use your key to"
+                                 + "\n unlock the first of 3 doors. A few minutes later you are"
+                                 + "\n searching the shelves for the leather-bound book holding your"
+                                 + "\n next clue. You find the book and a tattered old paper falls "
+                                 + "\n to the floor. You pick it up and read, “Is it legal for a man"
+                                 + "\n in California to marry his widow’s sister?” You smile,"
+                                 + "\n and bury the book back on the shelf."
+                                 + "\n ==========================================================="
+                                 + "\n Type Y for yes and N for no.  ");
+                break;
+            case "Germany": //display the question
+                System.out.println("\n You have arrived at a small cottage hidden along the mossy"
+                                 + "\n covered hillside. This is the safe-house in Germany. You look"
+                                 + "\n around the cottage for the key and find a riddle that contains"
+                                 + "\n the code to the lock on the door. Once inside you can report"
+                                 + "\n back to your handler and receive the next dossier for your"
+                                 + "\n mission. Puzzle: What can run, but never walks, has a mouth,"
+                                 + "\n but never talks, has a head but never weeps, has a bed but never"
+                                 + "\n sleeps?"
+                                 + "\n ===========================================================");
+           
+                break;
+   
+            case "England": //display the question
+                System.out.println("\n Big Ben is the nickname for the Great Bell of the clock"
+                                 + "\n at the north end of the palace of Westminster in London."
+                                 + "\n It is one of London’s most famous landmarks. Blending"
+                                 + "\n in with the tourists and locals here isn’t too difficult."
+                                 + "\n You are watching for the man in the dark hat and gray scarf"
+                                 + "\n that seems to be following you at times. The clock begins"
+                                 + "\n to chime as a young man with dreadlocks, a black beard,"
+                                 + "\n and a backpack, loses control of his skateboard and knocks"
+                                 + "\n you to the ground. He apologizes, helps you to your feet, and"
+                                 + "\n slips you a tattered envelope. With a sly smile, he winks at "
+                                 + "\n you as he skates off into the crowded street. You open"
+                                 + "\n the envelope and begin to decipher the clue."
+                                 + "\n Puzzle: What are the only 4 words in the English language"
+                                 + "\n that begin with the letters dw…? Please answer in alphabetic"
+                                 + "\n order separated by commas."
+                                 + "\n ===========================================================");
+           
+                break;
+            case "Spain": //display the question
+                System.out.println("\n You step out of the taxi and into a blustery cold wind"
+                                 + "\n that chills you to the bone. The largest Gothic style"
+                                 + "\n Christian cathedral which took a century to build,"
+                                 + "\n raises into the sky. This is the safe-house in Spain."
+                                 + "\n You begin to walk around the great edifice and notice"
+                                 + "\n an older gentleman wearing a black fedora, gray scarf,"
+                                 + "\n and a trench coat pulled up tightly around his neck."
+                                 + "\n You approach him cautiously, and he asks you a simple"
+                                 + "\n question. “Which month has 28 days?” Answer this"
+                                 + "\n correctly, and he will open the door to your safe"
+                                 + "\n house. Once inside you can report back to your"
+                                 + "\n handler and receive the next dossier for your mission."
+                                 + "\n Puzzle: Which month has 28 days?"
+                                 + "\n ========================================================");                     
+                break;
+            
+            case "France": //display the question
+                System.out.println("\n This museum is filled with tourists today. The paintings"
+                                 + "\n are exquisite, and it is easy to lose the suspicious man"
+                                 + "\n that seems to be tailing you. Now where is the painting of"
+                                 + "\n Napoleon at Waterloo? You spot it as you walk among the"
+                                 + "\n crowded hallways into through the north wing of the museum."
+                                 + "\n The docent winks at you and begins to tell a story, all the"
+                                 + "\n while looking at you. He is delivering your next clue with"
+                                 + "\n with his story. The captain of the ship told an interesting"
+                                 + "\n tale. “We had traveled the sea far and wide, and at one point"
+                                 + "\n in time, two of my sailors were standing on opposite sides"
+                                 + "\n of the ship. One was looking east and the other was looking"
+                                 + "\n west. At this same time they could see each other clearly."
+                                 + "\n 'How would this be possible?' The docent asks, as he leads the"
+                                 + "\n tourists further down the corridor. Only a trained SNIPE agent"
+                                 + "\n would know the answer to retrieve the next clue."
+                                 + "\n ========================================================");
+                break;
+            case "Canada": //display the question
+                System.out.println("\n This is one big library, filled with hundreds of thousands"
+                                 + "\n are exquisite, and it is easy to lose the suspicious man"
+                                 + "\n of books. You need to find the one volume that contains "
+                                 + "\n your next clue. You walk down the south corridor passing"
+                                 + "\n many people who are silently reading. You look around and"
+                                 + "\n see a librarian, who motions with her finger for you to"
+                                 + "\n follow her. She hands you a paper with the number 10067.9D."
+                                 + "\n You look through the long rows of shelves in library for"
+                                 + "\n some time before finding row 10067.9D. You open the old leather"
+                                 + "\n bound text and find this clue."
+                                 + "\n  Puzzle: What does December have that other months don’t have?"
+                                 + "\n ========================================================");
+                break;
+            case "Brazil": //display the question
+                System.out.println("\n The capital city is filled with tourists haggling with the"
+                                 + "\n street vendors over prices. You weave in and out of the crowd"
+                                 + "\n looking for your contact at the fireworks stand. You spot him"
+                                 + "\n near the bright pink adobe building. This is the safe house in"
+                                 + "\n Brazil. As your contact shakes your hand, and begins speaking"
+                                 + "\n Portuguese, he slips something into your pocket. Fortunately,"
+                                 + "\n the clue inside the tattered envelope you receive is in English."
+                                 + "\n You are anxious to get out of the heat and humidity, take a"
+                                 + "\n shower, You are anxious to get out of the heat and humidity,"
+                                 + "\n take a shower, and get some rest."
+                                 + "\n Puzzle: I am the beginning of end, and the end of time and space."
+                                 + "\n I am essential to creation, and I surround every place. Who am I?"
+                                 + "\n  Puzzle: What does December have that other months don’t have?"
+                                 + "\n ========================================================");
+                break; 
+            case "Australia": //display the question
+                System.out.println("\n The capital city is filled with tourists haggling with the"
+                                 + "\n street vendors over prices. You weave in and out of the crowd"
+                                 + "\n looking for your contact at the fireworks stand. You spot him"
+                                 + "\n near the bright pink adobe building. This is the safe house in"
+                                 + "\n Brazil. As your contact shakes your hand, and begins speaking"
+                                 + "\n Portuguese, he slips something into your pocket. Fortunately,"
+                                 + "\n the clue inside the tattered envelope you receive is in English."
+                                 + "\n You are anxious to get out of the heat and humidity, take a"
+                                 + "\n shower, You are anxious to get out of the heat and humidity,"
+                                 + "\n take a shower, and get some rest."
+                                 + "\n Puzzle: I am the beginning of end, and the end of time and space."
+                                 + "\n I am essential to creation, and I surround every place. Who am I?"
+                                 + "\n  Puzzle: What does December have that other months don’t have?"
+                                 + "\n ========================================================");
+                break; 
+            default:
+                System.out.println("\n*** Country not built out yet - call Programmer");
+                break;
+        }
+  
+    }
+
+    
+    public void displayMenuView() {
+
+        boolean done = false; //set flag to not done
+        do {
+            String answerOption = this.getAnswerOption();
+
+            //do the requested action and display the next view
+            done = this.doAction(answerOption);
+
+        } while (!done);
+    }
+
+    private String getAnswerOption() {
+        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+        String value = ""; //value to be returned
+        boolean valid = false; //initialize to not valid
+
+        while (!valid) {
+            System.out.println("\n" + this.answerOption);
+
+            value = keyboard.nextLine(); //get next line typed on keyboard
+            value = value.trim(); //trim off leading and trailing blanks
+
+            if (value.length() < 1) { // value is blank
+                System.out.println("\nInvalid: entry required.");
+            }
+            break; //end the loop
+        }
+
+        return value; //return entered value
+    }
+
+    private boolean doAction(String choice) {
+        int var1=0;
+        int var2=0;
+        int var3=0;
+        int var4=0;
+       
+       
+        switch (answerOption) {
+            case "1,2,3 && currentCountry == 'Germany'": //They chose an answer for Germany challenge
+                if (answerOption == "1"){
+                    var1=34;
+                    var2=61;      
+                    ChallengeControl.calcMathPuzzle1(var1, var2);
+                }
+                if (answerOption == "2"){
+                    var1=32;
+                    var2=68;      
+                    ChallengeControl.calcMathPuzzle1(var1, var2);
+                }
+                if (answerOption == "3"){
+                    var1=30;
+                    var2=66;      
+                    ChallengeControl.calcMathPuzzle1(var1, var2); 
+                }
+                //need to display the return value
+                break;
+            case "1,2,3 && currentCountry == 'Spain'":  //They chose an answer for Spain challenge
+                if (answerOption == "1"){
+                    var1=74;
+                    var2=30;      
+                    ChallengeControl.calcMathPuzzle2(var1, var2);
+                }
+                if (answerOption == "2"){
+                    var1=68;
+                    var2=20;      
+                    ChallengeControl.calcMathPuzzle2(var1, var2);
+                }
+                if (answerOption == "3"){
+                    var1=65;
+                    var2=20;      
+                    ChallengeControl.calcMathPuzzle2(var1, var2); 
+                }
+                //need to display the return value
+                break;
+            case "1,2,3 && currentCountry == 'Russia'": //They chose an answer for Russia challenge
+                ChallengeControl.calcMathPuzzle3(0, 0, 0, 0);
+                 if (answerOption == "1"){
+                    var1=500;
+                    var2=95;
+                    var3=6;
+                    var4=3;
+                    ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4);
+                }
+                if (answerOption == "2"){
+                    var1=200;
+                    var2=75;
+                    var3=6;
+                    var4=3;
+                    ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4);
+                }
+                if (answerOption == "3"){
+                    var1=100;
+                    var2=25;
+                    var3=6;
+                    var4=3;
+                    ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4); 
+                }
+                //need to display the return value
+                break;
+            default:
+                System.out.println("\n*** Invalid Selection *** Try Again");
+                break;
+          
+        }
+
+        return false;
+    }
+    
     
 }

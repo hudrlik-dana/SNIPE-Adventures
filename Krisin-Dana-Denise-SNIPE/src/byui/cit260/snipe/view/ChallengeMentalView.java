@@ -18,7 +18,6 @@ public class ChallengeMentalView {
 
     private String answerOption;
 
- //   Country currentCountry = Snipe.getPlayer().getCurrentCountry();
     
     public ChallengeMentalView() {
         
@@ -230,7 +229,7 @@ public class ChallengeMentalView {
         return false;
     }
 
-//System.out.println("\n*** functionName stub function called ***");
+
 }   
  
 
