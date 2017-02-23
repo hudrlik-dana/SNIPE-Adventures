@@ -35,8 +35,7 @@ public class PlayerHealthView {
                 + "\n***********************************************************";
     }
      /**
-     * verifies the player selection
-     * picks up input, display limited game menu functions
+     * verifies the player selection 
      */
 
     public void displayMenuView () {
@@ -53,7 +52,9 @@ public class PlayerHealthView {
             }
             while (!done);         
      }
-    
+/*
+   player input 
+*/    
     private String getMenuOption() {
         Scanner keyboard = new Scanner(System.in);  //get infile from keyboard
         String value = ""; //value to be returned
@@ -73,7 +74,9 @@ public class PlayerHealthView {
         }
         return value;  //return entered value
     }
-    
+/*
+    display limited game menu functions
+*/
         private boolean doAction(String choice) {
             choice = choice.toUpperCase(); //convert choice to upper case
                 switch (choice) { 
