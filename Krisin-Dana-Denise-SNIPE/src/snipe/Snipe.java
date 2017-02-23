@@ -8,6 +8,7 @@ package snipe;
 import byui.cit260.snipe.model.Game;
 import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.view.StartProgramView;
+import byui.cit260.snipe.view.PlayerHealthView;
 
 /**
  *
