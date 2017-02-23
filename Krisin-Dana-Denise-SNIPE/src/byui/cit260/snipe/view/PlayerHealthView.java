@@ -107,7 +107,7 @@ public class PlayerHealthView {
         } 
 
         private void displayPlayerCurrentScene() { 
-            System.out.println("\n*** displayPlayerHealthView() function called ***"); 
+            System.out.println("\n*** displayPlayerCurrentScene() function called ***"); 
         }          
     }
 
