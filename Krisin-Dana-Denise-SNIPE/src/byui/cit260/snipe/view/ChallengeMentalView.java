@@ -138,62 +138,99 @@ public class ChallengeMentalView {
                 if (answerOption == "1"){
                     var1=34;
                     var2=61;      
-                    ChallengeControl.calcMathPuzzle1(var1, var2);
+                    ChallengeControl.calcMathPuzzle1(var1, var2); //incorrect answer
+                    System.out.println("\n Bummer, your checked the wall and didn't find the secret"
+                                     + "\n passage. Consult your dossier for additional clues to solve"
+                                     + "\n the equation. Recalculate and try again or travel to another"
+                                     + "\n location and try a different challenge.");
+                    
                 }
-                if (answerOption == "2"){
+                if (answerOption == "2"){   //correct answer
                     var1=32;
                     var2=68;      
                     ChallengeControl.calcMathPuzzle1(var1, var2);
+                    System.out.println("\n Great job! You have your first clue. After carefully"
+                                     + "\n checking to see if anyone is watching, you slip the clue"
+                                     + "\n in your pocket and return to the Safe House to contact your"
+                                     + "\n handler and receive the dossier for your next mission.");
                 }
-                if (answerOption == "3"){
+                if (answerOption == "3"){   //incorrect answer
                     var1=30;
                     var2=66;      
-                    ChallengeControl.calcMathPuzzle1(var1, var2); 
+                    ChallengeControl.calcMathPuzzle1(var1, var2);
+                    System.out.println("\n Bummer, your checked the wall and didn't find the secret"
+                                     + "\n passage. Consult your dossier for additional clues to solve"
+                                     + "\n the equation. Recalculate and try again or travel to another"
+                                     + "\n location and try a different challenge.");
                 }
-                //need to display the return value
                 break;
+                
             case "1,2,3 && currentCountry == 'Spain'":  //They chose an answer for Spain challenge
-                if (answerOption == "1"){
+                if (answerOption == "1"){   //correct answer
                     var1=74;
                     var2=30;      
                     ChallengeControl.calcMathPuzzle2(var1, var2);
+                    System.out.println("\n Great job! You have your clue. After carefully checking "
+                                     + "\n to see if anyone is watching, you slip the clue in your"
+                                     + "\n pocket and return to the Safe House to contact your"
+                                     + "\n handler and receive the dossier for your next mission.");   
                 }
-                if (answerOption == "2"){
+                if (answerOption == "2"){    //incorrect answer
                     var1=68;
                     var2=20;      
                     ChallengeControl.calcMathPuzzle2(var1, var2);
+                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                                     + "\n for additional clues to solve the puzzle. Recalculate and"
+                                     + "\n try again or travel to another location and try a"
+                                     + "\n different challenge.");
                 }
-                if (answerOption == "3"){
+                if (answerOption == "3"){    //incorrect answer
                     var1=65;
                     var2=20;      
-                    ChallengeControl.calcMathPuzzle2(var1, var2); 
+                    ChallengeControl.calcMathPuzzle2(var1, var2);
+                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                                     + "\n for additional clues to solve the puzzle. Recalculate and"
+                                     + "\n try again or travel to another location and try a"
+                                     + "\n different challenge.");
                 }
-                //need to display the return value
                 break;
+                
             case "1,2,3 && currentCountry == 'Russia'": //They chose an answer for Russia challenge
-                 if (answerOption == "1"){
+                 if (answerOption == "1"){   //incorrect answer 31666
                     var1=500;
                     var2=95;
                     var3=6;
                     var4=3;
                     ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4);
+                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                                     + "\n for additional clues to solve the puzzle. Recalculate and"
+                                     + "\n try again or travel to another location and try a"
+                                     + "\n different challenge.");
                 }
-                if (answerOption == "2"){
+                if (answerOption == "2"){    //correct answer 10000
                     var1=200;
                     var2=75;
                     var3=6;
                     var4=3;
                     ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4);
+                    System.out.println("\n Great job! You have your clue. After carefully checking "
+                                     + "\n to see if anyone is watching, you slip the clue in your"
+                                     + "\n pocket and return to the Safe House to contact your"
+                                     + "\n handler and receive the dossier for your next mission.");   
                 }
-                if (answerOption == "3"){
+                if (answerOption == "3"){    //incorrect answer 1666
                     var1=100;
                     var2=25;
                     var3=6;
                     var4=3;
-                    ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4); 
+                    ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4);
+                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                                     + "\n for additional clues to solve the puzzle. Recalculate and"
+                                     + "\n try again or travel to another location and try a"
+                                     + "\n different challenge.");
                 }
-                //need to display the return value
                 break;
+                
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;

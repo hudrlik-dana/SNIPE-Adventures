@@ -46,7 +46,8 @@ public class ChallengeRiddleView {
                                  + "\n in California to marry his widow’s sister?” You smile,"
                                  + "\n and bury the book back on the shelf."
                                  + "\n ==========================================================="
-                                 + "\n Type Y for yes and N for no.  ");
+                                 + "\n Type 1 - Yes, It is legal in California and Colorado."
+                                 + "\n Type 2 -  No, It is not legal to get married if you are dead.");
                 break;
             case "Germany": //display the question
                 System.out.println("\n You have arrived at a small cottage hidden along the mossy"
@@ -57,8 +58,9 @@ public class ChallengeRiddleView {
                                  + "\n mission. Puzzle: What can run, but never walks, has a mouth,"
                                  + "\n but never talks, has a head but never weeps, has a bed but never"
                                  + "\n sleeps?"
-                                 + "\n ===========================================================");
-           
+                                 + "\n ==========================================================="
+                                 + "\n Type 1 - River"
+                                 + "\n Type 2 - Lucky Streak");
                 break;
    
             case "England": //display the question
@@ -77,7 +79,9 @@ public class ChallengeRiddleView {
                                  + "\n Puzzle: What are the only 4 words in the English language"
                                  + "\n that begin with the letters dw…? Please answer in alphabetic"
                                  + "\n order separated by commas."
-                                 + "\n ===========================================================");
+                                 + "\n ==========================================================="
+                                 + "\n Type 1 - Dwindel, Dwight, Dwarf, Dwane"
+                                 + "\n Type 2 - Dwindle, Dwell, Dwarf, Dweeb");
            
                 break;
             case "Spain": //display the question
@@ -94,7 +98,26 @@ public class ChallengeRiddleView {
                                  + "\n house. Once inside you can report back to your"
                                  + "\n handler and receive the next dossier for your mission."
                                  + "\n Puzzle: Which month has 28 days?"
-                                 + "\n ========================================================");                     
+                                 + "\n ========================================================"
+                                 + "\n Type 1 - All the months"
+                                 + "\n Type 2 - February");
+                break;
+ 
+            case "Russia": //display the question
+                System.out.println("\n This old burial site has several monuments and you are"
+                                 + "\n carefully examining each one as you try to look like a "
+                                 + "\n tourist bundled up in your fur hooded coat. Lenin’s"
+                                 + "\n Mausoleum is the safe house in Russia. On the west side"
+                                 + "\n of the third statue, near the bottom, you notice what"
+                                 + "\n looks like a scuff mark. As you examine it closely, you"
+                                 + "\n pull out your magnifying glass to take a closer look."
+                                 + "\n Scribbled in tiny letters is the code to unlock the safe"
+                                 + "\n house door."
+                                 + "\n Puzzle: What 5 letter word becomes shorter when you add"
+                                 + "\n  2 letters to it?"
+                                 + "\n ========================================================"
+                                 + "\n Type 1 - litte"
+                                 + "\n Type 2 - short");
                 break;
             
             case "France": //display the question
@@ -113,7 +136,9 @@ public class ChallengeRiddleView {
                                  + "\n 'How would this be possible?' The docent asks, as he leads the"
                                  + "\n tourists further down the corridor. Only a trained SNIPE agent"
                                  + "\n would know the answer to retrieve the next clue."
-                                 + "\n ========================================================");
+                                 + "\n ========================================================"
+                                 + "\n Type 1 - X-Ray vision"
+                                 + "\n Type 2 - Window");
                 break;
             case "Canada": //display the question
                 System.out.println("\n This is one big library, filled with hundreds of thousands"
@@ -126,8 +151,10 @@ public class ChallengeRiddleView {
                                  + "\n You look through the long rows of shelves in library for"
                                  + "\n some time before finding row 10067.9D. You open the old leather"
                                  + "\n bound text and find this clue."
-                                 + "\n  Puzzle: What does December have that other months don’t have?"
-                                 + "\n ========================================================");
+                                 + "\n Puzzle: What does December have that other months don’t have?"
+                                 + "\n ========================================================"
+                                 + "\n Type 1 - Christmas!"
+                                 + "\n Type 2 - The letter D");
                 break;
             case "Brazil": //display the question
                 System.out.println("\n The capital city is filled with tourists haggling with the"
@@ -142,8 +169,9 @@ public class ChallengeRiddleView {
                                  + "\n take a shower, and get some rest."
                                  + "\n Puzzle: I am the beginning of end, and the end of time and space."
                                  + "\n I am essential to creation, and I surround every place. Who am I?"
-                                 + "\n  Puzzle: What does December have that other months don’t have?"
-                                 + "\n ========================================================");
+                                 + "\n ========================================================"
+                                 + "\n Type 1 - The letter E"
+                                 + "\n Type 2 - Heavenly Father");
                 break; 
             case "Australia": //display the question
                 System.out.println("\n Today has been exhausting and painful. You really need a break"
@@ -154,7 +182,9 @@ public class ChallengeRiddleView {
                                  + "\n only thing standing between you and the secret entrance door is"
                                  + "\n the answer to this clue."
                                  + "\n Puzzle: What kind of coat is always wet when you put it on?"
-                                 + "\n ========================================================");
+                                 + "\n ========================================================"
+                                 + "\n Type 1 - A rain coat"
+                                 + "\n Type 2 - A coat of wet paint");
                 break; 
             default:
                 System.out.println("\n*** Country not built out yet - call Programmer");
@@ -197,74 +227,136 @@ public class ChallengeRiddleView {
     }
 
     private boolean doAction(String choice) {
-        int var1=0;
-        int var2=0;
-        int var3=0;
-        int var4=0;
+      
        
        
         switch (answerOption) {
-            case "1,2,3 && currentCountry == 'Germany'": //They chose an answer for Germany challenge
+            case "1,2 && currentCountry == 'USA'":
                 if (answerOption == "1"){
-                    var1=34;
-                    var2=61;      
-                    ChallengeControl.calcMathPuzzle1(var1, var2);
+                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                                     + "\n for additional clues to solve the puzzle. Recalculate and"
+                                     + "\n try again or travel to another location and try a different"
+                                     + "\n challenge.");
+                     
                 }
                 if (answerOption == "2"){
-                    var1=32;
-                    var2=68;      
-                    ChallengeControl.calcMathPuzzle1(var1, var2);
+                    System.out.println("\n Great job! You have your clue. After carefully checking "
+                                    +  "\n to see if anyone is watching, you slip the clue in your"
+                                    +  "\n pocket and return to the Safe House to contact your"
+                                    +  "\n handler and receive the dossier for your next mission.");   
                 }
-                if (answerOption == "3"){
-                    var1=30;
-                    var2=66;      
-                    ChallengeControl.calcMathPuzzle1(var1, var2); 
-                }
-                //need to display the return value
                 break;
-            case "1,2,3 && currentCountry == 'Spain'":  //They chose an answer for Spain challenge
+                
+            case "1,2 && currentCountry == 'Germany'": 
                 if (answerOption == "1"){
-                    var1=74;
-                    var2=30;      
-                    ChallengeControl.calcMathPuzzle2(var1, var2);
+                    System.out.println("\n Great job! You use the code to enter the safe-house. After"
+                                     + "\n a  brief rest, you contact your handler and pick up the"
+                                     + "\n dossier for your next mission. Good Luck!");
                 }
                 if (answerOption == "2"){
-                    var1=68;
-                    var2=20;      
-                    ChallengeControl.calcMathPuzzle2(var1, var2);
+                    System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
+                                     + "\n Try checking your dossier for another hint and try again."
+                                     + "\n Remember you are a SNIPE agent, you can do it!");
+  
                 }
-                if (answerOption == "3"){
-                    var1=65;
-                    var2=20;      
-                    ChallengeControl.calcMathPuzzle2(var1, var2); 
-                }
-                //need to display the return value
                 break;
-            case "1,2,3 && currentCountry == 'Russia'": //They chose an answer for Russia challenge
-                ChallengeControl.calcMathPuzzle3(0, 0, 0, 0);
+                
+            case "1,2 && currentCountry == 'England'":
                  if (answerOption == "1"){
-                    var1=500;
-                    var2=95;
-                    var3=6;
-                    var4=3;
-                    ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4);
+                     System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
+                                      + "\n Try checking your dossier for another hint and try again."
+                                      + "\n Remember you are a SNIPE agent, you can do it!");
+   
                 }
                 if (answerOption == "2"){
-                    var1=200;
-                    var2=75;
-                    var3=6;
-                    var4=3;
-                    ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4);
+                    System.out.println("\n Great job! You use the code to enter the safe-house."
+                                     + "\n After a brief rest, you contact your handler and pick"
+                                     + "\n up the dossier for your next mission. Good Luck!");
                 }
-                if (answerOption == "3"){
-                    var1=100;
-                    var2=25;
-                    var3=6;
-                    var4=3;
-                    ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4); 
-                }
-                //need to display the return value
                 break;
+                
+            case "1,2 && currentCountry == 'Spain'":
+                 if (answerOption == "1"){
+                     System.out.println("\n Great job! You use the code to enter the safe-house."
+                                      + "\n After a brief rest, you contact your handler and pick"
+                                      + "\n up the dossier for your next mission. Good Luck!");
+                }
+                if (answerOption == "2"){
+                    System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
+                                     + "\n Try checking your dossier for another hint and try again."
+                                     + "\n again. Remember you are a SNIPE agent, you can do it!");
+                }
+                break;
+                
+            case "1,2 && currentCountry == 'Russia'":
+                 if (answerOption == "1"){
+                     System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                                      + "\n for additional clues to solve the puzzle. Recalculate and"
+                                      + "\n try again or travel to another location and try a"
+                                      + "\n different challenge.");
+                }
+                if (answerOption == "2"){
+                    System.out.println("\n Great job! You have your first clue. After carefully"
+                                     + "\n checking to see if anyone is watching, you slip the clue"
+                                     + "\n in your pocket and return to the Safe House to contact your"
+                                     + "\n handler and receive the dossier for your next mission.");
+                }
+                break;
+                    
+            case "1,2 && currentCountry == 'France'":
+                 if (answerOption == "1"){
+                    System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
+                                     + "\n Try checking your dossier for another hint and try again."
+                                     + "\n Remember you are a SNIPE agent, you can do it!");
+                }
+                if (answerOption == "2"){
+                    System.out.println("\n Great job! You use the code to enter the safe-house."
+                                     + "\n After a brief rest, you contact your handler and pick"
+                                     + "\n up the dossier for your next mission. Good Luck!");
+                }
+                break;
+                
+            case "1,2 && currentCountry == 'Canada'": //They chose an answer for Russia challenge
+                 if (answerOption == "1"){
+                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                                     + "\n for additional clues to solve the puzzle. Recalculate and"
+                                     + "\n try again or travel to another location and try a"
+                                     + "\n different challenge.");
+                }
+                if (answerOption == "2"){
+                    System.out.println("\n Great job! You have your clue. After carefully"
+                                     + "\n checking to see if anyone is watching, you slip the clue"
+                                     + "\n in your pocket and return to the Safe House to contact your"
+                                     + "\n handler and receive the dossier for your next mission.");
+                }
+                break;
+                
+            case "1,2 && currentCountry == 'Brazil'":
+                 if (answerOption == "1"){
+                    System.out.println("\n Great job! You use the code to enter the safe-house."
+                                     + "\n After a brief rest, you contact your handler and pick"
+                                     + "\n up the dossier for your next mission. Good Luck!");
+                }
+                if (answerOption == "2"){
+                    System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
+                                     + "\n Try checking your dossier for another hint and try again."
+                                     + "\n Remember you are a SNIPE agent, you can do it!");
+                }
+                break;
+                
+            case "1,2 && currentCountry == 'Australia'":
+                 if (answerOption == "1"){
+                    System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
+                                     + "\n Try checking your dossier for another hint and try again."
+                                     + "\n Remember you are a SNIPE agent, you can do it!");
+                }
+                if (answerOption == "2"){
+                    System.out.println("\n Great job! You use the code to enter the safe-house."
+                                     + "\n After a brief rest, you contact your handler and pick"
+                                     + "\n up the dossier for your next mission. Good Luck!");
+                }
+                break;
+                
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
