@@ -177,7 +177,13 @@ public class GameControl {
         bigBen.setChallenge(false);
         bigBen.setCountryCode("E");
         bigBen.setPlaceName("Big Ben");
-        bigBen.setPlaceScene("You are standing in front of Big Ban.");
+        bigBen.setPlaceScene("\n A taxi takes you to Westminster, in Central London. The cab drops"
+                           + "\n you off practically under Big Ben, the iconic clock that is a"
+                           + "\n tourist magnet. There is no shortage of tourists today. They are"
+                           + "\n easily spotted with their british flag t-shirts and phones taking"
+                           + "\n selfies everywhere. You arrive at 11:57, which is just before Big"
+                           + "\n Ben will strike 12 to indicate it is noon. Gong. You can feel the"
+                           + "\n vibrations from the 13 ton bell. Gong...");
         england.addPlace(bigBen);
         
         Place buckinghamPalace = new Place();
@@ -217,21 +223,38 @@ public class GameControl {
         tarragona.setChallenge(false);
         tarragona.setCountryCode("S");
         tarragona.setPlaceName("Tarragona");
-        tarragona.setPlaceScene("You are in Spain tarragona");
+        tarragona.setPlaceScene("\n After you fly into Spain you are taken to Tarragona city."
+                              + "\n This city is ancient and has many ruins. The old warm tan "
+                              + "\n stone buildings are built into the hillside and the sea meets"
+                              + "\n the edge of the lower buildings. You see the stains on the"
+                              + "\n lower buildings from when the tide comes in and rolls up on"
+                              + "\n them. The sun is hot and it is apparent you have arrived in"
+                              + "\n the Mediterranean.");
         spain.addPlace(tarragona);
         
         Place valencia = new Place();
         valencia.setChallenge(false);
         valencia.setCountryCode("S");
         valencia.setPlaceName("Valencia");
-        valencia.setPlaceScene("This is valencia");
+        valencia.setPlaceScene("\n You have made your way to the city of Valencia, Spain. The"
+                             + "\n buildings are very densely spaced in rows and patterns. This"
+                             + "\n city is an eclectic view of modern and very old buildings rich"
+                             + "\n in history. Beautiful hotels span the beaches but deeper in you"
+                             + "\n see complex of modern buildings called Cludada de las Artes las"
+                             + "\n Ciencias. You soon see that the buildings are so tightly packed"
+                             + "\n it would be easy to get confused and get disorientated.");
         spain.addPlace(valencia);
         
         Place cathedralSeville = new Place();
         cathedralSeville.setChallenge(false);
         cathedralSeville.setCountryCode("S");
         cathedralSeville.setPlaceName("Cathedral of Seville");
-        cathedralSeville.setPlaceScene("You are at the cathedral of seville");
+        cathedralSeville.setPlaceScene("\n A taxi drops you off at the Cathedral of Seville. The building"
+                                     + "\n is adorned  with rich detail of centuries past architecture. The"
+                                     + "\n stone detail is so fine the patterns in parts could be described"
+                                     + "\n as lace.  You step out onto the paver street and see this 2-story"
+                                     + "\n high gate entryway made of stone and rod iron. Next you see the"
+                                     + " Triumph of Faith statue tarnished with a grey-blue patina.");
         spain.addPlace(cathedralSeville);
         
         world.addCountry(spain);
@@ -245,53 +268,200 @@ public class GameControl {
         stPetersSquare.setChallenge(false);
         stPetersSquare.setCountryCode("R");
         stPetersSquare.setPlaceName("St. Peter's Square");
-        stPetersSquare.setPlaceScene("You are at St. Peters Square");
+        stPetersSquare.setPlaceScene("\n You arrive at St. Peter’s Square in Moscow Russia. In the center of"
+                                   + "\n the square is a statue of an angel with a cross that stands at least"
+                                   + "\n 5 stories tall. The square is surrounded with enormous stately"
+                                   + "\n rectangular stone buildings. The stone payment going up to each"
+                                   + "\n building looks to be 2 times a Walmart supercenter parking lot."
+                                   + "\n A mint green building with white trim and statues all across the"
+                                   + "\n edge of rooftop seems more like an enormous wall rather than a building."
+                                   + "\n You realize that is Hermitage museum.");
         russia.addPlace(stPetersSquare);
         
         Place stBasilsCathedral = new Place();
         stBasilsCathedral.setChallenge(false);
         stBasilsCathedral.setCountryCode("R");
         stBasilsCathedral.setPlaceName("Saint Basil's Cathedral");
-        stBasilsCathedral.setPlaceScene("You are at the Saint Basil's Cathedral");
+        stBasilsCathedral.setPlaceScene("\n You arrive at Saint Basil’s Cathedral, an unmistakable Russian"
+                                      + "\n building. The multi-colored puffed onion domes top this mainly"
+                                      + "\n red colored 16th century building. You see the 2-story high statue"
+                                      + "\n of two warriors in front as you walk toward the gate.");
         russia.addPlace(stBasilsCathedral);
         
         Place leninsMausoleum = new Place();
         leninsMausoleum.setChallenge(false);
         leninsMausoleum.setCountryCode("R");
         leninsMausoleum.setPlaceName("Lenin's Mausoleum");
-        leninsMausoleum.setPlaceScene("You are at Lenin's Mausoleum");
+        leninsMausoleum.setPlaceScene("\n After arriving in Red Square in Moscow, you see Lenin’s Mausoleum."
+                                    + "\n The mainly red stone building contrasts nicely with the charcoal"
+                                    + "\n grey accent stones and grey paver brick streets. The overall look of"
+                                    + "\n the building is masculine due to its color and multileveled rectangular"
+                                    + "\n shapes. The red brick wall behind the building stretches upward the"
+                                    + "\n the Mausoleum, serving as a background.");
         russia.addPlace(leninsMausoleum);
         
         world.addCountry(russia);
         
-         //France
+        //France
         Country france = new Country();
         france.setName("France");
         
         Place eiffelTower = new Place();
         eiffelTower.setChallenge(false);
         eiffelTower.setCountryCode("F");
-        eiffelTower.setPlaceName("Eiffel Tower");
-        eiffelTower.setPlaceScene("You are at the Eiffle Tower");
+        eiffelTower.setPlaceName("Eiffel Tower");  
+        eiffelTower.setPlaceScene("\n You take bus line 82 and get off at BRANLY. As your bus nears"
+                                + "\n you can see the iconic trademark of Paris, the Eiffel tower. "
+                                + "\n You see people walking up the stairs inside the legs of the tower."
+                                + "\n You get off the bus and start walking toward it.   People are all"
+                                + "\n around. The elevator lifts shoot up the curved metal structure."
+                                + "\n The first deck has people peering out at the views. Then you look"
+                                + "\n further up to see the other two decks with people taking pictures"
+                                + "\n and taking in the view. ");
         france.addPlace(eiffelTower);
         
         Place louvre = new Place();
         louvre.setChallenge(false);
         louvre.setCountryCode("F");
         louvre.setPlaceName("The Louvre");
-        louvre.setPlaceScene("You are at the Louvre in France!");
+        louvre.setPlaceScene("\n You arrive at the Louvre Museum. Buildings surround the glass pyramid"
+                           + "\n and fountains. The glass of the Louvre Pyramid is glowing with this"
+                           + "\n beautiful gold light making the diamond pattern of the framework stand"
+                           + "\n out. You start walking toward the museum entry.");
         france.addPlace(louvre);
         
         Place cafeFrance = new Place();
         cafeFrance.setChallenge(false);
         cafeFrance.setCountryCode("F");
         cafeFrance.setPlaceName("Sidewalk Cafe in France");
-        cafeFrance.setPlaceScene("You are at a French sidewalk cafe");
+        cafeFrance.setPlaceScene("\n You walk to the Cafe De Flore as instructed. It’s easy to find because"
+                               + "\n of its white lettering mounted  to the edge the roof just above the "
+                               + "\n building. It’s a corner cafe with large round glass windows. Small"
+                               + "\n bistro tables outside form a semicircle around the rounded building."
+                               + "\n People are dining while reading the newspaper or talking to friends.");
         france.addPlace(cafeFrance);
         
         world.addCountry(france);
         
+         //Canada
+        Country canada = new Country();
+        canada.setName("Canada");
         
+        Place montrealStadium = new Place();
+        montrealStadium.setChallenge(false);
+        montrealStadium.setCountryCode("C");
+        montrealStadium.setPlaceName("Montreal Olympic Stadium");
+      
+        
+        montrealStadium.setPlaceScene("\n From a distance you see the Montreal Olympic Stadium with its unmistakable"
+                                    + "\n hoisting tower that looks like a modern lamp for the spaceship looking"
+                                    + "\n building. You can see that the stadium has it’s white roof on right now."
+                                    + "\n You are dropped off ready for your mission.  ");
+        canada.addPlace(montrealStadium);
+        
+        Place libraryParliament = new Place();
+        libraryParliament.setChallenge(false);
+        libraryParliament.setCountryCode("C");
+        libraryParliament.setPlaceName("Library of Parliament");
+        libraryParliament.setPlaceScene("\n You are now in Ottawa, Canada making your way to the Library of Parliament."
+                                      + "\n The light-tan colored stone building  is circular in shape, in the Victorian"
+                                      + "\n Gothic style adorned with pointed arches, spires and dark brown slate roofs."
+                                      + "\n You get out of the car and proceed to the door. ");
+        canada.addPlace(libraryParliament);
+        
+        Place cnTower = new Place();
+        cnTower.setChallenge(false);
+        cnTower.setCountryCode("C");
+        cnTower.setPlaceName("CN Tower");
+        cnTower.setPlaceScene("\n You travel to Toronto, Ontario in Canada. The city has many tall buildings"
+                            + "\n but the CN tower is close to double of the tallest building from the naked"
+                            + "\n eye. The building has pole like structure and the main living space near"
+                            + "\n the top revolving 360 degrees like a doughnut slowly turning on a stick.");
+        canada.addPlace(cnTower);
+        
+        world.addCountry(canada);
+                
+        //Brazil
+        Country brazil = new Country();
+        brazil.setName("Brazil");
+        
+        Place rioDeJaneiro = new Place();
+        rioDeJaneiro.setChallenge(false);
+        rioDeJaneiro.setCountryCode("B");
+        rioDeJaneiro.setPlaceName("Rio De Janeiro");
+        rioDeJaneiro.setPlaceScene("\n Traveling to Rio De Janeiro, Brazil is easy on the eyes. The clear aqua"
+                                 + "\n colored beaches and sunny days will have  you thinking vacation. Hotels"
+                                 + "\n line the sandy beaches but the city is densely populated with buildings."
+                                 + "\n Beach life is clearly a passion here as you see so many people on the"
+                                 + "\n beach soaking up the sun.  ");
+        brazil.addPlace(rioDeJaneiro);
+        
+        Place amazonForest = new Place();
+        amazonForest.setChallenge(false);
+        amazonForest.setCountryCode("B");
+        amazonForest.setPlaceName("Amazon Forest");
+        amazonForest.setPlaceScene("\n You are in a Jeep traveling along and through the forest at times. The dirt"
+                                 + "\n roads mainly go along the side.  You see children ahead and are dropped off"
+                                 + "\n at a small town of wooden shack structures. The smell of burning firewood is"
+                                 + "\n in the air. Clothes hang on a line swaying in the wind ");
+        brazil.addPlace(amazonForest);
+        
+        Place saoPaulo = new Place();
+        saoPaulo.setChallenge(false);
+        saoPaulo.setCountryCode("B");
+        saoPaulo.setPlaceName("Sao Paulo");
+        saoPaulo.setPlaceScene("\n You are headed for Brazil’s largest city, Sao Paulo. The tropical to"
+                             + "\n subtropical climate makes it warm year-round but have unpredictable"
+                             + "\n monsoons. This is a well-established city densely populated with "
+                             + "\n skyscrapers and building of all kinds. Even from the air the view"
+                             + "\n is a landscape of tall buildings covering the earth. In the far of"
+                             + "\n distance there are mountains that can only be seen by air.");
+        brazil.addPlace(saoPaulo);
+        
+        world.addCountry(brazil);
+        
+        //Australia
+        Country australia = new Country();
+        australia.setName("Australia");
+        
+        Place sydneyOpHouse = new Place();
+        sydneyOpHouse.setChallenge(false);
+        sydneyOpHouse.setCountryCode("A");
+        sydneyOpHouse.setPlaceName("Sydney Opera House");
+        sydneyOpHouse.setPlaceScene("\n You are on your way to the Sydney Opera House in Sydney, Australia."
+                                  + "\n The architecture of this iconic modern building is constructed of"
+                                  + "\n concave triangles looking like layered dog ears standing on end."
+                                  + "\n The building is on a small peninsula that protrudes out into the"
+                                  + "\n ocean. Coming from the city you pass the greenery of the park and"
+                                  + "\n see the opera house perfectly positioned for the view of the ocean.");
+        australia.addPlace(sydneyOpHouse);
+        
+        Place australiaBridge = new Place();
+        australiaBridge.setChallenge(false);
+        australiaBridge.setCountryCode("A");
+        australiaBridge.setPlaceName("Australia Bridge");
+        australiaBridge.setPlaceScene("\n Traveling to the Sydney Harbor, you can see the Sydney Harbor"
+                                    + "\n bridge. You see the steel constructed arch and supporting cables."
+                                    + "\n This iconic bridge is also known as the “coat hanger” As you get"
+                                    + "\n closer you see there are 4 lanes going each way and a pedestrian"
+                                    + "\n walkway. You get out and ready yourself for your mission.");
+        australia.addPlace(australiaBridge);
+        
+        Place melbourneJail = new Place();
+        melbourneJail.setChallenge(false);
+        melbourneJail.setCountryCode("A");
+        melbourneJail.setPlaceName("Old Melbourne Jail");
+        melbourneJail.setPlaceScene("\n You are headed to the Old Melbourne Jail in Victoria, Australia."
+                                  + "\n It is a museum now but has quite of history and some say it is"
+                                  + "\n haunted. You pull up and see a thick two-story brick wall with"
+                                  + "\n an archway. You enter and see the complex. The jail is constructed"
+                                  + "\n of charcoal grey colored cinder block. The building itself looks"
+                                  + "\n a bit like a saltbox construction where it is one large rectangle"
+                                  + "\n atop another. Each small window has metal bars. The whole scene is"
+                                  + "\n dreary and feels like you could be trapped.");
+        australia.addPlace(melbourneJail);
+        
+        world.addCountry(australia);
         
         return world;
     }
