@@ -120,19 +120,19 @@ public class TravelMenuView {
     private void displayMainMenu() {
         //display the main menu
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenuView();
+        mainMenu.display();
     }
 
     private void displayHelpMenu() {
         //display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenuView();
+        helpMenu.display();
     }
     
         private void displayMap() {
         //display the travel menu
         MapMenuView mapMenu = new MapMenuView();
-        mapMenu.displayMenuView();
+        mapMenu.display();
     }
 
     private void displayPlaceOne() {

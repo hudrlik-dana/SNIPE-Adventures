@@ -12,12 +12,12 @@ import java.util.Scanner;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public class MapMenuView {
+public class MapMenuView extends View {
 
-    private final String menu;
+    //private final String menu;
 
     public MapMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n-----------------------------------------------------------"
                 + "\n Map Menu                                                "
                 + "\n-----------------------------------------------------------"
@@ -51,10 +51,10 @@ public class MapMenuView {
                 + "\n P - View Passport"
                 + "\n M - Main Menu"
                 + "\n H - Help Menu"
-                + "\n-----------------------------------------------------------";
+                + "\n-----------------------------------------------------------");
     }
 
-    public void displayMenuView() {
+    /*public void display() {
 
         boolean done = false; //set flag to not done
         do {
@@ -87,9 +87,10 @@ public class MapMenuView {
         }
 
         return value; //return entered value
-    }
+    }*/
 
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
@@ -117,13 +118,13 @@ public class MapMenuView {
     private void displayMainMenu() {
         //display the main menu
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenuView();
+        mainMenu.display();
     }
 
     private void displayHelpMenu() {
         //display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenuView();
+        helpMenu.display();
     }
 
     private void displayTravelMenuView() {

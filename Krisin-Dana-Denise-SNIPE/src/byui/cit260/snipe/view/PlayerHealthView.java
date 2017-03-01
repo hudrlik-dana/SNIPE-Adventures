@@ -100,13 +100,13 @@ public class PlayerHealthView {
         private void displayMainMenu() { 
             //display the main menu 
             MainMenuView mainMenu = new MainMenuView(); 
-            mainMenu.displayMenuView(); 
+            mainMenu.display(); 
         } 
 
         private void displayHelpMenu() { 
             //display the help menu 
             HelpMenuView helpMenu = new HelpMenuView(); 
-            helpMenu.displayMenuView(); 
+            helpMenu.display(); 
         } 
 
         private void displayPlayerCurrentScene() { 

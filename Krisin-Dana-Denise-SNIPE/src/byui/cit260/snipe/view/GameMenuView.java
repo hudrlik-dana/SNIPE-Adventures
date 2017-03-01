@@ -12,12 +12,12 @@ import java.util.Scanner;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public class GameMenuView {
+public class GameMenuView extends View{
     
-    private final String menu;
+    //private final String menu;
 
     public GameMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n-----------------------------------------------------------"
                 + "\n Game Menu                                                "
                 + "\n-----------------------------------------------------------"
@@ -29,10 +29,10 @@ public class GameMenuView {
                 + "\n V - View Map"
                 + "\n M - Main Menu"
                 + "\n H - Help Menu"
-                + "\n-----------------------------------------------------------";
+                + "\n-----------------------------------------------------------");
     }
 
-    public void displayMenuView() {
+    /*public void display() {
 
         boolean done = false; //set flag to not done
         do {
@@ -65,9 +65,10 @@ public class GameMenuView {
         }
 
         return value; //return entered value
-    }
+    }*/
 
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
@@ -104,19 +105,19 @@ public class GameMenuView {
     private void displayMainMenu() {
         //display the main menu
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenuView();
+        mainMenu.display();
     }
 
     private void displayHelpMenu() {
         //display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenuView();
+        helpMenu.display();
     }
 
     private void displayMap() {
         //display the travel menu
         MapMenuView mapMenu = new MapMenuView();
-        mapMenu.displayMenuView();
+        mapMenu.display();
     }
 
     private void displayTravelMenuView() {
@@ -126,7 +127,9 @@ public class GameMenuView {
     }
 
     private void displayPlayerHealthView() {
-        System.out.println("\n*** displayPlayerHealthView stub function called ***");
+        //display the player Health
+        PlayerHealthView playerHealth = new PlayerHealthView();
+        playerHealth.displayMenuView();
     }
 
     private void displayCollectedCodesView() {

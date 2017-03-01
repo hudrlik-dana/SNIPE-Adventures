@@ -198,7 +198,7 @@ public class StartProgramView {
         MainMenuView mainMenuView = new MainMenuView();
         
         //Display the main menu view
-        mainMenuView.displayMenuView();
+        mainMenuView.display();
     }
 
 //System.out.println("\n*** functionName() function called ***");

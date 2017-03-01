@@ -16,38 +16,26 @@ import snipe.Snipe;
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
 
-public class MainMenuView {
+public class MainMenuView extends View {
 
-    private String menu;
+    //private String menu;
 
     public MainMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n--------------------------------"
                 + "\n Main Menu                      "
                 + "\n--------------------------------"
-                + "\n L - Load Existing Game         " //(This will lose any unsaved progress in the current game)
-                + "\n N - Start New Game             " //(This will lose any unsaved progress in the current game)
+                + "\n L - Load Existing Game         " 
+                + "\n N - Start New Game             " 
                 + "\n S - Save Game                  "
                 + "\n R - Return to Player Location  "
                 + "\n H - Help Menu                  "
-                + "\n X - Exit Game                  " //(This will lose any unsaved progress in the current game)
-                + "\n--------------------------------";
+                + "\n X - Exit Game                  " 
+                + "\n--------------------------------");
     }
 
 /*  
-    Basic template for displaying a view: 
-    BEGIN
-        do
-            prompt for and get input value/s
-            if (value == "X") THEN
-                exit
-        
-        do  the action and display the next view
-        
-        while the view is not done
-    END
-*/
-    
+ 
     // displays the start program view
     public void displayMenuView() {
 
@@ -84,24 +72,10 @@ public class MainMenuView {
         }
 
         return value; //return entered value
-    }
+    }*/
 
-/*
-doAction(choice): void
-    BEGIN
-        convert choice to uppercase
-        SWITCH choice
-            "A":  description();
-                break; 
-            "B":  description();
-                break;
-        DEFAULT:DISPLAY "Invalid selection"
-        ENDSWITCH
-        RETURN false
-    END
-*/
-    
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
@@ -142,7 +116,7 @@ doAction(choice): void
         //display the game menu view
         GameMenuView gameMenu = new GameMenuView();
         //display the game menu
-        gameMenu.displayMenuView();
+        gameMenu.display();
     }
 
     private void saveGame() {
@@ -156,7 +130,7 @@ doAction(choice): void
     private void displayHelpMenu() {
         //display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenuView();
+        helpMenu.display();
     }
 
     private void exitGame() {

@@ -13,12 +13,12 @@ import java.util.Scanner;
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
 
-public class HelpMenuView {
+public class HelpMenuView extends View {
 
-    private final String menu;
+    //private final String menu;
 
     public HelpMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n-----------------------------------------------------------"
                 + "\n Help Menu                                                 "
                 + "\n-----------------------------------------------------------"
@@ -53,24 +53,12 @@ public class HelpMenuView {
                 + "\n-----------------------------------------------------------"
                 + "\n R - Return to Player Location"
                 + "\n M - Main Menu"
-                + "\n-----------------------------------------------------------";
+                + "\n-----------------------------------------------------------");
     }
     
-    /*  
-    Basic template for displaying a view: 
-    BEGIN
-        do
-            prompt for and get input value/s
-            if (value == "X") THEN
-                exit
-        
-        do  the action and display the next view
-        
-        while the view is not done
-    END
-*/
+
     
-    public void displayMenuView() {
+    /*public void display() {
 
         boolean done = false; //set flag to not done
         do {
@@ -103,7 +91,7 @@ public class HelpMenuView {
             break; //end the loop
         }
         return value; //return entered value
-    }
+    }*/
 
     /*
 doAction(choice): void
@@ -119,8 +107,8 @@ doAction(choice): void
         RETURN false
     END
 */
-    
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
@@ -141,7 +129,7 @@ doAction(choice): void
     private void displayMainMenu() {
         //display the main menu
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenuView();
+        mainMenu.display();
     }
 
     private void displayPlayerCurrentScene() {

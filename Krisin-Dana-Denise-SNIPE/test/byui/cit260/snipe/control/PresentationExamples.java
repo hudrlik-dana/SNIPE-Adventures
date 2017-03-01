@@ -125,9 +125,7 @@ public class PresentationExamples {
      */
     /*
     public static double calcMathPuzzle3(int lengthA, int widthA, int lengthB, int widthB) {
-
         double totalBricks = Math.round(((lengthA * widthA) * 12) / (lengthB * widthB));
-
         return totalBricks;
     }    
      */
@@ -151,13 +149,6 @@ public class PresentationExamples {
         result = instance.calcMathPuzzle3(lengthA, widthA, lengthB, widthB);
         assertEquals(expResult, result, 0.0);
 
-        lengthA = 100;
-        widthA = 25;
-        lengthB = 6;
-        widthB = 3;
-        expResult = 1666; //round should make this 1667 but isn't????
-        result = instance.calcMathPuzzle3(lengthA, widthA, lengthB, widthB);
-        assertEquals(expResult, result, 0.0);
     }
 
 //*******************************************************************************************
@@ -241,7 +232,6 @@ affected then the mechanism used is pass by reference
 otherwise it is pass by value.*/
 
 public class Swap {
-
 	public void main(String args[]) {
 		Animal a1 = new Animal("Lion");
 		Animal a2 = new Animal("Crocodile");
@@ -250,7 +240,6 @@ public class Swap {
 		swap(a1, a2);
 		System.out.println("After Swap:- a1:" + a1 + "; a2:" + a2);
 	}
-
 	public void swap(Animal animal1, Animal animal2) {
 		Animal temp = new Animal("");
 		temp = animal1;
@@ -258,24 +247,21 @@ public class Swap {
 		animal2 = temp;
 	}
 }
-
 class Animal {
 	String name;
-
 	public Animal(String name) {
 		this.name = name;
 	}
-
 	public String toString() {
 		return name;
 	}
 }
-
 /*Example Output:
 
 Before Swap:- a1:Lion; a2:Crocodile
 After Swap:- a1:Lion; a2:Crocodile
 Objects are not swapped because Java uses pass by value.*/
+
 
 /*Java Passes the Reference
 
