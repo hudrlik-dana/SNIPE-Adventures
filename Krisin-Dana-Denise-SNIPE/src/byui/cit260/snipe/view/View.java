@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.snipe.view;
 
 import java.util.Scanner;
@@ -13,16 +12,16 @@ import java.util.Scanner;
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
 public abstract class View implements ViewInterface {
-    
+
     protected String displayMessage;
-    
+
     public View() {
     }
-    
-    public View (String message) {
+
+    public View(String message) {
         this.displayMessage = message;
     }
-    
+
     @Override
     public void display() {
         boolean done = false; //set flag to not done
@@ -37,13 +36,13 @@ public abstract class View implements ViewInterface {
 
         } while (!done);
     }
-    
+
     @Override
     public String getInput() {
         Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         boolean valid = false; //initialize to not valid
         String value = ""; //value to be returned
-        
+
         while (!valid) {
             System.out.println("\n" + this.displayMessage);
 
@@ -60,9 +59,4 @@ public abstract class View implements ViewInterface {
 
     }
 
-   
 }
-
-    
-
-

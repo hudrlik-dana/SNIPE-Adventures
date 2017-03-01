@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.snipe.view;
 
 import java.util.Scanner;
@@ -12,53 +11,49 @@ import java.util.Scanner;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public abstract class Challenge implements ChallengeInterface{
+public abstract class Challenge implements ChallengeInterface {
 
-    protected String displayDescription;
-    
-    public Challenge(){
-        
+    protected String answerOption;
+
+    public Challenge() {
     }
-    
-    public Challenge(String description){
-        this.displayDescription = description;
+
+    public Challenge(String answer) {
+        this.answerOption = answer;
     }
-    
+
     @Override
-    public void displayDesc() {
+    public void displayAnswers() {
+
         boolean done = false; //set flag to not done
         do {
-            // prompt for and get players name
-            String value = this.getInput();
-            if (value.toUpperCase().equals("X")) {  //user wants to quit
-                return;    //exit the game
-            }
+            String answerOption = this.getAnswerOption();
+
             //do the requested action and display the next view
-            done = this.doAction(value);
+            done = this.doAction(answerOption);
 
         } while (!done);
     }
-    
+
     @Override
-    public String getInput() {
+    public String getAnswerOption() {
         Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
-        boolean valid = false; //initialize to not valid
         String value = ""; //value to be returned
-        
+        boolean valid = false; //initialize to not valid
+
         while (!valid) {
-            System.out.println("\n" + this.displayDescription);
+            System.out.println("\n" + this.answerOption);
 
             value = keyboard.nextLine(); //get next line typed on keyboard
             value = value.trim(); //trim off leading and trailing blanks
 
             if (value.length() < 1) { // value is blank
                 System.out.println("\nInvalid: entry required.");
-                continue;
             }
             break; //end the loop
         }
-        return value; //return entered value
 
+        return value; //return entered value
     }
-    
+
 }
