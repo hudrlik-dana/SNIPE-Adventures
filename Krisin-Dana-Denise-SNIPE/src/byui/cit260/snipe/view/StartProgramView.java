@@ -79,7 +79,7 @@ public class StartProgramView {
         do {
             //prompt for and get player's name
             String playerName = this.getPlayerName();
-            if (playerName.toUpperCase().equals("X")) {//user wants to quit
+            if (playerName.toUpperCase().equals("Q")) {//user wants to quit
             
                 return; //exit the game
             }
@@ -198,7 +198,7 @@ public class StartProgramView {
         MainMenuView mainMenuView = new MainMenuView();
         
         //Display the main menu view
-        mainMenuView.displayMenuView();
+        mainMenuView.display();
     }
 
 //System.out.println("\n*** functionName() function called ***");

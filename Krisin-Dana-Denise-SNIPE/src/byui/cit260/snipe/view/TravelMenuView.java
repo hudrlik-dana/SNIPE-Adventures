@@ -14,12 +14,12 @@ import snipe.Snipe;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public class TravelMenuView {
+public class TravelMenuView extends View {
 
     private final String menu;
 
     public TravelMenuView() {
-        
+        super();
         Country currentCountry = Snipe.getPlayer().getCurrentCountry();
         
         String tempMenu = "\n"
@@ -42,11 +42,12 @@ public class TravelMenuView {
         this.menu = tempMenu;
     }
 
-    public void displayMenuView() {
+    @Override
+    public void display() {
 
         boolean done = false; //set flag to not done
         do {
-            String menuOption = this.getMenuOption();
+            String menuOption = this.getInput();
             if (menuOption.toUpperCase().equals("X")) {
                 return;
             }
@@ -57,7 +58,8 @@ public class TravelMenuView {
         } while (!done);
     }
 
-    private String getMenuOption() {
+    @Override
+    public String getInput() {
         Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid
@@ -77,7 +79,8 @@ public class TravelMenuView {
         return value; //return entered value
     }
 
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
@@ -120,19 +123,19 @@ public class TravelMenuView {
     private void displayMainMenu() {
         //display the main menu
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenuView();
+        mainMenu.display();
     }
 
     private void displayHelpMenu() {
         //display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenuView();
+        helpMenu.display();
     }
     
         private void displayMap() {
         //display the travel menu
         MapMenuView mapMenu = new MapMenuView();
-        mapMenu.displayMenuView();
+        mapMenu.display();
     }
 
     private void displayPlaceOne() {

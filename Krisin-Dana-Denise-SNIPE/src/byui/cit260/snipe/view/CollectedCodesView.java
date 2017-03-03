@@ -10,10 +10,16 @@ package byui.cit260.snipe.view;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public class CollectedCodesView {
+public class CollectedCodesView extends View{
     
-    void displayMenuView() {
-            System.out.println("\n*** displayMenuView stub function called ***");
-        }
+    public void display() {
+        System.out.println("\n*** displayMenuView stub function called ***");
+    }
+
+    @Override
+    public boolean doAction(String value) {
+        System.out.println("\n*** doAction stub function called ***");
+        return false;
+    }
 
 }

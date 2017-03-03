@@ -13,12 +13,10 @@ import java.util.Scanner;
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
 
-public class HelpMenuView {
-
-    private final String menu;
+public class HelpMenuView extends View {
 
     public HelpMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n-----------------------------------------------------------"
                 + "\n Help Menu                                                 "
                 + "\n-----------------------------------------------------------"
@@ -53,74 +51,13 @@ public class HelpMenuView {
                 + "\n-----------------------------------------------------------"
                 + "\n R - Return to Player Location"
                 + "\n M - Main Menu"
-                + "\n-----------------------------------------------------------";
+                + "\n-----------------------------------------------------------");
     }
     
-    /*  
-    Basic template for displaying a view: 
-    BEGIN
-        do
-            prompt for and get input value/s
-            if (value == "X") THEN
-                exit
-        
-        do  the action and display the next view
-        
-        while the view is not done
-    END
-*/
-    
-    public void displayMenuView() {
 
-        boolean done = false; //set flag to not done
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("X")) {
-                return;
-            }
 
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not valid
-
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-
-            value = keyboard.nextLine(); //get next line typed on keyboard
-            value = value.trim(); //trim off leading and trailing blanks
-
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid: entry required.");
-                continue;
-            }
-            break; //end the loop
-        }
-        return value; //return entered value
-    }
-
-    /*
-doAction(choice): void
-    BEGIN
-        convert choice to uppercase
-        SWITCH choice
-            "A":  description();
-                break; 
-            "B":  description();
-                break;
-        DEFAULT:DISPLAY "Invalid selection"
-        ENDSWITCH
-        RETURN false
-    END
-*/
-    
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
@@ -141,7 +78,7 @@ doAction(choice): void
     private void displayMainMenu() {
         //display the main menu
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenuView();
+        mainMenu.display();
     }
 
     private void displayPlayerCurrentScene() {

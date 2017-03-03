@@ -16,92 +16,25 @@ import snipe.Snipe;
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
 
-public class MainMenuView {
-
-    private String menu;
+public class MainMenuView extends View {
 
     public MainMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n--------------------------------"
                 + "\n Main Menu                      "
                 + "\n--------------------------------"
-                + "\n L - Load Existing Game         " //(This will lose any unsaved progress in the current game)
-                + "\n N - Start New Game             " //(This will lose any unsaved progress in the current game)
+                + "\n L - Load Existing Game         " 
+                + "\n N - Start New Game             " 
                 + "\n S - Save Game                  "
                 + "\n R - Return to Player Location  "
                 + "\n H - Help Menu                  "
-                + "\n X - Exit Game                  " //(This will lose any unsaved progress in the current game)
-                + "\n--------------------------------";
+                + "\n Q - Exit Game                  " 
+                + "\n--------------------------------");
     }
 
-/*  
-    Basic template for displaying a view: 
-    BEGIN
-        do
-            prompt for and get input value/s
-            if (value == "X") THEN
-                exit
-        
-        do  the action and display the next view
-        
-        while the view is not done
-    END
-*/
-    
-    // displays the start program view
-    public void displayMenuView() {
 
-        boolean done = false; //set flag to not done
-        do {
-            // prompt for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("X")) {  //user wants to quit
-                return;    //exit the game
-            }
-
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not valid
-
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-
-            value = keyboard.nextLine(); //get next line typed on keyboard
-            value = value.trim(); //trim off leading and trailing blanks
-
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid: entry required.");
-                continue;
-            }
-            break; //end the loop
-        }
-
-        return value; //return entered value
-    }
-
-/*
-doAction(choice): void
-    BEGIN
-        convert choice to uppercase
-        SWITCH choice
-            "A":  description();
-                break; 
-            "B":  description();
-                break;
-        DEFAULT:DISPLAY "Invalid selection"
-        ENDSWITCH
-        RETURN false
-    END
-*/
-    
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
@@ -121,9 +54,8 @@ doAction(choice): void
             case "H": //Display Help Menu
                 this.displayHelpMenu();
                 break;
-            case "X": //Exit Game
-                this.exitGame();
-                break;
+            case "Q": //Exit Game
+                return true;
             default:      
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;   
@@ -142,7 +74,7 @@ doAction(choice): void
         //display the game menu view
         GameMenuView gameMenu = new GameMenuView();
         //display the game menu
-        gameMenu.displayMenuView();
+        gameMenu.display();
     }
 
     private void saveGame() {
@@ -156,12 +88,9 @@ doAction(choice): void
     private void displayHelpMenu() {
         //display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenuView();
+        helpMenu.display();
     }
 
-    private void exitGame() {
-        System.out.println("\n*** exitGame() function called ***");
-    }
 
 //System.out.println("\n*** functionName() function called ***");
 }
