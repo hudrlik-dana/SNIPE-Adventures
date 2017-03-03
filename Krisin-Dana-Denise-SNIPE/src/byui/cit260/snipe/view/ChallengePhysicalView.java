@@ -103,7 +103,7 @@ public class ChallengePhysicalView extends View{
                   + "\n***********************************************************");
                 break;
 
-            case "Germany": 
+            case "England": 
                 System.out.println(
                     "\n***********************************************************"
                   + "\n* You arrive in front of the majestic Cologne Cathedral.  *"
