@@ -44,11 +44,13 @@ public class PresentationExamples {
 //Results of Player Answer
     String result = null;
 
-    public String playerAnswer(char playerAnswer, char correctAnswer, char otherAnswer1, char otherAnswer2, char otherAnswer3) {
+    public String playerAnswer(char playerAnswer, char correctAnswer, 
+            char otherAnswer1, char otherAnswer2, char otherAnswer3) {
 
         if (playerAnswer == correctAnswer) {
             return result = "Correct";
-        } else if (playerAnswer == otherAnswer1 || playerAnswer == otherAnswer2 || playerAnswer == otherAnswer3) {
+        } else if (playerAnswer == otherAnswer1 || playerAnswer == otherAnswer2 
+                     || playerAnswer == otherAnswer3) {
             return result = "Incorrect";
         } else {
             return result = "Invalid Entry, Try Again";
@@ -270,7 +272,6 @@ property of a passed argument object inside a method and it gets
 reflected in the actual argument.*/
 
 public class Swap2 {
-
 	public void main(String args[]) {
 		Animal2 a = new Animal2("Lion");
 
@@ -278,12 +279,10 @@ public class Swap2 {
 		modify(a);
 		System.out.println("After Modify: " + a);
 	}
-
 	public void modify(Animal2 animal) {
 		animal.setName("Tiger");
 	}
 }
-
 class Animal2 {
 	String name;
 
@@ -297,11 +296,38 @@ class Animal2 {
 		this.name = name;
 	}
     }
-/*Example Output:
 
+/* Example Output
 Before Modify: Lion
 After Modify: Tiger*/
 
 
 // http://javapapers.com/core-java/java-pass-by-value-and-pass-by-reference/
 }
+/*
+
+    //Denise's Individual Assignment
+    public static double calcMathPuzzle1(int wallHeight, int shadowLength) {
+        double distance = 0;
+        distance = Math.round(Math.sqrt((wallHeight * wallHeight) + (shadowLength * shadowLength)));
+
+        return distance;
+    }
+
+//Dana's Individual Assignment
+    //A - length & width in feet 
+    //B - length & width in inches
+    public static double calcMathPuzzle3(int lengthA, int widthA, int lengthB, int widthB) {
+        double totalBricks = Math.round(((lengthA * widthA) * 12) / (lengthB * widthB));
+        return totalBricks;
+    }
+
+    //Kristin's Individual Assignment
+    public boolean physicalChallengeCheck(int randomNumber, int challengeNumber) {
+        if (randomNumber > challengeNumber) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+*/
