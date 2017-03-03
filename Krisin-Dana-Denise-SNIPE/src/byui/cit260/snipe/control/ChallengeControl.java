@@ -60,17 +60,16 @@ public class ChallengeControl {
     public static double calcMathPuzzle1(int wallHeight, int shadowLength) {
         double distance = 0;
         distance = Math.round(Math.sqrt((wallHeight * wallHeight) + (shadowLength * shadowLength)));
-
+        
         return distance;
     }
 
 //Dana's Individual Assignment
-    //A - length & width in feet 
-    //B - length & width in inches
+    
     public static double calcMathPuzzle3(int lengthA, int widthA, int lengthB, int widthB) {
-
+        
         double totalBricks = Math.round(((lengthA * widthA) * 12) / (lengthB * widthB));
-
+        
         return totalBricks;
     }
 
