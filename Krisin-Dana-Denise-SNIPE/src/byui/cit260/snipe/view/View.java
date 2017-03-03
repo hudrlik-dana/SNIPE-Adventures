@@ -28,7 +28,7 @@ public abstract class View implements ViewInterface {
         do {
             // prompt for and get players name
             String value = this.getInput();
-            if (value.toUpperCase().equals("X")) {  //user wants to quit
+            if (value.toUpperCase().equals("Q")) {  //user wants to quit
                 return;    //exit the game
             }
             //do the requested action and display the next view
