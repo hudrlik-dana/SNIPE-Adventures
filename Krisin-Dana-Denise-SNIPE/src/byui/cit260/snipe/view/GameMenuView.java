@@ -123,7 +123,7 @@ public class GameMenuView extends View{
     private void displayTravelMenuView() {
         //display the travel menu
         TravelMenuView travelMenu = new TravelMenuView();
-        travelMenu.displayMenuView();
+        travelMenu.display();
     }
 
     private void displayPlayerHealthView() {
