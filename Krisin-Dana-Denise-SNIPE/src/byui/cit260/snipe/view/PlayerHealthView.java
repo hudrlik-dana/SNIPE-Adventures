@@ -43,7 +43,7 @@ public class PlayerHealthView {
         boolean done = false;  //set flag to not done
             do {
                 String menuOption = this.getInput();
-                if (menuOption.toUpperCase().equals("R")) {
+                if (menuOption.toUpperCase().equals("X")) {
                     return;  // return to player location
                 }
                 //do the requested action and display the next view

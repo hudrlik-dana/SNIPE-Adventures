@@ -103,6 +103,35 @@ public class ChallengePhysicalView extends View{
                   + "\n***********************************************************");
                 break;
 
+            case "Germany": 
+                System.out.println(
+                    "\n***********************************************************"
+                  + "\n* You arrive in front of the majestic Cologne Cathedral.  *"
+                  + "\n* The intricate detail of the building with spires        *"
+                  + "\n* reaching for the heavens would suggest this massive     *"
+                  + "\n* building has been around for centuries. You go inside   *"
+                  + "\n* inside to see the beauty of the building amplifies with *"
+                  + "\n* gorgeous arches, doors and stunning leaded glass        *"
+                  + "\n* windows. You walk down a long arched hallway lined with *"
+                  + "\n* marble columns to find a door at the end. You open it   *"
+                  + "\n* and a stairway leads down to a lower level. You find    *"
+                  + "\n* the painting of an old ship hanging on the wall in the  *"
+                  + "\n* west wing. After looking around to ensure no one is     *"
+                  + "\n* watching you, you carefully reach around the painting   *"
+                  + "\n* and slide your hand down the back side of the frame.    *"
+                  + "\n* You remove the tattered envelope and read your next     *"
+                  + "\n* clue:                                                   *"
+                  + "\n* A ladder is over the side of a ship anchored in port.   *"
+                  + "\n* The bottom rung of the ladder touches the water. The    *"
+                  + "\n* distance between rungs is 18 inches and the length of   *"
+                  + "\n* the ladder is 180 inches. The tide is rising at a rate  *"
+                  + "\n* of 6 inches per hour. When will the water reach the 7th *"
+                  + "\n* rung from the top?                                      *"
+                  + "\n***********************************************************"
+                  + "\n* Choose your answer:                                     *"
+                  + "\n***********************************************************");
+                break;                
+                
             default:
                 System.out.println("\n*** Country not built out yet.");
                 break;        
