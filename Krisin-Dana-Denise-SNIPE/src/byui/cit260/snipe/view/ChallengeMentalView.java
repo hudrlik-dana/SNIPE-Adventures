@@ -18,7 +18,7 @@ public class ChallengeMentalView {
 
     private String answerOption;
 
-    
+
     public ChallengeMentalView() {
         
        Country currentCountry = Snipe.getPlayer().getCurrentCountry();
