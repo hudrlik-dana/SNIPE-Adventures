@@ -24,12 +24,13 @@ BEGIN
 END
 */
 
-public class ChallengePhysicalView {
+public class ChallengePhysicalView extends View{
     
     private String displayDescription; 
     private String answerOption;
     
     public ChallengePhysicalView() {
+        super();
         //identify the country player is in
     Country currentCountry = Snipe.getPlayer().getCurrentCountry();  
     
@@ -45,7 +46,7 @@ public class ChallengePhysicalView {
      * display description of physical challenge
      */
     public static void displayDescription() {
-       
+
        //case switch to identify country and display the description of the challenge 
         switch ("currentCountry"){
             case "USA":
@@ -110,6 +111,24 @@ public class ChallengePhysicalView {
 // 
         
         }
+    }
+
+    public void displayMenuView() {
+
+        boolean done = false; //set flag to not done
+        do {
+            String answerOption = this.getInput();
+
+            //do the requested action and display the next view
+            done = this.doAction(answerOption);
+
+        } while (!done);
+    }
+    
+    @Override
+    public boolean doAction(String value) {
+        System.out.println("\n*** doAction stub function called ***");
+        return false;
     }
     
     

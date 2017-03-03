@@ -14,16 +14,18 @@ import snipe.Snipe;
  *
  * @author denisegoetz
  */
-public class ChallengeMentalView {
+public class ChallengeMentalView extends View {
 
     private String answerOption;
 
 
     public ChallengeMentalView() {
+    
+        super();
         
-       Country currentCountry = Snipe.getPlayer().getCurrentCountry();
+        Country currentCountry = Snipe.getPlayer().getCurrentCountry();
         
-       switch ("currentCountry") {
+        switch ("currentCountry") {
            
             case "Germany": //display the question
                 System.out.println("\n Beginning at the east end you walk along the wall"
@@ -98,7 +100,7 @@ public class ChallengeMentalView {
 
         boolean done = false; //set flag to not done
         do {
-            String answerOption = this.getAnswerOption();
+            String answerOption = this.getInput();
 
             //do the requested action and display the next view
             done = this.doAction(answerOption);
@@ -106,27 +108,8 @@ public class ChallengeMentalView {
         } while (!done);
     }
 
-    private String getAnswerOption() {
-        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not valid
 
-        while (!valid) {
-            System.out.println("\n" + this.answerOption);
-
-            value = keyboard.nextLine(); //get next line typed on keyboard
-            value = value.trim(); //trim off leading and trailing blanks
-
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid: entry required.");
-            }
-            break; //end the loop
-        }
-
-        return value; //return entered value
-    }
-
-    private boolean doAction(String choice) {
+    public boolean doAction(String choice) {
       
         int var1=0;
         int var2=0;

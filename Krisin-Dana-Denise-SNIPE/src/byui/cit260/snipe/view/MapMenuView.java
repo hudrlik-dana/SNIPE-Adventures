@@ -14,8 +14,6 @@ import java.util.Scanner;
  */
 public class MapMenuView extends View {
 
-    //private final String menu;
-
     public MapMenuView() {
         super("\n"
                 + "\n-----------------------------------------------------------"
@@ -54,40 +52,6 @@ public class MapMenuView extends View {
                 + "\n-----------------------------------------------------------");
     }
 
-    /*public void display() {
-
-        boolean done = false; //set flag to not done
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("X")) {
-                return;
-            }
-
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not valid
-
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-
-            value = keyboard.nextLine(); //get next line typed on keyboard
-            value = value.trim(); //trim off leading and trailing blanks
-
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid: entry required.");
-            }
-            break; //end the loop
-        }
-
-        return value; //return entered value
-    }*/
 
     @Override
     public boolean doAction(String choice) {
