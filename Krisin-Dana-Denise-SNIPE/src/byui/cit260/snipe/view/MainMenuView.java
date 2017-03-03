@@ -18,8 +18,6 @@ import snipe.Snipe;
 
 public class MainMenuView extends View {
 
-    //private String menu;
-
     public MainMenuView() {
         super("\n"
                 + "\n--------------------------------"
@@ -34,45 +32,6 @@ public class MainMenuView extends View {
                 + "\n--------------------------------");
     }
 
-/*  
- 
-    // displays the start program view
-    public void displayMenuView() {
-
-        boolean done = false; //set flag to not done
-        do {
-            // prompt for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("X")) {  //user wants to quit
-                return;    //exit the game
-            }
-
-            //do the requested action and display the next view
-            done = this.doAction(menuOption);
-
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not valid
-
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-
-            value = keyboard.nextLine(); //get next line typed on keyboard
-            value = value.trim(); //trim off leading and trailing blanks
-
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid: entry required.");
-                continue;
-            }
-            break; //end the loop
-        }
-
-        return value; //return entered value
-    }*/
 
     @Override
     public boolean doAction(String choice) {
