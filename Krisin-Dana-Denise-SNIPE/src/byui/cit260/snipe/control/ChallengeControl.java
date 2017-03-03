@@ -32,7 +32,7 @@ public class ChallengeControl {
 
     }
 
-    public boolean performPhysicalChallenge() {
+    public static boolean performPhysicalChallenge() {
         Random rand = new Random();
         int randomValue = rand.nextInt(100);
         return physicalChallengeCheck(randomValue, 50); //TODO grab location challenge number
@@ -40,7 +40,7 @@ public class ChallengeControl {
     }
 
     //Kristin's Individual Assignment
-    public boolean physicalChallengeCheck(int randomNumber, int challengeNumber) {
+    public static boolean physicalChallengeCheck(int randomNumber, int challengeNumber) {
         if (randomNumber > challengeNumber) {
             return true;
         } else {
