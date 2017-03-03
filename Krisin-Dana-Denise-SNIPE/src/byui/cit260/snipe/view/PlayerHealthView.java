@@ -38,11 +38,11 @@ public class PlayerHealthView {
      * verifies the player selection 
      */
 
-    public void displayMenuView () {
+    public void display() {
         
         boolean done = false;  //set flag to not done
             do {
-                String menuOption = this.getMenuOption();
+                String menuOption = this.getInput();
                 if (menuOption.toUpperCase().equals("R")) {
                     return;  // return to player location
                 }
@@ -55,7 +55,7 @@ public class PlayerHealthView {
 /*
    player input 
 */    
-    private String getMenuOption() {
+    private String getInput() {
         Scanner keyboard = new Scanner(System.in);  //get infile from keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid to allow input

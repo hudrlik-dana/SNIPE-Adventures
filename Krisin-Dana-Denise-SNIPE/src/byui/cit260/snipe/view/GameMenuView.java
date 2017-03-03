@@ -129,7 +129,7 @@ public class GameMenuView extends View{
     private void displayPlayerHealthView() {
         //display the player Health
         PlayerHealthView playerHealth = new PlayerHealthView();
-        playerHealth.displayMenuView();
+        playerHealth.display();
     }
 
     private void displayCollectedCodesView() {
