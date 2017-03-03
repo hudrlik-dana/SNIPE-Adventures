@@ -30,7 +30,7 @@ public class MainMenuView extends View {
                 + "\n S - Save Game                  "
                 + "\n R - Return to Player Location  "
                 + "\n H - Help Menu                  "
-                + "\n X - Exit Game                  " 
+                + "\n Q - Exit Game                  " 
                 + "\n--------------------------------");
     }
 
@@ -95,9 +95,8 @@ public class MainMenuView extends View {
             case "H": //Display Help Menu
                 this.displayHelpMenu();
                 break;
-            case "X": //Exit Game
-                this.exitGame();
-                break;
+            case "Q": //Exit Game
+                return true;
             default:      
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;   
@@ -133,9 +132,6 @@ public class MainMenuView extends View {
         helpMenu.display();
     }
 
-    private void exitGame() {
-        System.out.println("\n*** exitGame() function called ***");
-    }
 
 //System.out.println("\n*** functionName() function called ***");
 }
