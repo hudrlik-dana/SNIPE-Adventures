@@ -315,6 +315,10 @@ public class ChallengePhysicalView extends View {
                                      + "\n to contact your handler and receive the dossier for your"
                                      + "\n next mission.");
                 }
+                if (answerOption != "3" || answerOption != "2" || answerOption != "1") {
+                    
+                    System.out.println("\n Invalid entry. Please select answer 1, 2, or 3"); 
+                }
             break;
             
             default:
