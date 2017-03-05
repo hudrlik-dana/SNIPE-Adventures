@@ -93,6 +93,16 @@ public class TravelMenuView extends View {
             
             //IF PLAYER MOVEMENT TO A PLACE TRIGGERS CHALLENGE - OPEN THE CHALLENGE VIEW HERE
 //            if(Snipe.getPlayer().getCurrentPlace().isChallenge()) {
+
+               if (numChoice == 1){
+                 System.out.println("\n this is first" + Snipe.getPlayer().getCurrentPlace().getPlaceScene()); 
+              }
+               if (numChoice == 2){
+                 System.out.println("\n this is second " + Snipe.getPlayer().getCurrentPlace().getPlaceScene()); 
+              }
+               if (numChoice == 3){
+                 System.out.println("\n this is third" + Snipe.getPlayer().getCurrentPlace().getPlaceScene()); 
+              }
 //            }
             return true;
         } catch(IndexOutOfBoundsException ibe) {

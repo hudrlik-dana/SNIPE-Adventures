@@ -98,7 +98,7 @@ public class GameControl {
          
    
         Place libraryCongress = new Place();
-        libraryCongress.setChallenge(false);
+        libraryCongress.setChallenge(true);
         libraryCongress.setCountryCode("U");
         libraryCongress.setPlaceName("Library of Congress");
         libraryCongress.setPlaceScene("\n You're at the Library of Congress now. This is a very"
@@ -107,7 +107,7 @@ public class GameControl {
         usa.addPlace(libraryCongress);
         
         Place gatewayArch = new Place();
-        gatewayArch.setChallenge(false);
+        gatewayArch.setChallenge(true);
         gatewayArch.setCountryCode("U");
         gatewayArch.setPlaceName("Gateway Arch");
         gatewayArch.setPlaceScene("\n You have arrived at the Gateway Arch in St. Louis Missouri."
