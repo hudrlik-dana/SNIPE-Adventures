@@ -6,7 +6,7 @@
 package byui.cit260.snipe.model;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -20,7 +20,7 @@ public class Player implements Serializable {
     private int playerHealth;
     private String charName;
     private String dossier;
-    private List<Place> passport;
+    private ArrayList<Place> passport; 
     private Place currentPlace;
     private Country currentCountry;
 
@@ -56,11 +56,11 @@ public class Player implements Serializable {
         this.dossier = dossier;
     }
 
-    public List<Place> getPassport() {
+    public ArrayList<Place> getPassport() {
         return passport;
     }
 
-    public void setPassport(List<Place> passport) {
+    public void setPassport(ArrayList<Place> passport) {
         this.passport = passport;
     }
 
