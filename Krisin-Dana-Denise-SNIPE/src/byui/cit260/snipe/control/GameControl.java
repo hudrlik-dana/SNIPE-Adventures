@@ -10,8 +10,8 @@ import byui.cit260.snipe.model.Game;
 import byui.cit260.snipe.model.Place;
 import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.model.World;
-import java.util.List;
 import java.util.Random;
+import java.util.ArrayList;
 import snipe.Snipe;
 
 /**
@@ -42,6 +42,10 @@ public class GameControl {
 
         Player player = new Player();
         player.setName(name);
+        player.setPlayerHealth(100);
+        player.setCharName("");
+        //player.setPassport(passport);
+        //player.setCurrentPlace[][];
 
         Snipe.setPlayer(player); // save the player        
 
@@ -104,6 +108,7 @@ public class GameControl {
         libraryCongress.setPlaceScene("\n You're at the Library of Congress now. This is a very"
                                     + "\n secure building and you will need to be sharp to "
                                     + "\n accomplish your mission!");
+        libraryCongress.setMasterCodePiece("");
         usa.addPlace(libraryCongress);
         
         Place gatewayArch = new Place();
@@ -113,6 +118,7 @@ public class GameControl {
         gatewayArch.setPlaceScene("\n You have arrived at the Gateway Arch in St. Louis Missouri."
                                 + "\n The Arch is a spectacular sight, but you quickly remember"
                                 + "\n you are on a mission!");
+        gatewayArch.setMasterCodePiece("");
         usa.addPlace(gatewayArch);
         
         world.addCountry(usa);
