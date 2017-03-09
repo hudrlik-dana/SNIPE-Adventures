@@ -38,14 +38,14 @@ public class MapMenuView extends View {
         System.out.println();
         line = new StringBuilder("                     ");
         line.insert(0,"USA");
-        line.insert(0,"GERMANY");
-        line.insert(0,"ENGLAND");
-        line.insert(0,"SPAIN");
-        line.insert(0,"RUSSIA");
-        line.insert(0,"FRANCE");
-        line.insert(0,"CANADA");
-        line.insert(0,"BRAZIL");
-        line.insert(0,"AUSTRALIA");
+        line.insert(06,"GERMANY");
+        line.insert(15,"ENGLAND");
+        line.insert(25,"SPAIN");
+        line.insert(32,"RUSSIA");
+        line.insert(40,"FRANCE");
+        line.insert(47,"CANADA");
+        line.insert(55,"BRAZIL");
+        line.insert(62,"AUSTRALIA");
         System.out.println(line.toString());
         
         //For each Place
@@ -56,14 +56,17 @@ public class MapMenuView extends View {
             {"S.N.I.P.E Academy", "Rhine River", "Westminster Abbey", "Cathedral of Seville", "Lenin's Mausoleum", "Sidewalk Cafe", "CN Tower", "Sao Paulo", "Old Melbourne Jail"}
         };   
         
-/*
-        for (String i = 0; i < places.length; i++) {
-            for (String j = 0; j < places[i].length; j++) {
-        System.out.print(places[i][j] + " ");
+
+        for (int i = 0; i < places.length; i++) {
+            for (int j = 0; j < places[i].length; j++) {
+                
+                System.out.print(places[i][j] + " ");
+             
+                if (j == 8) {
+                   System.out.print("\n");
+                }     
+            }
         }
-        System.out.println();
-        }
-*/
 
 /*       
         final int[][] matrix = {
