@@ -18,39 +18,16 @@ import snipe.Snipe;
  */
 public class MapMenuView extends View {
 
-    //private final String menu;
-
     public MapMenuView() {
         super();
-        Place currentPlace = Snipe.getPlayer().getCurrentPlace();
-        
-        String tempMenu = "\n"
-                + "\n-----------------------------------------------------------"
-                + "\n Map of Places"
-                + "\n-----------------------------------------------------------"
-                + "\n";
-
-        StringBuilder line;
-
-        Game game = Snipe.getCurrentGame();
-        
-        
-        System.out.println();
-        line = new StringBuilder("                     ");
-        line.insert(0,"USA");
-        line.insert(06,"GERMANY");
-        line.insert(15,"ENGLAND");
-        line.insert(25,"SPAIN");
-        line.insert(32,"RUSSIA");
-        line.insert(40,"FRANCE");
-        line.insert(47,"CANADA");
-        line.insert(55,"BRAZIL");
-        line.insert(62,"AUSTRALIA");
-        System.out.println(line.toString());
-        
-        //For each Place
+        System.out.print("\n"
+            + "\n------------------------------------------------------------------------------"
+            + "\n Map of Places"
+            + "\n------------------------------------------------------------------------------"
+            + "\n");
 
         final String[][] places = {
+            {"    USA   ", "  GERMANY ", "  ENGLAND ", "   SPAIN   ", "  RUSSIA  ", "  FRANCE  ", "  CANADA  ", "  BRAZIL  ", " AUSTRALIA"},
             {"Library of Congress", "Berlin Wall", "Big Ben", "Valencia", "St. Peter's Square", "The Louvre", "Library of Parliament", "Rio De Janeiro", "Sydney Opera House"},
             {"Gateway Arch", "Cologne Cathedral", "Buckingham Palace", "Tarragona", "Saint Basil's Cathedral", "Eiffel Tower", "Montreal Olympic Stadium", "Amazon Forest", "Australia Bridge"},
             {"S.N.I.P.E Academy", "Rhine River", "Westminster Abbey", "Cathedral of Seville", "Lenin's Mausoleum", "Sidewalk Cafe", "CN Tower", "Sao Paulo", "Old Melbourne Jail"}
@@ -67,23 +44,20 @@ public class MapMenuView extends View {
                 }     
             }
         }
-
-/*       
-        final int[][] matrix = {
-  { 1, 2, 3 },
-  { 4, 5, 6 },
-  { 7, 8, 9 }
-};
-
-for (int i = 0; i < matrix.length; i++) {
-    for (int j = 0; j < matrix[i].length; j++) {
-        System.out.print(matrix[i][j] + " ");
-    }
-    System.out.println();
-}
         
-*/
-        
+        System.out.print("\n"
+                + "\n **************"
+                + "\n T - Travel"
+                + "\n P - View Passport"
+                + "\n M - Main Menu"
+                + "\n H - Help Menu"
+                + "\n-----------------------------------------------------------");
+
+  
+        Game game = Snipe.getCurrentGame();
+        Place currentPlace = Snipe.getPlayer().getCurrentPlace();
+
+ }    
 /*        tempMenu +="\n **************"
                 + "\n T - Travel"
                 + "\n P - View Passport"
@@ -92,9 +66,7 @@ for (int i = 0; i < matrix.length; i++) {
                 + "\n-----------------------------------------------------------");
         
         this.menu = tempMenu;
-*/        
-    }
-        
+*/            
         
  /*   displayMap(): void
 BEGIN
@@ -117,12 +89,7 @@ get the 2-D locations array in the map in the current game
              
     }*/
     
-/*    String[][] places = {
-            {"Library of Congress", "Berlin Wall", "Big Ben", "Valencia", "St. Peter's Square", "The Louvre", "Library of Parliament", "Rio De Janeiro", "Sydney Opera House"},
-            {"Gateway Arch", "Cologne Cathedral", "Buckingham Palace", "Tarragona", "Saint Basil's Cathedral", "Eiffel Tower", "Montreal Olympic Stadium", "Amazon Forest", "Australia Bridge"},
-            {"S.N.I.P.E Academy", "Rhine River", "Westminster Abbey", "Cathedral of Seville", "Lenin's Mausoleum", "Sidewalk Cafe", "CN Tower", "Sao Paulo", "Old Melbourne Jail"}
-        };
- */   
+
     
     @Override
     public boolean doAction(String choice) {
@@ -175,6 +142,33 @@ get the 2-D locations array in the map in the current game
     
 //System.out.println("\n*** functionName stub function called ***");
 }
+
+       
+ /*       String tempMenu = "\n"
+                + "\n-----------------------------------------------------------"
+                + "\n Map of Places"
+                + "\n-----------------------------------------------------------"
+                + "\n";
+*/
+
+
+ /*        StringBuilder line;
+        System.out.println();
+        line = new StringBuilder("                     ");
+        line.insert(0,"USA");
+        line.insert(06,"GERMANY");
+        line.insert(15,"ENGLAND");
+        line.insert(25,"SPAIN");
+        line.insert(32,"RUSSIA");
+        line.insert(40,"FRANCE");
+        line.insert(47,"CANADA");
+        line.insert(55,"BRAZIL");
+        line.insert(62,"AUSTRALIA");
+        System.out.println(line.toString());
+  */
+
+
+
 
 /*    
     
