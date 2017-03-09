@@ -10,8 +10,8 @@ import byui.cit260.snipe.model.Game;
 import byui.cit260.snipe.model.Place;
 import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.model.World;
-import java.util.List;
 import java.util.Random;
+import java.util.ArrayList;
 import snipe.Snipe;
 
 /**
@@ -42,6 +42,10 @@ public class GameControl {
 
         Player player = new Player();
         player.setName(name);
+        player.setPlayerHealth(100);
+        player.setCharName("");
+        //player.setPassport(passport);
+        //player.setCurrentPlace[][];
 
         Snipe.setPlayer(player); // save the player        
 
@@ -81,6 +85,28 @@ public class GameControl {
         Country usa = new Country();
         usa.setName("USA");
 
+        Place libraryCongress = new Place();
+        libraryCongress.setChallenge(true);
+        libraryCongress.setCountryCode("U");
+        libraryCongress.setPlaceName("Library of Congress");
+        libraryCongress.setPlaceScene("\n You're at the Library of Congress now. This is a very"
+                                    + "\n secure building and you will need to be sharp to "
+                                    + "\n accomplish your mission!");
+        libraryCongress.setMasterCodePiece("");
+        usa.addPlace(libraryCongress);
+        
+        Place gatewayArch = new Place();
+        gatewayArch.setChallenge(true);
+        gatewayArch.setCountryCode("U");
+        gatewayArch.setPlaceName("Gateway Arch");
+        gatewayArch.setPlaceScene("\n You have arrived at the Gateway Arch in St. Louis Missouri."
+                                + "\n The Arch is a spectacular sight, but you quickly remember"
+                                + "\n you are on a mission!");
+        gatewayArch.setMasterCodePiece("");
+        usa.addPlace(gatewayArch);
+        
+        world.addCountry(usa);
+        
         Place snipeAcademy = new Place();
         snipeAcademy.setChallenge(false);
         snipeAcademy.setCountryCode("U");
@@ -95,27 +121,7 @@ public class GameControl {
                                  + "\n invisible in plain sight. The code to enter is your secret spy"
                                  + "\n name and passport.");
         usa.addPlace(snipeAcademy);
-         
-   
-        Place libraryCongress = new Place();
-        libraryCongress.setChallenge(true);
-        libraryCongress.setCountryCode("U");
-        libraryCongress.setPlaceName("Library of Congress");
-        libraryCongress.setPlaceScene("\n You're at the Library of Congress now. This is a very"
-                                    + "\n secure building and you will need to be sharp to "
-                                    + "\n accomplish your mission!");
-        usa.addPlace(libraryCongress);
         
-        Place gatewayArch = new Place();
-        gatewayArch.setChallenge(true);
-        gatewayArch.setCountryCode("U");
-        gatewayArch.setPlaceName("Gateway Arch");
-        gatewayArch.setPlaceScene("\n You have arrived at the Gateway Arch in St. Louis Missouri."
-                                + "\n The Arch is a spectacular sight, but you quickly remember"
-                                + "\n you are on a mission!");
-        usa.addPlace(gatewayArch);
-        
-        world.addCountry(usa);
 
         //Germany
         Country germany = new Country();
@@ -124,7 +130,7 @@ public class GameControl {
         Place berlin = new Place();
         berlin.setChallenge(false);
         berlin.setCountryCode("G");
-        berlin.setPlaceName("Berlin");
+        berlin.setPlaceName("Berlin Wall");
         berlin.setPlaceScene("\n After passing through part of the bustling city, you"
                            + "\n are dropped off at the Berlin Wall and get out the taxi"
                            + "\n cab. The Brandenburg Gate, the iconic triumphal arch"
@@ -198,26 +204,39 @@ public class GameControl {
                                      + "\n side. You step out onto the faded red pavement to start your mission here.");
         england.addPlace(buckinghamPalace);
         
-        Place westminsterAbby = new Place();
-        westminsterAbby.setChallenge(false);
-        westminsterAbby.setCountryCode("E");
-        westminsterAbby.setPlaceName("Westminster Abby");
-        westminsterAbby.setPlaceScene("\n You arrived at the Westminster Abby, a gothic styled church of"
+        Place westminsterAbbey = new Place();
+        westminsterAbbey.setChallenge(false);
+        westminsterAbbey.setCountryCode("E");
+        westminsterAbbey.setPlaceName("Westminster Abbey");
+        westminsterAbbey.setPlaceScene("\n You arrived at the Westminster Abbey, a gothic styled church of"
                                     + "\n the 13th century. Steeped deep in history this building has witnessed"
                                     + "\n every coronation of since the 10th century and sixteen royal"
-                                    + "\n weddings. Recalling history, you remember that the Abby is a"
+                                    + "\n weddings. Recalling history, you remember that the Abbey is a"
                                     + "\n burial place of kings, statesmen, poets, scientists, warriors and musicians."
                                     + "\n This regal, magnificent building has the most gorgeous details."
                                     + "\n The windows are a work of geometric art with their varying shapes"
                                     + "\n and patterns of leaded glass. People are bustling around, both"
                                     + "\n inside and outside of the church.");
-        england.addPlace(westminsterAbby);
+        england.addPlace(westminsterAbbey);
         
         world.addCountry(england);
         
         //Spain
         Country spain = new Country();
         spain.setName("Spain");
+              
+        Place valencia = new Place();
+        valencia.setChallenge(false);
+        valencia.setCountryCode("S");
+        valencia.setPlaceName("Valencia");
+        valencia.setPlaceScene("\n You have made your way to the city of Valencia, Spain. The"
+                             + "\n buildings are very densely spaced in rows and patterns. This"
+                             + "\n city is an eclectic view of modern and very old buildings rich"
+                             + "\n in history. Beautiful hotels span the beaches but deeper in you"
+                             + "\n see complex of modern buildings called Cludada de las Artes las"
+                             + "\n Ciencias. You soon see that the buildings are so tightly packed"
+                             + "\n it would be easy to get confused and get disorientated.");
+        spain.addPlace(valencia);
         
         Place tarragona = new Place();
         tarragona.setChallenge(false);
@@ -231,19 +250,6 @@ public class GameControl {
                               + "\n them. The sun is hot and it is apparent you have arrived in"
                               + "\n the Mediterranean.");
         spain.addPlace(tarragona);
-        
-        Place valencia = new Place();
-        valencia.setChallenge(false);
-        valencia.setCountryCode("S");
-        valencia.setPlaceName("Valencia");
-        valencia.setPlaceScene("\n You have made your way to the city of Valencia, Spain. The"
-                             + "\n buildings are very densely spaced in rows and patterns. This"
-                             + "\n city is an eclectic view of modern and very old buildings rich"
-                             + "\n in history. Beautiful hotels span the beaches but deeper in you"
-                             + "\n see complex of modern buildings called Cludada de las Artes las"
-                             + "\n Ciencias. You soon see that the buildings are so tightly packed"
-                             + "\n it would be easy to get confused and get disorientated.");
-        spain.addPlace(valencia);
         
         Place cathedralSeville = new Place();
         cathedralSeville.setChallenge(false);
@@ -306,6 +312,16 @@ public class GameControl {
         Country france = new Country();
         france.setName("France");
         
+        Place louvre = new Place();
+        louvre.setChallenge(false);
+        louvre.setCountryCode("F");
+        louvre.setPlaceName("The Louvre");
+        louvre.setPlaceScene("\n You arrive at the Louvre Museum. Buildings surround the glass pyramid"
+                           + "\n and fountains. The glass of the Louvre Pyramid is glowing with this"
+                           + "\n beautiful gold light making the diamond pattern of the framework stand"
+                           + "\n out. You start walking toward the museum entry.");
+        france.addPlace(louvre);
+        
         Place eiffelTower = new Place();
         eiffelTower.setChallenge(false);
         eiffelTower.setCountryCode("F");
@@ -319,16 +335,6 @@ public class GameControl {
                                 + "\n further up to see the other two decks with people taking pictures"
                                 + "\n and taking in the view. ");
         france.addPlace(eiffelTower);
-        
-        Place louvre = new Place();
-        louvre.setChallenge(false);
-        louvre.setCountryCode("F");
-        louvre.setPlaceName("The Louvre");
-        louvre.setPlaceScene("\n You arrive at the Louvre Museum. Buildings surround the glass pyramid"
-                           + "\n and fountains. The glass of the Louvre Pyramid is glowing with this"
-                           + "\n beautiful gold light making the diamond pattern of the framework stand"
-                           + "\n out. You start walking toward the museum entry.");
-        france.addPlace(louvre);
         
         Place cafeFrance = new Place();
         cafeFrance.setChallenge(false);
@@ -346,6 +352,16 @@ public class GameControl {
          //Canada
         Country canada = new Country();
         canada.setName("Canada");
+                
+        Place libraryParliament = new Place();
+        libraryParliament.setChallenge(false);
+        libraryParliament.setCountryCode("C");
+        libraryParliament.setPlaceName("Library of Parliament");
+        libraryParliament.setPlaceScene("\n You are now in Ottawa, Canada making your way to the Library of Parliament."
+                                      + "\n The light-tan colored stone building  is circular in shape, in the Victorian"
+                                      + "\n Gothic style adorned with pointed arches, spires and dark brown slate roofs."
+                                      + "\n You get out of the car and proceed to the door. ");
+        canada.addPlace(libraryParliament);
         
         Place montrealStadium = new Place();
         montrealStadium.setChallenge(false);
@@ -358,16 +374,6 @@ public class GameControl {
                                     + "\n building. You can see that the stadium has it’s white roof on right now."
                                     + "\n You are dropped off ready for your mission.  ");
         canada.addPlace(montrealStadium);
-        
-        Place libraryParliament = new Place();
-        libraryParliament.setChallenge(false);
-        libraryParliament.setCountryCode("C");
-        libraryParliament.setPlaceName("Library of Parliament");
-        libraryParliament.setPlaceScene("\n You are now in Ottawa, Canada making your way to the Library of Parliament."
-                                      + "\n The light-tan colored stone building  is circular in shape, in the Victorian"
-                                      + "\n Gothic style adorned with pointed arches, spires and dark brown slate roofs."
-                                      + "\n You get out of the car and proceed to the door. ");
-        canada.addPlace(libraryParliament);
         
         Place cnTower = new Place();
         cnTower.setChallenge(false);
@@ -465,4 +471,7 @@ public class GameControl {
         
         return world;
     }
+    
+    
+    
 }

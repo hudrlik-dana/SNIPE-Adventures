@@ -19,7 +19,7 @@ public class Map implements Serializable {
     private int numRows;
     private int numCols;
     private List<String> places;
-    private boolean visited;
+    private boolean visited; 
 
     public int getNumRows() {
         return numRows;

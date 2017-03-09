@@ -48,7 +48,7 @@ public class TravelMenuView extends View {
         boolean done = false; //set flag to not done
         do {
             String menuOption = this.getInput();
-            if (menuOption.toUpperCase().equals("X")) {
+            if (menuOption.toUpperCase().equals("Q")) {
                 return;
             }
 
