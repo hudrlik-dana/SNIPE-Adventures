@@ -87,7 +87,7 @@ public class TravelMenuView extends View {
         try {
             int numChoice = Integer.parseInt(choice);
             Snipe.getPlayer().setCurrentPlace(Snipe.getPlayer().getCurrentCountry().getPlaces().get(numChoice - 1));
-            
+               
             //Output non-challenge description
             System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
             
