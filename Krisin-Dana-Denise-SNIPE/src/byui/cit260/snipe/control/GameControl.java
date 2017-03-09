@@ -75,6 +75,10 @@ public class GameControl {
 
         player.setCurrentCountry(world.getCountries().get(0));
         player.setCurrentPlace(world.getCountries().get(0).getPlaces().get(0));
+       
+//     String spyName = "";
+//     player.setName(GameControl.getCodeName().get(String[] spyName));
+       
     }
 
     private static World setupWorld() {
