@@ -87,6 +87,21 @@ public class GameControl {
         Country usa = new Country();
         usa.setName("USA");
 
+        Place snipeAcademy = new Place();
+        snipeAcademy.setChallenge(false);
+        snipeAcademy.setCountryCode("U");
+        snipeAcademy.setPlaceName("Snipe Academy");
+        snipeAcademy.setPlaceScene("\n You're at the Snipe Academy. This is where all secret "
+                                 + "\n agents begin training, graduate upon completion of their"
+                                 + "\n training graduate upon completion of their training mission,"
+                                 + "\n and recover from death defying accidents. The exact "
+                                 + "\n location of the S.N.I.P.E. academy is classified. This is"
+                                 + "\n the safe-house in the USA. Your trainers and handlers are"
+                                 + "\n here to help you become the best of the best, unseen by most,"
+                                 + "\n invisible in plain sight. The code to enter is your secret spy"
+                                 + "\n name and passport.");
+        usa.addPlace(snipeAcademy);
+        
         Place libraryCongress = new Place();
         libraryCongress.setChallenge(true);
         libraryCongress.setCountryCode("U");
@@ -106,24 +121,7 @@ public class GameControl {
                                 + "\n you are on a mission!");
         gatewayArch.setMasterCodePiece("");
         usa.addPlace(gatewayArch);
-        
-       
-        
-        Place snipeAcademy = new Place();
-        snipeAcademy.setChallenge(false);
-        snipeAcademy.setCountryCode("U");
-        snipeAcademy.setPlaceName("Snipe Academy");
-        snipeAcademy.setPlaceScene("\n You're at the Snipe Academy. This is where all secret "
-                                 + "\n agents begin training, graduate upon completion of their"
-                                 + "\n training graduate upon completion of their training mission,"
-                                 + "\n and recover from death defying accidents. The exact "
-                                 + "\n location of the S.N.I.P.E. academy is classified. This is"
-                                 + "\n the safe-house in the USA. Your trainers and handlers are"
-                                 + "\n here to help you become the best of the best, unseen by most,"
-                                 + "\n invisible in plain sight. The code to enter is your secret spy"
-                                 + "\n name and passport.");
-        usa.addPlace(snipeAcademy);
-        
+                
         world.addCountry(usa);
         
         //Germany
