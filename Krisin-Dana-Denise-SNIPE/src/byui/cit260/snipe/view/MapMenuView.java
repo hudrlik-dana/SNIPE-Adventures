@@ -21,7 +21,7 @@ public class MapMenuView extends View {
         super();
         System.out.print("\n"
                 + "\n------------------------------------------------------------------------------"
-                + "\n Map of Places"
+                + "\n S.N.I.P.E Adventures Places"
                 + "\n------------------------------------------------------------------------------"
                 + "\n");
 
