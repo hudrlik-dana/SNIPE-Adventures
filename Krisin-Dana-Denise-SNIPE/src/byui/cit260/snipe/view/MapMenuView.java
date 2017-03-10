@@ -37,7 +37,7 @@ public class MapMenuView extends View {
         for (int i = 0; i < places.length; i++) {
             for (int j = 0; j < places[i].length; j++) {
                 
-                System.out.print(places[i][j] + " ");
+                System.out.print(places[i][j] + " |");
              
                 if (j == 8) {
                    System.out.print("\n");

@@ -109,7 +109,7 @@ public class GameControl {
         gatewayArch.setMasterCodePiece("");
         usa.addPlace(gatewayArch);
         
-        world.addCountry(usa);
+       
         
         Place snipeAcademy = new Place();
         snipeAcademy.setChallenge(false);
@@ -126,7 +126,8 @@ public class GameControl {
                                  + "\n name and passport.");
         usa.addPlace(snipeAcademy);
         
-
+        world.addCountry(usa);
+        
         //Germany
         Country germany = new Country();
         germany.setName("Germany");
