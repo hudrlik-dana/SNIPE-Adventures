@@ -24,6 +24,8 @@ public class Player implements Serializable {
     private Place currentPlace;
     private Country currentCountry;
 
+    
+    
     public String getName() {
         return name;
     }

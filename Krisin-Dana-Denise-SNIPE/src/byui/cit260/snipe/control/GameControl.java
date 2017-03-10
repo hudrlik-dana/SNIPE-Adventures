@@ -12,7 +12,6 @@ import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.model.World;
 import byui.cit260.snipe.view.GameMenuView;
 import byui.cit260.snipe.view.MainMenuView;
-import byui.cit260.snipe.view.NewGameView;
 import java.util.Random;
 import java.util.ArrayList;
 import snipe.Snipe;
@@ -51,7 +50,7 @@ public class GameControl {
         return player;
     }
 
-    public static String getCodeName(String args) {
+    public static String getCodeName() {
 
         String[] names1 = {"Speedy", "Bright", "Stealthy", "Silent", "Brave", "Dizzy", "Neon", "Red", "Diamond", "Silver"};
         String[] names2 = {"Unicorn", "Snake", "Ninja", "Lizard", "King", "Tabasco", "Cockroach", "Ladybug", "Dancer", "Tuna"};
@@ -60,7 +59,7 @@ public class GameControl {
         String firstName = names1[random.nextInt(names1.length)];
         String lastName = names2[random.nextInt(names2.length)];
 
-        return "Your SNIPE code name is " + firstName + " " + lastName + ".";
+        return "\n" + "\nYour SNIPE code name is " + firstName + " " + lastName + ".";
     }
 
     public static void createNewGame(Player player) {
@@ -74,17 +73,11 @@ public class GameControl {
         
         player.setCurrentCountry(world.getCountries().get(0));
         player.setCurrentPlace(world.getCountries().get(0).getPlaces().get(0));
-        player.setCodeName("");
         player.setPlayerHealth(100);
+        player.setCodeName(getCodeName());
         
-        //needs to trigger NewGameView
+        Snipe.setCurrentGame(game);
     }
-    
-    /* private void displayNewGameView() {
-        
-        NewGameView newGameView = new NewGameView();
-        newGameView.display();
-    }*/
 
     private static World setupWorld() {
 
