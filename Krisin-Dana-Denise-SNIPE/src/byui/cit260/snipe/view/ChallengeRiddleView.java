@@ -22,7 +22,7 @@ public class ChallengeRiddleView extends View {
         super();
         Country currentCountry = Snipe.getPlayer().getCurrentCountry();
         
-       switch ("currentCountry") {
+       switch (currentCountry.getName()) {
             case "USA": //display the question
                 System.out.println("\n This library holds the president’s book of secrets"
                                  + "\n and is heavily guarded. You will need to be  very"
