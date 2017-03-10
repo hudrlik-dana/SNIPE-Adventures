@@ -280,7 +280,7 @@ public class ChallengePhysicalView extends View {
                   + "\n***********************************************************");
                 break;
             default:
-                System.out.println("\n*** Country not built out yet.");
+                System.out.println("\n*** Invalid answer. Try again.");
                 break;        
         }
     }
