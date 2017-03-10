@@ -18,7 +18,7 @@ public class Player implements Serializable {
     //Class instance variables
     private String name;
     private int playerHealth;
-    private String charName;
+    private String codeName;
     private String dossier;
     private ArrayList<Place> passport; 
     private Place currentPlace;
@@ -40,12 +40,12 @@ public class Player implements Serializable {
         this.playerHealth = playerHealth;
     }
 
-    public String getCharName() {
-        return charName;
+    public String getCodeName() {
+        return codeName;
     }
 
-    public void setCharName(String charName) {
-        this.charName = charName;
+    public void setCodeName(String codeName) {
+        this.codeName = codeName;
     }
 
     public String getDossier() {
@@ -88,7 +88,7 @@ public class Player implements Serializable {
         int hash = 7;
         hash = 89 * hash + Objects.hashCode(this.name);
         hash = 89 * hash + this.playerHealth;
-        hash = 89 * hash + Objects.hashCode(this.charName);
+        hash = 89 * hash + Objects.hashCode(this.codeName);
         hash = 89 * hash + Objects.hashCode(this.dossier);
         hash = 89 * hash + Objects.hashCode(this.passport);
         hash = 89 * hash + Objects.hashCode(this.currentPlace);
@@ -113,7 +113,7 @@ public class Player implements Serializable {
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.charName, other.charName)) {
+        if (!Objects.equals(this.codeName, other.codeName)) {
             return false;
         }
         if (!Objects.equals(this.dossier, other.dossier)) {
@@ -130,7 +130,7 @@ public class Player implements Serializable {
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", playerHealth=" + playerHealth + ", charName=" + charName + ", dossier=" + dossier + ", passport=" + passport + ", currentPlace=" + currentPlace + '}';
+        return "Player{" + "name=" + name + ", playerHealth=" + playerHealth + ", codeName=" + codeName + ", dossier=" + dossier + ", passport=" + passport + ", currentPlace=" + currentPlace + '}';
     }
 
 }

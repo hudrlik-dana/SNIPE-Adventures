@@ -22,7 +22,7 @@ public class GameMenuView extends View{
                 + "\n Game Menu                                                "
                 + "\n-----------------------------------------------------------"
                 + "\n"
-                + "\n D - View Dossier List"
+                + "\n D - View Current Dossier"
                 + "\n C - View Collected Codes"
                 + "\n P - View Player Health"
                 + "\n T - Travel"
@@ -40,13 +40,13 @@ public class GameMenuView extends View{
         choice = choice.toUpperCase(); //convert choice to upper case
 
         switch (choice) {
-            case "D": //Travel to first location
+            case "D": //Show current country Dossier
                 this.displayDossierListView();
                 break;
-            case "C": //Travel to second location
+            case "C": //Display list of collected codes
                 this.displayCollectedCodesView();
                 break;
-            case "P": //Travel to third location
+            case "P": //display player health
                 this.displayPlayerHealthView();
                 break;
             case "T": //display the TravelMenu

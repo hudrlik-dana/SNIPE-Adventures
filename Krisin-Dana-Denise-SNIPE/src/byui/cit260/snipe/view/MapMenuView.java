@@ -33,6 +33,21 @@ public class MapMenuView extends View {
             {"S.N.I.P.E Academy", "Rhine River", "Westminster Abbey", "Cathedral of Seville", "Lenin's Mausoleum", "Sidewalk Cafe", "CN Tower", "Sao Paulo", "Old Melbourne Jail"}
         };   
         
+/*        
+        final String[][] places = {
+            {"USA", "GERMANY", "ENGLAND", "SPAIN", "RUSSIA"},
+            {"Library of Congress", "Berlin Wall", "Big Ben", "Valencia", "St. Peter's Square"},
+            {"Gateway Arch", "Cologne Cathedral", "Buckingham Palace", "Tarragona", "Saint Basil's Cathedral"},
+            {"S.N.I.P.E Academy", "Rhine River", "Westminster Abbey", "Cathedral of Seville", "Lenin's Mausoleum"},
+            {},
+            {"  FRANCE  ", "  CANADA  ", "  BRAZIL  ", " AUSTRALIA"},
+            {"The Louvre", "Library of Parliament", "Rio De Janeiro", "Sydney Opera House"},
+            {"Eiffel Tower", "Montreal Olympic Stadium", "Amazon Forest", "Australia Bridge"},
+            {"Sidewalk Cafe", "CN Tower", "Sao Paulo", "Old Melbourne Jail"}
+        }; 
+
+
+*/        
 
         for (int i = 0; i < places.length; i++) {
             for (int j = 0; j < places[i].length; j++) {
