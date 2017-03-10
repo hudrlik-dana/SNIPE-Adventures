@@ -71,6 +71,8 @@ public class MainMenuView extends View {
         //create new game
         GameControl.createNewGame(Snipe.getPlayer());
         
+        System.out.println(Snipe.getPlayer().getCodeName());
+        
         //display the game menu view
         GameMenuView gameMenu = new GameMenuView();
         //display the game menu

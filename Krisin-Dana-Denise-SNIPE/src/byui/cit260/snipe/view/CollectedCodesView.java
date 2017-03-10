@@ -6,6 +6,9 @@
 
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.model.Place;
+import snipe.Snipe;
+
 /**
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
@@ -13,7 +16,10 @@ package byui.cit260.snipe.view;
 public class CollectedCodesView extends View{
     
     public void display() {
-        System.out.println("\n*** displayMenuView stub function called ***");
+        /*System.out.println("You have visited: ");
+        for (Item codeList : Snipe.getPlayer().getCodeList()) {
+            System.out.println(item.getCodeList());
+        }*/
     }
 
     @Override
@@ -23,3 +29,11 @@ public class CollectedCodesView extends View{
     }
 
 }
+
+/*
+List<Codes> codeList = Snipe.getPlayer().getPassport();
+            
+            if(!passport.contains(Snipe.getPlayer().getCurrentPlace())){
+                    passport.add(Snipe.getPlayer().getCurrentPlace());
+                }
+*/

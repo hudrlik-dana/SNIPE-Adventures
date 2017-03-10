@@ -7,6 +7,7 @@ package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Place;
+import java.util.List;
 import java.util.Scanner;
 import snipe.Snipe;
 
@@ -85,9 +86,15 @@ public class TravelMenuView extends View {
         choice = choice.toUpperCase(); //convert choice to upper case
 
         try {
-            int numChoice = Integer.parseInt(choice);
+            int numChoice = Integer.parseInt(choice);          
             Snipe.getPlayer().setCurrentPlace(Snipe.getPlayer().getCurrentCountry().getPlaces().get(numChoice - 1));
-               
+            
+            List<Place> passport = Snipe.getPlayer().getPassport();
+            
+            if(!passport.contains(Snipe.getPlayer().getCurrentPlace())){
+                    passport.add(Snipe.getPlayer().getCurrentPlace());
+                }
+            
             //Output non-challenge description
             System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
             
@@ -147,19 +154,6 @@ public class TravelMenuView extends View {
         MapMenuView mapMenu = new MapMenuView();
         mapMenu.display();
     }
-
-    private void displayPlaceOne() {
-        System.out.println("\n*** displayPlaceOne stub function called ***");
-    }
-
-    private void displayPlaceTwo() {
-        System.out.println("\n*** displayPlaceTwo stub function called ***");
-    }
-
-    private void displayPlaceThree() {
-        System.out.println("\n*** displayPlaceThree stub function called ***");
-    }
-
 
 
 //System.out.println("\n*** functionName stub function called ***");

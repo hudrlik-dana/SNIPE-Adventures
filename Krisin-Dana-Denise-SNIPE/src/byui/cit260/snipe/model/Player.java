@@ -24,6 +24,10 @@ public class Player implements Serializable {
     private Place currentPlace;
     private Country currentCountry;
 
+    public Player() {
+        passport = new ArrayList<>();
+    }
+    
     public String getName() {
         return name;
     }
@@ -80,8 +84,6 @@ public class Player implements Serializable {
         this.currentCountry = currentCountry;
     }
 
-    public Player() {
-    }
 
     @Override
     public int hashCode() {

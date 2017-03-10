@@ -13,4 +13,10 @@ import java.util.Random;
  */
 public class ItemControl {
 
+    /*
+    currentDossier
+    CodeList
+    */
+    
+    
 }
