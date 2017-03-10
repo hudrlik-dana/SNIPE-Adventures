@@ -19,7 +19,7 @@ import snipe.Snipe;
 
 /**
  *
- * @author dana.hudrlik
+ * @author danahudrlik
  */
 
 /*
@@ -101,7 +101,7 @@ public class GameControl {
         libraryCongress.setPlaceScene("\n You're at the Library of Congress now. This is a very"
                                     + "\n secure building and you will need to be sharp to "
                                     + "\n accomplish your mission!");
-        libraryCongress.setMasterCodePiece("");
+        libraryCongress.setMasterCodePiece("327 W5HG4M1.");
         usa.addPlace(libraryCongress);
         
         Place gatewayArch = new Place();
@@ -111,7 +111,7 @@ public class GameControl {
         gatewayArch.setPlaceScene("\n You have arrived at the Gateway Arch in St. Louis Missouri."
                                 + "\n The Arch is a spectacular sight, but you quickly remember"
                                 + "\n you are on a mission!");
-        gatewayArch.setMasterCodePiece("");
+        gatewayArch.setMasterCodePiece("327 W5HG4M1.");
         usa.addPlace(gatewayArch);
         
        
@@ -152,6 +152,7 @@ public class GameControl {
                            + "\n put it in one of the cracks in the wall. The tourist group"
                            + "\n gets in the way of your view and you can only assume"
                            + "\n the man went out the gate near the end of the wall.");
+        berlin.setMasterCodePiece("6MG4W3G5 V37 V567.");
         germany.addPlace(berlin);
 
         Place cologne = new Place();
@@ -166,6 +167,7 @@ public class GameControl {
                             + "\n glass windows. You walk down a long arched hallway lined with"
                             + "\n marble columns to find a door at the end. You open"
                             + "\n it and a stairway leads down to a lower level.");
+        cologne.setMasterCodePiece("6MG4W3G5 V37 V567.");
         germany.addPlace(cologne);
         
         Place rhineRiver = new Place();
@@ -200,6 +202,7 @@ public class GameControl {
                            + "\n selfies everywhere. You arrive at 11:57, which is just before Big"
                            + "\n Ben will strike 12 to indicate it is noon. Gong. You can feel the"
                            + "\n vibrations from the 13 ton bell. Gong...");
+        bigBen.setMasterCodePiece("W5X4H43M");
         england.addPlace(bigBen);
         
         Place buckinghamPalace = new Place();
@@ -212,6 +215,7 @@ public class GameControl {
                                      + "\n symmetry. Every window perfectly placed with a main entryway adorned"
                                      + "\n with marble columns in the middle and smaller copycat entries on each"
                                      + "\n side. You step out onto the faded red pavement to start your mission here.");
+        buckinghamPalace.setMasterCodePiece("W5X4H43M");
         england.addPlace(buckinghamPalace);
         
         Place westminsterAbbey = new Place();
@@ -246,6 +250,7 @@ public class GameControl {
                              + "\n see complex of modern buildings called Cludada de las Artes las"
                              + "\n Ciencias. You soon see that the buildings are so tightly packed"
                              + "\n it would be easy to get confused and get disorientated.");
+        valencia.setMasterCodePiece("56XS W61 4H");
         spain.addPlace(valencia);
         
         Place tarragona = new Place();
@@ -259,6 +264,7 @@ public class GameControl {
                               + "\n lower buildings from when the tide comes in and rolls up on"
                               + "\n them. The sun is hot and it is apparent you have arrived in"
                               + "\n the Mediterranean.");
+        tarragona.setMasterCodePiece("56XS W61 4H");
         spain.addPlace(tarragona);
         
         Place cathedralSeville = new Place();
@@ -292,6 +298,7 @@ public class GameControl {
                                    + "\n A mint green building with white trim and statues all across the"
                                    + "\n edge of rooftop seems more like an enormous wall rather than a building."
                                    + "\n You realize that is Hermitage museum.");
+        stPetersSquare.setMasterCodePiece("7N M5PH3M");
         russia.addPlace(stPetersSquare);
         
         Place stBasilsCathedral = new Place();
@@ -302,6 +309,7 @@ public class GameControl {
                                       + "\n building. The multi-colored puffed onion domes top this mainly"
                                       + "\n red colored 16th century building. You see the 2-story high statue"
                                       + "\n of two warriors in front as you walk toward the gate.");
+        stBasilsCathedral.setMasterCodePiece("7N M5PH3M");
         russia.addPlace(stBasilsCathedral);
         
         Place leninsMausoleum = new Place();
@@ -330,6 +338,7 @@ public class GameControl {
                            + "\n and fountains. The glass of the Louvre Pyramid is glowing with this"
                            + "\n beautiful gold light making the diamond pattern of the framework stand"
                            + "\n out. You start walking toward the museum entry.");
+        louvre.setMasterCodePiece("W5X4H43MH W5G57N4M5");
         france.addPlace(louvre);
         
         Place eiffelTower = new Place();
@@ -344,6 +353,7 @@ public class GameControl {
                                 + "\n The first deck has people peering out at the views. Then you look"
                                 + "\n further up to see the other two decks with people taking pictures"
                                 + "\n and taking in the view. ");
+        eiffelTower.setMasterCodePiece("W5X4H43MH W5G57N4M5");
         france.addPlace(eiffelTower);
         
         Place cafeFrance = new Place();
@@ -371,6 +381,7 @@ public class GameControl {
                                       + "\n The light-tan colored stone building  is circular in shape, in the Victorian"
                                       + "\n Gothic style adorned with pointed arches, spires and dark brown slate roofs."
                                       + "\n You get out of the car and proceed to the door. ");
+        libraryParliament.setMasterCodePiece("6MW 327");
         canada.addPlace(libraryParliament);
         
         Place montrealStadium = new Place();
@@ -383,6 +394,7 @@ public class GameControl {
                                     + "\n hoisting tower that looks like a modern lamp for the spaceship looking"
                                     + "\n building. You can see that the stadium has it’s white roof on right now."
                                     + "\n You are dropped off ready for your mission.  ");
+        montrealStadium.setMasterCodePiece("6MW 327");
         canada.addPlace(montrealStadium);
         
         Place cnTower = new Place();
@@ -410,6 +422,7 @@ public class GameControl {
                                  + "\n line the sandy beaches but the city is densely populated with buildings."
                                  + "\n Beach life is clearly a passion here as you see so many people on the"
                                  + "\n beach soaking up the sun.  ");
+        rioDeJaneiro.setMasterCodePiece("V64GS 4H GS5");
         brazil.addPlace(rioDeJaneiro);
         
         Place amazonForest = new Place();
@@ -420,6 +433,7 @@ public class GameControl {
                                  + "\n roads mainly go along the side.  You see children ahead and are dropped off"
                                  + "\n at a small town of wooden shack structures. The smell of burning firewood is"
                                  + "\n in the air. Clothes hang on a line swaying in the wind ");
+        amazonForest.setMasterCodePiece("V64GS 4H GS5");
         brazil.addPlace(amazonForest);
         
         Place saoPaulo = new Place();
@@ -450,6 +464,7 @@ public class GameControl {
                                   + "\n The building is on a small peninsula that protrudes out into the"
                                   + "\n ocean. Coming from the city you pass the greenery of the park and"
                                   + "\n see the opera house perfectly positioned for the view of the ocean.");
+        sydneyOpHouse.setMasterCodePiece("6 W61 3V");
         australia.addPlace(sydneyOpHouse);
         
         Place australiaBridge = new Place();
@@ -461,6 +476,7 @@ public class GameControl {
                                     + "\n This iconic bridge is also known as the “coat hanger” As you get"
                                     + "\n closer you see there are 4 lanes going each way and a pedestrian"
                                     + "\n walkway. You get out and ready yourself for your mission.");
+        australiaBridge.setMasterCodePiece("6 W61 3V");
         australia.addPlace(australiaBridge);
         
         Place melbourneJail = new Place();
