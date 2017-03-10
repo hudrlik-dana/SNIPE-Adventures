@@ -25,7 +25,7 @@ public class ChallengeMentalView extends View {
         
         Country currentCountry = Snipe.getPlayer().getCurrentCountry();
         
-        switch ("currentCountry") {
+        switch (currentCountry.getName()) {
            
             case "Germany": //display the question
                 System.out.println("\n Beginning at the east end you walk along the wall"
