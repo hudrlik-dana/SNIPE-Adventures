@@ -30,12 +30,12 @@ public class ChallengePhysicalView extends View {
     private String displayDescription; 
     private String answerOption;
     
+
     public ChallengePhysicalView() {
         super();
         //identify the country player is in
     Country currentCountry = Snipe.getPlayer().getCurrentCountry();  
     
-
         this.displayDescription = "\n Welcome to  "+ currentCountry+".";
         //welcome player to the country
         
@@ -47,9 +47,11 @@ public class ChallengePhysicalView extends View {
      * display description of physical challenge
      */
     public static void displayDescription() {
-
+        
+        Country currentCountry = Snipe.getPlayer().getCurrentCountry(); 
+        
        //case switch to identify country and display the description of the challenge 
-        switch ("currentCountry") {
+        switch (currentCountry.getName()) {
             case "USA":
                 System.out.println(
                     "\n***********************************************************"
