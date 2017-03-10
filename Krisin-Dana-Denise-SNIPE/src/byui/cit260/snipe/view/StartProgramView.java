@@ -51,26 +51,10 @@ public class StartProgramView {
                 + "\n* mission, you will receive your credentials. You will need to collect pieces of a       *"
                 + "\n* master code that has been divided and scattered across several countries.              *"
                 + "\n*                                                                                        *"
-                + "\n* <Please hit N enter your name and begin your first mission>                            *"
-                + "\n*                                                                                        *"
                 + "\n******************************************************************************************"
         );
 
-    }
-    
-  /*  
-    Basic template for displaying a view: 
-    BEGIN
-        do
-            prompt for and get playersName
-            if playersName =='X'  *typically 'Q', our game menu is 'X'
-                return
-        
-        do  requested action and display next view
-        
-        while the veiw is not done
-    END
-*/      
+    }  
     
     public void displayStartProgramView() { 
         //displays the start program view 
@@ -89,28 +73,6 @@ public class StartProgramView {
         } while (!done);
     }
 
-    /*
-    Template for getting user input - prompt for and get user input
-        getInput(): value
-        BEGIN
-            WHILE a valid value has not been entered
-                DISPLAY a message prompting the user to enter a value
-                GET the value entered from the keyboard
-                Trim front and trailing blanks off of the value
-    
-                IF the length of the value is blank or <1  THEN
-                    DISPLAY "Invalid value: The value cannot be blank"
-                    CONTINUE
-                ENDIF
-    
-                BREAK
-    
-            ENDWHILE
-    
-            RETURN value
-        END
-    */
-    
     private String getPlayerName() {
         Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         String value = ""; //value to be returned
@@ -130,26 +92,7 @@ public class StartProgramView {
         }
         return value; //return entered value
     }
-    
-    /*
-    doAction(playersName): boolean
-    BEGIN
-        IF the length of the playersName < 2 THEN
-            display "Invalid name: The name must be > 1 character"
-            RETURN false
-    
-        create Player with specified name
-        IF unsuccessful THEN
-            display "Invalid name: The name is too short"
-            RETURN false
-    
-        display customized welcome message
-        display mainMenuView
-    
-        RETURN true
-    END
-    */
-    
+       
     private boolean doAction(String playerName) {
 
         if (playerName.length() < 2) {
@@ -171,16 +114,6 @@ public class StartProgramView {
         return true; //Success! 
     }
     
-/*
-    displayNextView(player): Player
-    BEGIN
-        Print a customized welcome message
-    
-        Create a MainMenuView
-        Display the MainMenuView
-    END
-*/
-    
     private void displayNextView(Player player) {
         
         //display a custom welcome message
@@ -190,7 +123,7 @@ public class StartProgramView {
                           +"\n for graduation to the status of a top-secret agent. This "
                           +"\n mission is not without risk."
                           +"\n"
-                          +"\n Select New Game from the Menu to begin."
+                          +"\n Select an option from the Menu to begin."
                           +"\n****************************************************************"
         );
         
