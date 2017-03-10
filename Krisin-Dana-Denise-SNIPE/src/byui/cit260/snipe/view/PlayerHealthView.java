@@ -7,77 +7,40 @@
 package byui.cit260.snipe.view;
 
 import java.util.Scanner;
+import snipe.Snipe;
 
 /**
  * @author dana.hudrlik
  */
 
-public class PlayerHealthView {
+public class PlayerHealthView extends View{
 
-    private final String menu;
+ //Not using this anymore - Denise
+    //private final String menu;
     //call menu with data listed 
-    
-    private final int playerHealth = 100;  
-    // how to pull this from player adjust health ?
+ 
+ //  Not using this anymore - Denise
+ //   private final int playerHealth = 100;  
+ //    how to pull this from player adjust health ?
     
     public PlayerHealthView() {
-        this.menu = "\n"
+           super("\n"
                 + "\n***********************************************************" 
                 + "\n* Player Health                                           *" 
                 + "\n***********************************************************" 
                 + "\n*                                                         *"
-                + "\n* Your current Health Points: " + playerHealth + ".       *" 
+                + "\n* Your current Health Points: " + Snipe.getPlayer().getPlayerHealth() + " "
+                + "                          *"
                 + "\n*                                                         *" 
                 + "\n***********************************************************" 
                 + "\n* R - Return to Player Location                           *" 
                 + "\n* M - Main Menu                                           *" 
                 + "\n* H - Help Menu                                           *" 
-                + "\n***********************************************************";
-    }
-     /**
-     * verifies the player selection 
-     */
-
-    public void display() {
-        
-        boolean done = false;  //set flag to not done
-            do {
-                String menuOption = this.getInput();
-                if (menuOption.toUpperCase().equals("X")) {
-                    return;  // return to player location
-                }
-                //do the requested action and display the next view
-                done = this.doAction(menuOption); 
-                
-            }
-            while (!done);         
-     }
-/*
-   player input 
-*/    
-    private String getInput() {
-        Scanner keyboard = new Scanner(System.in);  //get infile from keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not valid to allow input
-        
-        while (!valid) {   // while not valid input
-            System.out.println("\n" + this.menu);
-            
-            value = keyboard.nextLine(); //get next line typed on keyboard
-            value = value.trim();  //trim off leading and trailing blanks
-            
-            if (value.length() < 1) {  //blank value entered
-                System.out.print("\nInvalid: entry required.");
-                continue;
-            }
-            break;  //end the loop  
+                + "\n***********************************************************");
         }
-        return value;  //return entered value
-    }
-/*
-    display limited game menu functions
-*/
-        private boolean doAction(String choice) {
+      
+        @Override
+        public boolean doAction(String choice) {
             choice = choice.toUpperCase(); //convert choice to upper case
                 switch (choice) { 
                 case "R": //Return to Player Location 

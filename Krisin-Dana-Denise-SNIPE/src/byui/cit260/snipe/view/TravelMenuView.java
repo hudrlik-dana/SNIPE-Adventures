@@ -48,7 +48,7 @@ public class TravelMenuView extends View {
         boolean done = false; //set flag to not done
         do {
             String menuOption = this.getInput();
-            if (menuOption.toUpperCase().equals("X")) {
+            if (menuOption.toUpperCase().equals("Q")) {
                 return;
             }
 
@@ -87,12 +87,22 @@ public class TravelMenuView extends View {
         try {
             int numChoice = Integer.parseInt(choice);
             Snipe.getPlayer().setCurrentPlace(Snipe.getPlayer().getCurrentCountry().getPlaces().get(numChoice - 1));
-            
+               
             //Output non-challenge description
             System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
             
             //IF PLAYER MOVEMENT TO A PLACE TRIGGERS CHALLENGE - OPEN THE CHALLENGE VIEW HERE
 //            if(Snipe.getPlayer().getCurrentPlace().isChallenge()) {
+
+               if (numChoice == 1){
+                 System.out.println("\n this is first" + Snipe.getPlayer().getCurrentPlace().getPlaceScene()); 
+              }
+               if (numChoice == 2){
+                 System.out.println("\n this is second " + Snipe.getPlayer().getCurrentPlace().getPlaceScene()); 
+              }
+               if (numChoice == 3){
+                 System.out.println("\n this is third" + Snipe.getPlayer().getCurrentPlace().getPlaceScene()); 
+              }
 //            }
             return true;
         } catch(IndexOutOfBoundsException ibe) {
