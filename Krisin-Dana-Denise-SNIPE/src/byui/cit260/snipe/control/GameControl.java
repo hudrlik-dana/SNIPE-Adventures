@@ -129,7 +129,7 @@ public class GameControl {
         germany.setName("Germany");
 
         Place berlin = new Place();
-        berlin.setChallenge(false);
+        berlin.setChallenge(true);
         berlin.setCountryCode("G");
         berlin.setPlaceName("Berlin Wall");
         berlin.setPlaceScene("\n After passing through part of the bustling city, you"
@@ -147,7 +147,7 @@ public class GameControl {
         germany.addPlace(berlin);
 
         Place cologne = new Place();
-        cologne.setChallenge(false);
+        cologne.setChallenge(true);
         cologne.setCountryCode("G");
         cologne.setPlaceName("Cologne Cathedral");
         cologne.setPlaceScene("\n You arrive in front of the majestic Cologne Cathedral. The"
@@ -183,7 +183,7 @@ public class GameControl {
         england.setName("England");
         
         Place bigBen = new Place();
-        bigBen.setChallenge(false);
+        bigBen.setChallenge(true);
         bigBen.setCountryCode("E");
         bigBen.setPlaceName("Big Ben");
         bigBen.setPlaceScene("\n A taxi takes you to Westminster, in Central London. The cab drops"
@@ -197,7 +197,7 @@ public class GameControl {
         england.addPlace(bigBen);
         
         Place buckinghamPalace = new Place();
-        buckinghamPalace.setChallenge(false);
+        buckinghamPalace.setChallenge(true);
         buckinghamPalace.setCountryCode("E");
         buckinghamPalace.setPlaceName("Buckingham Palace");
         buckinghamPalace.setPlaceScene("\n You are driving up to Buckingham Palace and see the large memorial"
@@ -231,7 +231,7 @@ public class GameControl {
         spain.setName("Spain");
               
         Place valencia = new Place();
-        valencia.setChallenge(false);
+        valencia.setChallenge(true);
         valencia.setCountryCode("S");
         valencia.setPlaceName("Valencia");
         valencia.setPlaceScene("\n You have made your way to the city of Valencia, Spain. The"
@@ -245,7 +245,7 @@ public class GameControl {
         spain.addPlace(valencia);
         
         Place tarragona = new Place();
-        tarragona.setChallenge(false);
+        tarragona.setChallenge(true);
         tarragona.setCountryCode("S");
         tarragona.setPlaceName("Tarragona");
         tarragona.setPlaceScene("\n After you fly into Spain you are taken to Tarragona city."
@@ -278,7 +278,7 @@ public class GameControl {
         russia.setName("Russia");
         
         Place stPetersSquare = new Place();
-        stPetersSquare.setChallenge(false);
+        stPetersSquare.setChallenge(true);
         stPetersSquare.setCountryCode("R");
         stPetersSquare.setPlaceName("St. Peter's Square");
         stPetersSquare.setPlaceScene("\n You arrive at St. Peter’s Square in Moscow Russia. In the center of"
@@ -293,7 +293,7 @@ public class GameControl {
         russia.addPlace(stPetersSquare);
         
         Place stBasilsCathedral = new Place();
-        stBasilsCathedral.setChallenge(false);
+        stBasilsCathedral.setChallenge(true);
         stBasilsCathedral.setCountryCode("R");
         stBasilsCathedral.setPlaceName("Saint Basil's Cathedral");
         stBasilsCathedral.setPlaceScene("\n You arrive at Saint Basil’s Cathedral, an unmistakable Russian"
@@ -322,7 +322,7 @@ public class GameControl {
         france.setName("France");
         
         Place louvre = new Place();
-        louvre.setChallenge(false);
+        louvre.setChallenge(true);
         louvre.setCountryCode("F");
         louvre.setPlaceName("The Louvre");
         louvre.setPlaceScene("\n You arrive at the Louvre Museum. Buildings surround the glass pyramid"
@@ -333,7 +333,7 @@ public class GameControl {
         france.addPlace(louvre);
         
         Place eiffelTower = new Place();
-        eiffelTower.setChallenge(false);
+        eiffelTower.setChallenge(true);
         eiffelTower.setCountryCode("F");
         eiffelTower.setPlaceName("Eiffel Tower");  
         eiffelTower.setPlaceScene("\n You take bus line 82 and get off at BRANLY. As your bus nears"
@@ -365,7 +365,7 @@ public class GameControl {
         canada.setName("Canada");
                 
         Place libraryParliament = new Place();
-        libraryParliament.setChallenge(false);
+        libraryParliament.setChallenge(true);
         libraryParliament.setCountryCode("C");
         libraryParliament.setPlaceName("Library of Parliament");
         libraryParliament.setPlaceScene("\n You are now in Ottawa, Canada making your way to the Library of Parliament."
@@ -376,11 +376,9 @@ public class GameControl {
         canada.addPlace(libraryParliament);
         
         Place montrealStadium = new Place();
-        montrealStadium.setChallenge(false);
+        montrealStadium.setChallenge(true);
         montrealStadium.setCountryCode("C");
         montrealStadium.setPlaceName("Montreal Olympic Stadium");
-      
-        
         montrealStadium.setPlaceScene("\n From a distance you see the Montreal Olympic Stadium with its unmistakable"
                                     + "\n hoisting tower that looks like a modern lamp for the spaceship looking"
                                     + "\n building. You can see that the stadium has it’s white roof on right now."
@@ -405,7 +403,7 @@ public class GameControl {
         brazil.setName("Brazil");
         
         Place rioDeJaneiro = new Place();
-        rioDeJaneiro.setChallenge(false);
+        rioDeJaneiro.setChallenge(true);
         rioDeJaneiro.setCountryCode("B");
         rioDeJaneiro.setPlaceName("Rio De Janeiro");
         rioDeJaneiro.setPlaceScene("\n Traveling to Rio De Janeiro, Brazil is easy on the eyes. The clear aqua"
@@ -417,7 +415,7 @@ public class GameControl {
         brazil.addPlace(rioDeJaneiro);
         
         Place amazonForest = new Place();
-        amazonForest.setChallenge(false);
+        amazonForest.setChallenge(true);
         amazonForest.setCountryCode("B");
         amazonForest.setPlaceName("Amazon Forest");
         amazonForest.setPlaceScene("\n You are in a Jeep traveling along and through the forest at times. The dirt"
@@ -446,7 +444,7 @@ public class GameControl {
         australia.setName("Australia");
         
         Place sydneyOpHouse = new Place();
-        sydneyOpHouse.setChallenge(false);
+        sydneyOpHouse.setChallenge(true);
         sydneyOpHouse.setCountryCode("A");
         sydneyOpHouse.setPlaceName("Sydney Opera House");
         sydneyOpHouse.setPlaceScene("\n You are on your way to the Sydney Opera House in Sydney, Australia."
@@ -459,7 +457,7 @@ public class GameControl {
         australia.addPlace(sydneyOpHouse);
         
         Place australiaBridge = new Place();
-        australiaBridge.setChallenge(false);
+        australiaBridge.setChallenge(true);
         australiaBridge.setCountryCode("A");
         australiaBridge.setPlaceName("Australia Bridge");
         australiaBridge.setPlaceScene("\n Traveling to the Sydney Harbor, you can see the Sydney Harbor"

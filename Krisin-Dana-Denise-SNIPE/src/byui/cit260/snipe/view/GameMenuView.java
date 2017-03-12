@@ -113,7 +113,6 @@ public class GameMenuView extends View{
         System.out.println("\n*** displayDossierListView stub function called ***");
                 
         /*
-        System.out.println("You have the following Codes: ");
         for (Dossier dossier : Snipe.getPlayer().getDossierHints()) {
             System.out.println(dossier.getDossierHints());
         */
