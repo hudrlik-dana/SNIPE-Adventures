@@ -101,10 +101,22 @@ public class GameMenuView extends View{
 
     private void displayCollectedCodesView() {
         System.out.println("\n*** displayCollectedCodesView stub function called ***");
+        
+        /*
+        System.out.println("You have the following Codes: ");
+        for (Challenge challenge : Snipe.getPlayer().getMasterCodePiece()) {
+            System.out.println(challenge.getMasterCodePieceName());
+        */
     }
 
     private void displayDossierListView() {
         System.out.println("\n*** displayDossierListView stub function called ***");
+                
+        /*
+        System.out.println("You have the following Codes: ");
+        for (Dossier dossier : Snipe.getPlayer().getDossierHints()) {
+            System.out.println(dossier.getDossierHints());
+        */
     }
     
     

@@ -20,15 +20,15 @@ public class GameControlTest {
     /**
      * Test of getCodeName method, of class GameControl. Danas 
      */
-    @Test
+    /*@Test
     public void testGetCodeName() {
         System.out.println("getCodeName");
         String[] args = null;
         String expResult = "Your SNIPE code name is Stealthy Ninja.";
         String result = GameControl.getCodeName(args);
-/*        assertEquals(expResult, result);
-        */
+        assertEquals(expResult, result);
+        
        
-    }
+    }*/
     
 }
