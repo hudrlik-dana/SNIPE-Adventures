@@ -126,7 +126,7 @@ public class GameControl {
         
         //Germany
         Country germany = new Country();
-        germany.setName("Germany");
+        germany.setName("GERMANY");
 
         Place berlin = new Place();
         berlin.setChallenge(true);
@@ -180,7 +180,7 @@ public class GameControl {
 
         //England
         Country england = new Country();
-        england.setName("England");
+        england.setName("ENGLAND");
         
         Place bigBen = new Place();
         bigBen.setChallenge(true);
@@ -228,7 +228,7 @@ public class GameControl {
         
         //Spain
         Country spain = new Country();
-        spain.setName("Spain");
+        spain.setName("SPAIN");
               
         Place valencia = new Place();
         valencia.setChallenge(true);
@@ -275,7 +275,7 @@ public class GameControl {
         
         //Russia
         Country russia = new Country();
-        russia.setName("Russia");
+        russia.setName("RUSSIA");
         
         Place stPetersSquare = new Place();
         stPetersSquare.setChallenge(true);
@@ -319,7 +319,7 @@ public class GameControl {
         
         //France
         Country france = new Country();
-        france.setName("France");
+        france.setName("FRANCE");
         
         Place louvre = new Place();
         louvre.setChallenge(true);
@@ -362,7 +362,7 @@ public class GameControl {
         
          //Canada
         Country canada = new Country();
-        canada.setName("Canada");
+        canada.setName("CANADA");
                 
         Place libraryParliament = new Place();
         libraryParliament.setChallenge(true);
@@ -400,7 +400,7 @@ public class GameControl {
                 
         //Brazil
         Country brazil = new Country();
-        brazil.setName("Brazil");
+        brazil.setName("BRAZIL");
         
         Place rioDeJaneiro = new Place();
         rioDeJaneiro.setChallenge(true);
@@ -441,7 +441,7 @@ public class GameControl {
         
         //Australia
         Country australia = new Country();
-        australia.setName("Australia");
+        australia.setName("AUSTRALIA");
         
         Place sydneyOpHouse = new Place();
         sydneyOpHouse.setChallenge(true);

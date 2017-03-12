@@ -24,12 +24,7 @@ BRAZIL(""),
 AUSTRALIA("");
 
 //class instance variables
-    private final String countryCode;
     private final String hints;
-
-    public String getCountryCode() {
-        return countryCode;
-    }
 
     public String getHints() {
         return hints;
@@ -37,14 +32,13 @@ AUSTRALIA("");
 
     Dossier(String hints) {
         this.hints = hints;
-        countryCode = new String();
     }
 
        
 
     @Override
     public String toString() {
-        return "Dossier{" + "countryCode=" + countryCode + ", hints=" + hints + '}';
+        return "Dossier:\n" + hints;
     }
 
 }

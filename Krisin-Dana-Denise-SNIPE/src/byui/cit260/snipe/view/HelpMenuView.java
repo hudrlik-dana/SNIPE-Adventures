@@ -50,7 +50,7 @@ public class HelpMenuView extends View {
                 + "\n "
                 + "\n-----------------------------------------------------------"
                 + "\n R - Return to Player Location"
-                + "\n M - Main Menu"
+                + "\n G - Game Menu"
                 + "\n-----------------------------------------------------------");
     }
     
@@ -62,8 +62,8 @@ public class HelpMenuView extends View {
         choice = choice.toUpperCase(); //convert choice to upper case
 
         switch (choice) {
-            case "M": //Return to Main Menu
-                this.displayMainMenu();
+            case "G": //Return to Main Menu
+                this.displayGameMenu();
                 break;
             case "R": //Return to Player Location
                 this.displayPlayerCurrentScene();
@@ -75,10 +75,10 @@ public class HelpMenuView extends View {
         return false;
     }
     
-    private void displayMainMenu() {
-        //display the main menu
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.display();
+    private void displayGameMenu() {
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void displayPlayerCurrentScene() {

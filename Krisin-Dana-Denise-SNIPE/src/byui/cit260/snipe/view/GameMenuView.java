@@ -7,6 +7,8 @@
 package byui.cit260.snipe.view;
 
 import java.util.Scanner;
+import snipe.Snipe;
+import byui.cit260.snipe.model.Dossier;
 
 /**
  *
@@ -22,7 +24,7 @@ public class GameMenuView extends View{
                 + "\n Game Menu                                                "
                 + "\n-----------------------------------------------------------"
                 + "\n"
-                + "\n D - View Current Dossier"
+                + "\n D - View Dossier"
                 + "\n C - View Collected Codes"
                 + "\n P - View Player Health"
                 + "\n T - Travel"
@@ -41,7 +43,7 @@ public class GameMenuView extends View{
 
         switch (choice) {
             case "D": //Show current country Dossier
-                this.displayDossierListView();
+                this.displayDossierView();
                 break;
             case "C": //Display list of collected codes
                 this.displayCollectedCodesView();
@@ -109,14 +111,11 @@ public class GameMenuView extends View{
         */
     }
 
-    private void displayDossierListView() {
-        System.out.println("\n*** displayDossierListView stub function called ***");
-                
-        /*
-        for (Dossier dossier : Snipe.getPlayer().getDossierHints()) {
-            System.out.println(dossier.getDossierHints());
-        */
-    }
+    private void displayDossierView() {
+        DossierView dossierView = new DossierView();
+        dossierView.display();
+    }        
+     
     
     
 //System.out.println("\n*** functionName stub function called ***");
