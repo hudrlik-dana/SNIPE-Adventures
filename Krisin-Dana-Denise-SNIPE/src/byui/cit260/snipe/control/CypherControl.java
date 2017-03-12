@@ -61,48 +61,14 @@ public class CypherControl extends View {
                         "\n******* Congratulations! ********"
                       + "\n You are now a S.N.I.P.E Agent."   
                       + "\n*********************************"
-                      + "\n Press any key to take a well "
-                      + "\n      deserved vacation."
+                      + "\n Take a well desevved vacation!  "
+                      + "\n*********************************"             
+                      + "\n N - Start New Game              "
+                      + "\n Q - Exit Game                   "                                                  
                       + "\n*********************************"
                 ); 
         return true;
     }
     
-   // public class MainMenuView extends View {
-   //     public void MainMenuView() {
-   //     super("\n"
-   //             + "\n--------------------------------"
-   //             + "\n Main Menu                      "
-   //             + "\n--------------------------------"
-   //             + "\n N - Start New Game             "
-   //             + "\n Q - Exit Game                  " 
-   //             + "\n--------------------------------");
-   // }
   
-    @Override
-    public String getInput() {
-        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
-        boolean valid = false; //initialize to not valid
-        String value = ""; //value to be returned
-
-        while (!valid) {
-            System.out.println("\n" + this.displayMessage);
-
-            value = keyboard.nextLine(); //get next line typed on keyboard
-            value = value.trim(); //trim off leading and trailing blanks
-
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid: entry required.");
-                continue;
-            }
-            break; //end the loop
-        }
-        return value; //return entered value
-
-    }
-
-//        @Override
-//        public boolean doAction(String value) {
-//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//        }
     }

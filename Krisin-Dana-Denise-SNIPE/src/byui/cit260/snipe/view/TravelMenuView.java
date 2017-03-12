@@ -49,6 +49,7 @@ public class TravelMenuView extends View {
         boolean done = false; //set flag to not done
         do {
             String menuOption = this.getInput();
+
             if (menuOption.toUpperCase().equals("Q")) {
                 return;
             }
@@ -103,12 +104,18 @@ public class TravelMenuView extends View {
 
                if (numChoice == 1){
                  System.out.println("\n this is first" + Snipe.getPlayer().getCurrentPlace().getPlaceScene()); 
-              }
+                 
+               }
                if (numChoice == 2){
-                 System.out.println("\n this is second " + Snipe.getPlayer().getCurrentPlace().getPlaceScene()); 
+                 System.out.println("\n this is second " + Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+                 ChallengeRiddleView challenge3 = new ChallengeRiddleView();
+                 challenge3.display(); 
+ 
               }
                if (numChoice == 3){
-                 System.out.println("\n this is third" + Snipe.getPlayer().getCurrentPlace().getPlaceScene()); 
+                 System.out.println("\n this is third" + Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+                 ChallengePhysicalView challenge2 = new ChallengePhysicalView();
+                 challenge2.display();
               }
 //            }
             return true;

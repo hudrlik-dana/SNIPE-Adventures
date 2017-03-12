@@ -116,9 +116,11 @@ public class ChallengeMentalView extends View {
         int var3=0;
         int var4=0;
        
-        switch (answerOption) {
-            case "1,2,3 && currentCountry == 'Germany'": //They chose an answer for Germany challenge
-                if (answerOption == "1"){
+        Country currentCountry = Snipe.getPlayer().getCurrentCountry();
+        
+        switch (currentCountry.getName()) {
+            case "Germany": //They chose an answer for Germany challenge
+                if (choice.equals("1")){
                     var1=34;
                     var2=61;      
                     ChallengeControl.calcMathPuzzle1(var1, var2); //incorrect answer
@@ -128,7 +130,7 @@ public class ChallengeMentalView extends View {
                                      + "\n location and try a different challenge.");
                     
                 }
-                if (answerOption == "2"){   //correct answer
+                if (choice.equals("2")){   //correct answer
                     var1=32;
                     var2=68;      
                     ChallengeControl.calcMathPuzzle1(var1, var2);
@@ -137,7 +139,7 @@ public class ChallengeMentalView extends View {
                                      + "\n in your pocket and return to the Safe House to contact your"
                                      + "\n handler and receive the dossier for your next mission.");
                 }
-                if (answerOption == "3"){   //incorrect answer
+                if (choice.equals("3")){   //incorrect answer
                     var1=30;
                     var2=66;      
                     ChallengeControl.calcMathPuzzle1(var1, var2);
@@ -148,8 +150,8 @@ public class ChallengeMentalView extends View {
                 }
                 break;
                 
-            case "1,2,3 && currentCountry == 'Spain'":  //They chose an answer for Spain challenge
-                if (answerOption == "1"){   //correct answer
+            case "Spain":  //They chose an answer for Spain challenge
+                if (choice.equals("1")){   //correct answer
                     var1=74;
                     var2=30;      
                     ChallengeControl.calcMathPuzzle2(var1, var2);
@@ -158,7 +160,7 @@ public class ChallengeMentalView extends View {
                                      + "\n pocket and return to the Safe House to contact your"
                                      + "\n handler and receive the dossier for your next mission.");   
                 }
-                if (answerOption == "2"){    //incorrect answer
+                if (choice.equals("2")){    //incorrect answer
                     var1=68;
                     var2=20;      
                     ChallengeControl.calcMathPuzzle2(var1, var2);
@@ -167,7 +169,7 @@ public class ChallengeMentalView extends View {
                                      + "\n try again or travel to another location and try a"
                                      + "\n different challenge.");
                 }
-                if (answerOption == "3"){    //incorrect answer
+                if (choice.equals("3")){    //incorrect answer
                     var1=65;
                     var2=20;      
                     ChallengeControl.calcMathPuzzle2(var1, var2);
@@ -178,8 +180,8 @@ public class ChallengeMentalView extends View {
                 }
                 break;
                 
-            case "1,2,3 && currentCountry == 'Russia'": //They chose an answer for Russia challenge
-                 if (answerOption == "1"){   //incorrect answer 31666
+            case "Russia": //They chose an answer for Russia challenge
+                 if (choice.equals("1")){   //incorrect answer 31666
                     var1=500;
                     var2=95;
                     var3=6;
@@ -190,7 +192,7 @@ public class ChallengeMentalView extends View {
                                      + "\n try again or travel to another location and try a"
                                      + "\n different challenge.");
                 }
-                if (answerOption == "2"){    //correct answer 10000
+                if (choice.equals("2")){    //correct answer 10000
                     var1=200;
                     var2=75;
                     var3=6;
@@ -201,7 +203,7 @@ public class ChallengeMentalView extends View {
                                      + "\n pocket and return to the Safe House to contact your"
                                      + "\n handler and receive the dossier for your next mission.");   
                 }
-                if (answerOption == "3"){    //incorrect answer 1666
+                if (choice.equals("3")){    //incorrect answer 1666
                     var1=100;
                     var2=25;
                     var3=6;
