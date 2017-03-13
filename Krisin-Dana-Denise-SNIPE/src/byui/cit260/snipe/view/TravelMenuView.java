@@ -22,24 +22,23 @@ public class TravelMenuView extends View {
     public TravelMenuView() {
         super();
         Country currentCountry = Snipe.getPlayer().getCurrentCountry();
-        
+
         String tempMenu = "\n"
                 + "\n-----------------------------------------------------------"
                 + "\n Travel Menu                                                "
                 + "\n-----------------------------------------------------------"
                 + "\n";
-                
-        
-        for(int i = 0; i < currentCountry.getPlaces().size(); i++) {
-            tempMenu += "\n " + (i+1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
+
+        for (int i = 0; i < currentCountry.getPlaces().size(); i++) {
+            tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
         }
-        
+
         tempMenu += "\n **************"
                 + "\n V - View Map"
                 + "\n M - Main Menu"
                 + "\n H - Help Menu"
                 + "\n-----------------------------------------------------------";
-        
+
         this.menu = tempMenu;
     }
 
@@ -87,44 +86,66 @@ public class TravelMenuView extends View {
         choice = choice.toUpperCase(); //convert choice to upper case
 
         try {
-            int numChoice = Integer.parseInt(choice);          
+            int numChoice = Integer.parseInt(choice);
             Snipe.getPlayer().setCurrentPlace(Snipe.getPlayer().getCurrentCountry().getPlaces().get(numChoice - 1));
-            
+
             List<Place> passport = Snipe.getPlayer().getPassport();
-            
-            if(!passport.contains(Snipe.getPlayer().getCurrentPlace())){
-                    passport.add(Snipe.getPlayer().getCurrentPlace());
-                }
-            
+
+            if (!passport.contains(Snipe.getPlayer().getCurrentPlace())) {
+                passport.add(Snipe.getPlayer().getCurrentPlace());
+            }
+
             //Output non-challenge description
             System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
-            
+
             //IF PLAYER MOVEMENT TO A PLACE TRIGGERS CHALLENGE - OPEN THE CHALLENGE VIEW HERE
 //            if(Snipe.getPlayer().getCurrentPlace().isChallenge()) {
-
-               if (numChoice == 1){
-                 System.out.println("\n this is first" + Snipe.getPlayer().getCurrentPlace().getPlaceScene()); 
-                 
-               }
-               if (numChoice == 2){
-                 System.out.println("\n this is second " + Snipe.getPlayer().getCurrentPlace().getPlaceScene());
-                 ChallengeRiddleView challenge3 = new ChallengeRiddleView();
-                 challenge3.display(); 
- 
-              }
-               if (numChoice == 3){
-                 System.out.println("\n this is third" + Snipe.getPlayer().getCurrentPlace().getPlaceScene());
-                 ChallengePhysicalView challenge2 = new ChallengePhysicalView();
-                 challenge2.display();
-              }
-//            }
+            if (numChoice == 1) {
+                //safe house 
+                SafeHouseView safeHouse = new SafeHouseView();
+                safeHouse.display();
+            }
+            if (numChoice == 2) {
+                //First two lines don't work, why?  I don't know why? --Denise 
+                //      It's fixed now! 
+                //I learned I can't print all the stuff on Country object.  Doesn't know what you want. 
+                //  Must specify the actual varable. Must be aware of the class and what you are asking for.
+//              Country currentCountry = Snipe.getPlayer().getCurrentCountry();
+//              System.out.println("\n this is second "  + currentCountry.getName());
+// 
+                //this line doesn't work also. don't know why --Denise
+//              System.out.println("\n this is second " + Snipe.getPlayer().getCurrentCountry());
+//
+                //this line works
+//              System.out.println("\n this is second " + Snipe.getPlayer().getCurrentPlace().getCountryCode());
+//
+                String countryCode;
+                countryCode =  Snipe.getPlayer().getCurrentPlace().getCountryCode();
+               
+              if (countryCode.matches("G|S|R")) {
+                 //mental challenge-math (only Germany, Spain, Russia) 
+                    ChallengeMentalView challenge2 = new ChallengeMentalView();
+                     challenge2.display();
+                }
+               else {
+                  //puzzle challenge
+                    ChallengeRiddleView challenge2 = new ChallengeRiddleView();
+                     challenge2.display();
+                }
+            }
+            if (numChoice == 3) {
+                //physical Challenges 
+                ChallengePhysicalView challenge3 = new ChallengePhysicalView();
+                challenge3.display();
+            }
+//         
             return true;
-        } catch(IndexOutOfBoundsException ibe) {
+        } catch (IndexOutOfBoundsException ibe) {
             System.out.println("That place number doesn't exist!");
         } catch (Exception e) {
             //bury this
         }
-        
+
         switch (choice) {
             case "V": //display the map
                 System.out.println("You are at: " + Snipe.getPlayer().getCurrentPlace().getPlaceName());
@@ -155,13 +176,12 @@ public class TravelMenuView extends View {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
-    
-        private void displayMap() {
+
+    private void displayMap() {
         //display the travel menu
         MapMenuView mapMenu = new MapMenuView();
         mapMenu.display();
     }
-
 
 //System.out.println("\n*** functionName stub function called ***");
 }

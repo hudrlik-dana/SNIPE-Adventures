@@ -82,7 +82,18 @@ public class GameControl {
     private static World setupWorld() {
 
         World world = new World();
-
+//*********************************************************************************************
+//* For the logic to work in this game it is critical that the places are built in this order.
+//*
+//* 1st) Safe house
+//* 2nd) Puzzle or Mental Challenge
+//* 3rd) Physical Challenge
+//*
+//* The logic is found in the TravelMenuView.  Also, ChallengeMentalView, ChallengePhysicalView
+//* and ChallengeRiddleView search for country name, formated like this (Germany, USA, Spain, England)
+//  If you change the values of the model, the programs will need to change as well.  
+//*
+//*********************************************************************************************
         //USA  
         Country usa = new Country();
         usa.setName("USA");
@@ -126,7 +137,22 @@ public class GameControl {
         
         //Germany
         Country germany = new Country();
-        germany.setName("GERMANY");
+        germany.setName("Germany");
+        
+        Place rhineRiver = new Place();
+        rhineRiver.setChallenge(false);
+        rhineRiver.setCountryCode("G");
+        rhineRiver.setPlaceName("Rhine River");
+        rhineRiver.setPlaceScene("\n You take a boat on the Rhine River and the city seems to"
+                            + "\n get smaller and smaller the further south the boat sails. A"
+                            + "\n thick border of trees line the river and you are entering"
+                            + "\n the country side. Along the river, you see what looks like"
+                            + "\n a spectacular castle jutting out of the greenery along the"
+                            + "\n river. The sun bathes the masonry of the castle, illuminating"
+                            + "\n all the details of the peaks, windows and a rustic cylinder"
+                            + "\n that looks like a farming silo that is directly behind the"
+                            + "\n main building.");
+        germany.addPlace(rhineRiver);
 
         Place berlin = new Place();
         berlin.setChallenge(true);
@@ -160,27 +186,27 @@ public class GameControl {
                             + "\n it and a stairway leads down to a lower level.");
         cologne.setMasterCodePiece("6MG4W3G5 V37 V567.");
         germany.addPlace(cologne);
-        
-        Place rhineRiver = new Place();
-        rhineRiver.setChallenge(false);
-        rhineRiver.setCountryCode("G");
-        rhineRiver.setPlaceName("Rhine River");
-        rhineRiver.setPlaceScene("\n You take a boat on the Rhine River and the city seems to"
-                            + "\n get smaller and smaller the further south the boat sails. A"
-                            + "\n thick border of trees line the river and you are entering"
-                            + "\n the country side. Along the river, you see what looks like"
-                            + "\n a spectacular castle jutting out of the greenery along the"
-                            + "\n river. The sun bathes the masonry of the castle, illuminating"
-                            + "\n all the details of the peaks, windows and a rustic cylinder"
-                            + "\n that looks like a farming silo that is directly behind the"
-                            + "\n main building.");
-        germany.addPlace(rhineRiver);
-        
+          
         world.addCountry(germany);
 
         //England
         Country england = new Country();
-        england.setName("ENGLAND");
+        england.setName("England");
+ 
+        Place westminsterAbbey = new Place();
+        westminsterAbbey.setChallenge(false);
+        westminsterAbbey.setCountryCode("E");
+        westminsterAbbey.setPlaceName("Westminster Abbey");
+        westminsterAbbey.setPlaceScene("\n You arrived at the Westminster Abbey, a gothic styled church of"
+                                    + "\n the 13th century. Steeped deep in history this building has witnessed"
+                                    + "\n every coronation of since the 10th century and sixteen royal"
+                                    + "\n weddings. Recalling history, you remember that the Abbey is a"
+                                    + "\n burial place of kings, statesmen, poets, scientists, warriors and musicians."
+                                    + "\n This regal, magnificent building has the most gorgeous details."
+                                    + "\n The windows are a work of geometric art with their varying shapes"
+                                    + "\n and patterns of leaded glass. People are bustling around, both"
+                                    + "\n inside and outside of the church.");
+        england.addPlace(westminsterAbbey);       
         
         Place bigBen = new Place();
         bigBen.setChallenge(true);
@@ -208,28 +234,25 @@ public class GameControl {
                                      + "\n side. You step out onto the faded red pavement to start your mission here.");
         buckinghamPalace.setMasterCodePiece("W5X4H43M");
         england.addPlace(buckinghamPalace);
-        
-        Place westminsterAbbey = new Place();
-        westminsterAbbey.setChallenge(false);
-        westminsterAbbey.setCountryCode("E");
-        westminsterAbbey.setPlaceName("Westminster Abbey");
-        westminsterAbbey.setPlaceScene("\n You arrived at the Westminster Abbey, a gothic styled church of"
-                                    + "\n the 13th century. Steeped deep in history this building has witnessed"
-                                    + "\n every coronation of since the 10th century and sixteen royal"
-                                    + "\n weddings. Recalling history, you remember that the Abbey is a"
-                                    + "\n burial place of kings, statesmen, poets, scientists, warriors and musicians."
-                                    + "\n This regal, magnificent building has the most gorgeous details."
-                                    + "\n The windows are a work of geometric art with their varying shapes"
-                                    + "\n and patterns of leaded glass. People are bustling around, both"
-                                    + "\n inside and outside of the church.");
-        england.addPlace(westminsterAbbey);
-        
+          
         world.addCountry(england);
         
         //Spain
         Country spain = new Country();
-        spain.setName("SPAIN");
-              
+        spain.setName("Spain");
+       
+       Place cathedralSeville = new Place();
+        cathedralSeville.setChallenge(false);
+        cathedralSeville.setCountryCode("S");
+        cathedralSeville.setPlaceName("Cathedral of Seville");
+        cathedralSeville.setPlaceScene("\n A taxi drops you off at the Cathedral of Seville. The building"
+                                     + "\n is adorned  with rich detail of centuries past architecture. The"
+                                     + "\n stone detail is so fine the patterns in parts could be described"
+                                     + "\n as lace.  You step out onto the paver street and see this 2-story"
+                                     + "\n high gate entryway made of stone and rod iron. Next you see the"
+                                     + " Triumph of Faith statue tarnished with a grey-blue patina.");
+        spain.addPlace(cathedralSeville);
+        
         Place valencia = new Place();
         valencia.setChallenge(true);
         valencia.setCountryCode("S");
@@ -258,24 +281,25 @@ public class GameControl {
         tarragona.setMasterCodePiece("56XS W61 4H");
         spain.addPlace(tarragona);
         
-        Place cathedralSeville = new Place();
-        cathedralSeville.setChallenge(false);
-        cathedralSeville.setCountryCode("S");
-        cathedralSeville.setPlaceName("Cathedral of Seville");
-        cathedralSeville.setPlaceScene("\n A taxi drops you off at the Cathedral of Seville. The building"
-                                     + "\n is adorned  with rich detail of centuries past architecture. The"
-                                     + "\n stone detail is so fine the patterns in parts could be described"
-                                     + "\n as lace.  You step out onto the paver street and see this 2-story"
-                                     + "\n high gate entryway made of stone and rod iron. Next you see the"
-                                     + " Triumph of Faith statue tarnished with a grey-blue patina.");
-        spain.addPlace(cathedralSeville);
-        
         world.addCountry(spain);
         
         
         //Russia
         Country russia = new Country();
-        russia.setName("RUSSIA");
+        russia.setName("Russia");
+        
+        Place leninsMausoleum = new Place();
+        leninsMausoleum.setChallenge(false);
+        leninsMausoleum.setCountryCode("R");
+        leninsMausoleum.setPlaceName("Lenin's Mausoleum");
+        leninsMausoleum.setPlaceScene("\n After arriving in Red Square in Moscow, you see Lenin’s Mausoleum."
+                                    + "\n The mainly red stone building contrasts nicely with the charcoal"
+                                    + "\n grey accent stones and grey paver brick streets. The overall look of"
+                                    + "\n the building is masculine due to its color and multileveled rectangular"
+                                    + "\n shapes. The red brick wall behind the building stretches upward the"
+                                    + "\n the Mausoleum, serving as a background.");
+        russia.addPlace(leninsMausoleum);
+        
         
         Place stPetersSquare = new Place();
         stPetersSquare.setChallenge(true);
@@ -302,24 +326,23 @@ public class GameControl {
                                       + "\n of two warriors in front as you walk toward the gate.");
         stBasilsCathedral.setMasterCodePiece("7N M5PH3M");
         russia.addPlace(stBasilsCathedral);
-        
-        Place leninsMausoleum = new Place();
-        leninsMausoleum.setChallenge(false);
-        leninsMausoleum.setCountryCode("R");
-        leninsMausoleum.setPlaceName("Lenin's Mausoleum");
-        leninsMausoleum.setPlaceScene("\n After arriving in Red Square in Moscow, you see Lenin’s Mausoleum."
-                                    + "\n The mainly red stone building contrasts nicely with the charcoal"
-                                    + "\n grey accent stones and grey paver brick streets. The overall look of"
-                                    + "\n the building is masculine due to its color and multileveled rectangular"
-                                    + "\n shapes. The red brick wall behind the building stretches upward the"
-                                    + "\n the Mausoleum, serving as a background.");
-        russia.addPlace(leninsMausoleum);
-        
+           
         world.addCountry(russia);
         
         //France
         Country france = new Country();
-        france.setName("FRANCE");
+        france.setName("France");
+       
+        Place cafeFrance = new Place();
+        cafeFrance.setChallenge(false);
+        cafeFrance.setCountryCode("F");
+        cafeFrance.setPlaceName("Sidewalk Cafe in France");
+        cafeFrance.setPlaceScene("\n You walk to the Cafe De Flore as instructed. It’s easy to find because"
+                               + "\n of its white lettering mounted  to the edge the roof just above the "
+                               + "\n building. It’s a corner cafe with large round glass windows. Small"
+                               + "\n bistro tables outside form a semicircle around the rounded building."
+                               + "\n People are dining while reading the newspaper or talking to friends.");
+        france.addPlace(cafeFrance);      
         
         Place louvre = new Place();
         louvre.setChallenge(true);
@@ -347,23 +370,22 @@ public class GameControl {
         eiffelTower.setMasterCodePiece("W5X4H43MH W5G57N4M5");
         france.addPlace(eiffelTower);
         
-        Place cafeFrance = new Place();
-        cafeFrance.setChallenge(false);
-        cafeFrance.setCountryCode("F");
-        cafeFrance.setPlaceName("Sidewalk Cafe in France");
-        cafeFrance.setPlaceScene("\n You walk to the Cafe De Flore as instructed. It’s easy to find because"
-                               + "\n of its white lettering mounted  to the edge the roof just above the "
-                               + "\n building. It’s a corner cafe with large round glass windows. Small"
-                               + "\n bistro tables outside form a semicircle around the rounded building."
-                               + "\n People are dining while reading the newspaper or talking to friends.");
-        france.addPlace(cafeFrance);
-        
         world.addCountry(france);
         
          //Canada
         Country canada = new Country();
-        canada.setName("CANADA");
-                
+        canada.setName("Canada");
+ 
+        Place cnTower = new Place();
+        cnTower.setChallenge(false);
+        cnTower.setCountryCode("C");
+        cnTower.setPlaceName("CN Tower");
+        cnTower.setPlaceScene("\n You travel to Toronto, Ontario in Canada. The city has many tall buildings"
+                            + "\n but the CN tower is close to double of the tallest building from the naked"
+                            + "\n eye. The building has pole like structure and the main living space near"
+                            + "\n the top revolving 360 degrees like a doughnut slowly turning on a stick.");
+        canada.addPlace(cnTower);      
+        
         Place libraryParliament = new Place();
         libraryParliament.setChallenge(true);
         libraryParliament.setCountryCode("C");
@@ -386,21 +408,23 @@ public class GameControl {
         montrealStadium.setMasterCodePiece("6MW 327");
         canada.addPlace(montrealStadium);
         
-        Place cnTower = new Place();
-        cnTower.setChallenge(false);
-        cnTower.setCountryCode("C");
-        cnTower.setPlaceName("CN Tower");
-        cnTower.setPlaceScene("\n You travel to Toronto, Ontario in Canada. The city has many tall buildings"
-                            + "\n but the CN tower is close to double of the tallest building from the naked"
-                            + "\n eye. The building has pole like structure and the main living space near"
-                            + "\n the top revolving 360 degrees like a doughnut slowly turning on a stick.");
-        canada.addPlace(cnTower);
-        
         world.addCountry(canada);
                 
         //Brazil
         Country brazil = new Country();
-        brazil.setName("BRAZIL");
+        brazil.setName("Brazil");
+        
+        Place saoPaulo = new Place();
+        saoPaulo.setChallenge(false);
+        saoPaulo.setCountryCode("B");
+        saoPaulo.setPlaceName("Sao Paulo");
+        saoPaulo.setPlaceScene("\n You are headed for Brazil’s largest city, Sao Paulo. The tropical to"
+                             + "\n subtropical climate makes it warm year-round but have unpredictable"
+                             + "\n monsoons. This is a well-established city densely populated with "
+                             + "\n skyscrapers and building of all kinds. Even from the air the view"
+                             + "\n is a landscape of tall buildings covering the earth. In the far of"
+                             + "\n distance there are mountains that can only be seen by air.");
+        brazil.addPlace(saoPaulo);
         
         Place rioDeJaneiro = new Place();
         rioDeJaneiro.setChallenge(true);
@@ -425,23 +449,27 @@ public class GameControl {
         amazonForest.setMasterCodePiece("V64GS 4H GS5");
         brazil.addPlace(amazonForest);
         
-        Place saoPaulo = new Place();
-        saoPaulo.setChallenge(false);
-        saoPaulo.setCountryCode("B");
-        saoPaulo.setPlaceName("Sao Paulo");
-        saoPaulo.setPlaceScene("\n You are headed for Brazil’s largest city, Sao Paulo. The tropical to"
-                             + "\n subtropical climate makes it warm year-round but have unpredictable"
-                             + "\n monsoons. This is a well-established city densely populated with "
-                             + "\n skyscrapers and building of all kinds. Even from the air the view"
-                             + "\n is a landscape of tall buildings covering the earth. In the far of"
-                             + "\n distance there are mountains that can only be seen by air.");
-        brazil.addPlace(saoPaulo);
+
         
         world.addCountry(brazil);
         
         //Australia
         Country australia = new Country();
-        australia.setName("AUSTRALIA");
+        australia.setName("Australia");
+          
+        Place melbourneJail = new Place();
+        melbourneJail.setChallenge(false);
+        melbourneJail.setCountryCode("A");
+        melbourneJail.setPlaceName("Old Melbourne Jail");
+        melbourneJail.setPlaceScene("\n You are headed to the Old Melbourne Jail in Victoria, Australia."
+                                  + "\n It is a museum now but has quite of history and some say it is"
+                                  + "\n haunted. You pull up and see a thick two-story brick wall with"
+                                  + "\n an archway. You enter and see the complex. The jail is constructed"
+                                  + "\n of charcoal grey colored cinder block. The building itself looks"
+                                  + "\n a bit like a saltbox construction where it is one large rectangle"
+                                  + "\n atop another. Each small window has metal bars. The whole scene is"
+                                  + "\n dreary and feels like you could be trapped.");
+        australia.addPlace(melbourneJail);     
         
         Place sydneyOpHouse = new Place();
         sydneyOpHouse.setChallenge(true);
@@ -467,21 +495,7 @@ public class GameControl {
                                     + "\n walkway. You get out and ready yourself for your mission.");
         australiaBridge.setMasterCodePiece("6 W61 3V");
         australia.addPlace(australiaBridge);
-        
-        Place melbourneJail = new Place();
-        melbourneJail.setChallenge(false);
-        melbourneJail.setCountryCode("A");
-        melbourneJail.setPlaceName("Old Melbourne Jail");
-        melbourneJail.setPlaceScene("\n You are headed to the Old Melbourne Jail in Victoria, Australia."
-                                  + "\n It is a museum now but has quite of history and some say it is"
-                                  + "\n haunted. You pull up and see a thick two-story brick wall with"
-                                  + "\n an archway. You enter and see the complex. The jail is constructed"
-                                  + "\n of charcoal grey colored cinder block. The building itself looks"
-                                  + "\n a bit like a saltbox construction where it is one large rectangle"
-                                  + "\n atop another. Each small window has metal bars. The whole scene is"
-                                  + "\n dreary and feels like you could be trapped.");
-        australia.addPlace(melbourneJail);
-        
+          
         world.addCountry(australia);
         
         return world;
