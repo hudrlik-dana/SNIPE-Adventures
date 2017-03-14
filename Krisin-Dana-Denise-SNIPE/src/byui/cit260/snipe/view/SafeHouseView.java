@@ -36,6 +36,14 @@ public class SafeHouseView extends View {
 // call the correct enum variable.  It won't let me, at least how I am trying to do it.
         String countryName = Snipe.getPlayer().getCurrentCountry().getName();
         
+//        for(SafeHouse neededSafeHouse : SafeHouse.values()) {
+           
+ //           if (countryName.equals(SafeHouse.getSafeHouseCountry)) {
+ //             SafeHouse safeHouseDesc = SafeHouse.safeHouseDesc;
+ //             System.out.println("\n" + SafeHouse.values(safeHouseCountry).getSafeHouseDesc());  
+ //           }
+ //       }
+        
         SafeHouse safeHouseDesc = SafeHouse.USA;
         System.out.println("\n" + SafeHouse.USA.getSafeHouseDesc());
         
