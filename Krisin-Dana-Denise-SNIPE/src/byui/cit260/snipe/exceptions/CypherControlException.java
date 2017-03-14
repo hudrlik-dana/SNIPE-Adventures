@@ -10,24 +10,24 @@ package byui.cit260.snipe.exceptions;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public class GameControlException extends Exception {
+public class CypherControlException extends Exception {
 
-    public GameControlException() {
+    public CypherControlException() {
     }
 
-    public GameControlException(String message) {
+    public CypherControlException(String message) {
         super(message);
     }
 
-    public GameControlException(String message, Throwable cause) {
+    public CypherControlException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public GameControlException(Throwable cause) {
+    public CypherControlException(Throwable cause) {
         super(cause);
     }
 
-    public GameControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public CypherControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
     

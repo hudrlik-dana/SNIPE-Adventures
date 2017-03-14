@@ -10,26 +10,25 @@ package byui.cit260.snipe.exceptions;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public class GameControlException extends Exception {
+public class PlaceControlException extends Exception{
 
-    public GameControlException() {
+    public PlaceControlException() {
     }
 
-    public GameControlException(String message) {
+    public PlaceControlException(String message) {
         super(message);
     }
 
-    public GameControlException(String message, Throwable cause) {
+    public PlaceControlException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public GameControlException(Throwable cause) {
+    public PlaceControlException(Throwable cause) {
         super(cause);
     }
 
-    public GameControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public PlaceControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
     
-
 }
