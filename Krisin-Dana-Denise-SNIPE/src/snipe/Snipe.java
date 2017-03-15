@@ -40,10 +40,18 @@ public class Snipe {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws GameControlException {
-
-        //Create StartProgramViewOrig and display the start program view (welcome scene)
+        
+        //Create StartProgramView and display the start program view (welcome scene)
         StartProgramView startProgramView = new StartProgramView();
+        
+        try {
         startProgramView.displayStartProgramView();
+        }
+        catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.displayStartProgramView();
+        }
 
     }
 }
