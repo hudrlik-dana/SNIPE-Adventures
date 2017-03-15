@@ -60,23 +60,22 @@ public class ChallengeControl {
     public static double calcMathPuzzle1(int wallHeight, int shadowLength) {
         double distance = 0;
         distance = Math.round(Math.sqrt((wallHeight * wallHeight) + (shadowLength * shadowLength)));
-        
+
         return distance;
     }
 
 //Dana's Individual Assignment
-    
     public static double calcMathPuzzle3(int lengthA, int widthA, int lengthB, int widthB) {
-        
+
         double totalBricks = Math.round(((lengthA * widthA) * 12) / (lengthB * widthB));
-        
+
         return totalBricks;
     }
 
 //Other functions 
 //Apply Damage
     int playerHealth = 100;
-    
+
     public int adjustPlayerHealth(int currentHealth, int injuryPoints) {
 
         if (injuryPoints < currentHealth) {
@@ -89,9 +88,8 @@ public class ChallengeControl {
     }
 
 //Results of Player Answer
-    
     String result = null;
-    
+
     public String playerAnswer(char playerAnswer, char correctAnswer, char otherAnswer1, char otherAnswer2, char otherAnswer3) {
 
         if (playerAnswer == correctAnswer) {
@@ -102,16 +100,11 @@ public class ChallengeControl {
             return result = "Invalid Entry, Try Again";
         }
     }
-    
-    // Get an integer between 1 and 100.
 
+    // Get an integer between 1 and 100.
     public int randomWithRange(int min, int max, int number) {
         int range = (max - min) + 1;
         return number = (int) (Math.random() * range) + min;
 
     }
 }
-        
- 
-
-

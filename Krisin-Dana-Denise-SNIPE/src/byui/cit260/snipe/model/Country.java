@@ -14,10 +14,10 @@ import java.util.Objects;
  *
  * @author denisegoetz
  */
-public class Country implements Serializable{
-    
+public class Country implements Serializable {
+
     //class instance variables
-    private List <Place> places;
+    private List<Place> places;
     private String entryPointCode;
     private String entryPointDesc;
     private String name;
@@ -53,12 +53,12 @@ public class Country implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public void addPlace(Place place) {
         places.add(place);
     }
 
-   //constructor for country
+    //constructor for country
     public Country() {
         places = new ArrayList<>();
     }
@@ -100,8 +100,5 @@ public class Country implements Serializable{
     public String toString() {
         return "Countries{" + "places=" + places + ", entryPointCode=" + entryPointCode + ", entryPointDesc=" + entryPointDesc + '}';
     }
-    
-    
 
-    
 }

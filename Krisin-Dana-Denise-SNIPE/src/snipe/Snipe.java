@@ -5,6 +5,7 @@
  */
 package snipe;
 
+import byui.cit260.snipe.exceptions.GameControlException;
 import byui.cit260.snipe.model.Game;
 import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.view.StartProgramView;
@@ -38,7 +39,7 @@ public class Snipe {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws GameControlException {
 
         //Create StartProgramViewOrig and display the start program view (welcome scene)
         StartProgramView startProgramView = new StartProgramView();

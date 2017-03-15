@@ -13,12 +13,12 @@ import static org.junit.Assert.*;
  * @author danahudrlik
  */
 public class GameControlTest {
-    
+
     public GameControlTest() {
     }
 
     /**
-     * Test of getCodeName method, of class GameControl. Danas 
+     * Test of getCodeName method, of class GameControl. Danas
      */
     /*@Test
     public void testGetCodeName() {
@@ -30,5 +30,4 @@ public class GameControlTest {
         
        
     }*/
-    
 }

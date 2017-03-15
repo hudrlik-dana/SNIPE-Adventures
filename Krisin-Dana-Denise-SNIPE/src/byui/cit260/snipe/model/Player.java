@@ -20,14 +20,16 @@ public class Player implements Serializable {
     private int playerHealth;
     private String codeName;
     private String dossier;
-    private ArrayList<Place> passport; 
+    private ArrayList<Place> passport;
     private Place currentPlace;
     private Country currentCountry;
+    private ArrayList<Place> codeList;
 
     public Player() {
         passport = new ArrayList<>();
+        codeList = new ArrayList<>();
     }
-    
+
     public String getName() {
         return name;
     }
@@ -84,6 +86,13 @@ public class Player implements Serializable {
         this.currentCountry = currentCountry;
     }
 
+    public ArrayList<Place> getCodeList() {
+        return codeList;
+    }
+
+    public void setCodeList(ArrayList<Place> codeList) {
+        this.codeList = codeList;
+    }
 
     @Override
     public int hashCode() {

@@ -69,7 +69,7 @@ public class Place implements Serializable {
     public void setChallenge(boolean challenge) {
         this.challenge = challenge;
     }
-    
+
     //constructor for Place
     public Place() {
     }

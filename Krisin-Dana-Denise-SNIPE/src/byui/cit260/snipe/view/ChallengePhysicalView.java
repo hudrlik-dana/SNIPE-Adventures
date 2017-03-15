@@ -16,7 +16,6 @@ import byui.cit260.snipe.model.Place;
  *
  * @author danahudrlik
  */
-
 public class ChallengePhysicalView extends View {
 
     private String displayDescription;
@@ -45,7 +44,7 @@ public class ChallengePhysicalView extends View {
         switch (currentCountry.getName()) {
             case "USA":
                 System.out.println(
-                          "\n---------------------------------------------------------"
+                        "\n---------------------------------------------------------"
                         + "\n The Gateway Arch in St. Louis, Missouri is world famous "
                         + "\n and tourists from all over the world come to see it.    "
                         + "\n Blending into the crowd will not be hard, but finding   "
@@ -70,7 +69,7 @@ public class ChallengePhysicalView extends View {
 
             case "Germany":
                 System.out.println(
-                          "\n---------------------------------------------------------"
+                        "\n---------------------------------------------------------"
                         + "\n You arrive in front of the majestic Cologne Cathedral.  "
                         + "\n The intricate detail of the building with spires        "
                         + "\n reaching for the heavens would suggest this massive     "
@@ -102,7 +101,7 @@ public class ChallengePhysicalView extends View {
 
             case "England":
                 System.out.println(
-                          "\n---------------------------------------------------------"
+                        "\n---------------------------------------------------------"
                         + "\n Buckingham Palace, this is your stop. Stepping out onto "
                         + "\n the faded red pavement, your mission begins here.       "
                         + "\n It is going to be challenging to get past the palace    "
@@ -127,7 +126,7 @@ public class ChallengePhysicalView extends View {
                 break;
             case "Spain":
                 System.out.println(
-                          "\n---------------------------------------------------------"
+                        "\n---------------------------------------------------------"
                         + "\n Roman history collides with beaches, nightlife, and     "
                         + "\n freshly grilled seafood in Tarragona. This Spain's      "
                         + "\n second most important Roman site filled with ruins and  "
@@ -152,7 +151,7 @@ public class ChallengePhysicalView extends View {
                 break;
             case "Russia":
                 System.out.println(
-                          "\n---------------------------------------------------------"
+                        "\n---------------------------------------------------------"
                         + "\n This is a beautiful Cathedral. Your dossier mentioned   "
                         + "\n stacking 12 chairs behind the veiled area in the east   "
                         + "\n wing to reach the location of the next clue. You look   "
@@ -175,7 +174,7 @@ public class ChallengePhysicalView extends View {
                 break;
             case "France":
                 System.out.println(
-                          "\n---------------------------------------------------------"
+                        "\n---------------------------------------------------------"
                         + "\n You board bus line 82 heading to Branly. As the bus     "
                         + "\n nears your stop, you can see the iconic trademark of    "
                         + "\n Paris, the Eiffel tower. People are walking up the      "
@@ -204,7 +203,7 @@ public class ChallengePhysicalView extends View {
                 break;
             case "Canada":
                 System.out.println(
-                          "\n---------------------------------------------------------"
+                        "\n---------------------------------------------------------"
                         + "\n The weather in Montreal is bone-chilling cold and the   "
                         + "\n snow is blowing in flurries today as you arrive at      "
                         + "\n the Olympic Stadium. Your next clue will be found as    "
@@ -222,7 +221,7 @@ public class ChallengePhysicalView extends View {
                 break;
             case "Brazil":
                 System.out.println(
-                          "\n---------------------------------------------------------"
+                        "\n---------------------------------------------------------"
                         + "\n This is a jungle cruise like no other. You will need to "
                         + "\n retrieve your next clue from an area known to be        "
                         + "\n infested with alligator filled swamps and jungles       "
@@ -244,7 +243,7 @@ public class ChallengePhysicalView extends View {
                 break;
             case "Australia":
                 System.out.println(
-                          "\n --------------------------------------------------------"
+                        "\n --------------------------------------------------------"
                         + "\n Your last clue is located at the top of the Sydney      "
                         + "\n gateway bridge under the uppermost deck. It is a steep  "
                         + "\n 2-mile uphill climb, one step at a time, to the very    "
@@ -278,7 +277,7 @@ public class ChallengePhysicalView extends View {
 
     @Override
     public boolean doAction(String choice) {
-        
+
         Country currentCountry = Snipe.getPlayer().getCurrentCountry();
 
         switch (currentCountry.getName()) {
@@ -286,7 +285,7 @@ public class ChallengePhysicalView extends View {
                 if (choice.equals("1")) {
 
                     System.out.println(
-                              "\n Bummer, your answer is incorrect consult your dossier"
+                            "\n Bummer, your answer is incorrect consult your dossier"
                             + "\n for additional clues to solve the challenge."
                             + "\n Recalculate your answer and try again or travel to"
                             + "\n another location and try a different challenge."
@@ -295,7 +294,7 @@ public class ChallengePhysicalView extends View {
                 if (choice.equals("2")) {
 
                     System.out.println(
-                              "\n Bummer, your answer is incorrect consult your dossier"
+                            "\n Bummer, your answer is incorrect consult your dossier"
                             + "\n for additional clues to solve the challenge."
                             + "\n Recalculate your answer and try again or travel to"
                             + "\n another location and try a different challenge."
@@ -304,7 +303,7 @@ public class ChallengePhysicalView extends View {
                 if (choice.equals("3")) {
 
                     System.out.println(
-                              "\n Great job! The tide is rising water, so the ship will also "
+                            "\n Great job! The tide is rising water, so the ship will also "
                             + "\n rise with the tide. The water will never reach past the"
                             + "\n first rung."
                             + "\n"
@@ -324,7 +323,7 @@ public class ChallengePhysicalView extends View {
                  {
                     if (true) {
                         System.out.println(
-                                  "\n Congratulations you made it!"
+                                "\n Congratulations you made it!"
                                 + "\n After carefully checking to see if anyone is watching,"
                                 + "\n you slip the clue into your pocket and return to the "
                                 + "\n Safe House to contact your handler and receive the  "
@@ -332,7 +331,7 @@ public class ChallengePhysicalView extends View {
 
                     } else {
                         System.out.println(
-                                  "\n Bummer, you fell and were injured in your attempt."
+                                "\n Bummer, you fell and were injured in your attempt."
                                 + "\n Return to the Safe House to rest and recover. Then consult "
                                 + "\n your dossier for the location of your next challenge.");
 

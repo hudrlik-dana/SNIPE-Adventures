@@ -3,21 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.exceptions.GameControlException;
 import java.util.Scanner;
 import snipe.Snipe;
 import byui.cit260.snipe.model.Dossier;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public class GameMenuView extends View{
-    
-    //private final String menu;
+public class GameMenuView extends View {
 
+    //private final String menu;
     public GameMenuView() {
         super("\n"
                 + "\n-----------------------------------------------------------"
@@ -34,35 +35,75 @@ public class GameMenuView extends View{
                 + "\n-----------------------------------------------------------");
     }
 
-  
-
     @Override
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
         switch (choice) {
-            case "D": //Show current country Dossier
-                this.displayDossierView();
-                break;
-            case "C": //Display list of collected codes
-                this.displayCollectedCodesView();
-                break;
-            case "P": //display player health
-                this.displayPlayerHealthView();
-                break;
-            case "T": //display the TravelMenu
-                this.displayTravelMenuView();
-                break;
-            case "V": //display the map
-                this.displayMap();
-                break;
-            case "M": //Return to Main Menu
-                this.displayMainMenu();
-                break;
-            case "H": //Display Help Menu
-                this.displayHelpMenu();
-                break;
+            case "D": {
+                try {
+                    //Show current country Dossier
+                    this.displayDossierView();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case "C": {
+                try {
+                    //Display list of collected codes
+                    this.displayCollectedCodesView();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case "P": {
+                try {
+                    //display player health
+                    this.displayPlayerHealthView();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case "T": {
+                try {
+                    //display the TravelMenu
+                    this.displayTravelMenuView();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case "V": {
+                try {
+                    //display the map
+                    this.displayMap();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case "M": {
+                try {
+                    //Return to Main Menu
+                    this.displayMainMenu();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case "H": {
+                try {
+                    //Display Help Menu
+                    this.displayHelpMenu();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
@@ -71,56 +112,46 @@ public class GameMenuView extends View{
         return false;
     }
 
-    private void displayMainMenu() {
+    private void displayMainMenu() throws GameControlException {
         //display the main menu
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();
     }
 
-    private void displayHelpMenu() {
+    private void displayHelpMenu() throws GameControlException {
         //display the help menu
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
 
-    private void displayMap() {
+    private void displayMap() throws GameControlException {
         //display the travel menu
         MapMenuView mapMenu = new MapMenuView();
         mapMenu.display();
     }
 
-    private void displayTravelMenuView() {
+    private void displayTravelMenuView() throws GameControlException {
         //display the travel menu
         TravelMenuView travelMenu = new TravelMenuView();
         travelMenu.display();
     }
 
-    private void displayPlayerHealthView() {
+    private void displayPlayerHealthView() throws GameControlException {
         //display the player Health
         PlayerHealthView playerHealth = new PlayerHealthView();
         playerHealth.display();
     }
 
-    private void displayCollectedCodesView() {
-        System.out.println("\n*** displayCollectedCodesView stub function called ***");
-        
-        /*
-        System.out.println("You have the following Codes: ");
-        for (Challenge challenge : Snipe.getPlayer().getMasterCodePiece()) {
-            System.out.println(challenge.getMasterCodePieceName());
-        */
+    private void displayCollectedCodesView() throws GameControlException {
+        //display the Collected Codes
+        CollectedCodesView collectedCodes = new CollectedCodesView();
+        collectedCodes.display();
     }
 
-    private void displayDossierView() {
+    private void displayDossierView() throws GameControlException {
         DossierView dossierView = new DossierView();
         dossierView.display();
-    }        
-     
-    
-    
+    }
+
 //System.out.println("\n*** functionName stub function called ***");
 }
-
-
-
-

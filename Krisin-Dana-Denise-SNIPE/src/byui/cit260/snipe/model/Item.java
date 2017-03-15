@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.snipe.model;
 
 import java.io.Serializable;
@@ -14,7 +13,7 @@ import java.util.Objects;
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
 public class Item implements Serializable {
-    
+
     //Class instance variables
     private String type;
     private String description;
@@ -84,7 +83,5 @@ public class Item implements Serializable {
     public String toString() {
         return "Item{" + "type=" + type + ", description=" + description + ", count=" + count + '}';
     }
-    
-    
 
 }

@@ -6,6 +6,7 @@
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.GameControl;
+import byui.cit260.snipe.exceptions.GameControlException;
 import byui.cit260.snipe.model.Player;
 import java.util.Scanner;
 
@@ -21,10 +22,10 @@ public class StartProgramView {
 
     public StartProgramView() {
         //promptMessage = "Please enter your name"
-        
+
         this.promptMessage = "\nPlease enter your name:";
         //display banner when view is created
-        
+
         this.displayBanner();
     }
 
@@ -54,17 +55,17 @@ public class StartProgramView {
                 + "\n******************************************************************************************"
         );
 
-    }  
-    
-    public void displayStartProgramView() { 
+    }
+
+    public void displayStartProgramView() throws GameControlException {
         //displays the start program view 
-        
+
         boolean done = false; //set flag to not done
         do {
             //prompt for and get player's name
             String playerName = this.getPlayerName();
             if (playerName.toUpperCase().equals("Q")) {//user wants to quit
-            
+
                 return; //exit the game
             }
             //do the requested action and display the next view
@@ -92,8 +93,8 @@ public class StartProgramView {
         }
         return value; //return entered value
     }
-       
-    private boolean doAction(String playerName) {
+
+    private boolean doAction(String playerName) throws GameControlException {
 
         if (playerName.length() < 2) {
             System.out.println("\nInvalid players name: Your name must be more than one character in length.");
@@ -107,29 +108,29 @@ public class StartProgramView {
             System.out.println("\nError creating the player");
             return false;
         }
-        
+
         //display next view
         this.displayNextView(player);
 
         return true; //Success! 
     }
-    
+
     private void displayNextView(Player player) {
-        
+
         //display a custom welcome message
         System.out.println("\n****************************************************************"
-                          +"\n Welcome, " + player.getName() + " to your final training"
-                          +"\n at the S.N.I.P.E. Academy. Successful completion is required"
-                          +"\n for graduation to the status of a top-secret agent. This "
-                          +"\n mission is not without risk."
-                          +"\n"
-                          +"\n Select an option from the Menu to begin."
-                          +"\n****************************************************************"
+                + "\n Welcome, " + player.getName() + " to your final training"
+                + "\n at the S.N.I.P.E. Academy. Successful completion is required"
+                + "\n for graduation to the status of a top-secret agent. This "
+                + "\n mission is not without risk."
+                + "\n"
+                + "\n Select an option from the Menu to begin."
+                + "\n****************************************************************"
         );
-        
+
         //Create MainMenuView object
         MainMenuView mainMenuView = new MainMenuView();
-        
+
         //Display the main menu view
         mainMenuView.display();
     }

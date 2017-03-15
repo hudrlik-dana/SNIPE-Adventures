@@ -5,10 +5,10 @@
  */
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.exceptions.GameControlException;
 import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.SafeHouse;
 import snipe.Snipe;
-
 
 /**
  *
@@ -24,37 +24,31 @@ public class SafeHouseView extends View {
                 + "\nPress any key to see more details about this safe house.   "
                 + "\n-----------------------------------------------------------"
                 + "\n"
-                );        
+        );
     }
-    
+
     @Override
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
-        
+
 //What I want to do here is dynamically set the country where is currently says USA and then it will automatically 
 // call the correct enum variable.  It won't let me, at least how I am trying to do it.
         String countryName = Snipe.getPlayer().getCurrentCountry().getName();
-        
+
 //        for(SafeHouse neededSafeHouse : SafeHouse.values()) {
-           
- //           if (countryName.equals(SafeHouse.getSafeHouseCountry)) {
- //             SafeHouse safeHouseDesc = SafeHouse.safeHouseDesc;
- //             System.out.println("\n" + SafeHouse.values(safeHouseCountry).getSafeHouseDesc());  
- //           }
- //       }
-        
+        //           if (countryName.equals(SafeHouse.getSafeHouseCountry)) {
+        //             SafeHouse safeHouseDesc = SafeHouse.safeHouseDesc;
+        //             System.out.println("\n" + SafeHouse.values(safeHouseCountry).getSafeHouseDesc());  
+        //           }
+        //       }
         SafeHouse safeHouseDesc = SafeHouse.USA;
         System.out.println("\n" + SafeHouse.USA.getSafeHouseDesc());
-        
 
         return true;
     }
 
-
-    private void displayPlayerCurrentScene() {
-        System.out.println("\n*** displayPlayerCurrentScene stub function called ***");
+    private void displayPlayerCurrentScene() throws GameControlException {
+        System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
     }
 }
-
-

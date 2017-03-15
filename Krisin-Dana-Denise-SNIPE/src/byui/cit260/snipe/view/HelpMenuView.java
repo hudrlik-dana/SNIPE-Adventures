@@ -3,16 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.exceptions.GameControlException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import snipe.Snipe;
 
 /**
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-
 public class HelpMenuView extends View {
 
     public HelpMenuView() {
@@ -32,13 +34,13 @@ public class HelpMenuView extends View {
                 + "\n can get hints about what each local location may have by "
                 + "\n reading their dossier for that country."
                 + "\n "
-                + "\n ***Dossier Inventory Help***"                
+                + "\n ***Dossier Inventory Help***"
                 + "\n Description of how the Dossier Inventory features work. "
                 + "\n Opening the Dossier menu, the player can see a list of "
                 + "\n the dossiers acquired. The player will be able to select "
                 + "\n dossier, and it will show a description of the challenges "
                 + "\n for his current country, hints for puzzles and riddles, "
-                + "\n and the safe house location."                
+                + "\n and the safe house location."
                 + "\n "
                 + "\n ***Collecting Codes***"
                 + "\n Description of what codes are, and how they will be used "
@@ -53,8 +55,6 @@ public class HelpMenuView extends View {
                 + "\n G - Game Menu"
                 + "\n-----------------------------------------------------------");
     }
-    
-
 
     @Override
     public boolean doAction(String choice) {
@@ -62,28 +62,42 @@ public class HelpMenuView extends View {
         choice = choice.toUpperCase(); //convert choice to upper case
 
         switch (choice) {
-            case "G": //Return to Main Menu
-                this.displayGameMenu();
-                break;
-            case "R": //Return to Player Location
-                this.displayPlayerCurrentScene();
-                break;
+            case "G": {
+                try {
+                    //Return to Main Menu
+                    this.displayGameMenu();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(HelpMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case "R": {
+                try {
+                    //Return to Player Location
+                    this.displayPlayerCurrentScene();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(HelpMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;
     }
-    
-    private void displayGameMenu() {
+
+    private void displayGameMenu() throws GameControlException {
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
 
-    private void displayPlayerCurrentScene() {
-        System.out.println("\n*** displayPlayerCurrentScene stub function called ***");
+    private void displayPlayerCurrentScene() throws GameControlException {
+        System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
-    
+
     //System.out.println("\n*** functionName() function called ***");
 }

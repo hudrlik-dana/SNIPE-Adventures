@@ -7,6 +7,9 @@ package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.ChallengeControl;
 import byui.cit260.snipe.model.Country;
+import byui.cit260.snipe.model.Place;
+import byui.cit260.snipe.model.Player;
+import java.util.List;
 import java.util.Scanner;
 import snipe.Snipe;
 
@@ -223,6 +226,12 @@ public class ChallengeRiddleView extends View {
                             + "\n to see if anyone is watching, you slip the clue in your"
                             + "\n pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
+
+                    /*                    List<Place> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }*/
                 }
                 break;
 

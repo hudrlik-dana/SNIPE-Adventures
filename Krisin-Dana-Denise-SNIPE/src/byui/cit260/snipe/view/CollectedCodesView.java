@@ -3,37 +3,90 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.exceptions.GameControlException;
+import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Place;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import snipe.Snipe;
 
 /**
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public class CollectedCodesView extends View{
-    
+public class CollectedCodesView extends View {
+
+    private final String menu;
+
+    public CollectedCodesView() {
+        super();
+        Country currentCountry = Snipe.getPlayer().getCurrentCountry();
+
+        String tempMenu = "\n"
+                + "\n-----------------------------------------------------------"
+                + "\n You Have Collected These Codes:"
+                + "\n-----------------------------------------------------------"
+                + "\n";
+
+        /*
+        System.out.println("You have the following Codes: ");
+        for (Challenge challenge : Snipe.getPlayer().getCodeList()) {
+            System.out.println(challenge.getCodeListName());
+         */
+        tempMenu += "\n -----------------------------------------------------------"
+                + "\n R - Return to Player Location"
+                + "\n G - Game Menu"
+                + "\n-----------------------------------------------------------";
+
+        this.menu = tempMenu;
+    }
+
     public void display() {
-        /*System.out.println("You have visited: ");
-        for (Item codeList : Snipe.getPlayer().getCodeList()) {
-            System.out.println(item.getCodeList());
-        }*/
+
     }
 
     @Override
-    public boolean doAction(String value) {
-        System.out.println("\n*** doAction stub function called ***");
+    public boolean doAction(String choice) {
+
+        choice = choice.toUpperCase(); //convert choice to upper case
+
+        switch (choice) {
+            case "G": {
+                try {
+                    //Return to Main Menu
+                    this.displayGameMenu();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(HelpMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            case "R": {
+                try {
+                    //Return to Player Location
+                    this.displayPlayerCurrentScene();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(HelpMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            default:
+                System.out.println("\n*** Invalid Selection *** Try Again");
+                break;
+        }
         return false;
     }
 
-}
+    private void displayGameMenu() throws GameControlException {
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+    }
 
-/*
-List<Codes> codeList = Snipe.getPlayer().getPassport();
-            
-            if(!passport.contains(Snipe.getPlayer().getCurrentPlace())){
-                    passport.add(Snipe.getPlayer().getCurrentPlace());
-                }
-*/
+    private void displayPlayerCurrentScene() throws GameControlException {
+        System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+    }
+
+}

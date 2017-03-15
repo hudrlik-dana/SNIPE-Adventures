@@ -111,7 +111,7 @@ public class ChallengeControlTest {
         expResult = 31666; //round should make this 31667 but isn't????
         result = instance.calcMathPuzzle3(lengthA, widthA, lengthB, widthB);
         assertEquals(expResult, result, 0.0);
-        
+
         lengthA = 100;
         widthA = 25;
         lengthB = 6;
@@ -189,5 +189,4 @@ public class ChallengeControlTest {
     int result = instance.randomWithRange(min, max);
     assertEquals(expResult, result);
     }*/
-
 }

@@ -93,7 +93,8 @@ public class MapMenuView extends View {
             System.out.println(place.getPlaceName());
         }
     }
-        private void displayMainMenu() {
+
+    private void displayMainMenu() {
         //display the main menu
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();

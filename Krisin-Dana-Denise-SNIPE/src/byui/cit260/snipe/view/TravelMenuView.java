@@ -120,17 +120,16 @@ public class TravelMenuView extends View {
 //              System.out.println("\n this is second " + Snipe.getPlayer().getCurrentPlace().getCountryCode());
 //
                 String countryCode;
-                countryCode =  Snipe.getPlayer().getCurrentPlace().getCountryCode();
-               
-              if (countryCode.matches("G|S|R")) {
-                 //mental challenge-math (only Germany, Spain, Russia) 
+                countryCode = Snipe.getPlayer().getCurrentPlace().getCountryCode();
+
+                if (countryCode.matches("G|S|R")) {
+                    //mental challenge-math (only Germany, Spain, Russia) 
                     ChallengeMentalView challenge2 = new ChallengeMentalView();
-                     challenge2.display();
-                }
-               else {
-                  //puzzle challenge
+                    challenge2.display();
+                } else {
+                    //puzzle challenge
                     ChallengeRiddleView challenge2 = new ChallengeRiddleView();
-                     challenge2.display();
+                    challenge2.display();
                 }
             }
             if (numChoice == 3) {

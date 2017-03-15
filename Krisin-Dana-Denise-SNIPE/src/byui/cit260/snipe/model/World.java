@@ -26,11 +26,11 @@ public class World implements Serializable {
     public void setCountries(List<Country> countries) {
         this.countries = countries;
     }
-    
+
     public void addCountry(Country country) {
         countries.add(country);
     }
-    
+
     //constructor for world
     public World() {
         countries = new ArrayList<>();

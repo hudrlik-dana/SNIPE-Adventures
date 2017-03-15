@@ -21,7 +21,7 @@ public class Game implements Serializable {
     private boolean totalPlayerHealth;
 
     public Player getPlayer() {
-        return player; 
+        return player;
     }
 
     public void setPlayer(Player player) {
