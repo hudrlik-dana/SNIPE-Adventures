@@ -116,6 +116,7 @@ public class GameControl {
                 + "\n here to help you become the best of the best, unseen by most,"
                 + "\n invisible in plain sight. The code to enter is your secret spy"
                 + "\n name and passport.");
+        snipeAcademy.setMasterCodePiece("327 W5HG4M1.");
         usa.addPlace(snipeAcademy);
 
         Place libraryCongress = new Place();
@@ -157,6 +158,7 @@ public class GameControl {
                 + "\n all the details of the peaks, windows and a rustic cylinder"
                 + "\n that looks like a farming silo that is directly behind the"
                 + "\n main building.");
+        rhineRiver.setMasterCodePiece("6MG4W3G5 V37 V567.");
         germany.addPlace(rhineRiver);
 
         Place berlin = new Place();
@@ -211,6 +213,7 @@ public class GameControl {
                 + "\n The windows are a work of geometric art with their varying shapes"
                 + "\n and patterns of leaded glass. People are bustling around, both"
                 + "\n inside and outside of the church.");
+        westminsterAbbey.setMasterCodePiece("W5X4H43M");
         england.addPlace(westminsterAbbey);
 
         Place bigBen = new Place();
@@ -256,6 +259,7 @@ public class GameControl {
                 + "\n as lace.  You step out onto the paver street and see this 2-story"
                 + "\n high gate entryway made of stone and rod iron. Next you see the"
                 + " Triumph of Faith statue tarnished with a grey-blue patina.");
+        cathedralSeville.setMasterCodePiece("56XS W61 4H");
         spain.addPlace(cathedralSeville);
 
         Place valencia = new Place();
@@ -302,6 +306,7 @@ public class GameControl {
                 + "\n the building is masculine due to its color and multileveled rectangular"
                 + "\n shapes. The red brick wall behind the building stretches upward the"
                 + "\n the Mausoleum, serving as a background.");
+        leninsMausoleum.setMasterCodePiece("7N M5PH3M");
         russia.addPlace(leninsMausoleum);
 
         Place stPetersSquare = new Place();
@@ -345,6 +350,7 @@ public class GameControl {
                 + "\n building. It’s a corner cafe with large round glass windows. Small"
                 + "\n bistro tables outside form a semicircle around the rounded building."
                 + "\n People are dining while reading the newspaper or talking to friends.");
+        cafeFrance.setMasterCodePiece("W5X4H43MH W5G57N4M5");
         france.addPlace(cafeFrance);
 
         Place louvre = new Place();
@@ -387,6 +393,7 @@ public class GameControl {
                 + "\n but the CN tower is close to double of the tallest building from the naked"
                 + "\n eye. The building has pole like structure and the main living space near"
                 + "\n the top revolving 360 degrees like a doughnut slowly turning on a stick.");
+        cnTower.setMasterCodePiece("6MW 327");
         canada.addPlace(cnTower);
 
         Place libraryParliament = new Place();
@@ -427,6 +434,7 @@ public class GameControl {
                 + "\n skyscrapers and building of all kinds. Even from the air the view"
                 + "\n is a landscape of tall buildings covering the earth. In the far of"
                 + "\n distance there are mountains that can only be seen by air.");
+        saoPaulo.setMasterCodePiece("V64GS 4H GS5");
         brazil.addPlace(saoPaulo);
 
         Place rioDeJaneiro = new Place();
@@ -470,6 +478,7 @@ public class GameControl {
                 + "\n a bit like a saltbox construction where it is one large rectangle"
                 + "\n atop another. Each small window has metal bars. The whole scene is"
                 + "\n dreary and feels like you could be trapped.");
+        melbourneJail.setMasterCodePiece("6 W61 3V");
         australia.addPlace(melbourneJail);
 
         Place sydneyOpHouse = new Place();

@@ -108,6 +108,20 @@ public class TravelMenuView extends View {
                 //safe house 
                 SafeHouseView safeHouse = new SafeHouseView();
                 safeHouse.display();
+                
+                /*Need to add trigger here to check for code piece & push player to next country.
+                
+                if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        System.out.println("\n-----------------------------------------------------------"
+                                            + "You have not yet obtained the code needed to move on. You "
+                                            + "will need to travel back to another location and complete"
+                                            + " a challenge to obtain a code. Once you have a code, you "
+                                            + "will return here to obtain your next Dossier and move on.");
+                    }else {
+                        //display next Dossier & move player to new country location.
+                    }*/ 
+                
+                
             }
             if (numChoice == 2) {
                 //First two lines don't work, why?  I don't know why? --Denise 
