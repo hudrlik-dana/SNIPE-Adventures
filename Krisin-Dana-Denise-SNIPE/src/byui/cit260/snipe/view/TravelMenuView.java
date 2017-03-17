@@ -5,10 +5,14 @@
  */
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.control.GameControl;
+import byui.cit260.snipe.exceptions.GameControlException;
 import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Place;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import snipe.Snipe;
 
 /**
@@ -35,7 +39,7 @@ public class TravelMenuView extends View {
 
         tempMenu += "\n **************"
                 + "\n V - View Map"
-                + "\n M - Main Menu"
+                + "\n S - Save Game"
                 + "\n H - Help Menu"
                 + "\n-----------------------------------------------------------";
 
@@ -150,9 +154,15 @@ public class TravelMenuView extends View {
                 System.out.println("You are at: " + Snipe.getPlayer().getCurrentPlace().getPlaceName());
 //                this.displayMap();
                 break;
-            case "M": //Return to Main Menu
-                this.displayMainMenu();
-                break;
+            case "S": {
+                try {
+                    //Save Current Game
+                    this.saveGame();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
             case "H": //Display Help Menu
                 this.displayHelpMenu();
                 break;
@@ -164,10 +174,18 @@ public class TravelMenuView extends View {
         return false;
     }
 
-    private void displayMainMenu() {
-        //display the main menu
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.display();
+    private void saveGame() throws GameControlException {
+        //prompt for and get the name of the file for saving
+        SaveGameView saveGameView = new SaveGameView();
+        String filePath = saveGameView.getInput();
+
+        try {
+            //save the game to the specified file
+            GameControl.saveGame(Snipe.getCurrentGame(), filePath);
+
+        } catch (GameControlException gce) {
+            ErrorView.display("MainMenuView", gce.getMessage());
+        }
     }
 
     private void displayHelpMenu() {

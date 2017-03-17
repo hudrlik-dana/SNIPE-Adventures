@@ -5,10 +5,13 @@
  */
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.exceptions.GameControlException;
 import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Place;
 import byui.cit260.snipe.model.World;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import snipe.Snipe;
 
 /**
@@ -50,7 +53,7 @@ public class MapMenuView extends View {
         System.out.print("\n"
                 + "\n T - Travel"
                 + "\n P - View Passport"
-                + "\n M - Main Menu"
+                + "\n R - Return to Player Location"
                 + "\n H - Help Menu"
                 + "\n-----------------------------------------------------------");
     }
@@ -67,8 +70,14 @@ public class MapMenuView extends View {
             case "P": //display the passport list
                 this.displayPassportList();
                 break;
-            case "M": //Return to Main Menu
-                this.displayMainMenu();
+            case "R": {
+                try {
+                    //Return to Player Location
+                    this.displayPlayerCurrentScene();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(HelpMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
                 break;
             case "H": //Display Help Menu
                 this.displayHelpMenu();
@@ -94,10 +103,10 @@ public class MapMenuView extends View {
         }
     }
 
-    private void displayMainMenu() {
-        //display the main menu
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.display();
+    private void displayPlayerCurrentScene() throws GameControlException {
+        System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void displayHelpMenu() {
