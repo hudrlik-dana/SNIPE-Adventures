@@ -32,8 +32,6 @@ public class SafeHouseView extends View {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
-//What I want to do here is dynamically set the country where is currently says USA and then it will automatically 
-// call the correct enum variable.  It won't let me, at least how I am trying to do it.
         String countryName = Snipe.getPlayer().getCurrentCountry().getName();
 
         for (SafeHouse safeHouse : SafeHouse.values()) {
@@ -41,8 +39,6 @@ public class SafeHouseView extends View {
                 System.out.println("\n" + safeHouse.getSafeHouseDesc());
             }
         }
-//        SafeHouse safeHouseDesc = SafeHouse.USA;
-//        System.out.println("\n" + SafeHouse.USA.getSafeHouseDesc());
 
         return true;
     }
