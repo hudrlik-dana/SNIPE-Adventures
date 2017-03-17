@@ -23,7 +23,7 @@ public class Player implements Serializable {
     private ArrayList<Place> passport;
     private Place currentPlace;
     private Country currentCountry;
-    private ArrayList<Place> codeList;
+    private ArrayList<String> codeList;
 
     public Player() {
         passport = new ArrayList<>();
@@ -86,11 +86,11 @@ public class Player implements Serializable {
         this.currentCountry = currentCountry;
     }
 
-    public ArrayList<Place> getCodeList() {
+    public ArrayList<String> getCodeList() {
         return codeList;
     }
 
-    public void setCodeList(ArrayList<Place> codeList) {
+    public void setCodeList(ArrayList<String> codeList) {
         this.codeList = codeList;
     }
 

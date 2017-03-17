@@ -227,11 +227,11 @@ public class ChallengeRiddleView extends View {
                             + "\n pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
 
-                    /*                    List<Place> codeList = Snipe.getPlayer().getCodeList();
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
 
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
-                    }*/
+                    }
                 }
                 break;
 

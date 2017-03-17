@@ -31,11 +31,10 @@ public class CollectedCodesView extends View {
                 + "\n-----------------------------------------------------------"
                 + "\n";
 
-        /*
         System.out.println("You have the following Codes: ");
-        for (Challenge challenge : Snipe.getPlayer().getCodeList()) {
-            System.out.println(challenge.getCodeListName());
-         */
+        for (String challenge : Snipe.getPlayer().getCodeList()) {
+            System.out.println(challenge);
+        }
         tempMenu += "\n -----------------------------------------------------------"
                 + "\n R - Return to Player Location"
                 + "\n G - Game Menu"
