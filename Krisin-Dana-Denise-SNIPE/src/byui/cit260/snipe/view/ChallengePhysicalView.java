@@ -11,6 +11,7 @@ import byui.cit260.snipe.control.GameControl;
 import java.util.Scanner;
 import snipe.Snipe;
 import byui.cit260.snipe.model.Place;
+import java.util.List;
 
 /**
  *
@@ -311,6 +312,11 @@ public class ChallengePhysicalView extends View {
                             + "\n slip the clue into your pocket and return to the Safe House"
                             + "\n to contact your handler and receive the dossier for your"
                             + "\n next mission.");
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
                 }
                 if (choice != "3" || choice != "2" || choice != "1") {
 
@@ -328,6 +334,11 @@ public class ChallengePhysicalView extends View {
                                 + "\n you slip the clue into your pocket and return to the "
                                 + "\n Safe House to contact your handler and receive the  "
                                 + "\n dossier for your next mission.");
+                        List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
 
                     } else {
                         System.out.println(
