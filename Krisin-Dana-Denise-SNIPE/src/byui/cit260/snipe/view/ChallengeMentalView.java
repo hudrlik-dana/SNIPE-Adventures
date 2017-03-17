@@ -7,6 +7,7 @@ package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.ChallengeControl;
 import byui.cit260.snipe.model.Country;
+import java.util.List;
 import java.util.Scanner;
 import snipe.Snipe;
 
@@ -135,6 +136,11 @@ public class ChallengeMentalView extends View {
                             + "\n checking to see if anyone is watching, you slip the clue"
                             + "\n in your pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
                 }
                 if (choice.equals("3")) {   //incorrect answer
                     var1 = 30;
@@ -156,6 +162,11 @@ public class ChallengeMentalView extends View {
                             + "\n to see if anyone is watching, you slip the clue in your"
                             + "\n pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
                 }
                 if (choice.equals("2")) {    //incorrect answer
                     var1 = 68;
@@ -199,6 +210,11 @@ public class ChallengeMentalView extends View {
                             + "\n to see if anyone is watching, you slip the clue in your"
                             + "\n pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
                 }
                 if (choice.equals("3")) {    //incorrect answer 1666
                     var1 = 100;

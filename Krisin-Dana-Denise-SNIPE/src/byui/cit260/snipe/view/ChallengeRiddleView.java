@@ -240,6 +240,11 @@ public class ChallengeRiddleView extends View {
                     System.out.println("\n Great job! You use the code to enter the safe-house. After"
                             + "\n a  brief rest, you contact your handler and pick up the"
                             + "\n dossier for your next mission. Good Luck!");
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
                 }
                 if (choice.equals("2")) {
                     System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
@@ -260,6 +265,11 @@ public class ChallengeRiddleView extends View {
                     System.out.println("\n Great job! You use the code to enter the safe-house."
                             + "\n After a brief rest, you contact your handler and pick"
                             + "\n up the dossier for your next mission. Good Luck!");
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
                 }
                 break;
 
@@ -288,6 +298,11 @@ public class ChallengeRiddleView extends View {
                             + "\n checking to see if anyone is watching, you slip the clue"
                             + "\n in your pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
                 }
                 break;
 
@@ -301,6 +316,11 @@ public class ChallengeRiddleView extends View {
                     System.out.println("\n Great job! You use the code to enter the safe-house."
                             + "\n After a brief rest, you contact your handler and pick"
                             + "\n up the dossier for your next mission. Good Luck!");
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
                 }
                 break;
 
@@ -316,6 +336,11 @@ public class ChallengeRiddleView extends View {
                             + "\n checking to see if anyone is watching, you slip the clue"
                             + "\n in your pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
                 }
                 break;
 
@@ -324,6 +349,11 @@ public class ChallengeRiddleView extends View {
                     System.out.println("\n Great job! You use the code to enter the safe-house."
                             + "\n After a brief rest, you contact your handler and pick"
                             + "\n up the dossier for your next mission. Good Luck!");
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
                 }
                 if (choice.equals("2")) {
                     System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
@@ -342,6 +372,11 @@ public class ChallengeRiddleView extends View {
                     System.out.println("\n Great job! You use the code to enter the safe-house."
                             + "\n After a brief rest, you contact your handler and pick"
                             + "\n up the dossier for your next mission. Good Luck!");
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
                 }
                 break;
 
