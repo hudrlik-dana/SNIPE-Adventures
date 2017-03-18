@@ -64,7 +64,7 @@ public class ChallengePhysicalView extends View {
                         + "\n where the clue is, but getting down is going to be a    "
                         + "\n challenge. Go slowly and try not to fall.               "
                         + "\n---------------------------------------------------------"
-                        + "\n Press any key to start your descent.                    "
+                        + "\n Enter B to start your descent.                    "
                         + "\n---------------------------------------------------------");
                 break;
 
@@ -122,7 +122,7 @@ public class ChallengePhysicalView extends View {
                         + "\n the base of the pole holding the pendent.               "
                         + "\n You almost have it...                                   "
                         + "\n---------------------------------------------------------"
-                        + "\n  Press any key to stretch out and reach for the clue.   "
+                        + "\n  Enter B to stretch out and reach for the clue.   "
                         + "\n---------------------------------------------------------");
                 break;
             case "Spain":
@@ -147,7 +147,7 @@ public class ChallengePhysicalView extends View {
                         + "\n running toward you. He thrusts a weathered brown        "
                         + "\n envelope into your hands, and tells you to run!         "
                         + "\n---------------------------------------------------------"
-                        + "\n  Press any key to run as fast as the wind.              "
+                        + "\n  Enter B to run as fast as the wind.              "
                         + "\n---------------------------------------------------------");
                 break;
             case "Russia":
@@ -170,7 +170,7 @@ public class ChallengePhysicalView extends View {
                         + "\n hand, from atop the wobbly stack of chairs, you can     "
                         + "\n just about reach the clue.                              "
                         + "\n---------------------------------------------------------"
-                        + "\n  Press any key carefully so you don't fall and get hurt."
+                        + "\n  Enter B carefully so you don't fall and get hurt."
                         + "\n---------------------------------------------------------");
                 break;
             case "France":
@@ -199,7 +199,7 @@ public class ChallengePhysicalView extends View {
                         + "\n police yelling in French for you to stop. You quickly   "
                         + "\n strap on your parachute and jump toward the pigeon.     "
                         + "\n---------------------------------------------------------"
-                        + "\n  Press any key to see if you got away with the clue.    "
+                        + "\n  Enter B to see if you got away with the clue.    "
                         + "\n---------------------------------------------------------");
                 break;
             case "Canada":
@@ -217,7 +217,7 @@ public class ChallengePhysicalView extends View {
                         + "\n the first run. Your heart skips a beat as you feel the  "
                         + "\n bobsled begin its descent.                              "
                         + "\n---------------------------------------------------------"
-                        + "\n Press any key to for the final result of your first run."
+                        + "\n Enter B to for the final result of your first run."
                         + "\n---------------------------------------------------------");
                 break;
             case "Brazil":
@@ -239,7 +239,7 @@ public class ChallengePhysicalView extends View {
                         + "\n the wall to get the clue, risking becoming lunch for    "
                         + "\n the hungry cat.                                         "
                         + "\n---------------------------------------------------------"
-                        + "\n Press any key to see who outran the jaguar.             "
+                        + "\n Enter B to see who outran the jaguar.             "
                         + "\n---------------------------------------------------------");
                 break;
             case "Australia":
@@ -267,7 +267,7 @@ public class ChallengePhysicalView extends View {
                         + "\n of 6 inches per hour. When will the water reach the 7th "
                         + "\n rung from the top?                                      "
                         + "\n---------------------------------------------------------"
-                        + "\n Press any key when you think you are at step 14,582.    "
+                        + "\n Enter B when you think you are at step 14,582.    "
                         + "\n---------------------------------------------------------");
                 break;
             default:
@@ -345,14 +345,14 @@ public class ChallengePhysicalView extends View {
                     } else {
                        System.out.println(
                                 "\n Bummer, you fell and were injured in your attempt."
-                                + "\n Return to the Safe House to rest and recover. Then consult "
+                                + "\n Maybe you should return to the Safe House to rest. Then consult "
                                 + "\n your dossier for the location of your next challenge.");
                        //adjustPlayerHealth();
                     }
                     return true;
                 }
         }
-        return false;
+        return true;
     }
 
     public void displayMenuView() {

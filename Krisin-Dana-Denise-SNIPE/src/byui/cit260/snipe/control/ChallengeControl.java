@@ -36,22 +36,6 @@ public class ChallengeControl {
 
     }
 
-    public static boolean performPhysicalChallenge() {
-        Random rand = new Random();
-        int randomValue = rand.nextInt(100);
-        return physicalChallengeCheck(randomValue, 50); //TODO grab location challenge number
-        //TODO add more logic like removing health, etc.
-    }
-
-    //Kristin's Individual Assignment
-    public static boolean physicalChallengeCheck(int randomNumber, int challengeNumber) {
-        if (randomNumber > challengeNumber) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public void performMathPuzle1() {
         int wallHeight = 10;
         int shadowLength = 10;
@@ -74,6 +58,22 @@ public class ChallengeControl {
         double totalBricks = Math.round(((lengthA * widthA) * 12) / (lengthB * widthB));
 
         return totalBricks;
+    }
+
+    public static boolean performPhysicalChallenge() {
+        Random rand = new Random();
+        int randomValue = rand.nextInt(100);
+        return physicalChallengeCheck(randomValue, 50); //TODO grab location challenge number
+        //TODO add more logic like removing health, etc.
+    }
+
+    //Kristin's Individual Assignment
+    public static boolean physicalChallengeCheck(int randomNumber, int challengeNumber) {
+        if (randomNumber > challengeNumber) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 //Other functions 
