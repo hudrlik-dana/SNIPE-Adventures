@@ -235,7 +235,7 @@ public class ChallengeMentalView extends View {
 
         }
 
-        return false;
+        return true;
     }
 
 }

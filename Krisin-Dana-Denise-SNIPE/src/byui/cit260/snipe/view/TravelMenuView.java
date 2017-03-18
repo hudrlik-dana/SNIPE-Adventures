@@ -108,7 +108,7 @@ public class TravelMenuView extends View {
                 //safe house 
                 SafeHouseView safeHouse = new SafeHouseView();
                 safeHouse.display();
-                
+
                 /*Need to add trigger here to check for code piece & push player to next country.
                 
                 if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
@@ -118,10 +118,44 @@ public class TravelMenuView extends View {
                                             + " a challenge to obtain a code. Once you have a code, you "
                                             + "will return here to obtain your next Dossier and move on.");
                     }else {
-                        //display next Dossier & move player to new country location.
-                    }*/ 
+                        //display next Dossier & offer travel menu.
+                        
+                        switch (choice) { //Show Dossier & Game Menu
+                            case "U": 
+                                System.out.println(Dossier.values()[1]);
+                                break;
+                            case "G": 
+                                System.out.println(Dossier.values()[2]);
+                                break;
+                            case "E": 
+                                System.out.println(Dossier.values()[3]);
+                                break;
+                            case "S": 
+                                System.out.println(Dossier.values()[4]);
+                                break;
+                            case "R": 
+                                System.out.println(Dossier.values()[5]);
+                                break;
+                            case "F": 
+                                System.out.println(Dossier.values()[6]);
+                                break;
+                            case "C": 
+                                System.out.println(Dossier.values()[7]);
+                                break;
+                            case "B": 
+                                System.out.println(Dossier.values()[8]);
+                                break;
+                            case "A": {
+                                try {
+                                    this.displayCypherControlView();
+                                } catch (GameControlException ex) {
+                                    Logger.getLogger(DossierView.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                            }
+                            break;
                 
                 
+                    }*/
             }
             if (numChoice == 2) {
                 //First two lines don't work, why?  I don't know why? --Denise 
