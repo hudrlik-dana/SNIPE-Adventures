@@ -16,26 +16,19 @@ import snipe.Snipe;
  */
 public class PlayerHealthView extends View {
 
-    //Not using this anymore - Denise
-    //private final String menu;
-    //call menu with data listed 
-    //  Not using this anymore - Denise
-    //   private final int playerHealth = 100;  
-    //    how to pull this from player adjust health ?
     public PlayerHealthView() {
         super("\n"
-                + "\n***********************************************************"
-                + "\n* Player Health                                           *"
-                + "\n***********************************************************"
-                + "\n*                                                         *"
+                + "\n-----------------------------------------------------------"
+                + "\nPlayer Health"
+                + "\n-----------------------------------------------------------"
+                + "\n"
                 + "\n* Your current Health Points: " + Snipe.getPlayer().getPlayerHealth() + " "
-                + "                          *"
-                + "\n*                                                         *"
-                + "\n***********************************************************"
-                + "\n* R - Return to Player Location                           *"
-                + "\n* M - Main Menu                                           *"
-                + "\n* H - Help Menu                                           *"
-                + "\n***********************************************************");
+                + "\n"
+                + "\n-----------------------------------------------------------"
+                + "\n R - Return to Player Location                           "
+                + "\n M - Main Menu                                           "
+                + "\n H - Help Menu                                           "
+                + "\n-----------------------------------------------------------");
     }
 
     @Override

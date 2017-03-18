@@ -5,11 +5,15 @@
  */
 package byui.cit260.snipe.control;
 
+import byui.cit260.snipe.exceptions.LoseGameException;
+import byui.cit260.snipe.model.Challenge;
+import byui.cit260.snipe.model.Player;
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 import java.util.Objects;
 import java.util.Random;
 import static javafx.beans.binding.Bindings.and;
+import snipe.Snipe;
 
 /**
  *
@@ -74,17 +78,24 @@ public class ChallengeControl {
 
 //Other functions 
 //Apply Damage
-    int playerHealth = 100;
-
-    public int adjustPlayerHealth(int currentHealth, int injuryPoints) {
-
-        if (injuryPoints < currentHealth) {
-            playerHealth = currentHealth - injuryPoints;
-            return playerHealth;
-        } else {
-            return playerHealth = 0;
+    public int adjustPlayerHealth() throws LoseGameException{
+        try{
+            int playerHealth = Snipe.getPlayer().getPlayerHealth();
+            
+            if (10 < playerHealth) {
+                int currentHealth = playerHealth - 10;
+            System.out.println(
+                    "\n Bummer, you were injured in your attempt."
+                    + "\n Return to the Safe House to rest and recover. Then consult "
+                    + "\n your dossier for the location of your next challenge.");
+            return currentHealth;
+        } 
         }
-
+        catch (LoseGameException lge){
+            System.out.println(lge.getMessage());
+        }
+        int currentHealth;
+        return currentHealth = 0;
     }
 
 //Results of Player Answer

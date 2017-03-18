@@ -291,6 +291,7 @@ public class ChallengePhysicalView extends View {
                             + "\n Recalculate your answer and try again or travel to"
                             + "\n another location and try a different challenge."
                             + "\n Snipe Agents never give in, give out, nor give up!");
+                    //adjustPlayerHealth();
                 }
                 if (choice.equals("2")) {
 
@@ -300,6 +301,7 @@ public class ChallengePhysicalView extends View {
                             + "\n Recalculate your answer and try again or travel to"
                             + "\n another location and try a different challenge."
                             + "\n Snipe Agents never give in, give out, nor give up!");
+                    //adjustPlayerHealth();
                 }
                 if (choice.equals("3")) {
 
@@ -341,11 +343,11 @@ public class ChallengePhysicalView extends View {
                     }
 
                     } else {
-                        System.out.println(
+                       System.out.println(
                                 "\n Bummer, you fell and were injured in your attempt."
                                 + "\n Return to the Safe House to rest and recover. Then consult "
                                 + "\n your dossier for the location of your next challenge.");
-
+                       //adjustPlayerHealth();
                     }
                     return true;
                 }

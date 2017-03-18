@@ -123,7 +123,7 @@ public class ChallengeControlTest {
 
     /**
      * Test of adjustPlayerHealth method, of class ChallengeControl.
-     */
+     *//*
     @Test
     public void testAdjustPlayerHealth() {
         System.out.println("adjustPlayerHealth");
@@ -139,7 +139,7 @@ public class ChallengeControlTest {
         expResult = 0;
         result = instance.adjustPlayerHealth(currentHealth, injuryPoints);
         assertEquals(expResult, result);
-    }
+    }*/
 
     /**
      * Test of playerAnswer method, of class ChallengeControl.

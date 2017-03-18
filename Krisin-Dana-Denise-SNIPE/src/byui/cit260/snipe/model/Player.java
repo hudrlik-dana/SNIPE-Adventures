@@ -17,7 +17,7 @@ public class Player implements Serializable {
 
     //Class instance variables
     private String name;
-    private int playerHealth;
+    public int playerHealth;
     private String codeName;
     private String dossier;
     private ArrayList<Place> passport;
