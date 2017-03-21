@@ -7,8 +7,10 @@ package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.GameControl;
 import byui.cit260.snipe.exceptions.GameControlException;
+import byui.cit260.snipe.model.World;
 import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Place;
+import byui.cit260.snipe.model.Player;
 import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -33,9 +35,36 @@ public class TravelMenuView extends View {
                 + "\n-----------------------------------------------------------"
                 + "\n";
 
-        for (int i = 0; i < currentCountry.getPlaces().size(); i++) {
-            tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
-        }
+ //Added code to check if player has a CypherCode if they don't they go to the first country (USA)
+ //else it takes the last code they have and (when I get it to work) will set player to the next Country
+ //based on how many code pieces they have obtained. 
+        if (Snipe.getPlayer().getCodeList() != null) {
+            if (Snipe.getPlayer().getCodeList().isEmpty()) {
+                for (int i = 0; i < currentCountry.getPlaces().size(); i++) {
+                 tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
+                 }
+            }
+            else{
+                //get lastcode in Cyphercodes arraylist
+                int lastone = (Snipe.getPlayer().getCodeList().size()-1);
+                String lastCode = Snipe.getPlayer().getCodeList().get(lastone);
+                System.out.println("Denise displays- This is the last code in the table " + lastCode);
+                        
+                int index = lastone + 3;
+// doesn't work - trying to set the player at the next country
+//              String nextCountry = "Germany";
+//              currentCountry = Snipe.getPlayer().setCurrentCountry(nextCountry);
+
+// doesn't work - why can't I set the stupid country?  
+//              currentCountry = Snipe.getPlayer().getCurrentCountry(Germany);
+//              Snipe.getPlayer().setCurrentCountry(currentCountry);
+            
+                for (int i = 3; i < currentCountry.getPlaces().size(); i++) {
+                tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
+                  } 
+               }    
+          }  
+        
 
         tempMenu += "\n **************"
                 + "\n V - View Map"
@@ -89,7 +118,7 @@ public class TravelMenuView extends View {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
-        try {
+        try {  
             int numChoice = Integer.parseInt(choice);
             Snipe.getPlayer().setCurrentPlace(Snipe.getPlayer().getCurrentCountry().getPlaces().get(numChoice - 1));
 
