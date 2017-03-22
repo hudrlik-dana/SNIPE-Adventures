@@ -5,15 +5,9 @@
  */
 package byui.cit260.snipe.view;
 
-import byui.cit260.snipe.control.GameControl;
 import byui.cit260.snipe.exceptions.GameControlException;
 import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Dossier;
-import byui.cit260.snipe.model.Place;
-import byui.cit260.snipe.model.Player;
-import byui.cit260.snipe.model.SafeHouse;
-import java.util.List;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import snipe.Snipe;
