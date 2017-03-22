@@ -48,7 +48,7 @@ public class SafeHouseView extends View {
                                             + "\na challenge to obtain a code. Once you have a code, you "
                                             + "\nwill return here to obtain your next Dossier and move on.");
                     }
-                
+        //else { MoveCountryView }        
         return true;
     }
 
