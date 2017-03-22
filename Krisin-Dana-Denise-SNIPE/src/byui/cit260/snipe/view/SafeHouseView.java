@@ -57,7 +57,7 @@ public class SafeHouseView extends View {
     }
 
     private void displayMoveCountry() {
-        MoveCountry moveCountry = new MoveCountry();
+        MoveCountryView moveCountry = new MoveCountryView();
         moveCountry.display();
     }
 }

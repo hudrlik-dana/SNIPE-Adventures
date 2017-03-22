@@ -10,6 +10,7 @@ import byui.cit260.snipe.exceptions.GameControlException;
 import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Dossier;
 import byui.cit260.snipe.model.Place;
+import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.model.SafeHouse;
 import java.util.List;
 import java.util.Scanner;
@@ -21,11 +22,11 @@ import snipe.Snipe;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public class MoveCountry extends View {
+public class MoveCountryView extends View {
 
     private final String menu;
 
-    public MoveCountry() {
+    public MoveCountryView() {
         super();
         Country currentCountry = Snipe.getPlayer().getCurrentCountry();
 
@@ -37,21 +38,14 @@ public class MoveCountry extends View {
                 + "\n "
                 + "\nYou will need to travel to a new Country. "
                 + "\nPlease select from the countries below:";
+       
+        //goal = list of on non-visited countries based from map & travel menu code, still tbd, trying to get static working first
         
-/*
-          System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
-
-            String countryName = Snipe.getPlayer().getCurrentCountry().getName();
-
-            for (SafeHouse safeHouse : SafeHouse.values()) {
-                if (countryName.equals(safeHouse.getSafeHouseCountry())) {
-                    System.out.println("\n" + safeHouse.getSafeHouseDesc());
-                }
-            }
-*/
         /*for (int i = 3; i < currentCountry.getPlaces().size(); i++) {
+            if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece()))
                 tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
-                  } */
+                  }
+        }*/
         tempMenu += "\n-----------------------------------------------------------"
                 + "\n 2 - Travel to: Germany"
                 + "\n 3 - Travel to: England"
@@ -93,6 +87,7 @@ public class MoveCountry extends View {
 
             switch (choice) {
                 case "1": //Show Dossier
+                    //Player player.setCurrentCountry(world.getCountries().get(1));
                     System.out.println(Dossier.values()[0]);
                     break;
                 case "2": //Show Dossier
@@ -156,7 +151,20 @@ public class MoveCountry extends View {
         gameMenu.display();
     }
 
+/*
+          System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
 
+            String countryName = Snipe.getPlayer().getCurrentCountry().getName();
+
+            for (SafeHouse safeHouse : SafeHouse.values()) {
+                if (countryName.equals(safeHouse.getSafeHouseCountry())) {
+                    System.out.println("\n" + safeHouse.getSafeHouseDesc());
+                }
+            }
+        
+        player.setCurrentCountry(world.getCountries().get(1));
+         player.setCurrentPlace(world.getCountries().get(1).getPlaces().get(0));
+*/
 
 //System.out.println("\n*** functionName stub function called ***");
 }
