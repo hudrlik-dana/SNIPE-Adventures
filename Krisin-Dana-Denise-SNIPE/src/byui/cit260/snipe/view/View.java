@@ -5,7 +5,13 @@
  */
 package byui.cit260.snipe.view;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import snipe.Snipe;
 
 /**
  *
@@ -14,6 +20,9 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
 
     protected String displayMessage;
+    
+    protected final BufferedReader keyboard = Snipe.getInFile();
+    protected final PrintWriter     console = Snipe.getOutFile();   
 
     public View() {
         this.displayMessage = "";
@@ -40,18 +49,24 @@ public abstract class View implements ViewInterface {
 
     @Override
     public String getInput() {
-        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+//delete        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         boolean valid = false; //initialize to not valid
         String value = ""; //value to be returned
 
         while (!valid) {
-            System.out.println("\n" + this.displayMessage);
+            this.console.println("\n" + this.displayMessage);
 
-            value = keyboard.nextLine(); //get next line typed on keyboard
+            try {
+                value = keyboard.readLine(); //get next line typed on keyboard
+            } catch (IOException ex) {
+                Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
+            }
             value = value.trim(); //trim off leading and trailing blanks
 
             if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid: entry required.");
+//                this.console.println("\nInvalid: entry required.");
+                  ErrorView.display(this.getClass().getName(),
+                           "\n***Invalid: entry required.!");    
                 continue;
             }
             break; //end the loop

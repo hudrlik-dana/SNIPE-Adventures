@@ -22,7 +22,7 @@ public class MapMenuView extends View {
 
     public MapMenuView() {
         super();
-        System.out.print("\n"
+       this.console.print("\n"
                 + "\n------------------------------------------------------------------------------"
                 + "\n S.N.I.P.E Adventures Places"
                 + "\n------------------------------------------------------------------------------"
@@ -33,24 +33,24 @@ public class MapMenuView extends View {
 
         for (int i = 0; i < countries.size(); i++) {
             Country map = countries.get(i);
-            System.out.println(map.getName());
+           this.console.println(map.getName());
 
             List<Place> places = map.getPlaces();
             for (int j = 0; j < places.size(); j++) {
-                System.out.println("\t" + places.get(j).getPlaceName());
+               this.console.println("\t" + places.get(j).getPlaceName());
 
             }
         }
 
-        System.out.print("\n-----------------------------------------------------------"
+        this.console.print("\n-----------------------------------------------------------"
                 + "\n");
 
-        System.out.print("\tYou are at: " + Snipe.getPlayer().getCurrentPlace().getPlaceName());
+        this.console.print("\tYou are at: " + Snipe.getPlayer().getCurrentPlace().getPlaceName());
 
-        System.out.print("\n"
+        this.console.print("\n"
                 + "\n-----------------------------------------------------------");
 
-        System.out.print("\n"
+        this.console.print("\n"
                 + "\n T - Travel"
                 + "\n P - View Passport"
                 + "\n R - Return to Player Location"
@@ -83,7 +83,9 @@ public class MapMenuView extends View {
                 this.displayHelpMenu();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+//               this.console.println("\n*** Invalid Selection *** Try Again");
+                 ErrorView.display(this.getClass().getName(),
+                          "\n*** Invalid Selection *** Try Again");
                 break;
         }
 
@@ -97,14 +99,14 @@ public class MapMenuView extends View {
     }
 
     private void displayPassportList() {
-        System.out.println("You have visited: ");
+        this.console.println("You have visited: ");
         for (Place place : Snipe.getPlayer().getPassport()) {
-            System.out.println(place.getPlaceName());
+            this.console.println(place.getPlaceName());
         }
     }
 
     private void displayPlayerCurrentScene() throws GameControlException {
-        System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+        this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
@@ -114,6 +116,4 @@ public class MapMenuView extends View {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.display();
     }
-
-//System.out.println("\n*** functionName stub function called ***");
 }

@@ -27,7 +27,7 @@ public class ChallengeRiddleView extends View {
 
         switch (currentCountry.getName()) {
             case "USA": //display the question
-                System.out.println("\n This library holds the president’s book of secrets"
+                this.console.println("\n This library holds the president’s book of secrets"
                         + "\n and is heavily guarded. You will need to be  very"
                         + "\n alert to collect your next clue. You have a special"
                         + "\n key to enter the back rooms where you clue is located."
@@ -54,7 +54,7 @@ public class ChallengeRiddleView extends View {
                         + "\n Type 2 -  No, It is not legal to get married if you are dead.");
                 break;
             case "Germany": //display the question
-                System.out.println("\n You have arrived at a small cottage hidden along the mossy"
+                this.console.println("\n You have arrived at a small cottage hidden along the mossy"
                         + "\n covered hillside. This is the safe-house in Germany. You look"
                         + "\n around the cottage for the key and find a riddle that contains"
                         + "\n the code to the lock on the door. Once inside you can report"
@@ -68,7 +68,7 @@ public class ChallengeRiddleView extends View {
                 break;
 
             case "England": //display the question
-                System.out.println("\n Big Ben is the nickname for the Great Bell of the clock"
+                this.console.println("\n Big Ben is the nickname for the Great Bell of the clock"
                         + "\n at the north end of the palace of Westminster in London."
                         + "\n It is one of London’s most famous landmarks. Blending"
                         + "\n in with the tourists and locals here isn’t too difficult."
@@ -89,7 +89,7 @@ public class ChallengeRiddleView extends View {
 
                 break;
             case "Spain": //display the question
-                System.out.println("\n You step out of the taxi and into a blustery cold wind"
+                this.console.println("\n You step out of the taxi and into a blustery cold wind"
                         + "\n that chills you to the bone. The largest Gothic style"
                         + "\n Christian cathedral which took a century to build,"
                         + "\n raises into the sky. This is the safe-house in Spain."
@@ -108,7 +108,7 @@ public class ChallengeRiddleView extends View {
                 break;
 
             case "Russia": //display the question
-                System.out.println("\n This old burial site has several monuments and you are"
+                this.console.println("\n This old burial site has several monuments and you are"
                         + "\n carefully examining each one as you try to look like a "
                         + "\n tourist bundled up in your fur hooded coat. Lenin’s"
                         + "\n Mausoleum is the safe house in Russia. On the west side"
@@ -125,7 +125,7 @@ public class ChallengeRiddleView extends View {
                 break;
 
             case "France": //display the question
-                System.out.println("\n This museum is filled with tourists today. The paintings"
+                this.console.println("\n This museum is filled with tourists today. The paintings"
                         + "\n are exquisite, and it is easy to lose the suspicious man"
                         + "\n that seems to be tailing you. Now where is the painting of"
                         + "\n Napoleon at Waterloo? You spot it as you walk among the"
@@ -145,7 +145,7 @@ public class ChallengeRiddleView extends View {
                         + "\n Type 2 - Window");
                 break;
             case "Canada": //display the question
-                System.out.println("\n This is one big library, filled with hundreds of thousands"
+                this.console.println("\n This is one big library, filled with hundreds of thousands"
                         + "\n are exquisite, and it is easy to lose the suspicious man"
                         + "\n of books. You need to find the one volume that contains "
                         + "\n your next clue. You walk down the south corridor passing"
@@ -161,7 +161,7 @@ public class ChallengeRiddleView extends View {
                         + "\n Type 2 - The letter D");
                 break;
             case "Brazil": //display the question
-                System.out.println("\n The capital city is filled with tourists haggling with the"
+                this.console.println("\n The capital city is filled with tourists haggling with the"
                         + "\n street vendors over prices. You weave in and out of the crowd"
                         + "\n looking for your contact at the fireworks stand. You spot him"
                         + "\n near the bright pink adobe building. This is the safe house in"
@@ -178,7 +178,7 @@ public class ChallengeRiddleView extends View {
                         + "\n Type 2 - Heavenly Father");
                 break;
             case "Australia": //display the question
-                System.out.println("\n Today has been exhausting and painful. You really need a break"
+                this.console.println("\n Today has been exhausting and painful. You really need a break"
                         + "\n to rest and recover. The most unlikely place for a safe-house"
                         + "\n happens to be in the basement of the Old Melbourne Jail. This"
                         + "\n is the safe-house for Australia. A nice comfy bed, hot shower"
@@ -191,7 +191,9 @@ public class ChallengeRiddleView extends View {
                         + "\n Type 2 - A coat of wet paint");
                 break;
             default:
-                System.out.println("\n*** Country not built out yet - call Programmer");
+ //               this.console.println("\n*** Country not built out yet - call Programmer");
+                 ErrorView.display(this.getClass().getName(),
+                           "\n*** Country not built out");
                 break;
         }
 
@@ -215,14 +217,14 @@ public class ChallengeRiddleView extends View {
         switch (currentCountry.getName()) {
             case "USA":
                 if (choice.equals("1")) {
-                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                    this.console.println("\n Bummer, your answer is incorrect. Consult your dossier"
                             + "\n for additional clues to solve the puzzle. Recalculate and"
                             + "\n try again or travel to another location and try a different"
                             + "\n challenge.");
 
                 }
                 if (choice.equals("2")) {
-                    System.out.println("\n Great job! You have your clue. After carefully checking "
+                    this.console.println("\n Great job! You have your clue. After carefully checking "
                             + "\n to see if anyone is watching, you slip the clue in your"
                             + "\n pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
@@ -237,7 +239,7 @@ public class ChallengeRiddleView extends View {
 
             case "Germany":
                 if (choice.equals("1")) {
-                    System.out.println("\n Great job! You use the code to enter the safe-house. After"
+                    this.console.println("\n Great job! You use the code to enter the safe-house. After"
                             + "\n a  brief rest, you contact your handler and pick up the"
                             + "\n dossier for your next mission. Good Luck!");
                     List<String> codeList = Snipe.getPlayer().getCodeList();
@@ -247,7 +249,7 @@ public class ChallengeRiddleView extends View {
                     }
                 }
                 if (choice.equals("2")) {
-                    System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
+                    this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n Remember you are a SNIPE agent, you can do it!");
 
@@ -256,13 +258,13 @@ public class ChallengeRiddleView extends View {
 
             case "England":
                 if (choice.equals("1")) {
-                    System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
+                    this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n Remember you are a SNIPE agent, you can do it!");
 
                 }
                 if (choice.equals("2")) {
-                    System.out.println("\n Great job! You use the code to enter the safe-house."
+                    this.console.println("\n Great job! You use the code to enter the safe-house."
                             + "\n After a brief rest, you contact your handler and pick"
                             + "\n up the dossier for your next mission. Good Luck!");
                     List<String> codeList = Snipe.getPlayer().getCodeList();
@@ -275,12 +277,12 @@ public class ChallengeRiddleView extends View {
 
             case "Spain":
                 if (choice.equals("1")) {
-                    System.out.println("\n Great job! You use the code to enter the safe-house."
+                    this.console.println("\n Great job! You use the code to enter the safe-house."
                             + "\n After a brief rest, you contact your handler and pick"
                             + "\n up the dossier for your next mission. Good Luck!");
                 }
                 if (choice.equals("2")) {
-                    System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
+                    this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n again. Remember you are a SNIPE agent, you can do it!");
                 }
@@ -288,13 +290,13 @@ public class ChallengeRiddleView extends View {
 
             case "Russia":
                 if (choice.equals("1")) {
-                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                    this.console.println("\n Bummer, your answer is incorrect. Consult your dossier"
                             + "\n for additional clues to solve the puzzle. Recalculate and"
                             + "\n try again or travel to another location and try a"
                             + "\n different challenge.");
                 }
                 if (choice.equals("2")) {
-                    System.out.println("\n Great job! You have your first clue. After carefully"
+                    this.console.println("\n Great job! You have your first clue. After carefully"
                             + "\n checking to see if anyone is watching, you slip the clue"
                             + "\n in your pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
@@ -308,12 +310,12 @@ public class ChallengeRiddleView extends View {
 
             case "France":
                 if (choice.equals("1")) {
-                    System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
+                    this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n Remember you are a SNIPE agent, you can do it!");
                 }
                 if (choice.equals("2")) {
-                    System.out.println("\n Great job! You use the code to enter the safe-house."
+                    this.console.println("\n Great job! You use the code to enter the safe-house."
                             + "\n After a brief rest, you contact your handler and pick"
                             + "\n up the dossier for your next mission. Good Luck!");
                     List<String> codeList = Snipe.getPlayer().getCodeList();
@@ -326,13 +328,13 @@ public class ChallengeRiddleView extends View {
 
             case "Canada":
                 if (choice.equals("1")) {
-                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                    this.console.println("\n Bummer, your answer is incorrect. Consult your dossier"
                             + "\n for additional clues to solve the puzzle. Recalculate and"
                             + "\n try again or travel to another location and try a"
                             + "\n different challenge.");
                 }
                 if (choice.equals("2")) {
-                    System.out.println("\n Great job! You have your clue. After carefully"
+                    this.console.println("\n Great job! You have your clue. After carefully"
                             + "\n checking to see if anyone is watching, you slip the clue"
                             + "\n in your pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
@@ -346,7 +348,7 @@ public class ChallengeRiddleView extends View {
 
             case "Brazil":
                 if (choice.equals("1")) {
-                    System.out.println("\n Great job! You use the code to enter the safe-house."
+                    this.console.println("\n Great job! You use the code to enter the safe-house."
                             + "\n After a brief rest, you contact your handler and pick"
                             + "\n up the dossier for your next mission. Good Luck!");
                     List<String> codeList = Snipe.getPlayer().getCodeList();
@@ -356,7 +358,7 @@ public class ChallengeRiddleView extends View {
                     }
                 }
                 if (choice.equals("2")) {
-                    System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
+                   this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n Remember you are a SNIPE agent, you can do it!");
                 }
@@ -364,12 +366,12 @@ public class ChallengeRiddleView extends View {
 
             case "Australia":
                 if (choice.equals("1")) {
-                    System.out.println("\n Bummer, your answer is incorrect and the door won’t open."
+                    this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n Remember you are a SNIPE agent, you can do it!");
                 }
                 if (choice.equals("2")) {
-                    System.out.println("\n Great job! You use the code to enter the safe-house."
+                    this.console.println("\n Great job! You use the code to enter the safe-house."
                             + "\n After a brief rest, you contact your handler and pick"
                             + "\n up the dossier for your next mission. Good Luck!");
                     List<String> codeList = Snipe.getPlayer().getCodeList();
@@ -381,7 +383,9 @@ public class ChallengeRiddleView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+  //              this.console.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 break;
 
         }

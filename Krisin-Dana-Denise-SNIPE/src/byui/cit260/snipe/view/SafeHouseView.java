@@ -36,7 +36,7 @@ public class SafeHouseView extends View {
 
         for (SafeHouse safeHouse : SafeHouse.values()) {
             if (countryName.equals(safeHouse.getSafeHouseCountry())) {
-                System.out.println("\n" + safeHouse.getSafeHouseDesc());
+                this.console.println("\n" + safeHouse.getSafeHouseDesc());
             }
         }
 
@@ -44,6 +44,6 @@ public class SafeHouseView extends View {
     }
 
     private void displayPlayerCurrentScene() throws GameControlException {
-        System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+       this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
     }
 }

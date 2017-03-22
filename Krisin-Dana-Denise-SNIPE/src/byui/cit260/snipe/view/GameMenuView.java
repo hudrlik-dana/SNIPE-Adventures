@@ -105,7 +105,9 @@ public class GameMenuView extends View {
             }
             break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+//                this.console.println("\n*** Invalid Selection *** Try Again");
+                  ErrorView.display(this.getClass().getName(),
+                           "\n*** Invalid Selection *** Try Again");
                 break;
         }
 
@@ -153,5 +155,4 @@ public class GameMenuView extends View {
         dossierView.display();
     }
 
-//System.out.println("\n*** functionName stub function called ***");
 }

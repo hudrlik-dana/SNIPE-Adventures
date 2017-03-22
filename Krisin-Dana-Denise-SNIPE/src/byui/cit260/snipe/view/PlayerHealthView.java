@@ -63,7 +63,9 @@ public class PlayerHealthView extends View {
             }
             break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+  //              this.console.println("\n*** Invalid Selection *** Try Again");
+                  ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 break;
         }
 
@@ -83,7 +85,7 @@ public class PlayerHealthView extends View {
     }
 
     private void displayPlayerCurrentScene() throws GameControlException {
-        System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+        this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }

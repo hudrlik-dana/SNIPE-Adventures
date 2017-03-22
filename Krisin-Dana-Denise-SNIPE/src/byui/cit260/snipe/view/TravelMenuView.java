@@ -11,6 +11,7 @@ import byui.cit260.snipe.model.World;
 import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Place;
 import byui.cit260.snipe.model.Player;
+import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -48,7 +49,7 @@ public class TravelMenuView extends View {
                 //get lastcode in Cyphercodes arraylist
                 int lastone = (Snipe.getPlayer().getCodeList().size()-1);
                 String lastCode = Snipe.getPlayer().getCodeList().get(lastone);
-                System.out.println("Denise displays- This is the last code in the table " + lastCode);
+                this.console.println("Denise displays- This is the last code in the table " + lastCode);
                         
                 int index = lastone + 3;
 // doesn't work - trying to set the player at the next country
@@ -94,18 +95,24 @@ public class TravelMenuView extends View {
 
     @Override
     public String getInput() {
-        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+//delete        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid
 
         while (!valid) {
-            System.out.println("\n" + this.menu);
+            this.console.println("\n" + this.menu);
 
-            value = keyboard.nextLine(); //get next line typed on keyboard
+            try {
+                value = keyboard.readLine(); //get next line typed on keyboard
+            } catch (IOException ex) {
+                Logger.getLogger(TravelMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
             value = value.trim(); //trim off leading and trailing blanks
 
             if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid: entry required.");
+ //               this.console.println("\nInvalid: entry required.");
+                ErrorView.display(this.getClass().getName(),
+                           "\n*** Invalid: entry required.");    
             }
             break; //end the loop
         }
@@ -129,7 +136,7 @@ public class TravelMenuView extends View {
             }
 
             //Output non-challenge description
-            System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+            this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
 
             //IF PLAYER MOVEMENT TO A PLACE TRIGGERS CHALLENGE - OPEN THE CHALLENGE VIEW HERE
 //            if(Snipe.getPlayer().getCurrentPlace().isChallenge()) {
@@ -141,7 +148,7 @@ public class TravelMenuView extends View {
                 /*Need to add trigger here to check for code piece & push player to next country.
                 
                 if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
-                        System.out.println("\n-----------------------------------------------------------"
+                        this.console.println("\n-----------------------------------------------------------"
                                             + "You have not yet obtained the code needed to move on. You "
                                             + "will need to travel back to another location and complete"
                                             + " a challenge to obtain a code. Once you have a code, you "
@@ -151,28 +158,28 @@ public class TravelMenuView extends View {
                         
                         switch (choice) { //Show Dossier & Game Menu
                             case "U": 
-                                System.out.println(Dossier.values()[1]);
+                                this.console.println(Dossier.values()[1]);
                                 break;
                             case "G": 
-                                System.out.println(Dossier.values()[2]);
+                                this.console.println(Dossier.values()[2]);
                                 break;
                             case "E": 
-                                System.out.println(Dossier.values()[3]);
+                                this.console.println(Dossier.values()[3]);
                                 break;
                             case "S": 
-                                System.out.println(Dossier.values()[4]);
+                                this.console.println(Dossier.values()[4]);
                                 break;
                             case "R": 
-                                System.out.println(Dossier.values()[5]);
+                               this.console.println(Dossier.values()[5]);
                                 break;
                             case "F": 
-                                System.out.println(Dossier.values()[6]);
+                                this.console.println(Dossier.values()[6]);
                                 break;
                             case "C": 
-                                System.out.println(Dossier.values()[7]);
+                                this.console.println(Dossier.values()[7]);
                                 break;
                             case "B": 
-                                System.out.println(Dossier.values()[8]);
+                               this.console.println(Dossier.values()[8]);
                                 break;
                             case "A": {
                                 try {
@@ -192,13 +199,13 @@ public class TravelMenuView extends View {
                 //I learned I can't print all the stuff on Country object.  Doesn't know what you want. 
                 //  Must specify the actual varable. Must be aware of the class and what you are asking for.
 //              Country currentCountry = Snipe.getPlayer().getCurrentCountry();
-//              System.out.println("\n this is second "  + currentCountry.getName());
+//              this.console.println("\n this is second "  + currentCountry.getName());
 // 
                 //this line doesn't work also. don't know why --Denise
-//              System.out.println("\n this is second " + Snipe.getPlayer().getCurrentCountry());
+//              this.console.println("\n this is second " + Snipe.getPlayer().getCurrentCountry());
 //
                 //this line works
-//              System.out.println("\n this is second " + Snipe.getPlayer().getCurrentPlace().getCountryCode());
+//              this.console..println("\n this is second " + Snipe.getPlayer().getCurrentPlace().getCountryCode());
 //
                 String countryCode;
                 countryCode = Snipe.getPlayer().getCurrentPlace().getCountryCode();
@@ -221,14 +228,16 @@ public class TravelMenuView extends View {
 //         
             return true;
         } catch (IndexOutOfBoundsException ibe) {
-            System.out.println("That place number doesn't exist!");
+ //           this.console.println("That place number doesn't exist!");
+            ErrorView.display(this.getClass().getName(),
+                           "\n*** That place number doesn't exist!");    
         } catch (Exception e) {
             //bury this
         }
 
         switch (choice) {
             case "V": //display the map
-                System.out.println("You are at: " + Snipe.getPlayer().getCurrentPlace().getPlaceName());
+               this.console.println("You are at: " + Snipe.getPlayer().getCurrentPlace().getPlaceName());
 //                this.displayMap();
                 break;
             case "S": {
@@ -244,7 +253,10 @@ public class TravelMenuView extends View {
                 this.displayHelpMenu();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+//                this.console.println("\n*** Invalid Selection *** Try Again");
+            ErrorView.display(this.getClass().getName(),
+                           "\n*** Invalid Selection *** Try Again");    
+
                 break;
         }
 
@@ -277,5 +289,4 @@ public class TravelMenuView extends View {
         mapMenu.display();
     }
 
-//System.out.println("\n*** functionName stub function called ***");
 }
