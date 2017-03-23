@@ -29,6 +29,7 @@ public class TravelMenuView extends View {
     public TravelMenuView() {
         super();
         Country currentCountry = Snipe.getPlayer().getCurrentCountry();
+        World world = Snipe.getCurrentGame().getWorld();
 
         String tempMenu = "\n"
                 + "\n-----------------------------------------------------------"
@@ -37,36 +38,29 @@ public class TravelMenuView extends View {
                 + "\n";
 
  //Added code to check if player has a CypherCode if they don't they go to the first country (USA)
- //else it takes the last code they have and (when I get it to work) will set player to the next Country
+ //else it takes the last code they have and will go to the next Country
  //based on how many code pieces they have obtained. 
-        if (Snipe.getPlayer().getCodeList() != null) {
-            if (Snipe.getPlayer().getCodeList().isEmpty()) {
+         if (Snipe.getPlayer().getCodeList() == null || Snipe.getPlayer().getCodeList().isEmpty() ) {
+ //           if (Snipe.getPlayer().getCodeList().isEmpty()) {
                 for (int i = 0; i < currentCountry.getPlaces().size(); i++) {
                  tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
                  }
             }
             else{
-                //get lastcode in Cyphercodes arraylist
-                int lastone = (Snipe.getPlayer().getCodeList().size()-1);
-                String lastCode = Snipe.getPlayer().getCodeList().get(lastone);
-                this.console.println("Denise displays- This is the last code in the table " + lastCode);
+                //Get lastcode in Cyphercodes arraylist. You can derive which country is needed next from this.
+                int lastOne = (Snipe.getPlayer().getCodeList().size()-1);
+  //              String lastCode = Snipe.getPlayer().getCodeList().get(lastOne);
+  //              this.console.println("Denise displays- This is the last code in the table " + lastCode);
                         
-                int index = lastone + 3;
-// doesn't work - trying to set the player at the next country
-//              String nextCountry = "Germany";
-//              currentCountry = Snipe.getPlayer().setCurrentCountry(nextCountry);
-
-// doesn't work - why can't I set the stupid country?  
-//              currentCountry = Snipe.getPlayer().getCurrentCountry(Germany);
-//              Snipe.getPlayer().setCurrentCountry(currentCountry);
-            
-                for (int i = 3; i < currentCountry.getPlaces().size(); i++) {
-                tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
+                int index = lastOne + 1;
+                Country nextCountry = world.getCountries().get(index);
+                Snipe.getPlayer().setCurrentCountry(nextCountry);
+         
+                for (int i = 0; i < nextCountry.getPlaces().size(); i++) {
+                tempMenu += "\n " + (i + 1) + " - " + nextCountry.getPlaces().get(i).getPlaceName();
                   } 
-               }    
-          }  
-        
-
+            } 
+ 
         tempMenu += "\n **************"
                 + "\n V - View Map"
                 + "\n S - Save Game"
@@ -144,7 +138,15 @@ public class TravelMenuView extends View {
                 //safe house 
                 SafeHouseView safeHouse = new SafeHouseView();
                 safeHouse.display();
-
+ //
+ //      if the passCollected is set to true for they can then travel from the MapMenuView or GameMenuView
+ //
+ //            if (ischallengeComplete for currentCountry) {
+ //                  set passCollected to true
+ //               }
+ // 
+                
+                 
                 /*Need to add trigger here to check for code piece & push player to next country.
                 
                 if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {

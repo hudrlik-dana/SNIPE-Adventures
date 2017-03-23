@@ -40,7 +40,7 @@ END
 null value is used for String; -1 is used for int
  */
 public class GameControl {
-
+    
     public static Player createPlayer(String name) throws GameControlException {
 
         if (name == null) {

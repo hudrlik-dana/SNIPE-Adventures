@@ -77,6 +77,14 @@ public class GameMenuView extends View {
             break;
             case "T": {
                 try {
+ //                 if (ischallengeComplete and ispasscollected) {
+ //                    this.displayTravelMenuView(); 
+ //                  }
+ //                 else{
+ //                    this.console.println("\n-----------------------------------------------------------"
+ //                                       + "You have not visied the safehouse. You  need to visit the "
+ //                                       + "safehouse to collect your next dossier before traveling."); 
+ //                         }    
                     //display the TravelMenu
                     this.displayTravelMenuView();
                 } catch (GameControlException ex) {
