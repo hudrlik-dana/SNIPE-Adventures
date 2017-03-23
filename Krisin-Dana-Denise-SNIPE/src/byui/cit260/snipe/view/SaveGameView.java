@@ -26,14 +26,14 @@ public class SaveGameView extends View {
     public String getInput() {
 //delete        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         boolean valid = false; //initialize to not valid
-        String value = ""; //value to be returned
+        String value = null; //value to be returned
 
         while (!valid) {
             try {
                 //prompt for player input
                 this.console.println("\n\nWhat do you want to call your save file? ");
 
-                value = keyboard.readLine(); //get next line typed on keyboard
+                value = this.keyboard.readLine(); //get next line typed on keyboard
                 value = value.trim(); //trim off leading and trailing blanks
 
                 if (value.length() < 1) { // value is blank
@@ -43,7 +43,7 @@ public class SaveGameView extends View {
                 } else {
                     break; //end the loop
                 }
-            } catch (Exception ex) {
+            } catch (IOException ex) {
                 Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
