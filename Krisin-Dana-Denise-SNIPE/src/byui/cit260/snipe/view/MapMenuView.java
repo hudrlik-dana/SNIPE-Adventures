@@ -65,7 +65,14 @@ public class MapMenuView extends View {
 
         switch (choice) {
             case "T": //display the Travel Menu
-                this.displayTravelMenuView();
+ //               if (ischallengeComplete and ispasscollected) {
+                     this.displayTravelMenuView(); 
+ //                  }
+ //                 else{
+ //                    this.console.println("\n-----------------------------------------------------------"
+ //                                       + "You have not visied the safehouse. You  need to visit the "
+ //                                       + "safehouse to collect your next dossier before traveling."); 
+ //                         }
                 break;
             case "P": //display the passport list
                 this.displayPassportList();
