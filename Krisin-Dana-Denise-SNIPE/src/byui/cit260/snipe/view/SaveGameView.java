@@ -24,24 +24,26 @@ public class SaveGameView extends View {
     @Override
 
     public String getInput() {
-        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+//delete        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         boolean valid = false; //initialize to not valid
-        String value = ""; //value to be returned
+        String value = null; //value to be returned
 
         while (!valid) {
             try {
                 //prompt for player input
-                System.out.println("\n\nWhat do you want to call your save file? ");
+                this.console.println("\n\nWhat do you want to call your save file? ");
 
-                value = keyboard.nextLine(); //get next line typed on keyboard
+                value = this.keyboard.readLine(); //get next line typed on keyboard
                 value = value.trim(); //trim off leading and trailing blanks
 
                 if (value.length() < 1) { // value is blank
-                    System.out.println("\nInvalid: entry required.");
+//                    this.console.println("\nInvalid: entry required.");
+                    ErrorView.display(this.getClass().getName(),
+                           "\n*** Invalid Selection *** Try Again");
                 } else {
                     break; //end the loop
                 }
-            } catch (Exception ex) {
+            } catch (IOException ex) {
                 Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
             }
         }

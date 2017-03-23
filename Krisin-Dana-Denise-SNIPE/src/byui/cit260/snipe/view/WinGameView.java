@@ -8,6 +8,7 @@ package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.GameControl;
 import byui.cit260.snipe.exceptions.GameControlException;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -55,7 +56,9 @@ public class WinGameView extends View{
             }
             break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+//                this.console.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                           "\n*** Invalid Selection *** Try Again");    
                 break;
         }
         return false;
@@ -65,7 +68,7 @@ public class WinGameView extends View{
         //create new game
         GameControl.createNewGame(Snipe.getPlayer());
 
-        System.out.println(Snipe.getPlayer().getCodeName());
+        this.console.println(Snipe.getPlayer().getCodeName());
 
         //display the game menu view
         GameMenuView gameMenu = new GameMenuView();
@@ -74,7 +77,7 @@ public class WinGameView extends View{
     }
 
     private void exitGame() throws GameControlException {
-        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+//        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         try {
             System.exit(0);
         } catch (Exception ex) {

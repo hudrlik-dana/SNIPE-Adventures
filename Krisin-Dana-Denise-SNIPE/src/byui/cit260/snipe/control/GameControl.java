@@ -511,21 +511,6 @@ public class GameControl {
         return world;
     }
 
-    public static void getSavedGame(String filePath) throws GameControlException {
-
-        Game game = null;
-
-        try (FileInputStream fips = new FileInputStream(filePath)) {
-
-            ObjectInputStream input = new ObjectInputStream(fips);
-            game = (Game) input.readObject();
-        } catch (Exception e) {
-            throw new GameControlException(e.getMessage());
-        }
-
-        Snipe.setCurrentGame(game);  //save in FireSwamp
-    }
-
     public static void saveGame(Game game, String filepath) throws GameControlException {
 
         try (FileOutputStream fops = new FileOutputStream(filepath)) {
@@ -536,6 +521,22 @@ public class GameControl {
             throw new GameControlException(e.getMessage());
         }
 
+    }
+
+    public static void getSavedGame(String filePath) throws GameControlException {
+
+        Game game = null;
+
+        try (FileInputStream fips = new FileInputStream(filePath)) {
+            ObjectInputStream input = new ObjectInputStream(fips);
+                    
+            game = (Game) input.readObject();
+        } 
+        catch (Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+
+        Snipe.setCurrentGame(game); 
     }
 
 }

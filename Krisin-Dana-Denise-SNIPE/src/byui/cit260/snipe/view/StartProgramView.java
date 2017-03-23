@@ -9,6 +9,11 @@ import byui.cit260.snipe.control.GameControl;
 import byui.cit260.snipe.exceptions.GameControlException;
 import byui.cit260.snipe.model.Player;
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -75,18 +80,22 @@ public class StartProgramView {
     }
 
     private String getPlayerName() {
-        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+      Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid
 
         while (!valid) {
             System.out.println("\n" + this.promptMessage);
-
+            
             value = keyboard.nextLine(); //get next line typed on keyboard
+
+//           value = keyboard.readLine(); //get next line typed on keyboard
             value = value.trim(); //trim off leading and trailing blanks
 
             if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid: name cannot be blank");
+//                System.out.println("\nInvalid: name cannot be blank");
+                  ErrorView.display(this.getClass().getName(),
+                           "\n*** Invalid: name cannot be blank");
                 continue;
             }
             break; //end the loop
@@ -97,7 +106,10 @@ public class StartProgramView {
     private boolean doAction(String playerName) throws GameControlException {
 
         if (playerName.length() < 2) {
-            System.out.println("\nInvalid players name: Your name must be more than one character in length.");
+//          System.out.println("\nInvalid players name: Your name must be more than one character in length.");
+            ErrorView.display(this.getClass().getName(),
+                           "\n***Invalid players name: Your name must be more than one character in length. ");        
+            
             return false;
         }
 
@@ -105,7 +117,9 @@ public class StartProgramView {
         Player player = GameControl.createPlayer(playerName);
 
         if (player == null) {//if unsuccessful
-            System.out.println("\nError creating the player");
+  //          System.out.println("\nError creating the player");
+            ErrorView.display(this.getClass().getName(),
+                       "\n***Error creating the player ");  
             return false;
         }
 

@@ -8,6 +8,7 @@ package byui.cit260.snipe.view;
 import byui.cit260.snipe.exceptions.GameControlException;
 import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.SafeHouse;
+import java.util.List;
 import snipe.Snipe;
 
 /**
@@ -21,7 +22,7 @@ public class SafeHouseView extends View {
                 + "\n-----------------------------------------------------------"
                 + "\n             Safe house - Get some rest!"
                 + "\n-----------------------------------------------------------"
-                + "\nPress any key to see more details about this safe house.   "
+                + "\nEnter any value to see more details about this safe house."
                 + "\n-----------------------------------------------------------"
                 + "\n"
         );
@@ -36,14 +37,27 @@ public class SafeHouseView extends View {
 
         for (SafeHouse safeHouse : SafeHouse.values()) {
             if (countryName.equals(safeHouse.getSafeHouseCountry())) {
-                System.out.println("\n" + safeHouse.getSafeHouseDesc());
+                this.console.println("\n" + safeHouse.getSafeHouseDesc());
             }
         }
-
+        List<String> codeList = Snipe.getPlayer().getCodeList();
+        if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        System.out.println("\n-----------------------------------------------------------"
+                                            + "\nYou have not yet obtained the code needed to move on. You "
+                                            + "\nwill need to travel back to another location and complete"
+                                            + "\na challenge to obtain a code. Once you have a code, you "
+                                            + "\nwill return here to obtain your next Dossier and move on.");
+                    }
+                
         return true;
     }
 
     private void displayPlayerCurrentScene() throws GameControlException {
-        System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+       this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+    }
+
+    private void displayMoveCountry() {
+        MoveCountryView moveCountry = new MoveCountryView();
+        moveCountry.display();
     }
 }

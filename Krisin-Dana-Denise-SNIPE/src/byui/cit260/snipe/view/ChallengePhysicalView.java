@@ -271,7 +271,10 @@ public class ChallengePhysicalView extends View {
                         + "\n---------------------------------------------------------");
                 break;
             default:
-                System.out.println("\n Invalid answer. Try again.");
+                 System.out.println("\n Invalid answer. Try again.");
+ //                 ErrorView.display(this.getClass().getName(),
+ //                           "\n*** Invalid Selection *** Try Again");
+                
                 break;
         }
     }
@@ -323,6 +326,9 @@ public class ChallengePhysicalView extends View {
                 if (choice != "3" || choice != "2" || choice != "1") {
 
                     System.out.println("\n Invalid entry. Please select answer 1, 2, or 3");
+ //                 ErrorView.display(this.getClass().getName(),
+ //                           "\n*** Invalid Selection *** Try Again");
+                   
                 }
                 break;
 

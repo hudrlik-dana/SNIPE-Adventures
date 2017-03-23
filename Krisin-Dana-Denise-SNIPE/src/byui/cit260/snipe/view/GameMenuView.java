@@ -9,6 +9,7 @@ import byui.cit260.snipe.exceptions.GameControlException;
 import java.util.Scanner;
 import snipe.Snipe;
 import byui.cit260.snipe.model.Dossier;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -32,6 +33,12 @@ public class GameMenuView extends View {
                 + "\n V - View Map"
                 + "\n M - Main Menu"
                 + "\n H - Help Menu"
+                + "\n-----------------------------------------------------------"
+                + "\n-----------------------------------------------------------"
+                + "\n Test Functions"
+                + "\n "
+                + "\n 1 - Print Code List to File"
+                + "\n 2 - Print Passport to File"
                 + "\n-----------------------------------------------------------");
     }
 
@@ -104,8 +111,16 @@ public class GameMenuView extends View {
                 }
             }
             break;
+            case "1": 
+                this.writeCodeList();
+                break;
+            case "2": 
+                this.writePassport();
+                break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+//                this.console.println("\n*** Invalid Selection *** Try Again");
+                  ErrorView.display(this.getClass().getName(),
+                           "\n*** Invalid Selection *** Try Again");
                 break;
         }
 
@@ -153,5 +168,72 @@ public class GameMenuView extends View {
         dossierView.display();
     }
 
-//System.out.println("\n*** functionName stub function called ***");
+    private void writeCodeList() {
+        String filePath = null;
+        boolean valid = false;
+
+        this.console.println("Enter the name you want to save your Code List as: ");
+        while (!valid) {
+            try {
+                //prompt for player input
+
+                filePath = this.keyboard.readLine();
+                filePath = filePath.trim();
+
+                if (filePath.length() < 1) {
+                    ErrorView.display(this.getClass().getName(),
+                           "\n***Invalid: entry required.!");
+                } else {
+                    valid = true;
+                }
+
+            } catch (IOException ex) {
+                Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        try {
+            //save inventory list to specified file
+            WriteCodeList.writeCodeList(Snipe.getPlayer().getCodeList(), filePath);
+            this.console.println("\nCode List successfully written to file " + filePath + ".");
+        } catch (IOException ioe) {
+            ErrorView.display("GameMenuView", ioe.getMessage());
+
+        }
+    }
+
+    private void writePassport() {
+        String filePath = null;
+        boolean valid = false;
+
+        this.console.println("Enter the name you want to save your Code List as: ");
+        while (!valid) {
+            try {
+                //prompt for player input
+
+                filePath = this.keyboard.readLine();
+                filePath = filePath.trim();
+
+                if (filePath.length() < 1) {
+                    ErrorView.display(this.getClass().getName(),
+                           "\n***Invalid: entry required.!");
+                } else {
+                    valid = true;
+                }
+
+            } catch (IOException ex) {
+                Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        try {
+            //save inventory list to specified file
+            WritePassportList.writePassportList(Snipe.getPlayer().getCodeList(), filePath);
+            this.console.println("\nPassport List successfully written to file " + filePath + ".");
+        } catch (IOException ioe) {
+            ErrorView.display("GameMenuView", ioe.getMessage());
+
+        }
+    }
+
 }

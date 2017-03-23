@@ -46,31 +46,31 @@ public class DossierView extends View {
 
         switch (choice) {
             case "1": //Show Dossier
-                System.out.println(Dossier.values()[0]);
+                this.console.println(Dossier.values()[0]);
                 break;
             case "2": //Show Dossier
-                System.out.println(Dossier.values()[1]);
+                this.console.println(Dossier.values()[1]);
                 break;
             case "3": //Show Dossier
-                System.out.println(Dossier.values()[2]);
+                this.console.println(Dossier.values()[2]);
                 break;
             case "4": //Show Dossier
-                System.out.println(Dossier.values()[3]);
+                this.console.println(Dossier.values()[3]);
                 break;
             case "5": //Show Dossier
-                System.out.println(Dossier.values()[4]);
+                this.console.println(Dossier.values()[4]);
                 break;
             case "6": //Show Dossier
-                System.out.println(Dossier.values()[5]);
+                this.console.println(Dossier.values()[5]);
                 break;
             case "7": //Show Dossier
-                System.out.println(Dossier.values()[6]);
+                this.console.println(Dossier.values()[6]);
                 break;
             case "8": //Show Dossier
-                System.out.println(Dossier.values()[7]);
+                this.console.println(Dossier.values()[7]);
                 break;
             case "9": //Show Dossier
-                System.out.println(Dossier.values()[8]);
+                this.console.println(Dossier.values()[8]);
                 break;
             case "G": {
                 try {
@@ -91,7 +91,9 @@ public class DossierView extends View {
             }
             break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+ //              this.console.println("\n*** Invalid Selection *** Try Again");
+                 ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;
@@ -104,7 +106,7 @@ public class DossierView extends View {
     }
 
     private void displayPlayerCurrentScene() throws GameControlException {
-        System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+        this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }

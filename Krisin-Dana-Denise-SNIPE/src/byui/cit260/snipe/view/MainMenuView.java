@@ -9,10 +9,10 @@ import byui.cit260.snipe.control.GameControl;
 import byui.cit260.snipe.exceptions.GameControlException;
 import byui.cit260.snipe.model.Game;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 //import byui.cit260.snipe.view.GameMenuView;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import snipe.Snipe;
@@ -49,7 +49,11 @@ public class MainMenuView extends View {
                     this.startSavedGame();
                 } catch (GameControlException ex) {
                     Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                } catch (IOException ex) {
+                Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
             }
             break;
             case "N": {
@@ -97,13 +101,15 @@ public class MainMenuView extends View {
                 }
             }
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                //              this.console.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;
     }
 
-    private void startSavedGame() throws GameControlException {
+    private void startSavedGame() throws GameControlException, FileNotFoundException, IOException, ClassNotFoundException {
         // prompt for and get the name of the file to be saved
         StartSavedGameView startSavedGameView = new StartSavedGameView();
         String filePath = startSavedGameView.getInput();
@@ -114,6 +120,8 @@ public class MainMenuView extends View {
             ObjectInputStream input = new ObjectInputStream(fips);
 
             game = (Game) input.readObject();
+        try {
+            GameControl.getSavedGame(filePath);
         } catch (Exception e) {
             throw new GameControlException(e.getMessage());
         }
@@ -122,14 +130,14 @@ public class MainMenuView extends View {
         Snipe.setPlayer(Snipe.getCurrentGame().getPlayer());
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
-
+        }
     }
 
     private void startNewGame() throws GameControlException {
         //create new game
         GameControl.createNewGame(Snipe.getPlayer());
 
-        System.out.println(Snipe.getPlayer().getCodeName());
+        this.console.println(Snipe.getPlayer().getCodeName());
 
         //display the game menu view
         GameMenuView gameMenu = new GameMenuView();
@@ -152,7 +160,7 @@ public class MainMenuView extends View {
     }
 
     private void displayPlayerCurrentScene() throws GameControlException {
-        System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+        this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
@@ -164,11 +172,11 @@ public class MainMenuView extends View {
     }
 
     private void exitGame() throws GameControlException {
-        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+        //delete       Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         try {
-            System.out.println("Do you wish to save the game before exiting?  Y/N");
+            this.console.println("Do you wish to save the game before exiting?  Y/N");
             String value = "";
-            value = keyboard.nextLine();
+            value = keyboard.readLine();
             value.trim();
             if ((value.toUpperCase().charAt(0)) == 'Y') {
                 this.saveGame();

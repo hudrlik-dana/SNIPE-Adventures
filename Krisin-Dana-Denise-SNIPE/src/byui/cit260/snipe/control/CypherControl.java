@@ -21,7 +21,7 @@ public class CypherControl extends View {
         CypherControl cypherDecoder = new CypherControl();
 
         //display cypher decoder  
-        System.out.println(
+         this.console.println(
                 "\n---------------- Cypher Decoder -----------------"
                 + "\n A = 6    G = T     M = N     S = H    Y = 1"
                 + "\n B = Z    H = S     N = M     T = G    Z = B"
@@ -60,7 +60,7 @@ public class CypherControl extends View {
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
-        System.out.println(
+        this.console.println(
                 "\n------- Congratulations! --------"
                 + "\n You are now a S.N.I.P.E Agent."
                 + "\n---------------------------------"

@@ -28,7 +28,7 @@ public class ChallengeMentalView extends View {
         switch (currentCountry.getName()) {
 
             case "Germany": //display the question
-                System.out.println("\n Beginning at the east end you walk along the wall"
+                this.console.println("\n Beginning at the east end you walk along the wall"
                         + "\n looking for your next clue that will lead you to "
                         + "\n the secret passage. You notice the 32-foot tall wall"
                         + "\n is casting a shadow in the warm afternoon sun. You "
@@ -48,7 +48,7 @@ public class ChallengeMentalView extends View {
                 break;
 
             case "Spain": //display the question
-                System.out.println("\n The narrow streets and plazas are filled with vendors,"
+                this.console.println("\n The narrow streets and plazas are filled with vendors,"
                         + "\n so you lose the suspicious man in the dark hat and coat"
                         + "\n who may have been following you the past hour. It is"
                         + "\n easy to blend in with the crowd. A young man dressed"
@@ -70,7 +70,7 @@ public class ChallengeMentalView extends View {
                         + "\n Type 3 for 16 chickens & 10 cows");
                 break;
             case "Russia": //display the question
-                System.out.println("\n This place is crawling with secret police. They really aren’t"
+                this.console.println("\n This place is crawling with secret police. They really aren’t"
                         + "\n very secret, since you can spot them by their clothing and"
                         + "\n earwigs. You will need to be very careful today and use all"
                         + "\n your SNIPE training to retrieve your next clue. You will need"
@@ -89,7 +89,8 @@ public class ChallengeMentalView extends View {
                         + "\n Type 3 for 1666");
                 break;
             default:
-                System.out.println("\n*** Country not built out yet - call Programmer");
+                ErrorView.display(this.getClass().getName(),
+                            "\n* Mental challenge not valid");
                 break;
         }
 
@@ -122,7 +123,7 @@ public class ChallengeMentalView extends View {
                     var1 = 34;
                     var2 = 61;
                     ChallengeControl.calcMathPuzzle1(var1, var2); //incorrect answer
-                    System.out.println("\n Bummer, your checked the wall and didn't find the secret"
+                    this.console.println("\n Bummer, your checked the wall and didn't find the secret"
                             + "\n passage. Consult your dossier for additional clues to solve"
                             + "\n the equation. Recalculate and try again or travel to another"
                             + "\n location and try a different challenge.");
@@ -132,7 +133,7 @@ public class ChallengeMentalView extends View {
                     var1 = 32;
                     var2 = 68;
                     ChallengeControl.calcMathPuzzle1(var1, var2);
-                    System.out.println("\n Great job! You have your first clue. After carefully"
+                    this.console.println("\n Great job! You have your first clue. After carefully"
                             + "\n checking to see if anyone is watching, you slip the clue"
                             + "\n in your pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
@@ -146,7 +147,7 @@ public class ChallengeMentalView extends View {
                     var1 = 30;
                     var2 = 66;
                     ChallengeControl.calcMathPuzzle1(var1, var2);
-                    System.out.println("\n Bummer, your checked the wall and didn't find the secret"
+                    this.console.println("\n Bummer, your checked the wall and didn't find the secret"
                             + "\n passage. Consult your dossier for additional clues to solve"
                             + "\n the equation. Recalculate and try again or travel to another"
                             + "\n location and try a different challenge.");
@@ -158,7 +159,7 @@ public class ChallengeMentalView extends View {
                     var1 = 74;
                     var2 = 30;
                     ChallengeControl.calcMathPuzzle2(var1, var2);
-                    System.out.println("\n Great job! You have your clue. After carefully checking "
+                    this.console.println("\n Great job! You have your clue. After carefully checking "
                             + "\n to see if anyone is watching, you slip the clue in your"
                             + "\n pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
@@ -172,7 +173,7 @@ public class ChallengeMentalView extends View {
                     var1 = 68;
                     var2 = 20;
                     ChallengeControl.calcMathPuzzle2(var1, var2);
-                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                    this.console.println("\n Bummer, your answer is incorrect. Consult your dossier"
                             + "\n for additional clues to solve the puzzle. Recalculate and"
                             + "\n try again or travel to another location and try a"
                             + "\n different challenge.");
@@ -181,7 +182,7 @@ public class ChallengeMentalView extends View {
                     var1 = 65;
                     var2 = 20;
                     ChallengeControl.calcMathPuzzle2(var1, var2);
-                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                    this.console.println("\n Bummer, your answer is incorrect. Consult your dossier"
                             + "\n for additional clues to solve the puzzle. Recalculate and"
                             + "\n try again or travel to another location and try a"
                             + "\n different challenge.");
@@ -195,7 +196,7 @@ public class ChallengeMentalView extends View {
                     var3 = 6;
                     var4 = 3;
                     ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4);
-                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                    this.console.println("\n Bummer, your answer is incorrect. Consult your dossier"
                             + "\n for additional clues to solve the puzzle. Recalculate and"
                             + "\n try again or travel to another location and try a"
                             + "\n different challenge.");
@@ -206,7 +207,7 @@ public class ChallengeMentalView extends View {
                     var3 = 6;
                     var4 = 3;
                     ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4);
-                    System.out.println("\n Great job! You have your clue. After carefully checking "
+                    this.console.println("\n Great job! You have your clue. After carefully checking "
                             + "\n to see if anyone is watching, you slip the clue in your"
                             + "\n pocket and return to the Safe House to contact your"
                             + "\n handler and receive the dossier for your next mission.");
@@ -222,7 +223,7 @@ public class ChallengeMentalView extends View {
                     var3 = 6;
                     var4 = 3;
                     ChallengeControl.calcMathPuzzle3(var1, var2, var3, var4);
-                    System.out.println("\n Bummer, your answer is incorrect. Consult your dossier"
+                    this.console.println("\n Bummer, your answer is incorrect. Consult your dossier"
                             + "\n for additional clues to solve the puzzle. Recalculate and"
                             + "\n try again or travel to another location and try a"
                             + "\n different challenge.");
@@ -230,7 +231,10 @@ public class ChallengeMentalView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+//delete        this.console.println("\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
+                
                 break;
 
         }
