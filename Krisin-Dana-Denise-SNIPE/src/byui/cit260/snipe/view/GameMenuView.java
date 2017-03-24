@@ -77,14 +77,14 @@ public class GameMenuView extends View {
             break;
             case "T": {
                 try {
- //                 if (ischallengeComplete and ispasscollected) {
- //                    this.displayTravelMenuView(); 
- //                  }
- //                 else{
- //                    this.console.println("\n-----------------------------------------------------------"
- //                                       + "You have not visied the safehouse. You  need to visit the "
- //                                       + "safehouse to collect your next dossier before traveling."); 
- //                         }    
+                    //                 if (ischallengeComplete and ispasscollected) {
+                    //                    this.displayTravelMenuView(); 
+                    //                  }
+                    //                 else{
+                    //                    this.console.println("\n-----------------------------------------------------------"
+                    //                                       + "You have not visied the safehouse. You  need to visit the "
+                    //                                       + "safehouse to collect your next dossier before traveling."); 
+                    //                         }    
                     //display the TravelMenu
                     this.displayTravelMenuView();
                 } catch (GameControlException ex) {
@@ -119,16 +119,16 @@ public class GameMenuView extends View {
                 }
             }
             break;
-            case "1": 
+            case "1":
                 this.writeCodeList();
                 break;
-            case "2": 
+            case "2":
                 this.writePassport();
                 break;
             default:
 //                this.console.println("\n*** Invalid Selection *** Try Again");
-                  ErrorView.display(this.getClass().getName(),
-                           "\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
                 break;
         }
 
@@ -190,7 +190,7 @@ public class GameMenuView extends View {
 
                 if (filePath.length() < 1) {
                     ErrorView.display(this.getClass().getName(),
-                           "\n***Invalid: entry required.!");
+                            "\n***Invalid: entry required.!");
                 } else {
                     valid = true;
                 }
@@ -224,7 +224,7 @@ public class GameMenuView extends View {
 
                 if (filePath.length() < 1) {
                     ErrorView.display(this.getClass().getName(),
-                           "\n***Invalid: entry required.!");
+                            "\n***Invalid: entry required.!");
                 } else {
                     valid = true;
                 }

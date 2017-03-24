@@ -28,13 +28,12 @@ public class MoveCountryView extends View {
                 + "\n-----------------------------------------------------------"
                 + "\n Move to Next Country "
                 + "\n-----------------------------------------------------------"
-                + "\n You are currently in: " + Snipe.getPlayer().getCurrentCountry()+ ""
+                + "\n You are currently in: " + Snipe.getPlayer().getCurrentCountry() + ""
                 + "\n "
                 + "\nYou will need to travel to a new Country. "
                 + "\nPlease select from the countries below:";
-       
+
         //goal = list of on non-visited countries based from map & travel menu code, still tbd, trying to get static working first
-        
         /*for (int i = 3; i < currentCountry.getPlaces().size(); i++) {
             if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece()))
                 tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
@@ -79,59 +78,59 @@ public class MoveCountryView extends View {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
-            switch (choice) {
-                case "1": //Show Dossier
-                    //Player player.setCurrentCountry(world.getCountries().get(1));
-                    System.out.println(Dossier.values()[0]);
-                    break;
-                case "2": //Show Dossier
-                    System.out.println(Dossier.values()[1]);
-                    break;
-                case "3": //Show Dossier
-                    System.out.println(Dossier.values()[2]);
-                    break;
-                case "4": //Show Dossier
-                    System.out.println(Dossier.values()[3]);
-                    break;
-                case "5": //Show Dossier
-                    System.out.println(Dossier.values()[4]);
-                    break;
-                case "6": //Show Dossier
-                    System.out.println(Dossier.values()[5]);
-                    break;
-                case "7": //Show Dossier
-                    System.out.println(Dossier.values()[6]);
-                    break;
-                case "8": //Show Dossier
-                    System.out.println(Dossier.values()[7]);
-                    break;
-                case "9": //Show Dossier
-                    System.out.println(Dossier.values()[8]);
-                    break;
-                case "G": {
-                    try {
-                        //Return to Main Menu
-                        this.displayGameMenu();
-                    } catch (GameControlException ex) {
-                        Logger.getLogger(DossierView.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                }
+        switch (choice) {
+            case "1": //Show Dossier
+                //Player player.setCurrentCountry(world.getCountries().get(1));
+                System.out.println(Dossier.values()[0]);
                 break;
-                case "R": {
-                    try {
-                        //Return to Player Location
-                        this.displayPlayerCurrentScene();
-                    } catch (GameControlException ex) {
-                        Logger.getLogger(DossierView.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                }
+            case "2": //Show Dossier
+                System.out.println(Dossier.values()[1]);
                 break;
-                default:
-                    System.out.println("\n*** Invalid Selection *** Try Again");
-                    break;
+            case "3": //Show Dossier
+                System.out.println(Dossier.values()[2]);
+                break;
+            case "4": //Show Dossier
+                System.out.println(Dossier.values()[3]);
+                break;
+            case "5": //Show Dossier
+                System.out.println(Dossier.values()[4]);
+                break;
+            case "6": //Show Dossier
+                System.out.println(Dossier.values()[5]);
+                break;
+            case "7": //Show Dossier
+                System.out.println(Dossier.values()[6]);
+                break;
+            case "8": //Show Dossier
+                System.out.println(Dossier.values()[7]);
+                break;
+            case "9": //Show Dossier
+                System.out.println(Dossier.values()[8]);
+                break;
+            case "G": {
+                try {
+                    //Return to Main Menu
+                    this.displayGameMenu();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(DossierView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-            return true;
+            break;
+            case "R": {
+                try {
+                    //Return to Player Location
+                    this.displayPlayerCurrentScene();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(DossierView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
+            default:
+                System.out.println("\n*** Invalid Selection *** Try Again");
+                break;
         }
+        return true;
+    }
 
     private void displayGameMenu() throws GameControlException {
         //display the game menu
@@ -145,7 +144,7 @@ public class MoveCountryView extends View {
         gameMenu.display();
     }
 
-/*
+    /*
           System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
 
             String countryName = Snipe.getPlayer().getCurrentCountry().getName();
@@ -158,7 +157,6 @@ public class MoveCountryView extends View {
         
         player.setCurrentCountry(world.getCountries().get(1));
          player.setCurrentPlace(world.getCountries().get(1).getPlaces().get(0));
-*/
-
+     */
 //System.out.println("\n*** functionName stub function called ***");
 }

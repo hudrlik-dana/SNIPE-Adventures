@@ -78,20 +78,19 @@ public class ChallengeControl {
 
 //Other functions 
 //Apply Damage
-    public int adjustPlayerHealth() throws LoseGameException{
-        try{
+    public int adjustPlayerHealth() throws LoseGameException {
+        try {
             int playerHealth = Snipe.getPlayer().getPlayerHealth();
-            
+
             if (10 < playerHealth) {
                 int currentHealth = playerHealth - 10;
-            System.out.println(
-                    "\n Bummer, you were injured in your attempt."
-                    + "\n Return to the Safe House to rest and recover. Then consult "
-                    + "\n your dossier for the location of your next challenge.");
-            return currentHealth;
-        } 
-        }
-        catch (LoseGameException lge){
+                System.out.println(
+                        "\n Bummer, you were injured in your attempt."
+                        + "\n Return to the Safe House to rest and recover. Then consult "
+                        + "\n your dossier for the location of your next challenge.");
+                return currentHealth;
+            }
+        } catch (LoseGameException lge) {
             System.out.println(lge.getMessage());
         }
         int currentHealth;

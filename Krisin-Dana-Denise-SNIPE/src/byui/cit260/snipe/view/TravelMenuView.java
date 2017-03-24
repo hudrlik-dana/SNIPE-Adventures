@@ -32,19 +32,17 @@ public class TravelMenuView extends View {
         World world = Snipe.getCurrentGame().getWorld();
         Country currentCountry = Snipe.getPlayer().getCurrentCountry();
 
-        if (Snipe.getPlayer().getCodeList() != null 
+        if (Snipe.getPlayer().getCodeList() != null
                 && Snipe.getPlayer().getCodeList().size() == world.getCountries().indexOf(currentCountry) + 1
                 && currentCountry.getPlaces().indexOf(Snipe.getPlayer().getCurrentPlace()) == 0) {
             //Get lastcode in Cyphercodes arraylist. You can derive which country is needed next from this.
             int numOfCodesCollected = Snipe.getPlayer().getCodeList().size();
             //              String lastCode = Snipe.getPlayer().getCodeList().get(lastOne);
             //              this.console.println("Denise displays- This is the last code in the table " + lastCode);
-            
+
             currentCountry = world.getCountries().get(numOfCodesCollected);
             Snipe.getPlayer().setCurrentCountry(currentCountry);
         }
-
-        
 
         String tempMenu = "\n"
                 + "\n-----------------------------------------------------------"

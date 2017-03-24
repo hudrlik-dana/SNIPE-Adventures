@@ -26,7 +26,7 @@ public class CypherControlView extends View {
         CypherControl cypherDecoder = new CypherControl();
 
         //display cypher decoder  
-       this.console.println(
+        this.console.println(
                 "\n---------------- Cypher Decoder -----------------"
                 + "\n A = 6    G = T     M = N     S = H    Y = 1"
                 + "\n B = Z    H = S     N = M     T = G    Z = B"
@@ -72,10 +72,10 @@ public class CypherControlView extends View {
                 }
             }
             default:
- //               this.console.println("\n*** Invalid Selection *** Try Again");
+                //               this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
-                          "\n*** Invalid Selection *** Try Again");              
-                
+                        "\n*** Invalid Selection *** Try Again");
+
                 break;
         }
         return false;

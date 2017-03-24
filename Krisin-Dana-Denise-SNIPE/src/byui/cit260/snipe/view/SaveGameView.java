@@ -39,7 +39,7 @@ public class SaveGameView extends View {
                 if (value.length() < 1) { // value is blank
 //                    this.console.println("\nInvalid: entry required.");
                     ErrorView.display(this.getClass().getName(),
-                           "\n*** Invalid Selection *** Try Again");
+                            "\n*** Invalid Selection *** Try Again");
                 } else {
                     break; //end the loop
                 }

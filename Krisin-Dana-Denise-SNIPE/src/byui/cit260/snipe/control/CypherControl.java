@@ -21,7 +21,7 @@ public class CypherControl extends View {
         CypherControl cypherDecoder = new CypherControl();
 
         //display cypher decoder  
-         this.console.println(
+        this.console.println(
                 "\n---------------- Cypher Decoder -----------------"
                 + "\n A = 6    G = T     M = N     S = H    Y = 1"
                 + "\n B = Z    H = S     N = M     T = G    Z = B"

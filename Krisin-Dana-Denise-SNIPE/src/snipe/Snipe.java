@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
-
 /**
  *
  * @author danahudrlik
@@ -28,10 +27,9 @@ public class Snipe {
 
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
-    
+
     private static PrintWriter logFile = null;
 
-    
     public static PrintWriter getLogfile() {
         return logFile;
     }
@@ -39,7 +37,7 @@ public class Snipe {
     public static void setLogfile(PrintWriter logfile) {
         Snipe.logFile = logfile;
     }
-    
+
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -69,69 +67,67 @@ public class Snipe {
     }
 
     public static void setInFile(BufferedReader inFile) {
-        Snipe.inFile = inFile;}
+        Snipe.inFile = inFile;
+    }
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws GameControlException, IOException {
-           
-       try {
-         //open character stream files for end user input and output
-         Snipe.inFile = 
-                 new BufferedReader(new InputStreamReader(System.in));
-         Snipe.outFile = 
-                 new PrintWriter(System.out, true);
-         
-         //open log file
-         String filePath = "log.txt";
-         Snipe.logFile= new PrintWriter(filePath);
-         
-         
-         //create StartProgramView and start the program
-         StartProgramView startProgramView = new StartProgramView();
-         startProgramView.displayStartProgramView();
-         return;
-        
-         
+
+        try {
+            //open character stream files for end user input and output
+            Snipe.inFile
+                    = new BufferedReader(new InputStreamReader(System.in));
+            Snipe.outFile
+                    = new PrintWriter(System.out, true);
+
+            //open log file
+            String filePath = "log.txt";
+            Snipe.logFile = new PrintWriter(filePath);
+
+            //create StartProgramView and start the program
+            StartProgramView startProgramView = new StartProgramView();
+            startProgramView.displayStartProgramView();
+            return;
+
         } catch (Throwable e) {
-    
-                System.out.println("Exception: " + e.toString() +
-                                   "\nCause: "   + e.getCause() +
-                                   "\nMessage "  + e.getMessage());
-                e.printStackTrace();;
-         }
- //       catch (Exception e) {
- //   
- //                System.out.println("Exception: " + e.toString() +
- //                                  "\nCause: "   + e.getCause() +
- //                                  "\nMessage "  + e.getMessage());
- //        }
+
+            System.out.println("Exception: " + e.toString()
+                    + "\nCause: " + e.getCause()
+                    + "\nMessage " + e.getMessage());
+            e.printStackTrace();;
+        } //       catch (Exception e) {
+        //   
+        //                System.out.println("Exception: " + e.toString() +
+        //                                  "\nCause: "   + e.getCause() +
+        //                                  "\nMessage "  + e.getMessage());
+        //        }
         finally {
-    
+
             try {
-                if (Snipe.inFile != null)
+                if (Snipe.inFile != null) {
                     Snipe.inFile.close();
-                if (Snipe.outFile != null)
+                }
+                if (Snipe.outFile != null) {
                     Snipe.outFile.close();
-                if (Snipe.logFile != null)
+                }
+                if (Snipe.logFile != null) {
                     Snipe.logFile.close();
-                
-             } catch (IOException ex) {
-               System.out.println("Error Closing Files");   
+                }
+
+            } catch (IOException ex) {
+                System.out.println("Error Closing Files");
                 return;
-             } 
-          }  
-         
-        
+            }
+        }
+
         //Create StartProgramView and display the start program view (welcome scene)
         StartProgramView startProgramView = new StartProgramView();
-        
-         
+
         try {
-        startProgramView.displayStartProgramView();
-        }
-        catch (Throwable te) {
+            startProgramView.displayStartProgramView();
+        } catch (Throwable te) {
             System.out.println(te.getMessage());
             te.printStackTrace();
             startProgramView.displayStartProgramView();

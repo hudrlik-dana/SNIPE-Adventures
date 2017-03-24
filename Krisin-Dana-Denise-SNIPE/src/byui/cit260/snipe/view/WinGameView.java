@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.GameControl;
@@ -18,10 +17,9 @@ import snipe.Snipe;
  *
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
-public class WinGameView extends View{
-        
+public class WinGameView extends View {
 
-    public WinGameView (){
+    public WinGameView() {
         super("\n------- Congratulations! --------"
                 + "\n You are now a S.N.I.P.E Agent."
                 + "\n---------------------------------"
@@ -58,7 +56,7 @@ public class WinGameView extends View{
             default:
 //                this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
-                           "\n*** Invalid Selection *** Try Again");    
+                        "\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;
@@ -84,6 +82,5 @@ public class WinGameView extends View{
             Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
 
 }

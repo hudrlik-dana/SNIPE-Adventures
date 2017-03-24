@@ -90,7 +90,7 @@ public class ChallengeMentalView extends View {
                 break;
             default:
                 ErrorView.display(this.getClass().getName(),
-                            "\n* Mental challenge not valid");
+                        "\n* Mental challenge not valid");
                 break;
         }
 
@@ -233,8 +233,8 @@ public class ChallengeMentalView extends View {
             default:
 //delete        this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
-                            "\n*** Invalid Selection *** Try Again");
-                
+                        "\n*** Invalid Selection *** Try Again");
+
                 break;
 
         }

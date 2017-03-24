@@ -191,9 +191,9 @@ public class ChallengeRiddleView extends View {
                         + "\n Type 2 - A coat of wet paint");
                 break;
             default:
- //               this.console.println("\n*** Country not built out yet - call Programmer");
-                 ErrorView.display(this.getClass().getName(),
-                           "\n*** Country not built out");
+                //               this.console.println("\n*** Country not built out yet - call Programmer");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Country not built out");
                 break;
         }
 
@@ -358,7 +358,7 @@ public class ChallengeRiddleView extends View {
                     }
                 }
                 if (choice.equals("2")) {
-                   this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
+                    this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n Remember you are a SNIPE agent, you can do it!");
                 }
@@ -383,9 +383,9 @@ public class ChallengeRiddleView extends View {
                 break;
 
             default:
-  //              this.console.println("\n*** Invalid Selection *** Try Again");
+                //              this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
-                            "\n*** Invalid Selection *** Try Again");
+                        "\n*** Invalid Selection *** Try Again");
                 break;
 
         }

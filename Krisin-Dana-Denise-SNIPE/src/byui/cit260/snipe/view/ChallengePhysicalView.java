@@ -271,10 +271,10 @@ public class ChallengePhysicalView extends View {
                         + "\n---------------------------------------------------------");
                 break;
             default:
-                 System.out.println("\n Invalid answer. Try again.");
- //                 ErrorView.display(this.getClass().getName(),
- //                           "\n*** Invalid Selection *** Try Again");
-                
+                System.out.println("\n Invalid answer. Try again.");
+                //                 ErrorView.display(this.getClass().getName(),
+                //                           "\n*** Invalid Selection *** Try Again");
+
                 break;
         }
     }
@@ -326,9 +326,9 @@ public class ChallengePhysicalView extends View {
                 if (choice != "3" || choice != "2" || choice != "1") {
 
                     System.out.println("\n Invalid entry. Please select answer 1, 2, or 3");
- //                 ErrorView.display(this.getClass().getName(),
- //                           "\n*** Invalid Selection *** Try Again");
-                   
+                    //                 ErrorView.display(this.getClass().getName(),
+                    //                           "\n*** Invalid Selection *** Try Again");
+
                 }
                 break;
 
@@ -344,16 +344,16 @@ public class ChallengePhysicalView extends View {
                                 + "\n dossier for your next mission.");
                         List<String> codeList = Snipe.getPlayer().getCodeList();
 
-                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
-                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
-                    }
+                        if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                            codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                        }
 
                     } else {
-                       System.out.println(
+                        System.out.println(
                                 "\n Bummer, you fell and were injured in your attempt."
                                 + "\n Maybe you should return to the Safe House to rest. Then consult "
                                 + "\n your dossier for the location of your next challenge.");
-                       //adjustPlayerHealth();
+                        //adjustPlayerHealth();
                     }
                     return true;
                 }
