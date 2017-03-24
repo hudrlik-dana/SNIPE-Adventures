@@ -36,7 +36,7 @@ public class GameMenuView extends View {
                 + "\n H - Help Menu"
                 + "\n-----------------------------------------------------------"
                 + "\n-----------------------------------------------------------"
-                + "\n Test Functions"
+                + "\n Print to File Functions"
                 + "\n "
                 + "\n 1 - Print Code List to File"
                 + "\n 2 - Print Passport to File"
