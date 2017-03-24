@@ -42,18 +42,18 @@ public class SafeHouseView extends View {
         }
         List<String> codeList = Snipe.getPlayer().getCodeList();
         if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
-                        System.out.println("\n-----------------------------------------------------------"
-                                            + "\nYou have not yet obtained the code needed to move on. You "
-                                            + "\nwill need to travel back to another location and complete"
-                                            + "\na challenge to obtain a code. Once you have a code, you "
-                                            + "\nwill return here to obtain your next Dossier and move on.");
-                    }
-                
+            System.out.println("\n-----------------------------------------------------------"
+                    + "\nYou have not yet obtained the code needed to move on. You "
+                    + "\nwill need to travel back to another location and complete"
+                    + "\na challenge to obtain a code. Once you have a code, you "
+                    + "\nwill return here to obtain your next Dossier and move on.");
+        }
+
         return true;
     }
 
     private void displayPlayerCurrentScene() throws GameControlException {
-       this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+        this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
     }
 
     private void displayMoveCountry() {
