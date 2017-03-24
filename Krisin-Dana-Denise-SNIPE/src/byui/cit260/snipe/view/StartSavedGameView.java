@@ -24,7 +24,7 @@ public class StartSavedGameView extends View {
 
     @Override
     public String getInput() {
- //delete       Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+        //delete       Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         boolean valid = false; //initialize to not valid
         String value = ""; //value to be returned
 
@@ -38,9 +38,8 @@ public class StartSavedGameView extends View {
 
                 if (value.length() < 1) { // value is blank
 //                   this.console.println("\nInvalid: entry required.");
-                 ErrorView.display(this.getClass().getName(),
-                           "\n*** Invalid: entry required.");                  
- 
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid: entry required.");
 
                 } else {
                     break; //end the loop

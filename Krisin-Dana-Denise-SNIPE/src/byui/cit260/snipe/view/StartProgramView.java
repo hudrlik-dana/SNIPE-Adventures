@@ -80,13 +80,13 @@ public class StartProgramView {
     }
 
     private String getPlayerName() {
-      Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid
 
         while (!valid) {
             System.out.println("\n" + this.promptMessage);
-            
+
             value = keyboard.nextLine(); //get next line typed on keyboard
 
 //           value = keyboard.readLine(); //get next line typed on keyboard
@@ -94,8 +94,8 @@ public class StartProgramView {
 
             if (value.length() < 1) { // value is blank
 //                System.out.println("\nInvalid: name cannot be blank");
-                  ErrorView.display(this.getClass().getName(),
-                           "\n*** Invalid: name cannot be blank");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid: name cannot be blank");
                 continue;
             }
             break; //end the loop
@@ -108,8 +108,8 @@ public class StartProgramView {
         if (playerName.length() < 2) {
 //          System.out.println("\nInvalid players name: Your name must be more than one character in length.");
             ErrorView.display(this.getClass().getName(),
-                           "\n***Invalid players name: Your name must be more than one character in length. ");        
-            
+                    "\n***Invalid players name: Your name must be more than one character in length. ");
+
             return false;
         }
 
@@ -117,9 +117,9 @@ public class StartProgramView {
         Player player = GameControl.createPlayer(playerName);
 
         if (player == null) {//if unsuccessful
-  //          System.out.println("\nError creating the player");
+            //          System.out.println("\nError creating the player");
             ErrorView.display(this.getClass().getName(),
-                       "\n***Error creating the player ");  
+                    "\n***Error creating the player ");
             return false;
         }
 

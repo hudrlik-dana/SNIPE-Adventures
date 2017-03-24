@@ -28,8 +28,21 @@ public class TravelMenuView extends View {
 
     public TravelMenuView() {
         super();
-        Country currentCountry = Snipe.getPlayer().getCurrentCountry();
+
         World world = Snipe.getCurrentGame().getWorld();
+        Country currentCountry = Snipe.getPlayer().getCurrentCountry();
+
+        if (Snipe.getPlayer().getCodeList() != null
+                && Snipe.getPlayer().getCodeList().size() == world.getCountries().indexOf(currentCountry) + 1
+                && currentCountry.getPlaces().indexOf(Snipe.getPlayer().getCurrentPlace()) == 0) {
+            //Get lastcode in Cyphercodes arraylist. You can derive which country is needed next from this.
+            int numOfCodesCollected = Snipe.getPlayer().getCodeList().size();
+            //              String lastCode = Snipe.getPlayer().getCodeList().get(lastOne);
+            //              this.console.println("Denise displays- This is the last code in the table " + lastCode);
+
+            currentCountry = world.getCountries().get(numOfCodesCollected);
+            Snipe.getPlayer().setCurrentCountry(currentCountry);
+        }
 
         String tempMenu = "\n"
                 + "\n-----------------------------------------------------------"
@@ -37,30 +50,10 @@ public class TravelMenuView extends View {
                 + "\n-----------------------------------------------------------"
                 + "\n";
 
- //Added code to check if player has a CypherCode if they don't they go to the first country (USA)
- //else it takes the last code they have and will go to the next Country
- //based on how many code pieces they have obtained. 
-         if (Snipe.getPlayer().getCodeList() == null || Snipe.getPlayer().getCodeList().isEmpty() ) {
- //           if (Snipe.getPlayer().getCodeList().isEmpty()) {
-                for (int i = 0; i < currentCountry.getPlaces().size(); i++) {
-                 tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
-                 }
-            }
-            else{
-                //Get lastcode in Cyphercodes arraylist. You can derive which country is needed next from this.
-                int lastOne = (Snipe.getPlayer().getCodeList().size()-1);
-  //              String lastCode = Snipe.getPlayer().getCodeList().get(lastOne);
-  //              this.console.println("Denise displays- This is the last code in the table " + lastCode);
-                        
-                int index = lastOne + 1;
-                Country nextCountry = world.getCountries().get(index);
-                Snipe.getPlayer().setCurrentCountry(nextCountry);
-         
-                for (int i = 0; i < nextCountry.getPlaces().size(); i++) {
-                tempMenu += "\n " + (i + 1) + " - " + nextCountry.getPlaces().get(i).getPlaceName();
-                  } 
-            } 
- 
+        for (int i = 0; i < currentCountry.getPlaces().size(); i++) {
+            tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
+        }
+
         tempMenu += "\n **************"
                 + "\n V - View Map"
                 + "\n S - Save Game"
@@ -104,9 +97,9 @@ public class TravelMenuView extends View {
             value = value.trim(); //trim off leading and trailing blanks
 
             if (value.length() < 1) { // value is blank
- //               this.console.println("\nInvalid: entry required.");
+                //               this.console.println("\nInvalid: entry required.");
                 ErrorView.display(this.getClass().getName(),
-                           "\n*** Invalid: entry required.");    
+                        "\n*** Invalid: entry required.");
             }
             break; //end the loop
         }
@@ -119,7 +112,7 @@ public class TravelMenuView extends View {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 
-        try {  
+        try {
             int numChoice = Integer.parseInt(choice);
             Snipe.getPlayer().setCurrentPlace(Snipe.getPlayer().getCurrentCountry().getPlaces().get(numChoice - 1));
 
@@ -138,15 +131,14 @@ public class TravelMenuView extends View {
                 //safe house 
                 SafeHouseView safeHouse = new SafeHouseView();
                 safeHouse.display();
- //
- //      if the passCollected is set to true for they can then travel from the MapMenuView or GameMenuView
- //
- //            if (ischallengeComplete for currentCountry) {
- //                  set passCollected to true
- //               }
- // 
-                
-                 
+                //
+                //      if the passCollected is set to true for they can then travel from the MapMenuView or GameMenuView
+                //
+                //            if (ischallengeComplete for currentCountry) {
+                //                  set passCollected to true
+                //               }
+                // 
+
                 /*Need to add trigger here to check for code piece & push player to next country.
                 
                 if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
@@ -230,16 +222,16 @@ public class TravelMenuView extends View {
 //         
             return true;
         } catch (IndexOutOfBoundsException ibe) {
- //           this.console.println("That place number doesn't exist!");
+            //           this.console.println("That place number doesn't exist!");
             ErrorView.display(this.getClass().getName(),
-                           "\n*** That place number doesn't exist!");    
+                    "\n*** That place number doesn't exist!");
         } catch (Exception e) {
             //bury this
         }
 
         switch (choice) {
             case "V": //display the map
-               this.console.println("You are at: " + Snipe.getPlayer().getCurrentPlace().getPlaceName());
+                this.console.println("You are at: " + Snipe.getPlayer().getCurrentPlace().getPlaceName());
 //                this.displayMap();
                 break;
             case "S": {
@@ -256,8 +248,8 @@ public class TravelMenuView extends View {
                 break;
             default:
 //                this.console.println("\n*** Invalid Selection *** Try Again");
-            ErrorView.display(this.getClass().getName(),
-                           "\n*** Invalid Selection *** Try Again");    
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
 
                 break;
         }

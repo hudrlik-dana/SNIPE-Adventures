@@ -41,6 +41,7 @@ public class Place implements Serializable {
         this.challengeComplete = challengeComplete;
     }
 //
+
     public String getCountryCode() {
         return countryCode;
     }

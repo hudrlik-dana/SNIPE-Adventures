@@ -22,7 +22,7 @@ public class MapMenuView extends View {
 
     public MapMenuView() {
         super();
-       this.console.print("\n"
+        this.console.print("\n"
                 + "\n------------------------------------------------------------------------------"
                 + "\n S.N.I.P.E Adventures Places"
                 + "\n------------------------------------------------------------------------------"
@@ -33,11 +33,11 @@ public class MapMenuView extends View {
 
         for (int i = 0; i < countries.size(); i++) {
             Country map = countries.get(i);
-           this.console.println(map.getName());
+            this.console.println(map.getName());
 
             List<Place> places = map.getPlaces();
             for (int j = 0; j < places.size(); j++) {
-               this.console.println("\t" + places.get(j).getPlaceName());
+                this.console.println("\t" + places.get(j).getPlaceName());
 
             }
         }
@@ -65,14 +65,14 @@ public class MapMenuView extends View {
 
         switch (choice) {
             case "T": //display the Travel Menu
- //               if (ischallengeComplete and ispasscollected) {
-                     this.displayTravelMenuView(); 
- //                  }
- //                 else{
- //                    this.console.println("\n-----------------------------------------------------------"
- //                                       + "You have not visied the safehouse. You  need to visit the "
- //                                       + "safehouse to collect your next dossier before traveling."); 
- //                         }
+                //               if (ischallengeComplete and ispasscollected) {
+                this.displayTravelMenuView();
+                //                  }
+                //                 else{
+                //                    this.console.println("\n-----------------------------------------------------------"
+                //                                       + "You have not visied the safehouse. You  need to visit the "
+                //                                       + "safehouse to collect your next dossier before traveling."); 
+                //                         }
                 break;
             case "P": //display the passport list
                 this.displayPassportList();
@@ -85,14 +85,14 @@ public class MapMenuView extends View {
                     Logger.getLogger(HelpMenuView.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-                break;
+            break;
             case "H": //Display Help Menu
                 this.displayHelpMenu();
                 break;
             default:
 //               this.console.println("\n*** Invalid Selection *** Try Again");
-                 ErrorView.display(this.getClass().getName(),
-                          "\n*** Invalid Selection *** Try Again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
                 break;
         }
 

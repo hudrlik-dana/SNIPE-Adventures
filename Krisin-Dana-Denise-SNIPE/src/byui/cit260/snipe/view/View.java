@@ -20,9 +20,9 @@ import snipe.Snipe;
 public abstract class View implements ViewInterface {
 
     protected String displayMessage;
-    
+
     protected final BufferedReader keyboard = Snipe.getInFile();
-    protected final PrintWriter     console = Snipe.getOutFile();   
+    protected final PrintWriter console = Snipe.getOutFile();
 
     public View() {
         this.displayMessage = "";
@@ -65,8 +65,8 @@ public abstract class View implements ViewInterface {
 
             if (value.length() < 1) { // value is blank
 //                this.console.println("\nInvalid: entry required.");
-                  ErrorView.display(this.getClass().getName(),
-                           "\n***Invalid: entry required.!");    
+                ErrorView.display(this.getClass().getName(),
+                        "\n***Invalid: entry required.!");
                 continue;
             }
             break; //end the loop

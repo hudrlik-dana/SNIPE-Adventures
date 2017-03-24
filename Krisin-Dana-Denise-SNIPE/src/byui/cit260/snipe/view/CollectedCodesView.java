@@ -72,9 +72,9 @@ public class CollectedCodesView extends View {
             }
             break;
             default:
- //               this.console.println("\n*** Invalid Selection *** Try Again");
+                //               this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
-                           "\n*** Invalid Selection *** Try Again");
+                        "\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;

@@ -40,7 +40,7 @@ END
 null value is used for String; -1 is used for int
  */
 public class GameControl {
-    
+
     public static Player createPlayer(String name) throws GameControlException {
 
         if (name == null) {
@@ -529,14 +529,13 @@ public class GameControl {
 
         try (FileInputStream fips = new FileInputStream(filePath)) {
             ObjectInputStream input = new ObjectInputStream(fips);
-                    
+
             game = (Game) input.readObject();
-        } 
-        catch (Exception e) {
+        } catch (Exception e) {
             throw new GameControlException(e.getMessage());
         }
 
-        Snipe.setCurrentGame(game); 
+        Snipe.setCurrentGame(game);
     }
 
 }

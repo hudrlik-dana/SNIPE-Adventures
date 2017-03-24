@@ -50,10 +50,10 @@ public class MainMenuView extends View {
                 } catch (GameControlException ex) {
                     Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
-                Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
-            }
+                    Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
             break;
             case "N": {
@@ -120,16 +120,16 @@ public class MainMenuView extends View {
             ObjectInputStream input = new ObjectInputStream(fips);
 
             game = (Game) input.readObject();
-        try {
-            GameControl.getSavedGame(filePath);
-        } catch (Exception e) {
-            throw new GameControlException(e.getMessage());
-        }
+            try {
+                GameControl.getSavedGame(filePath);
+            } catch (Exception e) {
+                throw new GameControlException(e.getMessage());
+            }
 
-        Snipe.setCurrentGame(game);
-        Snipe.setPlayer(Snipe.getCurrentGame().getPlayer());
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();
+            Snipe.setCurrentGame(game);
+            Snipe.setPlayer(Snipe.getCurrentGame().getPlayer());
+            GameMenuView gameMenu = new GameMenuView();
+            gameMenu.display();
         }
     }
 
