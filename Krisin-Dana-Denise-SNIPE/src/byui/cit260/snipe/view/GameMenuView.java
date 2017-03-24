@@ -9,6 +9,7 @@ import byui.cit260.snipe.exceptions.GameControlException;
 import java.util.Scanner;
 import snipe.Snipe;
 import byui.cit260.snipe.model.Dossier;
+import byui.cit260.snipe.model.World;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,10 +36,11 @@ public class GameMenuView extends View {
                 + "\n H - Help Menu"
                 + "\n-----------------------------------------------------------"
                 + "\n-----------------------------------------------------------"
-                + "\n Test Functions"
+                + "\n Print to File Functions"
                 + "\n "
                 + "\n 1 - Print Code List to File"
                 + "\n 2 - Print Passport to File"
+                + "\n 3 - Print List of Countries"
                 + "\n-----------------------------------------------------------");
     }
 
@@ -77,15 +79,6 @@ public class GameMenuView extends View {
             break;
             case "T": {
                 try {
-                    //                 if (ischallengeComplete and ispasscollected) {
-                    //                    this.displayTravelMenuView(); 
-                    //                  }
-                    //                 else{
-                    //                    this.console.println("\n-----------------------------------------------------------"
-                    //                                       + "You have not visied the safehouse. You  need to visit the "
-                    //                                       + "safehouse to collect your next dossier before traveling."); 
-                    //                         }    
-                    //display the TravelMenu
                     this.displayTravelMenuView();
                 } catch (GameControlException ex) {
                     Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
@@ -124,6 +117,9 @@ public class GameMenuView extends View {
                 break;
             case "2":
                 this.writePassport();
+                break;
+            case "3":
+                this.writeCountries();
                 break;
             default:
 //                this.console.println("\n*** Invalid Selection *** Try Again");
@@ -243,5 +239,38 @@ public class GameMenuView extends View {
 
         }
     }
+  private void writeCountries() {
+        String filePath = null;
+        boolean valid = false;
+       World world = Snipe.getCurrentGame().getWorld();
 
+        this.console.println("Enter the name you want to save your Country/Place List as: ");
+        while (!valid) {
+            try {
+                //prompt for player input
+
+                filePath = this.keyboard.readLine();
+                filePath = filePath.trim();
+
+                if (filePath.length() < 1) {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n***Invalid: entry required.!");
+                } else {
+                    valid = true;
+                }
+
+            } catch (IOException ex) {
+                Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        try {
+            //save inventory list to specified file
+            WriteCountryList.WriteCountryList(filePath);
+            this.console.println("\nCountry/Place List successfully written to file " + filePath + ".");
+        } catch (IOException ioe) {
+            ErrorView.display("GameMenuView", ioe.getMessage());
+
+        }
+    }
 }

@@ -32,15 +32,21 @@ public class TravelMenuView extends View {
         World world = Snipe.getCurrentGame().getWorld();
         Country currentCountry = Snipe.getPlayer().getCurrentCountry();
 
-        if (Snipe.getPlayer().getCodeList() != null
+        if (Snipe.getPlayer().getCodeList() != null  //not null means it does have a memory space avail for codelist. 
                 && Snipe.getPlayer().getCodeList().size() == world.getCountries().indexOf(currentCountry) + 1
+                //the below condition is checking for the current place within a country and making sure
+                //it is safehouse=0 index or 1 on the menu. 
                 && currentCountry.getPlaces().indexOf(Snipe.getPlayer().getCurrentPlace()) == 0) {
-            //Get lastcode in Cyphercodes arraylist. You can derive which country is needed next from this.
+            //Get lastcode in Cyphercodes arraylist using size. Now you know how many codes are in the table. 
             int numOfCodesCollected = Snipe.getPlayer().getCodeList().size();
-            //              String lastCode = Snipe.getPlayer().getCodeList().get(lastOne);
-            //              this.console.println("Denise displays- This is the last code in the table " + lastCode);
+            //
+            //leave until final cleanup.  
+            //    String lastCode = Snipe.getPlayer().getCodeList().get(lastOne);
+            //    this.console.println("Denise displays- This is the last code in the table " + lastCode);
 
+            //Taking the number of codes collected and setting it to current country. Updating it to currentCountry
             currentCountry = world.getCountries().get(numOfCodesCollected);
+            //Setting the players currentCountry to the current country based on the above set currentCountry variable.
             Snipe.getPlayer().setCurrentCountry(currentCountry);
         }
 
@@ -49,7 +55,7 @@ public class TravelMenuView extends View {
                 + "\n Travel Menu                                                "
                 + "\n-----------------------------------------------------------"
                 + "\n";
-
+//spin thru  arraylist getting places and placenames from currentCountry
         for (int i = 0; i < currentCountry.getPlaces().size(); i++) {
             tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
         }
@@ -130,15 +136,8 @@ public class TravelMenuView extends View {
             if (numChoice == 1) {
                 //safe house 
                 SafeHouseView safeHouse = new SafeHouseView();
-                safeHouse.display();
-                //
-                //      if the passCollected is set to true for they can then travel from the MapMenuView or GameMenuView
-                //
-                //            if (ischallengeComplete for currentCountry) {
-                //                  set passCollected to true
-                //               }
-                // 
-
+                safeHouse.display();              
+                
                 /*Need to add trigger here to check for code piece & push player to next country.
                 
                 if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
@@ -188,16 +187,6 @@ public class TravelMenuView extends View {
                     }*/
             }
             if (numChoice == 2) {
-                //First two lines don't work, why?  I don't know why? --Denise 
-                //      It's fixed now! 
-                //I learned I can't print all the stuff on Country object.  Doesn't know what you want. 
-                //  Must specify the actual varable. Must be aware of the class and what you are asking for.
-//              Country currentCountry = Snipe.getPlayer().getCurrentCountry();
-//              this.console.println("\n this is second "  + currentCountry.getName());
-// 
-                //this line doesn't work also. don't know why --Denise
-//              this.console.println("\n this is second " + Snipe.getPlayer().getCurrentCountry());
-//
                 //this line works
 //              this.console..println("\n this is second " + Snipe.getPlayer().getCurrentPlace().getCountryCode());
 //

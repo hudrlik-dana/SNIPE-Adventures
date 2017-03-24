@@ -21,27 +21,8 @@ public class Place implements Serializable {
     private String placeScene;
     private String masterCodePiece;
     private boolean challenge;
-// I added these last to as a solution for stopping player from travel when the didn't do to safehouse.
-    private boolean challengeComplete;
-    private boolean passCollected;
 
-    public boolean isPassCollected() {
-        return passCollected;
-    }
-
-    public void setPassCollected(boolean passCollected) {
-        this.passCollected = passCollected;
-    }
-
-    public boolean isChallengeComplete() {
-        return challengeComplete;
-    }
-
-    public void setChallengeComplete(boolean challengeComplete) {
-        this.challengeComplete = challengeComplete;
-    }
-//
-
+    
     public String getCountryCode() {
         return countryCode;
     }

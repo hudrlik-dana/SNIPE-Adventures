@@ -5,6 +5,7 @@
  */
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.model.World;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import snipe.Snipe;
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
 class WriteCodeList extends View {
-
+    
     public static void writeCodeList(ArrayList<String> codeList, String filepath) throws IOException {
 
         try (PrintWriter output = new PrintWriter(filepath)) {

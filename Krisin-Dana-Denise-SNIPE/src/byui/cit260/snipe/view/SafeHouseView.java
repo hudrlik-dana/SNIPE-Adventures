@@ -15,45 +15,63 @@ import snipe.Snipe;
  *
  * @author denisegoetz
  */
-public class SafeHouseView extends View {
+//public class SafeHouseView extends View {
+public class SafeHouseView {
 
-    public SafeHouseView() {
-        super("\n"
+ //   public SafeHouseView() {
+    public void display() {
+  //      super("\n"
+        System.out.println("\n"         
                 + "\n-----------------------------------------------------------"
                 + "\n             Safe house - Get some rest!"
                 + "\n-----------------------------------------------------------"
                 + "\nEnter any value to see more details about this safe house."
                 + "\n-----------------------------------------------------------"
-                + "\n"
-        );
-    }
+                + "\n" );
+      String countryName = Snipe.getPlayer().getCurrentCountry().getName();
 
-    @Override
-    public boolean doAction(String choice) {
-
-        choice = choice.toUpperCase(); //convert choice to upper case
-
-        String countryName = Snipe.getPlayer().getCurrentCountry().getName();
-
-        for (SafeHouse safeHouse : SafeHouse.values()) {
+       for (SafeHouse safeHouse : SafeHouse.values()) {
             if (countryName.equals(safeHouse.getSafeHouseCountry())) {
-                this.console.println("\n" + safeHouse.getSafeHouseDesc());
+                System.out.println("\n" + safeHouse.getSafeHouseDesc());
             }
         }
         List<String> codeList = Snipe.getPlayer().getCodeList();
         if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
-            System.out.println("\n-----------------------------------------------------------"
-                    + "\nYou have not yet obtained the code needed to move on. You "
-                    + "\nwill need to travel back to another location and complete"
-                    + "\na challenge to obtain a code. Once you have a code, you "
-                    + "\nwill return here to obtain your next Dossier and move on.");
-        }
-
-        return true;
+           System.out.println("\n-----------------------------------------------------------"
+                    + "\n You have not yet obtained the code needed to move on. You "
+                    + "\n will need to travel back to another location and complete"
+                    + "\n a challenge to obtain a code. Once you have a code, you "
+                    + "\n will return here to obtain your next Dossier and move on.");
+       }        
+       
     }
 
+//    @Override
+//    public boolean doAction(String choice) {
+
+//        choice = choice.toUpperCase(); //convert choice to upper case
+
+  //      String countryName = Snipe.getPlayer().getCurrentCountry().getName();
+
+ //       for (SafeHouse safeHouse : SafeHouse.values()) {
+ //           if (countryName.equals(safeHouse.getSafeHouseCountry())) {
+ //               this.console.println("\n" + safeHouse.getSafeHouseDesc());
+ //           }
+ //       }
+ //       List<String> codeList = Snipe.getPlayer().getCodeList();
+ //       if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+//            System.out.println("\n-----------------------------------------------------------"
+//                    + "\n You have not yet obtained the code needed to move on. You "
+//                    + "\n will need to travel back to another location and complete"
+//                    + "\n a challenge to obtain a code. Once you have a code, you "
+//                    + "\n will return here to obtain your next Dossier and move on.");
+//        }
+
+//        return true;
+//    }
+
     private void displayPlayerCurrentScene() throws GameControlException {
-        this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
+        System.out.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
     }
 
     private void displayMoveCountry() {

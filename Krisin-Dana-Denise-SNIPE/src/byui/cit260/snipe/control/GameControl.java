@@ -258,7 +258,7 @@ public class GameControl {
                 + "\n stone detail is so fine the patterns in parts could be described"
                 + "\n as lace.  You step out onto the paver street and see this 2-story"
                 + "\n high gate entryway made of stone and rod iron. Next you see the"
-                + " Triumph of Faith statue tarnished with a grey-blue patina.");
+                + "\n Triumph of Faith statue tarnished with a grey-blue patina.");
         cathedralSeville.setMasterCodePiece("56XS W61 4H");
         spain.addPlace(cathedralSeville);
 
