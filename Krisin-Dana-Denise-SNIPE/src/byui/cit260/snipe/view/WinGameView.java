@@ -26,7 +26,7 @@ public class WinGameView extends View {
                 + "\n Take a well desevved vacation!  "
                 + "\n--------------------------------*"
                 + "\n N - Start New Game              "
-                + "\n Q - Exit Game                   "
+                + "\n X - Exit Game                   "
                 + "\n---------------------------------");
     }
 

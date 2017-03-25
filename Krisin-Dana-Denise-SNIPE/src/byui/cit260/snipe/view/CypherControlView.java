@@ -78,7 +78,7 @@ public class CypherControlView extends View {
 
                 break;
         }
-        return false;
+        return true;
     }
 
     private void displayWinGameView() throws GameControlException {
