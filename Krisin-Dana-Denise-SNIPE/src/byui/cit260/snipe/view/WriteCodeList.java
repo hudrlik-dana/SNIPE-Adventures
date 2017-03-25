@@ -13,7 +13,7 @@ import snipe.Snipe;
 
 /**
  *
- * @author aingealfire@gmail.com (new16014@byui.edu)
+ * @author danahudrlik
  */
 class WriteCodeList extends View {
 

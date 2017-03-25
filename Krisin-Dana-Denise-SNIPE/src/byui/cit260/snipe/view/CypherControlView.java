@@ -15,7 +15,7 @@ import snipe.Snipe;
 
 /**
  *
- * @author aingealfire@gmail.com (new16014@byui.edu)
+ * @author danahudrlik
  */
 public class CypherControlView extends View {
 
