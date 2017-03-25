@@ -210,7 +210,7 @@ public class GameMenuView extends View {
         String filePath = null;
         boolean valid = false;
 
-        this.console.println("Enter the name you want to save your Code List as: ");
+        this.console.println("Enter the name you want to save your Passport List as: ");
         while (!valid) {
             try {
                 //prompt for player input
