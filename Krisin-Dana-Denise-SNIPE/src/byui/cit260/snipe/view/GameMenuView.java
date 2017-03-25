@@ -239,10 +239,11 @@ public class GameMenuView extends View {
 
         }
     }
-  private void writeCountries() {
+
+    private void writeCountries() {
         String filePath = null;
         boolean valid = false;
-       World world = Snipe.getCurrentGame().getWorld();
+        World world = Snipe.getCurrentGame().getWorld();
 
         this.console.println("Enter the name you want to save your Country/Place List as: ");
         while (!valid) {

@@ -22,7 +22,6 @@ public class Place implements Serializable {
     private String masterCodePiece;
     private boolean challenge;
 
-    
     public String getCountryCode() {
         return countryCode;
     }

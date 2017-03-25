@@ -32,7 +32,7 @@ public class TravelMenuView extends View {
         World world = Snipe.getCurrentGame().getWorld();
         Country currentCountry = Snipe.getPlayer().getCurrentCountry();
 
-        if (Snipe.getPlayer().getCodeList() != null  //not null means it does have a memory space avail for codelist. 
+        if (Snipe.getPlayer().getCodeList() != null //not null means it does have a memory space avail for codelist. 
                 && Snipe.getPlayer().getCodeList().size() == world.getCountries().indexOf(currentCountry) + 1
                 //the below condition is checking for the current place within a country and making sure
                 //it is safehouse=0 index or 1 on the menu. 
@@ -52,7 +52,7 @@ public class TravelMenuView extends View {
 
         String tempMenu = "\n"
                 + "\n-----------------------------------------------------------"
-                + "\n Travel Menu                                                "
+                + "\n Travel Menu"
                 + "\n-----------------------------------------------------------"
                 + "\n";
 //spin thru  arraylist getting places and placenames from currentCountry
@@ -60,7 +60,7 @@ public class TravelMenuView extends View {
             tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
         }
 
-        tempMenu += "\n **************"
+        tempMenu += "\n-----------------------------------------------------------"
                 + "\n V - View Map"
                 + "\n S - Save Game"
                 + "\n H - Help Menu"
@@ -136,8 +136,8 @@ public class TravelMenuView extends View {
             if (numChoice == 1) {
                 //safe house 
                 SafeHouseView safeHouse = new SafeHouseView();
-                safeHouse.display();              
-                
+                safeHouse.display();
+
                 /*Need to add trigger here to check for code piece & push player to next country.
                 
                 if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {

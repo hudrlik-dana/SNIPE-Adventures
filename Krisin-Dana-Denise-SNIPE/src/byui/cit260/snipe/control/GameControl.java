@@ -107,15 +107,7 @@ public class GameControl {
         snipeAcademy.setChallenge(false);
         snipeAcademy.setCountryCode("U");
         snipeAcademy.setPlaceName("Snipe Academy");
-        snipeAcademy.setPlaceScene("\n You're at the Snipe Academy. This is where all secret "
-                + "\n agents begin training, graduate upon completion of their"
-                + "\n training graduate upon completion of their training mission,"
-                + "\n and recover from death defying accidents. The exact "
-                + "\n location of the S.N.I.P.E. academy is classified. This is"
-                + "\n the safe-house in the USA. Your trainers and handlers are"
-                + "\n here to help you become the best of the best, unseen by most,"
-                + "\n invisible in plain sight. The code to enter is your secret spy"
-                + "\n name and passport.");
+        snipeAcademy.setPlaceScene("\n You're at the Snipe Academy.");
         snipeAcademy.setMasterCodePiece("327 W5HG4M1.");
         usa.addPlace(snipeAcademy);
 
@@ -149,15 +141,7 @@ public class GameControl {
         rhineRiver.setChallenge(false);
         rhineRiver.setCountryCode("G");
         rhineRiver.setPlaceName("Rhine River");
-        rhineRiver.setPlaceScene("\n You take a boat on the Rhine River and the city seems to"
-                + "\n get smaller and smaller the further south the boat sails. A"
-                + "\n thick border of trees line the river and you are entering"
-                + "\n the country side. Along the river, you see what looks like"
-                + "\n a spectacular castle jutting out of the greenery along the"
-                + "\n river. The sun bathes the masonry of the castle, illuminating"
-                + "\n all the details of the peaks, windows and a rustic cylinder"
-                + "\n that looks like a farming silo that is directly behind the"
-                + "\n main building.");
+        rhineRiver.setPlaceScene("\n You take a boat on the Rhine River.");
         rhineRiver.setMasterCodePiece("6MG4W3G5 V37 V567.");
         germany.addPlace(rhineRiver);
 
@@ -204,15 +188,7 @@ public class GameControl {
         westminsterAbbey.setChallenge(false);
         westminsterAbbey.setCountryCode("E");
         westminsterAbbey.setPlaceName("Westminster Abbey");
-        westminsterAbbey.setPlaceScene("\n You arrived at the Westminster Abbey, a gothic styled church of"
-                + "\n the 13th century. Steeped deep in history this building has witnessed"
-                + "\n every coronation of since the 10th century and sixteen royal"
-                + "\n weddings. Recalling history, you remember that the Abbey is a"
-                + "\n burial place of kings, statesmen, poets, scientists, warriors and musicians."
-                + "\n This regal, magnificent building has the most gorgeous details."
-                + "\n The windows are a work of geometric art with their varying shapes"
-                + "\n and patterns of leaded glass. People are bustling around, both"
-                + "\n inside and outside of the church.");
+        westminsterAbbey.setPlaceScene("\n You grab a taxi and head to Westminster Abbey");
         westminsterAbbey.setMasterCodePiece("W5X4H43M");
         england.addPlace(westminsterAbbey);
 
@@ -253,12 +229,7 @@ public class GameControl {
         cathedralSeville.setChallenge(false);
         cathedralSeville.setCountryCode("S");
         cathedralSeville.setPlaceName("Cathedral of Seville");
-        cathedralSeville.setPlaceScene("\n A taxi drops you off at the Cathedral of Seville. The building"
-                + "\n is adorned  with rich detail of centuries past architecture. The"
-                + "\n stone detail is so fine the patterns in parts could be described"
-                + "\n as lace.  You step out onto the paver street and see this 2-story"
-                + "\n high gate entryway made of stone and rod iron. Next you see the"
-                + "\n Triumph of Faith statue tarnished with a grey-blue patina.");
+        cathedralSeville.setPlaceScene("\n A taxi drops you off at the Cathedral of Seville.");
         cathedralSeville.setMasterCodePiece("56XS W61 4H");
         spain.addPlace(cathedralSeville);
 
@@ -300,12 +271,7 @@ public class GameControl {
         leninsMausoleum.setChallenge(false);
         leninsMausoleum.setCountryCode("R");
         leninsMausoleum.setPlaceName("Lenin's Mausoleum");
-        leninsMausoleum.setPlaceScene("\n After arriving in Red Square in Moscow, you see Lenin’s Mausoleum."
-                + "\n The mainly red stone building contrasts nicely with the charcoal"
-                + "\n grey accent stones and grey paver brick streets. The overall look of"
-                + "\n the building is masculine due to its color and multileveled rectangular"
-                + "\n shapes. The red brick wall behind the building stretches upward the"
-                + "\n the Mausoleum, serving as a background.");
+        leninsMausoleum.setPlaceScene("\n After arriving in Red Square in Moscow, you see Lenin’s Mausoleum.");
         leninsMausoleum.setMasterCodePiece("7N M5PH3M");
         russia.addPlace(leninsMausoleum);
 
@@ -345,11 +311,7 @@ public class GameControl {
         cafeFrance.setChallenge(false);
         cafeFrance.setCountryCode("F");
         cafeFrance.setPlaceName("Sidewalk Cafe in France");
-        cafeFrance.setPlaceScene("\n You walk to the Cafe De Flore as instructed. It’s easy to find because"
-                + "\n of its white lettering mounted  to the edge the roof just above the "
-                + "\n building. It’s a corner cafe with large round glass windows. Small"
-                + "\n bistro tables outside form a semicircle around the rounded building."
-                + "\n People are dining while reading the newspaper or talking to friends.");
+        cafeFrance.setPlaceScene("\n You walk to the Cafe De Flore as instructed.");
         cafeFrance.setMasterCodePiece("W5X4H43MH W5G57N4M5");
         france.addPlace(cafeFrance);
 
@@ -389,10 +351,7 @@ public class GameControl {
         cnTower.setChallenge(false);
         cnTower.setCountryCode("C");
         cnTower.setPlaceName("CN Tower");
-        cnTower.setPlaceScene("\n You travel to Toronto, Ontario in Canada. The city has many tall buildings"
-                + "\n but the CN tower is close to double of the tallest building from the naked"
-                + "\n eye. The building has pole like structure and the main living space near"
-                + "\n the top revolving 360 degrees like a doughnut slowly turning on a stick.");
+        cnTower.setPlaceScene("\n You travel to Toronto, Ontario in Canada.");
         cnTower.setMasterCodePiece("6MW 327");
         canada.addPlace(cnTower);
 
@@ -428,12 +387,7 @@ public class GameControl {
         saoPaulo.setChallenge(false);
         saoPaulo.setCountryCode("B");
         saoPaulo.setPlaceName("Sao Paulo");
-        saoPaulo.setPlaceScene("\n You are headed for Brazil’s largest city, Sao Paulo. The tropical to"
-                + "\n subtropical climate makes it warm year-round but have unpredictable"
-                + "\n monsoons. This is a well-established city densely populated with "
-                + "\n skyscrapers and building of all kinds. Even from the air the view"
-                + "\n is a landscape of tall buildings covering the earth. In the far of"
-                + "\n distance there are mountains that can only be seen by air.");
+        saoPaulo.setPlaceScene("\n You are headed for Brazil’s largest city, Sao Paulo.");
         saoPaulo.setMasterCodePiece("V64GS 4H GS5");
         brazil.addPlace(saoPaulo);
 
@@ -470,14 +424,7 @@ public class GameControl {
         melbourneJail.setChallenge(false);
         melbourneJail.setCountryCode("A");
         melbourneJail.setPlaceName("Old Melbourne Jail");
-        melbourneJail.setPlaceScene("\n You are headed to the Old Melbourne Jail in Victoria, Australia."
-                + "\n It is a museum now but has quite of history and some say it is"
-                + "\n haunted. You pull up and see a thick two-story brick wall with"
-                + "\n an archway. You enter and see the complex. The jail is constructed"
-                + "\n of charcoal grey colored cinder block. The building itself looks"
-                + "\n a bit like a saltbox construction where it is one large rectangle"
-                + "\n atop another. Each small window has metal bars. The whole scene is"
-                + "\n dreary and feels like you could be trapped.");
+        melbourneJail.setPlaceScene("\n You are headed to the Old Melbourne Jail in Victoria, Australia.");
         melbourneJail.setMasterCodePiece("6 W61 3V");
         australia.addPlace(melbourneJail);
 

@@ -20,8 +20,9 @@ import snipe.Snipe;
  */
 public class WriteCountryList extends View {
 //    public static void WriteCountryList(ArrayList<Country> countries, String filepath) throws IOException {
-      public static void WriteCountryList(String filepath) throws IOException {
- 
+
+    public static void WriteCountryList(String filepath) throws IOException {
+
         try (PrintWriter output = new PrintWriter(filepath)) {
 
             //write header
@@ -33,16 +34,16 @@ public class WriteCountryList extends View {
             if (countries.isEmpty()) {
                 //do nothing
             } else {   //write list
-                   for (int i = 0; i < countries.size(); i++) {
-                       Country map = countries.get(i);
-                       output.println(map.getName());
+                for (int i = 0; i < countries.size(); i++) {
+                    Country map = countries.get(i);
+                    output.println(map.getName());
 
-                       List<Place> places = map.getPlaces();
-                       for (int j = 0; j < places.size(); j++) {
-                       output.println("\t" + places.get(j).getPlaceName());
-            }
-        }
-                
+                    List<Place> places = map.getPlaces();
+                    for (int j = 0; j < places.size(); j++) {
+                        output.println("\t" + places.get(j).getPlaceName());
+                    }
+                }
+
             }
             output.flush();
         } catch (Exception e) {
@@ -54,4 +55,4 @@ public class WriteCountryList extends View {
     public boolean doAction(String value) {
         return false;
     }
-} 
+}

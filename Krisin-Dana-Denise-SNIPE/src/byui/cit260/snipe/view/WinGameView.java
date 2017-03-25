@@ -44,7 +44,7 @@ public class WinGameView extends View {
                     Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-            case "Q": {
+            case "X": {
                 try {
                     //Exit Game
                     this.exitGame();
@@ -75,12 +75,32 @@ public class WinGameView extends View {
     }
 
     private void exitGame() throws GameControlException {
-//        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+        //delete       Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         try {
+            this.console.println("Do you wish to save the game before exiting?  Y/N");
+            String value = "";
+            value = keyboard.readLine();
+            value.trim();
+            if ((value.toUpperCase().charAt(0)) == 'Y') {
+                this.saveGame();
+            }
             System.exit(0);
         } catch (Exception ex) {
             Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
+    private void saveGame() throws GameControlException {
+        //prompt for and get the name of the file for saving
+        SaveGameView saveGameView = new SaveGameView();
+        String filePath = saveGameView.getInput();
+
+        try {
+            //save the game to the specified file
+            GameControl.saveGame(Snipe.getCurrentGame(), filePath);
+
+        } catch (GameControlException gce) {
+            ErrorView.display("MainMenuView", gce.getMessage());
+        }
+    }
 }

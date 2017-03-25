@@ -23,7 +23,7 @@ public class CypherControlView extends View {
 
     public CypherControlView() {
         super();
-        CypherControl cypherDecoder = new CypherControl();
+        //CypherControl cypherDecoder = new CypherControl();
 
         //display cypher decoder  
         this.console.println(

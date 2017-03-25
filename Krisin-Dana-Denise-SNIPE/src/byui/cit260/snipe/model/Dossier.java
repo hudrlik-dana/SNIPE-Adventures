@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 public enum Dossier implements Serializable {
 
-    USA("\n\nWelcome home to the United States of America"
+    USA("\nWelcome home to the United States of America"
             + "\n-----------------------------------------"
             + "\n Known as the land of the free and the   "
             + "\n home of the brave, the USA is a diverse "
@@ -38,7 +38,7 @@ public enum Dossier implements Serializable {
             + "\n   your master code pieces to decypher   "
             + "\n   the top secret message.               "
             + "\n ----------------------------------------"),
-    GERMANY("\n\nWelcome to Germany"
+    GERMANY("\nWelcome to Germany"
             + "\n-----------------------------------------"
             + "\n Germany is a bustling country with many "
             + "\n international travelers. It will be a   "
@@ -63,7 +63,7 @@ public enum Dossier implements Serializable {
             + "\n   Pick up the dossier for your next     "
             + "\n   mission. Travel to your next country. "
             + "\n ----------------------------------------"),
-    ENGLAND("\n\nWelcome to the United Kingdom"
+    ENGLAND("\nWelcome to the United Kingdom"
             + "\n-----------------------------------------"
             + "\n The weather is typically overcast and   "
             + "\n damp. Tourist are few and police are    "
@@ -87,7 +87,7 @@ public enum Dossier implements Serializable {
             + "\n   Pick up the dossier for your next     "
             + "\n   mission. Travel to your next country. "
             + "\n ----------------------------------------"),
-    SPAIN("\n\nWelcome to Spain"
+    SPAIN("\nWelcome to Spain"
             + "\n-----------------------------------------"
             + "\n The old narrow streets are lined with   "
             + "\n ancient stone buildings and street markets."
@@ -112,7 +112,7 @@ public enum Dossier implements Serializable {
             + "\n   Pick up the dossier for your next     "
             + "\n   mission. Travel to your next country. "
             + "\n ----------------------------------------"),
-    RUSSIA("\n\nWelcome Russia"
+    RUSSIA("\nWelcome Russia"
             + "\n-----------------------------------------"
             + "\n It's hard to tell the difference between"
             + "\n natives, tourists, and KGB agents. All  "
@@ -135,7 +135,7 @@ public enum Dossier implements Serializable {
             + "\n   Pick up the dossier for your next     "
             + "\n   mission. Travel to your next country. "
             + "\n ----------------------------------------"),
-    FRANCE("\n\nWelcome to France"
+    FRANCE("\nWelcome to France"
             + "\n-----------------------------------------"
             + "\n A cultural hub of sidewalk cafes and world"
             + "\n famous tourist attractions abound in this"
@@ -159,7 +159,7 @@ public enum Dossier implements Serializable {
             + "\n   Pick up the dossier for your next     "
             + "\n   mission. Travel to your next country. "
             + "\n ----------------------------------------"),
-    CANADA("\n\nWelcome to Canada"
+    CANADA("\nWelcome to Canada"
             + "\n-----------------------------------------"
             + "\n The land is broken up by tall towering  "
             + "\n government buildings and winter Olympic "
@@ -181,7 +181,7 @@ public enum Dossier implements Serializable {
             + "\n   Pick up the dossier for your next     "
             + "\n   mission. Travel to your next country. "
             + "\n ----------------------------------------"),
-    BRAZIL("\n\nWelcome to Brazil"
+    BRAZIL("\nWelcome to Brazil"
             + "\n-----------------------------------------"
             + "\n White sandy beaches and street markets  "
             + "\n dot the horizon. The sunshine is warm and"
@@ -205,7 +205,7 @@ public enum Dossier implements Serializable {
             + "\n   Pick up the dossier for your next     "
             + "\n   mission. Travel to your next country. "
             + "\n ----------------------------------------"),
-    AUSTRALIA("\n\nWelcome to Australia"
+    AUSTRALIA("\nWelcome to Australia"
             + "\n-----------------------------------------"
             + "\n The land down under is hot and humid.   "
             + "\n The only way to tell a tourist from a   "

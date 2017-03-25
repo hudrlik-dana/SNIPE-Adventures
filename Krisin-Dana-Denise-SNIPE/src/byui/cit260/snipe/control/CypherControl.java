@@ -18,7 +18,7 @@ public class CypherControl extends View {
 
     public CypherControl() {
         super();
-        CypherControl cypherDecoder = new CypherControl();
+        //CypherControl cypherControl = new CypherControl();
 
         //display cypher decoder  
         this.console.println(

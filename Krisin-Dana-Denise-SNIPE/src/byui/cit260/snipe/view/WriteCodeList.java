@@ -16,7 +16,7 @@ import snipe.Snipe;
  * @author aingealfire@gmail.com (new16014@byui.edu)
  */
 class WriteCodeList extends View {
-    
+
     public static void writeCodeList(ArrayList<String> codeList, String filepath) throws IOException {
 
         try (PrintWriter output = new PrintWriter(filepath)) {
