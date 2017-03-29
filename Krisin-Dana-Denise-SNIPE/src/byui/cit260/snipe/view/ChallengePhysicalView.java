@@ -318,6 +318,8 @@ public class ChallengePhysicalView extends View {
                             + "\n to contact your handler and receive the dossier for your"
                             + "\n next mission.");
                     List<String> codeList = Snipe.getPlayer().getCodeList();
+                    
+                    //Check to see if the player has the code for the current place, if not, add it to codelist array.
 
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
@@ -326,9 +328,6 @@ public class ChallengePhysicalView extends View {
                 if (choice != "3" || choice != "2" || choice != "1") {
 
                     System.out.println("\n Invalid entry. Please select answer 1, 2, or 3");
-                    //                 ErrorView.display(this.getClass().getName(),
-                    //                           "\n*** Invalid Selection *** Try Again");
-
                 }
                 break;
 

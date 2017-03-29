@@ -152,6 +152,11 @@ public class ChallengeMentalView extends View {
                             + "\n the equation. Recalculate and try again or travel to another"
                             + "\n location and try a different challenge.");
                 }
+                else{
+                     ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
+                }
+                
                 break;
 
             case "Spain":  //They chose an answer for Spain challenge
@@ -186,6 +191,10 @@ public class ChallengeMentalView extends View {
                             + "\n for additional clues to solve the puzzle. Recalculate and"
                             + "\n try again or travel to another location and try a"
                             + "\n different challenge.");
+                }
+                else{
+                     ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
@@ -227,6 +236,10 @@ public class ChallengeMentalView extends View {
                             + "\n for additional clues to solve the puzzle. Recalculate and"
                             + "\n try again or travel to another location and try a"
                             + "\n different challenge.");
+                }
+                else{
+                     ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
