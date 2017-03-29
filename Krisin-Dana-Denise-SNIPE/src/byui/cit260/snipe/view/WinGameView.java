@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.GameControl;
 import byui.cit260.snipe.exceptions.GameControlException;
-import java.io.IOException;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import snipe.Snipe;
@@ -54,7 +48,6 @@ public class WinGameView extends View {
             }
             break;
             default:
-//                this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
                 break;
@@ -75,7 +68,6 @@ public class WinGameView extends View {
     }
 
     private void exitGame() throws GameControlException {
-        //delete       Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         try {
             this.console.println("Do you wish to save the game before exiting?  Y/N");
             String value = "";

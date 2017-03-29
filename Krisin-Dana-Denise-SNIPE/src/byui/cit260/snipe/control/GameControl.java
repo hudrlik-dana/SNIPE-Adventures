@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.snipe.control;
 
 import byui.cit260.snipe.exceptions.GameControlException;
@@ -11,14 +7,11 @@ import byui.cit260.snipe.model.Game;
 import byui.cit260.snipe.model.Place;
 import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.model.World;
-import byui.cit260.snipe.view.GameMenuView;
-import byui.cit260.snipe.view.MainMenuView;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Random;
-import java.util.ArrayList;
 import snipe.Snipe;
 
 /**
@@ -26,19 +19,7 @@ import snipe.Snipe;
  * @author danahudrlik
  */
 
-/*
-createPlayer(name): Player
-BEGIN
-    IF (name == null ) THEN
-        RETURN null
 
-    Create Player object
-    Set the name in the player object
-    Save the Player as a global variable
-END
-
-null value is used for String; -1 is used for int
- */
 public class GameControl {
 
     public static Player createPlayer(String name) throws GameControlException {

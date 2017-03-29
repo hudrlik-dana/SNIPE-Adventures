@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.GameControl;
@@ -39,10 +35,6 @@ public class TravelMenuView extends View {
                 && currentCountry.getPlaces().indexOf(Snipe.getPlayer().getCurrentPlace()) == 0) {
             //Get lastcode in Cyphercodes arraylist using size. Now you know how many codes are in the table. 
             int numOfCodesCollected = Snipe.getPlayer().getCodeList().size();
-            //
-            //leave until final cleanup.  
-            //    String lastCode = Snipe.getPlayer().getCodeList().get(lastOne);
-            //    this.console.println("Denise displays- This is the last code in the table " + lastCode);
 
             //Taking the number of codes collected and setting it to current country. Updating it to currentCountry
             currentCountry = world.getCountries().get(numOfCodesCollected);
@@ -88,7 +80,6 @@ public class TravelMenuView extends View {
 
     @Override
     public String getInput() {
-//delete        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid
 
@@ -132,64 +123,14 @@ public class TravelMenuView extends View {
             this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
 
             //IF PLAYER MOVEMENT TO A PLACE TRIGGERS CHALLENGE - OPEN THE CHALLENGE VIEW HERE
-//            if(Snipe.getPlayer().getCurrentPlace().isChallenge()) {
+
             if (numChoice == 1) {
                 //safe house 
                 SafeHouseView safeHouse = new SafeHouseView();
                 safeHouse.display();
-
-                /*Need to add trigger here to check for code piece & push player to next country.
-                
-                if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
-                        this.console.println("\n-----------------------------------------------------------"
-                                            + "You have not yet obtained the code needed to move on. You "
-                                            + "will need to travel back to another location and complete"
-                                            + " a challenge to obtain a code. Once you have a code, you "
-                                            + "will return here to obtain your next Dossier and move on.");
-                    }else {
-                        //display next Dossier & offer travel menu.
-                        
-                        switch (choice) { //Show Dossier & Game Menu
-                            case "U": 
-                                this.console.println(Dossier.values()[1]);
-                                break;
-                            case "G": 
-                                this.console.println(Dossier.values()[2]);
-                                break;
-                            case "E": 
-                                this.console.println(Dossier.values()[3]);
-                                break;
-                            case "S": 
-                                this.console.println(Dossier.values()[4]);
-                                break;
-                            case "R": 
-                               this.console.println(Dossier.values()[5]);
-                                break;
-                            case "F": 
-                                this.console.println(Dossier.values()[6]);
-                                break;
-                            case "C": 
-                                this.console.println(Dossier.values()[7]);
-                                break;
-                            case "B": 
-                               this.console.println(Dossier.values()[8]);
-                                break;
-                            case "A": {
-                                try {
-                                    this.displayCypherControlView();
-                                } catch (GameControlException ex) {
-                                    Logger.getLogger(DossierView.class.getName()).log(Level.SEVERE, null, ex);
-                                }
-                            }
-                            break;
-                
-                
-                    }*/
             }
             if (numChoice == 2) {
-                //this line works
-//              this.console..println("\n this is second " + Snipe.getPlayer().getCurrentPlace().getCountryCode());
-//
+
                 String countryCode;
                 countryCode = Snipe.getPlayer().getCurrentPlace().getCountryCode();
 
@@ -208,7 +149,7 @@ public class TravelMenuView extends View {
                 ChallengePhysicalView challenge3 = new ChallengePhysicalView();
                 challenge3.display();
             }
-//         
+       
             return true;
         } catch (IndexOutOfBoundsException ibe) {
             //           this.console.println("That place number doesn't exist!");
@@ -221,7 +162,6 @@ public class TravelMenuView extends View {
         switch (choice) {
             case "V": //display the map
                 this.console.println("You are at: " + Snipe.getPlayer().getCurrentPlace().getPlaceName());
-//                this.displayMap();
                 break;
             case "S": {
                 try {
@@ -236,7 +176,6 @@ public class TravelMenuView extends View {
                 this.displayHelpMenu();
                 break;
             default:
-//                this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
 

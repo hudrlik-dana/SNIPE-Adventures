@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.model.Country;
@@ -10,7 +6,6 @@ import byui.cit260.snipe.model.Place;
 import byui.cit260.snipe.model.World;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 import snipe.Snipe;
 
@@ -19,7 +14,6 @@ import snipe.Snipe;
  * @author denisegoetz
  */
 public class WriteCountryList extends View {
-//    public static void WriteCountryList(ArrayList<Country> countries, String filepath) throws IOException {
 
     public static void WriteCountryList(String filepath) throws IOException {
 
