@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.snipe.view;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import snipe.Snipe;
@@ -49,7 +44,7 @@ public abstract class View implements ViewInterface {
 
     @Override
     public String getInput() {
-//delete        Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+
         boolean valid = false; //initialize to not valid
         String value = ""; //value to be returned
 
@@ -64,7 +59,6 @@ public abstract class View implements ViewInterface {
             value = value.trim(); //trim off leading and trailing blanks
 
             if (value.length() < 1) { // value is blank
-//                this.console.println("\nInvalid: entry required.");
                 ErrorView.display(this.getClass().getName(),
                         "\n***Invalid: entry required.!");
                 continue;

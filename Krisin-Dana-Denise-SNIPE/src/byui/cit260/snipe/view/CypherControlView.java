@@ -1,21 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.snipe.view;
 
-import byui.cit260.snipe.control.CypherControl;
-import byui.cit260.snipe.control.GameControl;
 import byui.cit260.snipe.exceptions.GameControlException;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import snipe.Snipe;
 
 /**
  *
- * @author aingealfire@gmail.com (new16014@byui.edu)
+ * @author danahudrlik
  */
 public class CypherControlView extends View {
 
@@ -23,7 +15,7 @@ public class CypherControlView extends View {
 
     public CypherControlView() {
         super();
-        CypherControl cypherDecoder = new CypherControl();
+        //CypherControl cypherDecoder = new CypherControl();
 
         //display cypher decoder  
         this.console.println(
@@ -78,7 +70,7 @@ public class CypherControlView extends View {
 
                 break;
         }
-        return false;
+        return true;
     }
 
     private void displayWinGameView() throws GameControlException {

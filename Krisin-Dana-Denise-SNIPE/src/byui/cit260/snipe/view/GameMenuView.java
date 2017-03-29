@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.exceptions.GameControlException;
-import java.util.Scanner;
 import snipe.Snipe;
-import byui.cit260.snipe.model.Dossier;
 import byui.cit260.snipe.model.World;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -210,7 +204,7 @@ public class GameMenuView extends View {
         String filePath = null;
         boolean valid = false;
 
-        this.console.println("Enter the name you want to save your Code List as: ");
+        this.console.println("Enter the name you want to save your Passport List as: ");
         while (!valid) {
             try {
                 //prompt for player input
@@ -239,10 +233,11 @@ public class GameMenuView extends View {
 
         }
     }
-  private void writeCountries() {
+
+    private void writeCountries() {
         String filePath = null;
         boolean valid = false;
-       World world = Snipe.getCurrentGame().getWorld();
+        World world = Snipe.getCurrentGame().getWorld();
 
         this.console.println("Enter the name you want to save your Country/Place List as: ");
         while (!valid) {

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.GameControl;
@@ -89,11 +85,9 @@ public class StartProgramView {
 
             value = keyboard.nextLine(); //get next line typed on keyboard
 
-//           value = keyboard.readLine(); //get next line typed on keyboard
             value = value.trim(); //trim off leading and trailing blanks
 
             if (value.length() < 1) { // value is blank
-//                System.out.println("\nInvalid: name cannot be blank");
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid: name cannot be blank");
                 continue;
@@ -106,7 +100,6 @@ public class StartProgramView {
     private boolean doAction(String playerName) throws GameControlException {
 
         if (playerName.length() < 2) {
-//          System.out.println("\nInvalid players name: Your name must be more than one character in length.");
             ErrorView.display(this.getClass().getName(),
                     "\n***Invalid players name: Your name must be more than one character in length. ");
 
@@ -117,7 +110,6 @@ public class StartProgramView {
         Player player = GameControl.createPlayer(playerName);
 
         if (player == null) {//if unsuccessful
-            //          System.out.println("\nError creating the player");
             ErrorView.display(this.getClass().getName(),
                     "\n***Error creating the player ");
             return false;
@@ -149,5 +141,4 @@ public class StartProgramView {
         mainMenuView.display();
     }
 
-//System.out.println("\n*** functionName() function called ***");
 }
