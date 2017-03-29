@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.ChallengeControl;
 import byui.cit260.snipe.model.Country;
 import java.util.List;
-import java.util.Scanner;
 import snipe.Snipe;
 
 /**
@@ -151,12 +145,11 @@ public class ChallengeMentalView extends View {
                             + "\n passage. Consult your dossier for additional clues to solve"
                             + "\n the equation. Recalculate and try again or travel to another"
                             + "\n location and try a different challenge.");
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 }
-                else{
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
-                }
-                
+
                 break;
 
             case "Spain":  //They chose an answer for Spain challenge
@@ -191,10 +184,9 @@ public class ChallengeMentalView extends View {
                             + "\n for additional clues to solve the puzzle. Recalculate and"
                             + "\n try again or travel to another location and try a"
                             + "\n different challenge.");
-                }
-                else{
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
@@ -236,15 +228,13 @@ public class ChallengeMentalView extends View {
                             + "\n for additional clues to solve the puzzle. Recalculate and"
                             + "\n try again or travel to another location and try a"
                             + "\n different challenge.");
-                }
-                else{
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
             default:
-//delete        this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
 

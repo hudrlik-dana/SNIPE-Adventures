@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.snipe.view;
 
-import byui.cit260.snipe.control.ChallengeControl;
 import byui.cit260.snipe.model.Country;
-import byui.cit260.snipe.model.Place;
-import byui.cit260.snipe.model.Player;
 import java.util.List;
-import java.util.Scanner;
 import snipe.Snipe;
 
 /**
@@ -234,14 +225,12 @@ public class ChallengeRiddleView extends View {
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 }
-                else{
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
-                }
-                
-                break;
 
+                break;
 
             case "Germany":
                 if (choice.equals("1")) {
@@ -259,10 +248,9 @@ public class ChallengeRiddleView extends View {
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n Remember you are a SNIPE agent, you can do it!");
 
-                }
-                else{
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
@@ -282,10 +270,9 @@ public class ChallengeRiddleView extends View {
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
-                }
-                else{
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
@@ -299,10 +286,9 @@ public class ChallengeRiddleView extends View {
                     this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n again. Remember you are a SNIPE agent, you can do it!");
-                }
-                else{
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
@@ -323,10 +309,9 @@ public class ChallengeRiddleView extends View {
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
-                }
-                else{
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
@@ -345,10 +330,9 @@ public class ChallengeRiddleView extends View {
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
-                }
-                else{
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
@@ -369,10 +353,9 @@ public class ChallengeRiddleView extends View {
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
-                }
-                else{
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
@@ -391,10 +374,9 @@ public class ChallengeRiddleView extends View {
                     this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n Remember you are a SNIPE agent, you can do it!");
-                }
-                else{
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
@@ -413,10 +395,9 @@ public class ChallengeRiddleView extends View {
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
-                }
-                else{
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
