@@ -235,7 +235,13 @@ public class ChallengeRiddleView extends View {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
                 }
+                else{
+                     ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
+                }
+                
                 break;
+
 
             case "Germany":
                 if (choice.equals("1")) {
@@ -253,6 +259,10 @@ public class ChallengeRiddleView extends View {
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n Remember you are a SNIPE agent, you can do it!");
 
+                }
+                else{
+                     ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
@@ -273,6 +283,10 @@ public class ChallengeRiddleView extends View {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
                 }
+                else{
+                     ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
+                }
                 break;
 
             case "Spain":
@@ -285,6 +299,10 @@ public class ChallengeRiddleView extends View {
                     this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n again. Remember you are a SNIPE agent, you can do it!");
+                }
+                else{
+                     ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
@@ -306,6 +324,10 @@ public class ChallengeRiddleView extends View {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
                 }
+                else{
+                     ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
+                }
                 break;
 
             case "France":
@@ -323,6 +345,10 @@ public class ChallengeRiddleView extends View {
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
+                }
+                else{
+                     ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
@@ -344,6 +370,10 @@ public class ChallengeRiddleView extends View {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
                 }
+                else{
+                     ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
+                }
                 break;
 
             case "Brazil":
@@ -362,6 +392,10 @@ public class ChallengeRiddleView extends View {
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n Remember you are a SNIPE agent, you can do it!");
                 }
+                else{
+                     ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
+                }
                 break;
 
             case "Australia":
@@ -379,6 +413,10 @@ public class ChallengeRiddleView extends View {
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
+                }
+                else{
+                     ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try Again");
                 }
                 break;
 
