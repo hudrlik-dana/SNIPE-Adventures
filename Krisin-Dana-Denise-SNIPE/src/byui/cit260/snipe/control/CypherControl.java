@@ -1,4 +1,3 @@
-
 package byui.cit260.snipe.control;
 
 import byui.cit260.snipe.view.View;
@@ -30,7 +29,6 @@ public class CypherControl extends View {
                 + "\n Arrange the words in order to discover an "
                 + "\n important message."
                 + "\n-------------------------------------------------"
-            
         );
 
     }

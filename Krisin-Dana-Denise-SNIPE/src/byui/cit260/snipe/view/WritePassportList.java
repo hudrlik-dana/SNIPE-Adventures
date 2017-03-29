@@ -1,4 +1,3 @@
-
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.model.Place;

@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.snipe.view;
 
-import byui.cit260.snipe.control.ChallengeControl;
 import byui.cit260.snipe.model.Country;
-import byui.cit260.snipe.model.Place;
-import byui.cit260.snipe.model.Player;
 import java.util.List;
-import java.util.Scanner;
 import snipe.Snipe;
 
 /**
@@ -234,7 +225,7 @@ public class ChallengeRiddleView extends View {
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
-                }
+                } 
                 if ((choice.equals("1")) || (choice.equals("2"))){
                     }
                     else {

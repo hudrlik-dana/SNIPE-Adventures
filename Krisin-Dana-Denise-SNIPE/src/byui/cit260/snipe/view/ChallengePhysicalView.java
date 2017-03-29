@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.ChallengeControl;
 import byui.cit260.snipe.model.Country;
-import byui.cit260.snipe.control.GameControl;
-import java.util.Scanner;
 import snipe.Snipe;
-import byui.cit260.snipe.model.Place;
 import java.util.List;
 
 /**
@@ -272,9 +264,6 @@ public class ChallengePhysicalView extends View {
                 break;
             default:
                 System.out.println("\n Invalid answer. Try again.");
-                //                 ErrorView.display(this.getClass().getName(),
-                //                           "\n*** Invalid Selection *** Try Again");
-
                 break;
         }
     }
@@ -318,9 +307,8 @@ public class ChallengePhysicalView extends View {
                             + "\n to contact your handler and receive the dossier for your"
                             + "\n next mission.");
                     List<String> codeList = Snipe.getPlayer().getCodeList();
-                    
-                    //Check to see if the player has the code for the current place, if not, add it to codelist array.
 
+                    //Check to see if the player has the code for the current place, if not, add it to codelist array.
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
@@ -352,7 +340,6 @@ public class ChallengePhysicalView extends View {
                                 "\n Bummer, you fell and were injured in your attempt."
                                 + "\n Maybe you should return to the Safe House to rest. Then consult "
                                 + "\n your dossier for the location of your next challenge.");
-                        //adjustPlayerHealth();
                     }
                     return true;
                 }

@@ -1,4 +1,3 @@
-
 package byui.cit260.snipe.control;
 
 import byui.cit260.snipe.exceptions.GameControlException;
@@ -18,8 +17,6 @@ import snipe.Snipe;
  *
  * @author danahudrlik
  */
-
-
 public class GameControl {
 
     public static Player createPlayer(String name) throws GameControlException {

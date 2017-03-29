@@ -1,4 +1,3 @@
-
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.exceptions.GameControlException;
@@ -28,7 +27,6 @@ public class MoveCountryView extends View {
                 + "\n "
                 + "\nYou will need to travel to a new Country. "
                 + "\nPlease select from the countries below:";
-
 
         tempMenu += "\n-----------------------------------------------------------"
                 + "\n 2 - Travel to: Germany"

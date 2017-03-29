@@ -1,4 +1,3 @@
-
 package byui.cit260.snipe.view;
 
 import java.util.logging.Level;

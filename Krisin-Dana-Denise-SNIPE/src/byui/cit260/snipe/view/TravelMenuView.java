@@ -1,4 +1,3 @@
-
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.GameControl;
@@ -123,7 +122,6 @@ public class TravelMenuView extends View {
             this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
 
             //IF PLAYER MOVEMENT TO A PLACE TRIGGERS CHALLENGE - OPEN THE CHALLENGE VIEW HERE
-
             if (numChoice == 1) {
                 //safe house 
                 SafeHouseView safeHouse = new SafeHouseView();
@@ -149,7 +147,7 @@ public class TravelMenuView extends View {
                 ChallengePhysicalView challenge3 = new ChallengePhysicalView();
                 challenge3.display();
             }
-       
+
             return true;
         } catch (IndexOutOfBoundsException ibe) {
             //           this.console.println("That place number doesn't exist!");
