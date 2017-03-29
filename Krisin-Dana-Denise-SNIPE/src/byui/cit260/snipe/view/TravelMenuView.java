@@ -26,7 +26,7 @@ public class TravelMenuView extends View {
         super();
 
         World world = Snipe.getCurrentGame().getWorld();
-        Country currentCountry = Snipe.getPlayer().getCurrentCountry();
+        Country currentCountry = Snipe.getPlayer().getCurrentCountry(); 
 
         if (Snipe.getPlayer().getCodeList() != null //not null means it does have a memory space avail for codelist. 
                 && Snipe.getPlayer().getCodeList().size() == world.getCountries().indexOf(currentCountry) + 1

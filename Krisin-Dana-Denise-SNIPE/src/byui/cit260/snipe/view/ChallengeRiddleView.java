@@ -235,10 +235,12 @@ public class ChallengeRiddleView extends View {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
                 }
-                else{
+                if ((choice.equals("1")) || (choice.equals("2"))){
+                    }
+                    else {
                      ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
-                }
+                    }
                 
                 break;
 
@@ -260,10 +262,13 @@ public class ChallengeRiddleView extends View {
                             + "\n Remember you are a SNIPE agent, you can do it!");
 
                 }
-                else{
+                if ((choice.equals("1")) || (choice.equals("2"))){
+                    }
+                    else {
                      ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
-                }
+                    }
+
                 break;
 
             case "England":
@@ -283,10 +288,13 @@ public class ChallengeRiddleView extends View {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
                 }
-                else{
+                if ((choice.equals("1")) || (choice.equals("2"))){
+                    }
+                    else {
                      ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
-                }
+                    }                
+
                 break;
 
             case "Spain":
@@ -300,10 +308,13 @@ public class ChallengeRiddleView extends View {
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n again. Remember you are a SNIPE agent, you can do it!");
                 }
-                else{
+                if ((choice.equals("1")) || (choice.equals("2"))){
+                    }
+                    else {
                      ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
-                }
+                    }                
+
                 break;
 
             case "Russia":
@@ -324,10 +335,13 @@ public class ChallengeRiddleView extends View {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
                 }
-                else{
+                if ((choice.equals("1")) || (choice.equals("2"))){
+                    }
+                    else {
                      ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
-                }
+                    }                
+
                 break;
 
             case "France":
@@ -346,10 +360,13 @@ public class ChallengeRiddleView extends View {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
                 }
-                else{
+                if ((choice.equals("1")) || (choice.equals("2"))){
+                    }
+                    else {
                      ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
-                }
+                    }                
+
                 break;
 
             case "Canada":
@@ -370,10 +387,13 @@ public class ChallengeRiddleView extends View {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
                 }
-                else{
+                if ((choice.equals("1")) || (choice.equals("2"))){
+                    }
+                    else {
                      ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
-                }
+                    }                
+                
                 break;
 
             case "Brazil":
@@ -392,10 +412,13 @@ public class ChallengeRiddleView extends View {
                             + "\n Try checking your dossier for another hint and try again."
                             + "\n Remember you are a SNIPE agent, you can do it!");
                 }
-                else{
+                if ((choice.equals("1")) || (choice.equals("2"))){
+                    }
+                    else {
                      ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
-                }
+                    }
+                
                 break;
 
             case "Australia":
@@ -414,10 +437,13 @@ public class ChallengeRiddleView extends View {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
                 }
-                else{
+                if ((choice.equals("1")) || (choice.equals("2"))){
+                   }
+                    else {
                      ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
-                }
+                    }
+                 
                 break;
 
             default:
