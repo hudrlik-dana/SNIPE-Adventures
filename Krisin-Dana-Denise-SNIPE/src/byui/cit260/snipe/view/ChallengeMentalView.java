@@ -145,14 +145,13 @@ public class ChallengeMentalView extends View {
                             + "\n passage. Consult your dossier for additional clues to solve"
                             + "\n the equation. Recalculate and try again or travel to another"
                             + "\n location and try a different challenge.");
-                } 
-                if ((choice.equals("1")) || (choice.equals("2")) || (choice.equals("3"))){
-                    }
-                    else {
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
-                    }
-                
+                }
+                if ((choice.equals("1")) || (choice.equals("2")) || (choice.equals("3"))) {
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
+                }
+
                 break;
 
             case "Spain":  //They chose an answer for Spain challenge
@@ -188,13 +187,12 @@ public class ChallengeMentalView extends View {
                             + "\n try again or travel to another location and try a"
                             + "\n different challenge.");
                 }
-                if ((choice.equals("1")) || (choice.equals("2")) || (choice.equals("3"))){
-                    }
-                    else {
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
-                    }
-                
+                if ((choice.equals("1")) || (choice.equals("2")) || (choice.equals("3"))) {
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
+                }
+
                 break;
 
             case "Russia": //They chose an answer for Russia challenge
@@ -236,13 +234,12 @@ public class ChallengeMentalView extends View {
                             + "\n try again or travel to another location and try a"
                             + "\n different challenge.");
                 }
-                if ((choice.equals("1")) || (choice.equals("2")) || (choice.equals("3"))){
-                    }
-                    else {
-                     ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid Selection *** Try Again");
-                    }                
-                
+                if ((choice.equals("1")) || (choice.equals("2")) || (choice.equals("3"))) {
+                } else {
+                    ErrorView.display(this.getClass().getName(),
+                            "\n*** Invalid Selection *** Try Again");
+                }
+
                 break;
 
             default:
@@ -255,5 +252,5 @@ public class ChallengeMentalView extends View {
 
         return true;
     }
-    
+
 }
