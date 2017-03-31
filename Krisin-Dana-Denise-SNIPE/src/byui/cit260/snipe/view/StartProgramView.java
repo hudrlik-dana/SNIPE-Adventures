@@ -97,7 +97,7 @@ public class StartProgramView {
 
     private boolean doAction(String playerName) throws GameControlException {
 
-        if (playerName.length()< 2) {
+        if (playerName.length() < 2) {
             ErrorView.display(this.getClass().getName(),
                     "\n***Invalid players name: Your name must be more than one character in length. ");
 
@@ -119,6 +119,7 @@ public class StartProgramView {
         return true; //Success! 
     }
 //made displayNextView throw to GameControlException
+
     private void displayNextView(Player player) throws GameControlException {
 
         //display a custom welcome message

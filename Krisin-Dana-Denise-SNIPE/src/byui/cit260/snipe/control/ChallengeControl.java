@@ -52,7 +52,7 @@ public class ChallengeControl {
     public static boolean performPhysicalChallenge() {
         Random rand = new Random();
         int randomValue = rand.nextInt(100);
-        return physicalChallengeCheck(randomValue, 50); 
+        return physicalChallengeCheck(randomValue, 50);
     }
 
     //Kristin's Individual Assignment

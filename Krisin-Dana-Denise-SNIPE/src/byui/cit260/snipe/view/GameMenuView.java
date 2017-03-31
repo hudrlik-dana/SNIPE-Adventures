@@ -105,33 +105,30 @@ public class GameMenuView extends View {
                 }
             }
             break;
-            case "1":
-        {
-            try {
-                this.writeCodeList();
-            } catch (GameControlException ex) {
-                Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            case "1": {
+                try {
+                    this.writeCodeList();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
-                break;
-            case "2":
-        {
-            try {
-                this.writePassport();
-            } catch (GameControlException ex) {
-                Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            break;
+            case "2": {
+                try {
+                    this.writePassport();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
-                break;
-            case "3":
-        {
-            try {
-                this.writeCountries();
-            } catch (GameControlException ex) {
-                Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            break;
+            case "3": {
+                try {
+                    this.writeCountries();
+                } catch (GameControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
-                break;
+            break;
             default:
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
@@ -182,7 +179,8 @@ public class GameMenuView extends View {
         dossierView.display();
     }
 //added throws to GameControlException
-    private void writeCodeList() throws GameControlException{
+
+    private void writeCodeList() throws GameControlException {
         String filePath = null;
         boolean valid = false;
 
@@ -203,7 +201,7 @@ public class GameMenuView extends View {
 
             } catch (IOException ex) {
                 Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
-                throw new GameControlException(ex.getMessage());   
+                throw new GameControlException(ex.getMessage());
             }
         }
 
@@ -217,6 +215,7 @@ public class GameMenuView extends View {
         }
     }
 //added throws to GameControlException
+
     private void writePassport() throws GameControlException {
         String filePath = null;
         boolean valid = false;
@@ -237,7 +236,7 @@ public class GameMenuView extends View {
 
             } catch (IOException ex) {
                 Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
-                throw new GameControlException(ex.getMessage());     
+                throw new GameControlException(ex.getMessage());
             }
         }
 
@@ -251,7 +250,8 @@ public class GameMenuView extends View {
         }
     }
 //added throws to GameControlException
-    private void writeCountries() throws GameControlException{
+
+    private void writeCountries() throws GameControlException {
         String filePath = null;
         boolean valid = false;
         World world = Snipe.getCurrentGame().getWorld();
@@ -272,7 +272,7 @@ public class GameMenuView extends View {
 //added throw to GameControlException
             } catch (IOException ex) {
                 Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
-                throw new GameControlException(ex.getMessage());     
+                throw new GameControlException(ex.getMessage());
             }
         }
 
