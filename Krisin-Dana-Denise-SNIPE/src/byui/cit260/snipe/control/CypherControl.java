@@ -12,7 +12,6 @@ public class CypherControl extends View {
 
     public CypherControl() {
         super();
-        //CypherControl cypherControl = new CypherControl();
 
         //display cypher decoder  
         this.console.println(
@@ -30,7 +29,6 @@ public class CypherControl extends View {
                 + "\n important message."
                 + "\n-------------------------------------------------"
         );
-
     }
 
     public void displayMenuView() {
@@ -60,5 +58,4 @@ public class CypherControl extends View {
         );
         return true;
     }
-
 }

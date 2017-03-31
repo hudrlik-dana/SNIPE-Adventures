@@ -91,5 +91,4 @@ public class Challenge implements Serializable {
     public String toString() {
         return "Challenge{" + "desc=" + desc + ", injuryPoints=" + injuryPoints + ", hint=" + hint + ", masterCodePiece=" + masterCodePiece + '}';
     }
-
 }

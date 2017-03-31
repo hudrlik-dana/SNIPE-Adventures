@@ -131,5 +131,4 @@ public class MoveCountryView extends View {
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
-
 }

@@ -95,14 +95,13 @@ public class MainMenuView extends View {
                 }
             }
             default:
-                //              this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;
     }
-
+    
     private void startSavedGame() throws GameControlException, FileNotFoundException, IOException, ClassNotFoundException {
         // prompt for and get the name of the file to be saved
         StartSavedGameView startSavedGameView = new StartSavedGameView();
@@ -126,7 +125,6 @@ public class MainMenuView extends View {
             gameMenu.display();
        }
     }
-
     private void startNewGame() throws GameControlException {
         //create new game
         GameControl.createNewGame(Snipe.getPlayer());
@@ -166,7 +164,7 @@ public class MainMenuView extends View {
     }
 
     private void exitGame() throws GameControlException {
-        //delete       Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+
         try {
             this.console.println("Do you wish to save the game before exiting?  Y/N");
             String value = "";

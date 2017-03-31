@@ -33,7 +33,6 @@ public class MapMenuView extends View {
             List<Place> places = map.getPlaces();
             for (int j = 0; j < places.size(); j++) {
                 this.console.println("\t" + places.get(j).getPlaceName());
-
             }
         }
 
@@ -78,7 +77,6 @@ public class MapMenuView extends View {
                 this.displayHelpMenu();
                 break;
             default:
-//               this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
                 break;

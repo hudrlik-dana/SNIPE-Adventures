@@ -25,7 +25,7 @@ public class TravelMenuView extends View {
         super();
 
         World world = Snipe.getCurrentGame().getWorld();
-        Country currentCountry = Snipe.getPlayer().getCurrentCountry(); 
+        Country currentCountry = Snipe.getPlayer().getCurrentCountry();
 
         if (Snipe.getPlayer().getCodeList() != null //not null means it does have a memory space avail for codelist. 
                 && Snipe.getPlayer().getCodeList().size() == world.getCountries().indexOf(currentCountry) + 1
@@ -46,7 +46,7 @@ public class TravelMenuView extends View {
                 + "\n Travel Menu"
                 + "\n-----------------------------------------------------------"
                 + "\n";
-//spin thru  arraylist getting places and placenames from currentCountry
+//iterate thru  arraylist getting places and placenames from currentCountry
         for (int i = 0; i < currentCountry.getPlaces().size(); i++) {
             tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
         }
@@ -208,5 +208,4 @@ public class TravelMenuView extends View {
         MapMenuView mapMenu = new MapMenuView();
         mapMenu.display();
     }
-
 }

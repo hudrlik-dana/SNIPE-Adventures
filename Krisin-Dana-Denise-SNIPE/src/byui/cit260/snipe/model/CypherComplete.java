@@ -65,5 +65,4 @@ public class CypherComplete implements Serializable {
     public String toString() {
         return "CypherComplete{" + "codePhrase=" + codePhrase + ", codeDecoder=" + codeDecoder + '}';
     }
-
 }

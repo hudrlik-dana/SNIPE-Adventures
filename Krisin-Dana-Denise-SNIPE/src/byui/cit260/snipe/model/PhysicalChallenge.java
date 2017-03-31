@@ -77,5 +77,4 @@ public class PhysicalChallenge implements Serializable {
     public String toString() {
         return "PhysicalChallenge{" + "physicalSuccess=" + physicalSuccess + ", challengeNumber=" + challengeNumber + ", playerRandomNum=" + playerRandomNum + '}';
     }
-
 }

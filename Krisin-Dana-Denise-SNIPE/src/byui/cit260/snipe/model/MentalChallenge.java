@@ -51,5 +51,4 @@ public class MentalChallenge implements Serializable {
     public String toString() {
         return "MentalChallenge{" + "mentalAnswer=" + mentalAnswer + '}';
     }
-
 }

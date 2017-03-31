@@ -85,7 +85,6 @@ public class DossierView extends View {
             }
             break;
             default:
-                //              this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
                 break;
@@ -104,5 +103,4 @@ public class DossierView extends View {
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
-
 }

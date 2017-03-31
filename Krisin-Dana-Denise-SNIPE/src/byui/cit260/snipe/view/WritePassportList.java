@@ -37,5 +37,4 @@ class WritePassportList extends View {
     public boolean doAction(String value) {
         return false;
     }
-
 }

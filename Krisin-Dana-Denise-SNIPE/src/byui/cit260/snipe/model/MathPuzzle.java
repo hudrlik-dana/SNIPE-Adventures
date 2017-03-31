@@ -104,5 +104,4 @@ public class MathPuzzle implements Serializable {
     public String toString() {
         return "MathPuzzle{" + "healthPoints=" + healthPoints + ", mathAnswer=" + mathAnswer + ", var1=" + var1 + ", var2=" + var2 + ", var3=" + var3 + '}';
     }
-
 }

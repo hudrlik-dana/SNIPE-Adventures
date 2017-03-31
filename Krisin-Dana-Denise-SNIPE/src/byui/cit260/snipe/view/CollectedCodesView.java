@@ -82,5 +82,4 @@ public class CollectedCodesView extends View {
     private void displayPlayerCurrentScene() throws GameControlException {
         this.console.println(Snipe.getPlayer().getCurrentPlace().getPlaceScene());
     }
-
 }

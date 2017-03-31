@@ -52,8 +52,7 @@ public class ChallengeControl {
     public static boolean performPhysicalChallenge() {
         Random rand = new Random();
         int randomValue = rand.nextInt(100);
-        return physicalChallengeCheck(randomValue, 50); //TODO grab location challenge number
-        //TODO add more logic like removing health, etc.
+        return physicalChallengeCheck(randomValue, 50); 
     }
 
     //Kristin's Individual Assignment
