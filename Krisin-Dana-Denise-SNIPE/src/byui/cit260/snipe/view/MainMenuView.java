@@ -111,6 +111,8 @@ public class MainMenuView extends View {
 
         try (FileInputStream fips = new FileInputStream(filePath)) {
              ObjectInputStream input = new ObjectInputStream(fips);
+             
+             game = (Game) input.readObject();
         
             try {
                 GameControl.getSavedGame(filePath);
