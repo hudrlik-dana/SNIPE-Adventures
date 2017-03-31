@@ -52,8 +52,7 @@ public class StartProgramView {
                 + "\n* mission, you will receive your credentials. You will need to collect pieces of a       *"
                 + "\n* master code that has been divided and scattered across several countries.              *"
                 + "\n*                                                                                        *"
-                + "\n******************************************************************************************"
-        );
+                + "\n******************************************************************************************");
 
     }
 
@@ -139,5 +138,4 @@ public class StartProgramView {
         //Display the main menu view
         mainMenuView.display();
     }
-
 }

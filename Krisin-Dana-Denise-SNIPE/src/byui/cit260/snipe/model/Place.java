@@ -118,5 +118,4 @@ public class Place implements Serializable {
     public String toString() {
         return "Place{" + "countryCode=" + countryCode + ", placeCode=" + placeCode + ", placeName=" + placeName + ", placeScene=" + placeScene + ", masterCodePiece=" + masterCodePiece + ", challenge=" + challenge + '}';
     }
-
 }

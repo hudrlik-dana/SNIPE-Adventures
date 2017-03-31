@@ -117,6 +117,7 @@ public class ChallengePhysicalView extends View {
                         + "\n  Enter B to stretch out and reach for the clue.   "
                         + "\n---------------------------------------------------------");
                 break;
+
             case "Spain":
                 System.out.println(
                         "\n---------------------------------------------------------"
@@ -142,6 +143,7 @@ public class ChallengePhysicalView extends View {
                         + "\n  Enter B to run as fast as the wind.              "
                         + "\n---------------------------------------------------------");
                 break;
+
             case "Russia":
                 System.out.println(
                         "\n---------------------------------------------------------"
@@ -165,6 +167,7 @@ public class ChallengePhysicalView extends View {
                         + "\n  Enter B carefully so you don't fall and get hurt."
                         + "\n---------------------------------------------------------");
                 break;
+
             case "France":
                 System.out.println(
                         "\n---------------------------------------------------------"
@@ -194,6 +197,7 @@ public class ChallengePhysicalView extends View {
                         + "\n  Enter B to see if you got away with the clue.    "
                         + "\n---------------------------------------------------------");
                 break;
+
             case "Canada":
                 System.out.println(
                         "\n---------------------------------------------------------"
@@ -212,6 +216,7 @@ public class ChallengePhysicalView extends View {
                         + "\n Enter B to for the final result of your first run."
                         + "\n---------------------------------------------------------");
                 break;
+
             case "Brazil":
                 System.out.println(
                         "\n---------------------------------------------------------"
@@ -234,6 +239,7 @@ public class ChallengePhysicalView extends View {
                         + "\n Enter B to see who outran the jaguar.             "
                         + "\n---------------------------------------------------------");
                 break;
+
             case "Australia":
                 System.out.println(
                         "\n --------------------------------------------------------"
@@ -262,6 +268,7 @@ public class ChallengePhysicalView extends View {
                         + "\n Enter B when you think you are at step 14,582.    "
                         + "\n---------------------------------------------------------");
                 break;
+
             default:
                 System.out.println("\n Invalid answer. Try again.");
                 break;
@@ -283,7 +290,6 @@ public class ChallengePhysicalView extends View {
                             + "\n Recalculate your answer and try again or travel to"
                             + "\n another location and try a different challenge."
                             + "\n Snipe Agents never give in, give out, nor give up!");
-                    //adjustPlayerHealth();
                 }
                 if (choice.equals("2")) {
 
@@ -293,7 +299,6 @@ public class ChallengePhysicalView extends View {
                             + "\n Recalculate your answer and try again or travel to"
                             + "\n another location and try a different challenge."
                             + "\n Snipe Agents never give in, give out, nor give up!");
-                    //adjustPlayerHealth();
                 }
                 if (choice.equals("3")) {
 

@@ -95,5 +95,4 @@ public class Country implements Serializable {
     public String toString() {
         return "Countries{" + "places=" + places + ", entryPointCode=" + entryPointCode + ", entryPointDesc=" + entryPointDesc + '}';
     }
-
 }

@@ -65,7 +65,5 @@ public abstract class View implements ViewInterface {
             break; //end the loop
         }
         return value; //return entered value
-
     }
-
 }

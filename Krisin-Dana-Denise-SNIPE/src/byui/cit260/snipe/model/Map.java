@@ -93,5 +93,4 @@ public class Map implements Serializable {
     public String toString() {
         return "Map{" + "numRows=" + numRows + ", numCols=" + numCols + ", places=" + places + ", visited=" + visited + '}';
     }
-
 }

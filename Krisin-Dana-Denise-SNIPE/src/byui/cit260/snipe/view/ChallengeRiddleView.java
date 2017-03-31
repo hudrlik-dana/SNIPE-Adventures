@@ -44,6 +44,7 @@ public class ChallengeRiddleView extends View {
                         + "\n Type 1 - Yes, It is legal in California and Colorado."
                         + "\n Type 2 -  No, It is not legal to get married if you are dead.");
                 break;
+
             case "Germany": //display the question
                 this.console.println("\n You have arrived at a small cottage hidden along the mossy"
                         + "\n covered hillside. This is the safe-house in Germany. You look"
@@ -79,6 +80,7 @@ public class ChallengeRiddleView extends View {
                         + "\n Type 2 - Dwindle, Dwell, Dwarf, Dweeb");
 
                 break;
+
             case "Spain": //display the question
                 this.console.println("\n You step out of the taxi and into a blustery cold wind"
                         + "\n that chills you to the bone. The largest Gothic style"
@@ -135,6 +137,7 @@ public class ChallengeRiddleView extends View {
                         + "\n Type 1 - X-Ray vision"
                         + "\n Type 2 - Window");
                 break;
+
             case "Canada": //display the question
                 this.console.println("\n This is one big library, filled with hundreds of thousands"
                         + "\n are exquisite, and it is easy to lose the suspicious man"
@@ -151,6 +154,7 @@ public class ChallengeRiddleView extends View {
                         + "\n Type 1 - Christmas!"
                         + "\n Type 2 - The letter D");
                 break;
+
             case "Brazil": //display the question
                 this.console.println("\n The capital city is filled with tourists haggling with the"
                         + "\n street vendors over prices. You weave in and out of the crowd"
@@ -168,6 +172,7 @@ public class ChallengeRiddleView extends View {
                         + "\n Type 1 - The letter E"
                         + "\n Type 2 - Heavenly Father");
                 break;
+
             case "Australia": //display the question
                 this.console.println("\n Today has been exhausting and painful. You really need a break"
                         + "\n to rest and recover. The most unlikely place for a safe-house"
@@ -181,13 +186,13 @@ public class ChallengeRiddleView extends View {
                         + "\n Type 1 - A rain coat"
                         + "\n Type 2 - A coat of wet paint");
                 break;
+
             default:
                 //               this.console.println("\n*** Country not built out yet - call Programmer");
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Country not built out");
                 break;
         }
-
     }
 
     public void displayMenuView() {
@@ -432,10 +437,7 @@ public class ChallengeRiddleView extends View {
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
                 break;
-
         }
-
         return true;
     }
-
 }

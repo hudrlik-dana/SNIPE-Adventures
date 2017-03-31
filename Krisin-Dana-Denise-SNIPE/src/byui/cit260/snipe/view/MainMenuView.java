@@ -95,7 +95,6 @@ public class MainMenuView extends View {
                 }
             }
             default:
-                //              this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
                 break;
@@ -110,10 +109,6 @@ public class MainMenuView extends View {
 
         Game game = null;
 
-        try (FileInputStream fips = new FileInputStream(filePath)) {
-            ObjectInputStream input = new ObjectInputStream(fips);
-
-            game = (Game) input.readObject();
             try {
                 GameControl.getSavedGame(filePath);
             } catch (Exception e) {
@@ -124,7 +119,6 @@ public class MainMenuView extends View {
             Snipe.setPlayer(Snipe.getCurrentGame().getPlayer());
             GameMenuView gameMenu = new GameMenuView();
             gameMenu.display();
-        }
     }
 
     private void startNewGame() throws GameControlException {

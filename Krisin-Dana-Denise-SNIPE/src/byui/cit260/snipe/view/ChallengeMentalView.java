@@ -63,6 +63,7 @@ public class ChallengeMentalView extends View {
                         + "\n Type 2 for 20 chickens & 3 cows "
                         + "\n Type 3 for 16 chickens & 10 cows");
                 break;
+
             case "Russia": //display the question
                 this.console.println("\n This place is crawling with secret police. They really aren’t"
                         + "\n very secret, since you can spot them by their clothing and"
@@ -82,12 +83,12 @@ public class ChallengeMentalView extends View {
                         + "\n Type 2 for 10000 "
                         + "\n Type 3 for 1666");
                 break;
+
             default:
                 ErrorView.display(this.getClass().getName(),
                         "\n* Mental challenge not valid");
                 break;
         }
-
     }
 
     public void displayMenuView() {
@@ -247,10 +248,8 @@ public class ChallengeMentalView extends View {
                         "\n*** Invalid Selection *** Try Again");
 
                 break;
-
+                
         }
-
         return true;
     }
-
 }

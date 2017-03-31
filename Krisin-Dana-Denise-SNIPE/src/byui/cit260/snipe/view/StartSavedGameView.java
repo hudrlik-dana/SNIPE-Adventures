@@ -45,7 +45,5 @@ public class StartSavedGameView extends View {
     @Override
     public boolean doAction(String value) {
         return true;
-
     }
-
 }

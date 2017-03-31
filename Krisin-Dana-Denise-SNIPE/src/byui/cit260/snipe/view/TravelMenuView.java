@@ -46,7 +46,7 @@ public class TravelMenuView extends View {
                 + "\n Travel Menu"
                 + "\n-----------------------------------------------------------"
                 + "\n";
-//spin thru  arraylist getting places and placenames from currentCountry
+//iterate thru  arraylist getting places and placenames from currentCountry
         for (int i = 0; i < currentCountry.getPlaces().size(); i++) {
             tempMenu += "\n " + (i + 1) + " - " + currentCountry.getPlaces().get(i).getPlaceName();
         }
@@ -208,5 +208,4 @@ public class TravelMenuView extends View {
         MapMenuView mapMenu = new MapMenuView();
         mapMenu.display();
     }
-
 }

@@ -115,7 +115,6 @@ public class GameMenuView extends View {
                 this.writeCountries();
                 break;
             default:
-//                this.console.println("\n*** Invalid Selection *** Try Again");
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try Again");
                 break;

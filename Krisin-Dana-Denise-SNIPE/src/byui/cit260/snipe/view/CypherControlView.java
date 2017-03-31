@@ -14,8 +14,6 @@ public class CypherControlView extends View {
 
     public CypherControlView() {
         super();
-        //CypherControl cypherDecoder = new CypherControl();
-
         //display cypher decoder  
         this.console.println(
                 "\n---------------- Cypher Decoder -----------------"
@@ -33,9 +31,7 @@ public class CypherControlView extends View {
                 + "\n"
                 + "\n-------------------------------------------------"
                 + "\n Press B to Begin Decoding"
-                + "\n-------------------------------------------------"
-        );
-
+                + "\n-------------------------------------------------");
     }
 
     @Override

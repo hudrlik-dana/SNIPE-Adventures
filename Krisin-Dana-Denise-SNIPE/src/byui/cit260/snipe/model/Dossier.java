@@ -225,7 +225,6 @@ public enum Dossier implements Serializable {
             + "\n   mission. Travel to your next country. "
             + "\n ----------------------------------------");
 
-//class instance variables
 //class instance variables 
     private final String hints;
 
@@ -241,5 +240,4 @@ public enum Dossier implements Serializable {
     public String toString() {
         return "Dossier:\n" + hints;
     }
-
 }
