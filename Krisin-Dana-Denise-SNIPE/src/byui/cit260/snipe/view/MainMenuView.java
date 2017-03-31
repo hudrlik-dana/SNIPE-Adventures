@@ -109,6 +109,9 @@ public class MainMenuView extends View {
 
         Game game = null;
 
+        try (FileInputStream fips = new FileInputStream(filePath)) {
+             ObjectInputStream input = new ObjectInputStream(fips);
+        
             try {
                 GameControl.getSavedGame(filePath);
             } catch (Exception e) {
@@ -119,8 +122,8 @@ public class MainMenuView extends View {
             Snipe.setPlayer(Snipe.getCurrentGame().getPlayer());
             GameMenuView gameMenu = new GameMenuView();
             gameMenu.display();
+        }
     }
-
     private void startNewGame() throws GameControlException {
         //create new game
         GameControl.createNewGame(Snipe.getPlayer());
