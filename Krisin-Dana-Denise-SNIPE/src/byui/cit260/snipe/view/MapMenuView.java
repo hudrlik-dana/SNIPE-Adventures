@@ -33,7 +33,6 @@ public class MapMenuView extends View {
             List<Place> places = map.getPlaces();
             for (int j = 0; j < places.size(); j++) {
                 this.console.println("\t" + places.get(j).getPlaceName());
-
             }
         }
 

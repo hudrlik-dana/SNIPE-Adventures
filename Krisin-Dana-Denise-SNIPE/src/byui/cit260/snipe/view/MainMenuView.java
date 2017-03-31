@@ -166,7 +166,7 @@ public class MainMenuView extends View {
     }
 
     private void exitGame() throws GameControlException {
-        //delete       Scanner keyboard = new Scanner(System.in); //get infile for Keyboard
+
         try {
             this.console.println("Do you wish to save the game before exiting?  Y/N");
             String value = "";
