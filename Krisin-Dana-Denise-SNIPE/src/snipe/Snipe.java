@@ -90,19 +90,22 @@ public class Snipe {
             StartProgramView startProgramView = new StartProgramView();
             startProgramView.displayStartProgramView();
             return;
-
-        } catch (Throwable e) {
+            }
+        catch (GameControlException ex) {
+           
+            System.out.println("Exception: " + ex.toString() 
+                             + "\nCause: "   + ex.getCause() 
+                             + "\nMessage "  + ex.getMessage());
+            ex.printStackTrace();;
+            }
+        catch (Throwable e) {
 
             System.out.println("Exception: " + e.toString()
-                    + "\nCause: " + e.getCause()
-                    + "\nMessage " + e.getMessage());
+                             + "\nCause: " + e.getCause()
+                             + "\nMessage " + e.getMessage());
             e.printStackTrace();;
-        } //       catch (Exception e) {
-        //   
-        //                System.out.println("Exception: " + e.toString() +
-        //                                  "\nCause: "   + e.getCause() +
-        //                                  "\nMessage "  + e.getMessage());
-        //        }
+            }
+        
         finally {
 
             try {

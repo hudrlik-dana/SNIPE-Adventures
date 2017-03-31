@@ -12,8 +12,7 @@ import snipe.Snipe;
  */
 //public class SafeHouseView extends View {
 public class SafeHouseView {
-
-    //   public SafeHouseView() {
+    
     public void display() throws GameControlException {
 
         String countryName = Snipe.getPlayer().getCurrentCountry().getName();
