@@ -102,7 +102,8 @@ public class MainMenuView extends View {
         return false;
     }
     
-    private void startSavedGame() throws GameControlException, FileNotFoundException, IOException, ClassNotFoundException {
+    private void startSavedGame() throws GameControlException, FileNotFoundException, 
+                                         IOException, ClassNotFoundException {
         // prompt for and get the name of the file to be saved
         StartSavedGameView startSavedGameView = new StartSavedGameView();
         String filePath = startSavedGameView.getInput();
