@@ -294,6 +294,12 @@ public class ChallengeRiddleView extends View {
                     this.console.println("\n Great job! You use the code to enter the safe-house."
                             + "\n After a brief rest, you contact your handler and pick"
                             + "\n up the dossier for your next mission. Good Luck!");
+                    List<String> codeList = Snipe.getPlayer().getCodeList();
+
+                    if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
+                        codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
+                    }
+                    
                 }
                 if (choice.equals("2")) {
                     this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
