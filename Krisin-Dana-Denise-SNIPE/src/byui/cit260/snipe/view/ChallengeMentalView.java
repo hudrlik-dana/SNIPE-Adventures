@@ -248,7 +248,7 @@ public class ChallengeMentalView extends View {
                         "\n*** Invalid Selection *** Try Again");
 
                 break;
-                
+
         }
         return true;
     }
