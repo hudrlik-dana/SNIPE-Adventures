@@ -101,9 +101,8 @@ public class MainMenuView extends View {
         }
         return false;
     }
-    
-    private void startSavedGame() throws GameControlException, FileNotFoundException, 
-                                         IOException, ClassNotFoundException {
+
+    private void startSavedGame() throws GameControlException, FileNotFoundException, IOException, ClassNotFoundException {
         // prompt for and get the name of the file to be saved
         StartSavedGameView startSavedGameView = new StartSavedGameView();
         String filePath = startSavedGameView.getInput();
@@ -112,7 +111,7 @@ public class MainMenuView extends View {
 
         try (FileInputStream fips = new FileInputStream(filePath)) {
             ObjectInputStream input = new ObjectInputStream(fips);
- 
+
             game = (Game) input.readObject();
             try {
                 GameControl.getSavedGame(filePath);
@@ -124,8 +123,9 @@ public class MainMenuView extends View {
             Snipe.setPlayer(Snipe.getCurrentGame().getPlayer());
             GameMenuView gameMenu = new GameMenuView();
             gameMenu.display();
-       }
+        }
     }
+
     private void startNewGame() throws GameControlException {
         //create new game
         GameControl.createNewGame(Snipe.getPlayer());

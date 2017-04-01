@@ -66,8 +66,7 @@ public class PresentationExamples {
 //*******************************************************************************************
 
     /**
-     * Test of physicalChallenge method, of class ChallengeControl. Kristin's
-     * Individual Assignment
+     * Test of physicalChallenge method, of class ChallengeControl. Kristin's Individual Assignment
      */
     /*public boolean physicalChallengeCheck(int randomNumber, int challengeNumber) {
         if (randomNumber > challengeNumber) {
@@ -95,8 +94,7 @@ public class PresentationExamples {
 
 //*******************************************************************************************
     /**
-     * Test of calcMathPuzzle1 method, of class ChallengeControl. Denise's
-     * Individual Assignment
+     * Test of calcMathPuzzle1 method, of class ChallengeControl. Denise's Individual Assignment
      */
     /*public static double calcMathPuzzle1(int wallHeight, int shadowLength) {
         double distance = 0;
@@ -123,8 +121,7 @@ public class PresentationExamples {
 
     //*******************************************************************************************
     /**
-     * Test of calcMathPuzzle3 method, of class ChallengeControl. Dana's
-     * Individual Assignment
+     * Test of calcMathPuzzle3 method, of class ChallengeControl. Dana's Individual Assignment
      */
     /*
     public static double calcMathPuzzle3(int lengthA, int widthA, int lengthB, int widthB) {

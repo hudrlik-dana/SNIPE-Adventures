@@ -1,4 +1,3 @@
-
 package snipe;
 
 import byui.cit260.snipe.exceptions.GameControlException;
@@ -69,7 +68,6 @@ public class Snipe {
     /**
      * @param args the command line arguments
      */
-    
     public static void main(String[] args) throws GameControlException, IOException {
 
         try {
@@ -87,23 +85,19 @@ public class Snipe {
             StartProgramView startProgramView = new StartProgramView();
             startProgramView.displayStartProgramView();
             return;
-            }
-        catch (GameControlException ex) {
-           
-            System.out.println("Exception: " + ex.toString() 
-                             + "\nCause: "   + ex.getCause() 
-                             + "\nMessage "  + ex.getMessage());
+        } catch (GameControlException ex) {
+
+            System.out.println("Exception: " + ex.toString()
+                    + "\nCause: " + ex.getCause()
+                    + "\nMessage " + ex.getMessage());
             ex.printStackTrace();;
-            }
-        catch (Throwable e) {
+        } catch (Throwable e) {
 
             System.out.println("Exception: " + e.toString()
-                             + "\nCause: " + e.getCause()
-                             + "\nMessage " + e.getMessage());
+                    + "\nCause: " + e.getCause()
+                    + "\nMessage " + e.getMessage());
             e.printStackTrace();;
-        } 
-        
-        finally {
+        } finally {
 
             try {
                 if (Snipe.inFile != null) {

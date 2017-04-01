@@ -20,8 +20,7 @@ public class ChallengeControlTest {
     }
 
     /**
-     * Test of calcMathPuzzle2 method, of class ChallengeControl. Team
-     * Assignment
+     * Test of calcMathPuzzle2 method, of class ChallengeControl. Team Assignment
      */
     @Test
     public void testCalcMathPuzzle2() {
@@ -46,8 +45,7 @@ public class ChallengeControlTest {
     }
 
     /**
-     * Test of physicalChallenge method, of class ChallengeControl. Kristin's
-     * Individual Assignment
+     * Test of physicalChallenge method, of class ChallengeControl. Kristin's Individual Assignment
      */
     @Test
     public void testPhysicalChallenge() {
@@ -67,8 +65,7 @@ public class ChallengeControlTest {
     }
 
     /**
-     * Test of calcMathPuzzle1 method, of class ChallengeControl. Denise's
-     * Individual Assignment
+     * Test of calcMathPuzzle1 method, of class ChallengeControl. Denise's Individual Assignment
      */
     @Test
     public void testCalcMathPuzzle1() {
@@ -89,8 +86,7 @@ public class ChallengeControlTest {
     }
 
     /**
-     * Test of calcMathPuzzle3 method, of class ChallengeControl. Dana's
-     * Individual Assignment
+     * Test of calcMathPuzzle3 method, of class ChallengeControl. Dana's Individual Assignment
      */
     @Test
     public void testCalcMathPuzzle3() {
