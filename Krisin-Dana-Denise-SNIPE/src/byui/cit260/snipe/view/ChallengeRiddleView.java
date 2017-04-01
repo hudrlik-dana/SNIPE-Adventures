@@ -299,7 +299,7 @@ public class ChallengeRiddleView extends View {
                     if (!codeList.contains(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece())) {
                         codeList.add(Snipe.getPlayer().getCurrentPlace().getMasterCodePiece());
                     }
-                    
+
                 }
                 if (choice.equals("2")) {
                     this.console.println("\n Bummer, your answer is incorrect and the door won’t open."
